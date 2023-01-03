@@ -1,0 +1,16 @@
+15001;Calculated;Piotroski 1 (Positive Net Income);?;;;;;;;;0
+15002;Calculated;Piotroski 2 (Positive Operating Cash Flow);?;;;;;;;;0
+15003;Calculated;Piotroski 3 (Increasing Net Income);?;;;;;;;;0
+15004;Calculated;Piotroski 4 (Operating Cash flow exceeds Net Income);?;;;;;;;;0
+15005;Calculated;Piotroski 5 (Decreasing ratio of long-term debt to assets );?;;;;;;;;0
+15006;Calculated;Piotroski 6 (Increasing Current Ratio);?;;;;;;;;0
+15007;Calculated;Piotroski 7 (No increase in outstanding shares);?;;;;;;;;0
+15008;Calculated;Piotroski 8 (Increasing Gross Margins);?;;;;;;;;0
+15009;Calculated;Piotroski 9 (Increasing Asset Turnover);?;;;;;;;;0
+15010;Calculated;Piotroski F-Score;?;;;;;;;;0
+15011;Calculated;Altman Z-Score;?;;;;;;;;0
+15012;Calculated;Rule #1 MOS Price;?;;;;;;;;0
+15013;Calculated;Magic Formula Investing -- Earnings Yield;?;;;;;;;;0
+15014;Calculated;Magic Formula Investing -- Return on Capital;?;;;;;;;;0
+'------ Test Elements
+

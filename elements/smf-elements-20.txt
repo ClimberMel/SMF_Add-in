@@ -1,0 +1,23 @@
+'------ Test Elements
+20000;MSN or whatever;StockScouter Rating or whatever;=smfConvertData(smfstrExtr(smfGetTagContent("http://investing.money.msn.com/investments/stock-price?Symbol=~~~~~","a",1,"Rating:"),"~"," out of"))
+
+
+19901;Test;Ex-Dividend Date (Historical Estimate);=INDEX(RCHGetYahooHistory("~~~~~",,,,,,,"v",,0,,,10,1),MATCH(Today()-365,RCHGetYahooHistory("~~~~~",,,,,,,"v",,0,,,10,1),-1))+365
+19902;Test;Ex-Dividend Date (Historical Estimate);=DATEVALUE(smfGetTagContent("http://research.tdameritrade.com/public/stocks/overview/overview.asp?symbol=~~~~~","div",1,">Ex-Dividend"))
+19903;Test;Ex-Dividend Date (Historical Estimate);=INDEX(RCHGetYahooHistory("~~~~~",,,,,,,"v",,0,,,1,2),1,2)
+
+19904;Test;Ex-Dividend Date (Historical Estimate);=MAX(RCHGetElementNumber("~~~~~",19901),RCHGetElementNumber("~~~~~",19902))
+
+
+' ====================> NetFlix elements
+
+19001;NetFlix;Rating;=IFERROR(smfConvertData(smfstrExtr(smfGetTagContent("http://dvd.netflix.com/Movie/~~~~~","span",-1,"rating:"),":","~"))/1,3)
+19002;NetFlix;Synopsis;=LEFT(smfGetTagContent("http://dvd.netflix.com/Movie/~~~~~","p",-1,"class=""synopsis"""),255)
+
+' 19003;NetFlix;Title;=smfGetTagContent("http://dvd.netflix.com/Movie/~~~~~","h1",2)
+19003;NetFlix;Title;=smfGetTagContent("http://dvd.netflix.com/Movie/~~~~~","h1",1,"=""title-wrapper""")
+
+19004;NetFlix;Year;=smfConvertData(smfGetTagContent("http://dvd.netflix.com/Movie/~~~~~","span",-1,"class=""year"""))
+19005;NetFlix;Length;=smfGetTagContent("http://dvd.netflix.com/Movie/~~~~~","span",-1,"class=""duration""",,,,,"N/A")
+19006;NetFlix;Genre;=smfGetTagContent("http://dvd.netflix.com/Movie/~~~~~","a",1,">Genres")
+
