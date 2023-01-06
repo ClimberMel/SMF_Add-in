@@ -1,0 +1,123 @@
+<html>
+<head>
+	
+<title>RCHGetYahooQuotes() -- Documentation</title>
+
+</head>
+
+<body>
+<h2>Documentation for RCHGetYahooQuotes() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns delayed stock quotes and other data from the Yahoo quotes interface.
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=RCHGetYahooQuotes( tickerlist, [datacodelist], [serverid], [refresh], [headers] )</b>
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>tickerlist</b></td><td valign=top>=</td><td>
+A list of ticker symbols to get quotes and/or other data for from the Yahoo quotes server.  This parameter can either be a single ticker symbol, a comma-delimited list of ticker symbols, a cell reference, or a range reference.
+<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>datacodelist</b></td><td valign=top>=</td><td>
+An optional list of data codes telling the Yahoo quotes server which data elements you want.  This parameter can either be a string concatenation of all desired data codes, a cell reference, or a range reference.  The default value for this parameter is "sl1d1t1c1ohgv", which would return ticker symbol, last price, date and time of last price, change for the date, opening/high/low price of the day, and volume for the day.  Here is a table listing the most commonly used data codes:
+
+<br><br><table border=1>
+<tr><td colspan=2 align=center><b>Basic Quote</b></td><td colspan=2 align=center><b>Fundamentals</b></td><td colspan=2 align=center><b>Technicals</b></td><td colspan=2 align=center><b>Estimates</b></td><td colspan=2 align=center><b>Real-Time (ECN)</b></td></tr>
+<tr><td><b>Code</b></td><td><b>Description</b></td><td><b>Code</b></td><td><b>Description</b></td><td><b>Code</b></td><td><b>Description</b></td><td><b>Code</b></td><td><b>Description</b></td><td><b>Code</b></td><td><b>Description</b></td></tr>
+<tr><td align=center>s</td><td>Symbol</td><td align=center>j1</td><td>Market Capitalization</td><td align=center>a2</td><td>Average Daily Volume</td><td align=center>t8</td><td>1yr Target Price</td><td align=center>k1</td><td>Last Trade (ECN with Time)</td></tr>
+<tr><td align=center>n</td><td>Name</td><td align=center>f6</td><td>Float Shares</td><td align=center>t7</td><td>Ticker Trend</td><td align=center>e9</td><td>EPS Est. Next Quarter</td><td align=center>b3</td><td>Bid (ECN)</td></tr>
+<tr><td align=center>p</td><td>Previous Close</td><td align=center>r5</td><td>PEG Ratio</td><td align=center>j</td><td>52-week Low</td><td align=center>e7</td><td>EPS Est. Current Yr</td><td align=center>b2</td><td>Ask (ECN)</td></tr>
+<tr><td align=center>o</td><td>Open</td><td align=center>p5</td><td>Price/Sales</td><td align=center>j5</td><td>Change From 52-week Low</td><td align=center>e8</td><td>EPS Est. Next Year</td><td align=center>c6</td><td>Change (ECN)</td></tr>
+<tr><td align=center>h</td><td>High</td><td align=center>p6</td><td>Price/Book</td><td align=center>j6</td><td>Pct Chg From 52-week Low</td><td align=center>r6</td><td>Price/EPS Est. Current Yr</td><td align=center>w4</td><td>Day's Value Change (ECN)</td></tr>
+<tr><td align=center>g</td><td>Low</td><td align=center>b4</td><td>Book Value</td><td align=center>k</td><td>52-week High</td><td align=center>r7</td><td>Price/EPS Est. Next Yr</td><td align=center>c8</td><td>After Hours Change (ECN)</td></tr>
+<tr><td align=center>x</td><td>Exchange</td><td align=center>r</td><td>P/E Ratio</td><td align=center>k4</td><td>Change From 52-week High</td><td>&nbsp;</td><td>&nbsp;</td><td align=center>j3</td><td>Market Cap (ECN)</td></tr>
+<tr><td align=center>l1</td><td>Last Trade (Price Only)</td><td align=center>e</td><td>Earnings/Share</td><td align=center>k5</td><td>Pct Chg From 52-week High</td><td>&nbsp;</td><td>&nbsp;</td><td align=center>r2</td><td>P/E (ECN)</td></tr>
+<tr><td align=center>l</td><td>Last Trade (With Time)</td><td align=center>j4</td><td>EBITDA</td><td align=center>m3</td><td>50-day Moving Avg</td><td>&nbsp;</td><td>&nbsp;</td><td align=center>k2</td><td>Change &amp; Percent (ECN)</td></tr>
+<tr><td align=center>d1</td><td>Date of Last Trade</td><td align=center>s7</td><td>Short Ratio</td><td align=center>m7</td><td>Change From 50-day Moving Avg</td><td>&nbsp;</td><td>&nbsp;</td><td align=center>v7</td><td>Holdings Value (ECN)</td></tr>
+<tr><td align=center>t1</td><td>Time of Last Trade</td><td align=center>d</td><td>Dividend/Share</td><td align=center>m8</td><td>Pct Chg From 50-day Moving Avg</td><td>&nbsp;</td><td>&nbsp;</td><td align=center>g5</td><td>Holdings Gain &amp; Percent (ECN)</td></tr>
+<tr><td align=center>k3</td><td>Last Trade Size</td><td align=center>y</td><td>Dividend Yield</td><td align=center>m4</td><td>200-day Moving Avg</td><td>&nbsp;</td><td>&nbsp;</td><td align=center>g6</td><td>Holdings Gain (ECN)</td></tr>
+<tr><td align=center>c1</td><td>Change</td><td align=center>r1</td><td>Dividend Pay Date</td><td align=center>m5</td><td>Change From 200-day Moving Avg</td><td>&nbsp;</td><td>&nbsp;</td><td align=center>m2</td><td>Day's Range (ECN)</td></tr>
+<tr><td align=center>p2</td><td>Percent Change</td><td align=center>q</td><td>Ex-Dividend Date</td><td align=center>m6</td><td>Pct Chg From 200-day Moving Avg</td><td>&nbsp;</td><td>&nbsp;</td><td align=center>i5</td><td>Order Book (ECN)</td></tr>
+<tr><td align=center>c</td><td>Change &amp; Percent</td><td></td><td></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td align=center>v</td><td>Volume</td><td colspan=2 align=center><b>Option Quote Additions</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td align=center>m</td><td>Day's Range</td><td align=center><b>Code</b></td><td><b>Description</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td align=center>j</td><td>52-week Low</td><td align=center>o1</td><td>Open interest?</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td align=center>k</td><td>52-week High</td><td align=center>p3</td><td>Type of option</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td align=center>w</td><td>52-week Range</td><td align=center>e3</td><td>Expiration date</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td align=center>b</td><td>Bid</td><td align=center>s3</td><td>Strike price</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td align=center>b6</td><td>Bid Size</td><td align=center>n</td><td>Name of option</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td align=center>a</td><td>Ask</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td align=center>a5</td><td>Ask Size</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</table><br>
+
+</td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top>
+<b>serverid</b>
+</td><td valign=top>=</td><td>
+An optional parameter to specify the country id of an alternative Yahoo Quotes server.  The default is a null string, which uses the normal server.  From what I've seen on Yahoo, I believe these values can be specified:
+<br><br><table border=1>
+<tr><th align=center>Server ID</th><th>Yahoo Quotes Server For</th></tr>
+<tr><td align=center>ar</td><td>Argentina</td></tr>
+<tr><td align=center>au</td><td>Australia and New Zealand</td></tr>
+<tr><td align=center>br</td><td>Brazil</td></tr>
+<tr><td align=center>ca</td><td>Canada</td></tr>
+<tr><td align=center>cf</td><td>French Canada</td></tr>
+<tr><td align=center>chinese</td><td>Chinese</td></tr>
+<tr><td align=center>cn</td><td>China</td></tr>
+<tr><td align=center>de</td><td>Germany</td></tr>
+<tr><td align=center>es</td><td>Spain</td></tr>
+<tr><td align=center>fr</td><td>France</td></tr>
+<tr><td align=center>hk</td><td>Hong Kong</td></tr>
+<tr><td align=center>in</td><td>India</td></tr>
+<tr><td align=center>it</td><td>Italy</td></tr>
+<tr><td align=center>jp</td><td>Japan</td></tr>
+<tr><td align=center>kr</td><td>Korea</td></tr>
+<tr><td align=center>sg</td><td>Singapore</td></tr>
+<tr><td align=center>uk</td><td>UK and Ireland</td></tr>
+</table><br>
+</td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>refresh</b></td><td valign=top>=</td><td>
+An optional parameter that allows automatic refreshing of quotes via the F9 key (i.e. "recalculate").  All you need to do is pass "NOW()" as the value of this parameter to activate a refresh capability.  Basically, all it does is cause a change in parameter values, which makes the function recalculate.<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>headers</b></td><td valign=top>=</td><td>
+An optional parameter that allows column headings to be generated for the returned columns of data.<br><br></td></tr>
+
+</table>
+
+<br><u><b>Examples</b></u>
+<ul>
+<li>This would return the default data items for ticker symbol IBM:
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHGetYahooQuotes("IBM")
+
+<br><br><li>This would return updated default data items for ticker symbol IBM each time F9 was pressed:
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHGetYahooQuotes("IBM",,,NOW())
+
+<br><br><li>This would return default data items for ticker symbol IBM with columns headings on the returned data:
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHGetYahooQuotes("IBM",,,,1)
+
+<br><br><li>An step-by-step example of creating a current quotes table can be found <a href="http://finance.groups.yahoo.com/group/smf_addin/message/124">here</a>.
+
+<br><br><li>...more to come
+
+</ul>
+
+<u><b>Usage notes</b></u>
+<ul>
+
+<li>In most cases, this will need to be an array-entered formula.  To array-enter a formula in EXCEL, first highlight the range of cells where you would like the returned data to appear -- the number of rows for the range should be AT LEAST the number of ticker symbols you are requesting from the function, while the number of columns for the range should be AT LEAST the number of data items you are requesting for each ticker symbol from the function.  Next, enter your formula and then press Ctrl-Shift-Enter. 
+
+<br><br><li>...more to come
+
+</ul>
+
+
+</body>
+</html>

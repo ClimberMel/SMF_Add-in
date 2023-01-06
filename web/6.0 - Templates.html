@@ -1,0 +1,61 @@
+<html>
+<head>
+	
+<title>Stock Market Functions Add-In Templates</title>
+
+</head>
+
+<body>
+<h2>Stock Market Functions Add-In Templates</h2>
+<table width=600px><tr><td>
+
+As time goes on, I will be adding some templates and examples to the "Templates" folder of the Yahoo! Group's library.  The main purpose of these templates will be to show how the add-in might be used.  They will also provide some ranges of data that might easily be cut and pasted into a custom spreadsheet you wish to create.
+
+<br><br><u><b>Template Conventions</b></u>
+
+<table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><br>There are several standard conventions I'll try to use in the templates:
+
+<ol>
+
+<li>Input fields (e.g. a stocks Ticker symbol) will have a background of yellow.
+
+<br><br><li>If the entire template is based on a single Ticker symbol, the cell containing the Ticker symbol should be named "Ticker".  This makes it easy to copy formulas from one workbook to another.  When you copy a formula using a named range to another workbook and the new workbook contains the same named range, EXCEL will ask you if you want to change the named range reference to the field in the new workbook.
+
+<br><br><li>Most RCHGetElementNumber() functions will use a hard-coded element number.  This should also make it easier to copy cells and/or ranges from one workbook to another.
+
+<eol>
+
+</td></tr></table>
+
+
+<u><b>Update Links errors</b></u>
+<table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><br>Because EXCEL saves a hard-coded link to the location of an add-in's source code, opening these templates on another machine may cause a error with those links if you don't have the add-in stored in the recommended location (C:\Program Files\SMF Add-In).  This document will describe how to update the links to your own copy of the add-in, step by step:
+
+<ol>
+
+<li>When you first open the template, you should get an error message similar to:
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://finance.groups.yahoo.com/group/smf_addin/files/Misc/error-message-1.jpg">
+
+<br><br><li>Click on the "Update Links" option.  That will bring up an error message similar to:
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://finance.groups.yahoo.com/group/smf_addin/files/Misc/error-message-2.jpg">
+
+<br><br><li>Click on the "Edit Links..." option. That will bring up an error message similar to:
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://finance.groups.yahoo.com/group/smf_addin/files/Misc/error-message-3.jpg">
+
+<br><br><li>This error message indicates that the source file (i.e. the add-in) cannot be found.  Again, this is because the location of the add-in was hard-coded into the saved file.  At this point, you should click on the "Change Source..." option.  It will bring up a normal Windows browse dialog.  Use it to find the location of your add-in and double-click on the file when you find it.  After choosing your copy of the add-in file, you should see an hourglass temporarily, while the workbook is recalculating with the updated links to your copy of the add-in.  After that is done, you should see a message similar to this:
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://finance.groups.yahoo.com/group/smf_addin/files/Misc/error-message-4.jpg">
+
+<br><br><li>Hopefully, the "Status" will say "Source is Open," as this one does.  At this point, just click on "Close" and everything should be ready to go.  If you save the template on your machine now, you won't need to go through this process again.
+
+<eol>
+
+</td></tr></table>
+
+</td></tr></table>
+
+</body>
+</html>

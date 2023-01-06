@@ -1,0 +1,60 @@
+<html>
+<head>
+	
+<title>smfPricesByDates() -- Documentation</title>
+
+</head>
+
+<body>
+<h2>Documentation for smfPricesByDates() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Downloads adjusted closing prices of a single ticker symbol for specified dates from the Yahoo historical quotes interface.
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfPricesByDates( Ticker, date, [date,] [date,] ... )</b>
+
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Ticker</b></td><td valign=top>=</td><td>
+Ticker symbol (e.g "MMM").  <br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>date</b></td><td valign=top>=</td><td>
+A date or worksheet range containing dates for which to grab an adjusted closing price; must be an EXCEL serial date value (e.g. DATE(2006,10,15)) or a range of such date values.  Strings with valid dates are also allowed (e.g. "12/31/2008"). Non-date or invalid date values will cause "#N/A" to be returned for the adjusted closing price.<br><br></td></tr>
+
+</table>
+
+<br><u><b>Examples</b></u>
+<ul>
+
+<li>=smfPricesByDates("IBM", DATE(2007,1,1))
+
+<br><br><li>=smfPricesByDates("IBM", "1/1/2007")
+
+<br><br><li>=smfPricesByDates(A2, B$1:J$1)
+
+<br><br><li>=smfPricesByDates(A2, B$1:J$1, DATE(2007,1,1))
+
+<br><br><li>...more to come
+
+</ul>
+
+<u><b>Usage notes</b></u>
+<ul>
+
+<li>When passing more than one date for which to retrieve data, this will need to be an array-entered formula.  To array-enter a formula in EXCEL, first highlight the range of cells where you would like the returned data to appear -- the number of rows for the range should be the number of periods of data you are requesting from the function, while the number of columns for the range should be the number of data items you are requesting for each date from the function.  Next, enter your formula and then press Ctrl-Shift-Enter. 
+
+<br><br><li>If a date you passed is not a valid trading date but is within the range of historical dates available from Yahoo, you will get the adjusted closing price from the most recent trading day.
+
+<br><br><li>"#N/A" would be returned as the adjusted closing price for any date value passed that cannot be resolved -- for example, if you pass a non-date string or an empty cell, or pass a date outside of the historical range of dates available on Yahoo.
+
+<br><br><li>This function is only available in version 2.0i or later of the add-in.
+
+<br><br><li>...more to come
+
+</ul>
+
+</body>
+</html>

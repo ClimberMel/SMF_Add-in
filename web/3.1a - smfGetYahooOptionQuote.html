@@ -1,0 +1,103 @@
+<html>
+<head>
+	
+<title>smfGetYahooOptionQuote() -- Documentation</title>
+
+</head>
+
+<body>
+<h2>Documentation for smfGetYahooOptionQuote() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns a specific data item for an option from Yahoo.
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetYahooOptionQuote( Ticker, Put/Call, Expiry, StrikePrice, ItemID )</b>
+
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Ticker</b></td><td valign=top>=</td><td>
+Ticker symbol of underlying equity (e.g "MMM" or "SPY"). <br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Put/Call</b></td><td valign=top>=</td><td>
+A literal value of "Put" or "Call" to indicate the type of option data that is desired. Can be abbreviated to "P" or "C". <br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Expiry</b></td><td valign=top>=</td><td>
+The expiration date of the option for which data is to be retrieved. You can either pass:
+<ul>
+<li>The actual option expiration date if you know it (e.g. DATE(2010,6,19)).
+<li>The first of the month for the option expiration month you want (e.g. DATE(2010,6,1)).
+<li>The 30th or 31st day of the month-end quarter for the option expiration quarter you want (e.g. DATE(2010,6,30)). Note that only a few index ETFs have options that expire at the end of each quarter (e.g. "SPY" or "IWM").
+<eul>
+<br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>StrikePrice</b></td><td valign=top>=</td><td>
+The strike price of the option for which data is to be retrieved. You have several options here:<br><br>
+<table border=1>
+<tr><td>Actual Price</td><td>You can pass the actual strike price you want to use (e.g. 100).</td></tr>
+<tr><td>ITMn</td><td>You can pass a literal to indicate you want the first in-the-money option (e.g. "ITM1"), the second in-the-money option (e.g. "ITM2"), and so forth.</td></tr>
+<tr><td>OTMn</td><td>You can pass a literal to indicate you want the first out-of-the-money option (e.g. "OTM1"), the second out-of-the-money option (e.g. "OTM2"), and so forth.</td></tr>
+</table>
+<br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>ItemID</b></td><td valign=top>=</td><td>
+The itemID of the particular data item you want to retrieve for the option:<br><br>
+
+<table><tr><td valign=top>
+        <table border=1>
+        <tr><td colspan=2>Faster data items</td></tr>
+        <tr><td>&nbsp;a&nbsp;</td><td>Ask Price</td></tr>
+        <tr><td>&nbsp;b&nbsp;</td><td>Bid Price</td></tr>
+        <tr><td>&nbsp;i&nbsp;</td><td>Open Interest</td></tr>
+        <tr><td>&nbsp;l&nbsp;</td><td>Last Price</td></tr>
+        <tr><td>&nbsp;s&nbsp;</td><td>Strike Price</td></tr>
+        <tr><td>&nbsp;v&nbsp;</td><td>Volume</td></tr>
+        <tr><td>&nbsp;x&nbsp;</td><td>Expiration Date</td></tr>
+        <tr><td>&nbsp;z&nbsp;</td><td>Actual Option Symbol</td></tr>
+        </table>
+     </td><td>&nbsp;&nbsp;&nbsp;</td><td valign=top>
+        <table border=1>
+        <tr><td colspan=2>Slower data items</td></tr>
+        <tr><td>&nbsp;c&nbsp;</td><td>$ Change</td></tr>
+        <tr><td>&nbsp;g&nbsp;</td><td>Daily Low</td></tr>
+        <tr><td>&nbsp;h&nbsp;</td><td>Daily High</td></tr>
+        <tr><td>&nbsp;j&nbsp;</td><td>Contract Low</td></tr>
+        <tr><td>&nbsp;k&nbsp;</td><td>Contract High</td></tr>
+        <tr><td>&nbsp;o&nbsp;</td><td>Open Price</td></tr>
+        <tr><td>&nbsp;p&nbsp;</td><td>Previous Close</td></tr>
+        <tr><td>&nbsp;t&nbsp;</td><td>Last Trade Time</td></tr>
+        </table>
+     </td></tr></table>
+
+<p>The difference between the "Faster" and "Slower" data items is that you can retrieve all of the "Faster" items for all of the different options in the same expiration month with a single Internet access, while the "Slower" data items require a new Internet access for each individual option for which the various items are collected.</p>
+     
+</td></tr>
+
+</table>
+
+<br><u><b>Examples</b></u>
+<ul>
+
+<li>=smfGetYahooOptionQuote("SPY","C",DATE(2010,6,1),110,"b")
+
+<br><br><li>=smfGetYahooOptionQuote("SPY","C",DATE(2010,6,19),110,"b")
+
+<br><br><li>=smfGetYahooOptionQuote("SPY","C","6/19/2010",110,"b")
+
+<br><br><li>...more to come
+
+</ul>
+
+<u><b>Usage notes</b></u>
+<ul>
+
+<li>In general, you would use the smfGetOptionQuotes() function instead of this one. This is primarily intended as a "building block" function for that one.
+
+<br><br><li>...more to come
+
+</ul>
+
+</body>
+</html>

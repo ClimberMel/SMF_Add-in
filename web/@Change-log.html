@@ -1,0 +1,131 @@
+<html>
+ 
+Changes made to the add-in since the 2012-12-29 release:<br><br>
+
+<table border="1" width="800">
+
+<tr><td><b>Date</b></td>
+    <td><b>Routine</b></td>
+    <td><b>Description</b></td>
+    </tr>
+
+<tr><td valign="top">2013-01-04</td>
+    <td valign="top">smfGetMSNOptionQuote<br>
+                     smfGetOXOptionQuote<br>
+                     smfGetYahooOptionQuote<br></td>
+    <td valign="top">Remove day 1, 30, and 31 assumptions for option expiration date (because weekly options can fall on those days)
+    </td></tr>
+
+<tr><td valign="top">2013-01-06</td>
+    <td valign="top">smfGetOptionExpirations</td>
+    <td valign="top">Modified Yahoo processing to pick up expiration dates from Yahoo's API feed (a complete list)
+    </td></tr>
+
+<tr><td valign="top">2013-02-06</td>
+    <td valign="top">smfGetOptionQuotes<br>smfGetYahooOptionQuotes</td>
+    <td valign="top">Add workaround to fix the Yahoo "^VIX" / "VIX" issue
+    </td></tr>
+
+<tr><td valign="top">2013-03-02</td>
+    <td valign="top">smfGetBigChartsOptionQuote</td>
+    <td valign="top">New function to get current and historical option quotes from bigcharts.com
+    </td></tr>
+
+<tr><td valign="top">2013-03-13</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Fixed definition of element #13873 to pick up 2-word recommendations (i.e. "Strong Buy")
+    </td></tr>
+
+<tr><td valign="top">2013-03-16</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Fixed elements #13774-13776, "5-yr avg effective tax rates" from Reuters
+    </td></tr>
+
+<tr><td valign="top">2013-05-20</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Changed element #1285 (Yahoo next earnings date) to pick the date up from Yahoo's main quote page (smf-elements-2.txt)
+    </td></tr>
+
+<tr><td valign="top">2013-05-20</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Obsoleted StockCharts P&F elements #1513-#1515 because they no longer offer a text P&F chart (smf-elements-9.txt)
+    </td></tr>
+
+<tr><td valign="top">2013-06-03</td>
+    <td valign="top">smfGetOptionQuotes<br>smfGetYahooOptionQuote</td>
+    <td valign="top">Allow mini-options to be retrieved from Yahoo by appending a "7" to the end of the ticker symbol (i.e. AAPL7)
+    </td></tr>
+
+<tr><td valign="top">2013-06-19</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Changed element #13862, MSN -- Company Name, on smf-elements-1.txt
+    </td></tr>
+
+<tr><td valign="top">2013-06-28</td>
+    <td valign="top">smfGetOptionQuotes<br>smfGetYahooOptionQuote</td>
+    <td valign="top">Expanded mini-option processing to include special adjusted options as well (i.e. numeric right-side character on ticker symbol)
+    </td></tr>
+
+<tr><td valign="top">2013-07-06</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Fixed ETFScreen element definitions in file smf-element-9.txt (changed http://etfscreen.com to http://www.etfscreen.com)
+    </td></tr>
+
+<tr><td valign="top">2013-09-29</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Changed elements #253-#352, on smf-elements-1.txt, because MSN changed the sort order on a few of the 10-year summary tables.
+    </td></tr>
+
+<tr><td valign="top">2013-11-04</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Updated almost every Zacks element definition, on smf-elements-6.txt, because Zacks rearranged the content of their web pages. Also added several new elements (Beta, Next Earnings Date, etc).
+    </td></tr>
+
+<tr><td valign="top">2013-11-04</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Standardized the format of all obsolete element definitions
+    </td></tr>
+
+<tr><td valign="top">2013-11-04</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Changed all "evaluate" element defintions to regular formulas
+    </td></tr>
+
+
+<tr><td valign="top">2013-11-05</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">General updates based on review of all element definitions
+    </td></tr>
+
+<tr><td valign="top">2013-11-05</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Replaced the earnings.com earnings announcement element definitions, #1286 thru #1400, with element definitions from Zacks.
+    </td></tr>
+
+<tr><td valign="top">2013-11-06</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Reinstated obsolete elements #13931-#14057, on smf-elements-4.txt, to pull valuation ratios from static MorningStar web pages.
+    </td></tr>
+
+<tr><td valign="top">2013-11-06</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Reinstated obsolete elements #14058-#14343, on smf-elements-4.txt, to pull key ratios from static MorningStar web pages.
+    </td></tr>
+
+<tr><td valign="top">2013-11-14</td>
+    <td valign="top">RCHGetElementNumber</td>
+    <td valign="top">Update/added some MorningStar "Take" and "Profile" element definitions, #877-#891, to smf-elements-4.txt.
+    </td></tr>
+
+<tr><td valign="top">2013-mm-dd</td>
+    <td valign="top">...</td>
+    <td valign="top">...
+    </td></tr>
+
+
+</table>
+
+ 
+</html>
+
+

@@ -1,0 +1,97 @@
+<html>
+<head>
+	
+<title>smfGetOptionExpiry() -- Documentation</title>
+
+</head>
+
+<body>
+<h2>Documentation for smfGetOptionExpiry() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns the specific option expiration date for a given month and type of option.
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetOptionExpiry( [Year], [Month], [Type] )</b>
+
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Year</b></td><td valign=top>=</td><td>
+An optional parameter that indicates the year for which the expiration date is to be returned. Defaults to current year.<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Put/Call</b></td><td valign=top>=</td><td>
+An optional parameter from 1 to 12 that indicates the month for which the expiration date is to be returned. Defaults to current expiration month.<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Expiry</b></td><td valign=top>=</td><td>
+An optional parameter that indicates the type of option expiration date to be returned. Defaults to "M". The following values can be passed:<br><br>
+
+        <table border=1>
+        <tr><td>&nbsp;W&nbsp;</td><td>Next Weekly</td></tr>
+        <tr><td>&nbsp;Week&nbsp;</td><td>Next Weekly</td></tr>
+        <tr><td>&nbsp;Weekly&nbsp;</td><td>Next Weekly</td></tr>
+        <tr><td>&nbsp;W1&nbsp;</td><td>Next Weekly</td></tr>
+        <tr><td>&nbsp;W2&nbsp;</td><td>Following Weekly</td></tr>
+
+        <tr><td>&nbsp;M&nbsp;</td><td>Monthly</td></tr>
+        <tr><td>&nbsp;Month&nbsp;</td><td>Monthly</td></tr>
+        <tr><td>&nbsp;Monthly&nbsp;</td><td>Monthly</td></tr>
+
+        <tr><td>&nbsp;Q&nbsp;</td><td>Quarterly</td></tr>
+        <tr><td>&nbsp;Qtr&nbsp;</td><td>Quarterly</td></tr>
+        <tr><td>&nbsp;Quarter&nbsp;</td><td>Quarterly</td></tr>
+        <tr><td>&nbsp;Quarterly&nbsp;</td><td>Quarterly</td></tr>
+
+        </table>
+     
+</td></tr>
+
+</table>
+
+<br><u><b>Examples</b></u><br><br>
+
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<table border=1>
+<tr><td><b>Value</b></td><td><b>Formula (run on 2010-06-21)</b></td></tr>
+<tr><td>2010-06-25</td><td>=smfGetOptionExpiry(,,"W")</td></tr>
+<tr><td>2010-06-25</td><td>=smfGetOptionExpiry(,,"Week")</td></tr>
+<tr><td>2010-06-25</td><td>=smfGetOptionExpiry(,,"Weekly")</td></tr>
+<tr><td>2010-06-25</td><td>=smfGetOptionExpiry(,,"W1")</td></tr>
+<tr><td>2010-07-02</td><td>=smfGetOptionExpiry(,,"W2")</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>2010-07-17</td><td>=smfGetOptionExpiry(,,"M")</td></tr>
+<tr><td>2010-07-17</td><td>=smfGetOptionExpiry(,,"Month")</td></tr>
+<tr><td>2010-07-17</td><td>=smfGetOptionExpiry(,,"Monthly")</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>2010-06-30</td><td>=smfGetOptionExpiry(,,"Q")</td></tr>
+<tr><td>2010-06-30</td><td>=smfGetOptionExpiry(,,"Qtr")</td></tr>
+<tr><td>2010-06-30</td><td>=smfGetOptionExpiry(,,"Quarter")</td></tr>
+<tr><td>2010-06-30</td><td>=smfGetOptionExpiry(,,"Quarterly")</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>2010-08-21</td><td>=smfGetOptionExpiry(2010,8,"M")</td></tr>
+<tr><td>2010-09-18</td><td>=smfGetOptionExpiry(2010,9,"M")</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>2010-12-31</td><td>=smfGetOptionExpiry(2010,12,"Q")</td></tr>
+<tr><td>2011-03-31</td><td>=smfGetOptionExpiry(2011,3,"Q")</td></tr>
+</table>
+</td></tr>
+</table><br>
+
+<u><b>Usage notes</b></u>
+<ul>
+
+<li>The "W2" option type will typically only be valid when the following week is the option month-end, because they have been creating the new weekly options over the weekend and that is the only time two weeklies will exist at the same time.
+
+<br><br><li>The weekly and quarterly option expirations only exist for a few select ETFs, such as SPY and IWM.
+
+<br><br><li>The weekly option types will ignore the year and month that are passed.
+
+<br><br><li>...more to come
+
+</ul>
+
+</body>
+</html>
