@@ -7,7 +7,7 @@
 
 #  Output files
 #   I removed *.txt since the smf-elements are all txt files
-*.xls*
+#   I removed *.xls* since there are sample Excel files
 
 
 #  Flowchart and Word documents
@@ -22,6 +22,7 @@ test*/
 test*.py
 
 #  For now exclude image files.  I have some screenshots for VBA setting that are specific for the Add-in
+#  There is a separate images folder docs/images for the web pages
 img/
 
 # ----------------------------------------------------------------------------------------
