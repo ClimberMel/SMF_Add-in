@@ -1,0 +1,74 @@
+﻿H1 {
+  text-align:left;
+  padding: 0 10px 0 10;
+  font-size: 1000%;
+  font-weight: bold;
+  position: relative;
+    
+}
+
+H1old {
+  text-align:left;
+  Letter-spacing: px;
+  padding: 10px;
+  font-size: 1000%;
+  font-weight: bold;
+    position: relative;
+    
+}
+
+H2 {
+ font-family: 'Bookman Old Style'
+ font-size: 40px;
+  padding:20px;
+}
+
+H4 {
+ font-family: 'Bookman Old Style'
+ font-size: 12px;
+ position: relative;
+ padding:50 0 0 20px;
+}
+  
+p  {
+  text-align:left;
+  font-size:100%;
+  position: relative;
+   bottom: 100px;
+   left: 10px;
+   
+  
+}
+
+html{
+	background: url("../errors/oh-my-god!-surprised-kitten-wallpaper.jpg") no-repeat;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: '', sans-serif;
+	Color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  width: 200px;
+  background-color: transparent;
+}
+
+li a {
+	display: block;
+	background-color: #C0C0C0;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
