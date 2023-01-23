@@ -1,5 +1,5 @@
 Attribute VB_Name = "modGetElementNumber"
-Const kVersion = "2.1.2020.03.09"                   ' Version number of add-in
+Const kVersion = "2.2.2022.01.22"                   ' Version number of add-in
     
 Const kElements = 20000                             ' Number of data elements
 Dim aParms(1 To kElements) As String                ' Extraction parameters for each element
@@ -141,6 +141,8 @@ Public Function RCHGetElementNumber(ByVal pTicker As String, _
     ' 2017.07.23 -- Remove iMorningStar variable
     ' 2018.08.27 -- ERASE aData() array rather than resetting the individual items
     ' 2020.03.09 -- Replace EVALUATE() function with smfEvaluateTwice(), a fix for Microsoft changes
+    ' 2023-01-22 -- Mel Pryor (ClimberMel@gmail.com)
+    '               Changed version number to reflect updates to other modules
     '-----------------------------------------------------------------------------------------------> Version 2.0k
     ' > Example of an invocation to get The "Trend Spotter" value for IBM from the BarChart website:
     '
