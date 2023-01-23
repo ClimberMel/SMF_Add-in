@@ -15,6 +15,8 @@ Public Function smfGetCSVFile(pURL As String, _
     ' > Example of an invocation (needs to be array-entered):
     '
     '   =smfGetCSVFile("http://finviz.com/grp_export.ashx?g=industry&v=152&o=-perf52w")
+    '-----------------------------------------------------------------------------------------------> Version 2.2
+    ' 2023-01-21 -- requires module modGetYahooQuotes for RCHGetYahooQuotes
     '-----------------------------------------------------------------------------------------------------------*
     
     smfGetCSVFile = RCHGetYahooQuotes(pURL, "", pDelimiter:=pDelimiter, pDim1:=pDim1, pDim2:=pDim2)

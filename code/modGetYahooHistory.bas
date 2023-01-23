@@ -17,10 +17,16 @@ Public Function RCHGetYahooHistory(pTicker As String, _
     '-----------------------------------------------------------------------------------------------------------*
     ' User defined function to create backward compatible RCHGetYahooHistory() function
     '-----------------------------------------------------------------------------------------------------------*
-    ' 2017.05.25 -- Added for backward compatibility
+    ' 2017.05.25 -- Original code written by Randy Harmelink
+    '               Added for backward compatibility
     ' 2017.05.26 -- Check if pDim1 and pDim2 are overridden
     '-----------------------------------------------------------------------------------------------------------*
-    
+    ' 2023-01-22 -- Mel Pryor (climbermel@gmail.com)
+    ' 2023-01-22 -- Created new version of RCHGetYahooHistory funtion in modGetYahooHistory
+    '               Create routine to build URL as needed to then call RCHGetURLData
+    '               Possibly add routine to parse returned table for data as requested in pItems
+    '
+    '-----------------------------------------------------------------------------------------------------------*
     Dim sItems As String
     sItems = UCase(pItems)
     Select Case True
@@ -42,11 +48,16 @@ Public Function RCHGetYahooHistory(pTicker As String, _
        iDim2 = Application.Caller.Columns.Count
        End If
    
-    RCHGetYahooHistory = smfGetYahooHistory(pTicker, _
-                                            pStartMonth & "/" & pStartDay & "/" & pStartYear, _
-                                            pEndMonth & "/" & pEndDay & "/" & pEndYear, _
-                                            pPeriod, sItems, pNames, pResort, iDim1, iDim2)
-
+    startDate = smfDate2Unix(pStartMonth & "/" & pStartDay & "/" & pStartYear)
+    endDate = smfDate2Unix(pEndMonth & "/" & pEndDay & "/" & pEndYear)
+    
+    pURL = "https://query1.finance.yahoo.com/v7/finance/download/" & _
+            pTicker & _
+            "?period1=" & startDate & _
+            "&period2=" & endDate & _
+            "&interval=1d&events=history&includeAdjustedClose=true"
+    
+    RCHGetYahooHistory = RCHGetYahooQuotes(pURL, "")
     End Function
 
 Public Function RCHGetYahooHistory2(pTicker As String, _
