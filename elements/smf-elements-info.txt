@@ -1,0 +1,51 @@
+The add-in loads element definitions from files smf-elements-0.txt thru smf-elements-20.txt, in that order, if they exist. I'd suggest creating the currently non-existing smf-elements-20.txt file for your own element definitions. Otherwise, if you put them into an existing file, they would get wiped out if you need to replace the file with a new update from me. The #20 file will also be loaded last, so you can override and replace other element definitions by just reusing the element number.
+
+Files currently used by the add-in for existing element definitions:
+
+   smf-elements-0.txt = Calculated data elements
+   smf-elements-1.txt = MSN data elements
+   smf-elements-2.txt = Yahoo data elements
+   smf-elements-3.txt = Google data elements
+   smf-elements-4.txt = Morningstar data elements
+   smf-elements-5.txt = Reuters data elements
+   smf-elements-6.txt = Zacks data elements
+   smf-elements-7.txt = AdvFN data elements
+   smf-elements-8.txt = Earnings.com data elements
+   smf-elements-9.txt = Other misc data elements
+
+   smf-elements-20.txt = Custom element definitions to load for each individual
+   smf-elements-21.txt = Custom default settings for each individual
+   smf-elements-22.txt = Constant definitions to be used for element definitions (to get away from 255-byte limit of Eval() function
+
+Original method of definining an element (basically parameters of the RCHGetTableCell function):
+
+   #;source;element;url;cells;find1;find2;find3;find4;rows;end;look;type
+
+New method of defining an element (a much simpler and more flexible version):
+
+   #;source;name;formula
+
+where:
+
+   "#"       is the index for all element definitions. It can be anything from 1 to 20000.
+
+   "source"  can be whatever you want. I try to use a unique group name for all elements coming from the same web page. 
+             It is informational only, and not critical to anything.
+
+   "name"    is the name of the element, and can be whatever you want. It is informational only, and not critical to anything.
+
+   "formula" can be the add-in formula you use in a worksheet cell, except that five tildas (i.e. "~~~~~") should be 
+             where you want the "Ticker" parameter from the RCHGetElementNumber() formula to be placed.
+
+For example, suppose I had this formula retrieving the 20-day volume for ticker MMM from website stockscores.com:
+
+   =RCHGetTableCell("http://www.stockscores.com/quickreport.asp?ticker=MMM",1,"20 Day Avg Vol")
+
+I could define an element number by adding an element number, the name of the source, the name of the element, and then the formula (changing the ticker symbol to "~~~~~"):
+
+   785;StockScores;20 Day Avg Vol;=RCHGetTableCell("http://www.stockscores.com/quickreport.asp?ticker=~~~~~",1,"20 Day Avg Vol")
+
+Once loaded, this formula would be the equivalent of the original formula:
+
+   =RCHGetElementNumber("MMM",785)
+

@@ -1,0 +1,732 @@
+553;YahooAE;Consensus EPS Trend -- Date -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>EPS Trend;>; ; ;0;0;0;0
+554;YahooAE;Consensus EPS Trend -- Date -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>EPS Trend;>; ; ;0;0;0;0
+555;YahooAE;Consensus EPS Trend -- Date -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>EPS Trend;>; ; ;0;0;0;0
+556;YahooAE;Consensus EPS Trend -- Date -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>EPS Trend;>; ; ;0;0;0;0
+557;YahooAE;Consensus EPS Trend -- Current Estimate -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>EPS Trend;CURRENT ESTIMATE; ; ;0;0;0;0
+558;YahooAE;Consensus EPS Trend -- Current Estimate -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>EPS Trend;CURRENT ESTIMATE; ; ;0;0;0;0
+559;YahooAE;Consensus EPS Trend -- Current Estimate -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>EPS Trend;CURRENT ESTIMATE; ; ;0;0;0;0
+560;YahooAE;Consensus EPS Trend -- Current Estimate -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>EPS Trend;CURRENT ESTIMATE; ; ;0;0;0;0
+561;YahooAE;Consensus EPS Trend --  7 Days Ago -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>EPS Trend;7 DAYS AGO; ; ;0;0;0;0
+562;YahooAE;Consensus EPS Trend --  7 Days Ago -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>EPS Trend;7 DAYS AGO; ; ;0;0;0;0
+563;YahooAE;Consensus EPS Trend --  7 Days Ago -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>EPS Trend;7 DAYS AGO; ; ;0;0;0;0
+564;YahooAE;Consensus EPS Trend --  7 Days Ago -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>EPS Trend;7 DAYS AGO; ; ;0;0;0;0
+565;YahooAE;Consensus EPS Trend -- 30 Days Ago -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>EPS Trend;30 DAYS AGO; ; ;0;0;0;0
+566;YahooAE;Consensus EPS Trend -- 30 Days Ago -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>EPS Trend;30 DAYS AGO; ; ;0;0;0;0
+567;YahooAE;Consensus EPS Trend -- 30 Days Ago -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>EPS Trend;30 DAYS AGO; ; ;0;0;0;0
+568;YahooAE;Consensus EPS Trend -- 30 Days Ago -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>EPS Trend;30 DAYS AGO; ; ;0;0;0;0
+569;YahooAE;Consensus EPS Trend -- 60 Days Ago -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>EPS Trend;60 DAYS AGO; ; ;0;0;0;0
+570;YahooAE;Consensus EPS Trend -- 60 Days Ago -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>EPS Trend;60 DAYS AGO; ; ;0;0;0;0
+571;YahooAE;Consensus EPS Trend -- 60 Days Ago -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>EPS Trend;60 DAYS AGO; ; ;0;0;0;0
+572;YahooAE;Consensus EPS Trend -- 60 Days Ago -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>EPS Trend;60 DAYS AGO; ; ;0;0;0;0
+573;YahooAE;Consensus EPS Trend -- 90 Days Ago -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>EPS Trend;90 DAYS AGO; ; ;0;0;0;0
+574;YahooAE;Consensus EPS Trend -- 90 Days Ago -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>EPS Trend;90 DAYS AGO; ; ;0;0;0;0
+575;YahooAE;Consensus EPS Trend -- 90 Days Ago -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>EPS Trend;90 DAYS AGO; ; ;0;0;0;0
+576;YahooAE;Consensus EPS Trend -- 90 Days Ago -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>EPS Trend;90 DAYS AGO; ; ;0;0;0;0
+577;YahooAE;Earnings Estimates -- Date -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EARNINGS EST;>; ; ;0;0;0;0
+578;YahooAE;Earnings Estimates -- Date -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EARNINGS EST;>; ; ;0;0;0;0
+579;YahooAE;Earnings Estimates -- Date -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;EARNINGS EST;>; ; ;0;0;0;0
+580;YahooAE;Earnings Estimates -- Date -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;EARNINGS EST;>; ; ;0;0;0;0
+581;YahooAE;Earnings Estimates -- Number of Analysts -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EARNINGS EST;NO. OF ANALYSTS; ; ;0;0;0;0
+582;YahooAE;Earnings Estimates -- Number of Analysts -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EARNINGS EST;NO. OF ANALYSTS; ; ;0;0;0;0
+583;YahooAE;Earnings Estimates -- Number of Analysts -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;EARNINGS EST;NO. OF ANALYSTS; ; ;0;0;0;0
+584;YahooAE;Earnings Estimates -- Number of Analysts -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;EARNINGS EST;NO. OF ANALYSTS; ; ;0;0;0;0
+585;YahooAE;Earnings Estimates -- Low Estimate -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EARNINGS EST;LOW ESTIMATE; ; ;0;0;0;0
+586;YahooAE;Earnings Estimates -- Low Estimate -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EARNINGS EST;LOW ESTIMATE; ; ;0;0;0;0
+587;YahooAE;Earnings Estimates -- Low Estimate -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;EARNINGS EST;LOW ESTIMATE; ; ;0;0;0;0
+588;YahooAE;Earnings Estimates -- Low Estimate -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;EARNINGS EST;LOW ESTIMATE; ; ;0;0;0;0
+589;YahooAE;Earnings Estimates -- High Estimate -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EARNINGS EST;HIGH ESTIMATE; ; ;0;0;0;0
+590;YahooAE;Earnings Estimates -- High Estimate -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EARNINGS EST;HIGH ESTIMATE; ; ;0;0;0;0
+591;YahooAE;Earnings Estimates -- High Estimate -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;EARNINGS EST;HIGH ESTIMATE; ; ;0;0;0;0
+592;YahooAE;Earnings Estimates -- High Estimate -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;EARNINGS EST;HIGH ESTIMATE; ; ;0;0;0;0
+593;YahooAE;Earnings Estimates -- Average Estimate -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EARNINGS EST;AVG. ESTIMATE; ; ;0;0;0;0
+594;YahooAE;Earnings Estimates -- Average Estimate -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EARNINGS EST;AVG. ESTIMATE; ; ;0;0;0;0
+595;YahooAE;Earnings Estimates -- Average Estimate -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;EARNINGS EST;AVG. ESTIMATE; ; ;0;0;0;0
+596;YahooAE;Earnings Estimates -- Average Estimate -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;EARNINGS EST;AVG. ESTIMATE; ; ;0;0;0;0
+597;YahooAE;Earnings Estimates -- Year Ago EPS -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EARNINGS EST;YEAR AGO EPS; ; ;0;0;0;0
+598;YahooAE;Earnings Estimates -- Year Ago EPS -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EARNINGS EST;YEAR AGO EPS; ; ;0;0;0;0
+599;YahooAE;Earnings Estimates -- Year Ago EPS -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;EARNINGS EST;YEAR AGO EPS; ; ;0;0;0;0
+600;YahooAE;Earnings Estimates -- Year Ago EPS -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;EARNINGS EST;YEAR AGO EPS; ; ;0;0;0;0
+
+601;YahooAE;Earnings Growth Rates -- Current Quarter -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",1,">Growth Estimates","Current Qtr",,,1)
+602;YahooAE;Earnings Growth Rates -- Current Quarter -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",2,">Growth Estimates","Current Qtr",,,1)
+603;YahooAE;Earnings Growth Rates -- Current Quarter -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",3,">Growth Estimates","Current Qtr",,,1)
+604;YahooAE;Earnings Growth Rates -- Current Quarter -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",4,">Growth Estimates","Current Qtr",,,1)
+605;YahooAE;Earnings Growth Rates -- Next Quarter -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",1,">Growth Estimates","Next Qtr",,,1)
+606;YahooAE;Earnings Growth Rates -- Next Quarter -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",2,">Growth Estimates","Next Qtr",,,1)
+607;YahooAE;Earnings Growth Rates -- Next Quarter -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",3,">Growth Estimates","Next Qtr",,,1)
+608;YahooAE;Earnings Growth Rates -- Next Quarter -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",4,">Growth Estimates","Next Qtr",,,1)
+609;YahooAE;Earnings Growth Rates -- Current Year -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",1,">Growth Estimates","Current Year",,,1)
+610;YahooAE;Earnings Growth Rates -- Current Year -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",2,">Growth Estimates","Current Year",,,1)
+611;YahooAE;Earnings Growth Rates -- Current Year -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",3,">Growth Estimates","Current Year",,,1)
+612;YahooAE;Earnings Growth Rates -- Current Year -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",4,">Growth Estimates","Current Year",,,1)
+613;YahooAE;Earnings Growth Rates -- Next Year -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",1,">Growth Estimates","Next Year",,,1)
+614;YahooAE;Earnings Growth Rates -- Next Year -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",2,">Growth Estimates","Next Year",,,1)
+615;YahooAE;Earnings Growth Rates -- Next Year -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",3,">Growth Estimates","Next Year",,,1)
+616;YahooAE;Earnings Growth Rates -- Next Year -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",4,">Growth Estimates","Next Year",,,1)
+617;YahooAE;Earnings Growth Rates -- Past 5 Years -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",1,">Growth Estimates","Past 5 Years",,,1)
+618;YahooAE;Earnings Growth Rates -- Past 5 Years -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",2,">Growth Estimates","Past 5 Years",,,1)
+619;YahooAE;Earnings Growth Rates -- Past 5 Years -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",3,">Growth Estimates","Past 5 Years",,,1)
+620;YahooAE;Earnings Growth Rates -- Past 5 Years -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",4,">Growth Estimates","Past 5 Years",,,1)
+621;YahooAE;Earnings Growth Rates -- Next 5 Years -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",1,">Growth Estimates","Next 5 Years",,,1)
+622;YahooAE;Earnings Growth Rates -- Next 5 Years -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",2,">Growth Estimates","Next 5 Years",,,1)
+623;YahooAE;Earnings Growth Rates -- Next 5 Years -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",3,">Growth Estimates","Next 5 Years",,,1)
+624;YahooAE;Earnings Growth Rates -- Next 5 Years -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",4,">Growth Estimates","Next 5 Years",,,1)
+
+625;YahooAE;Earnings Growth Rates -- Price/Earnings -- Company;="Obsolete"
+626;YahooAE;Earnings Growth Rates -- Price/Earnings -- Industry;="Obsolete"
+627;YahooAE;Earnings Growth Rates -- Price/Earnings -- Sector;="Obsolete";0;0;0;0
+628;YahooAE;Earnings Growth Rates -- Price/Earnings -- S&P 500;="Obsolete"
+629;YahooAE;Earnings Growth Rates -- PEG Ratio -- Company;="Obsolete"
+630;YahooAE;Earnings Growth Rates -- PEG Ratio -- Industry;="Obsolete"
+631;YahooAE;Earnings Growth Rates -- PEG Ratio -- Sector;="Obsolete"
+632;YahooAE;Earnings Growth Rates -- PEG Ratio -- S&P 500;="Obsolete"
+633;YahooAE;Earnings Surprise -- Date -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EARNINGS HISTORY;>; ; ;0;0;0;0
+634;YahooAE;Earnings Surprise -- Date -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EARNINGS HISTORY;>; ; ;0;0;0;0
+635;YahooAE;Earnings Surprise -- Date -- FQ3;https://finance.yahoo.com/q/ae?s=~~~~~;3;EARNINGS HISTORY;>; ; ;0;0;0;0
+636;YahooAE;Earnings Surprise -- Date -- FQ4;https://finance.yahoo.com/q/ae?s=~~~~~;4;EARNINGS HISTORY;>; ; ;0;0;0;0
+637;YahooAE;Earnings Surprise -- EPS Estimate -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EARNINGS HISTORY;EPS EST; ; ;0;0;0;0
+638;YahooAE;Earnings Surprise -- EPS Estimate -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EARNINGS HISTORY;EPS EST; ; ;0;0;0;0
+639;YahooAE;Earnings Surprise -- EPS Estimate -- FQ3;https://finance.yahoo.com/q/ae?s=~~~~~;3;EARNINGS HISTORY;EPS EST; ; ;0;0;0;0
+640;YahooAE;Earnings Surprise -- EPS Estimate -- FQ4;https://finance.yahoo.com/q/ae?s=~~~~~;4;EARNINGS HISTORY;EPS EST; ; ;0;0;0;0
+641;YahooAE;Earnings Surprise -- EPS Actual -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EARNINGS HISTORY;EPS ACTUAL; ; ;0;0;0;0
+642;YahooAE;Earnings Surprise -- EPS Actual -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EARNINGS HISTORY;EPS ACTUAL; ; ;0;0;0;0
+643;YahooAE;Earnings Surprise -- EPS Actual -- FQ3;https://finance.yahoo.com/q/ae?s=~~~~~;3;EARNINGS HISTORY;EPS ACTUAL; ; ;0;0;0;0
+644;YahooAE;Earnings Surprise -- EPS Actual -- FQ4;https://finance.yahoo.com/q/ae?s=~~~~~;4;EARNINGS HISTORY;EPS ACTUAL; ; ;0;0;0;0
+645;YahooAE;Earnings Surprise -- Difference -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EARNINGS HISTORY;DIFFERENCE; ; ;0;0;0;0
+646;YahooAE;Earnings Surprise -- Difference -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EARNINGS HISTORY;DIFFERENCE; ; ;0;0;0;0
+647;YahooAE;Earnings Surprise -- Difference -- FQ3;https://finance.yahoo.com/q/ae?s=~~~~~;3;EARNINGS HISTORY;DIFFERENCE; ; ;0;0;0;0
+648;YahooAE;Earnings Surprise -- Difference -- FQ4;https://finance.yahoo.com/q/ae?s=~~~~~;4;EARNINGS HISTORY;DIFFERENCE; ; ;0;0;0;0
+649;YahooAE;Earnings Surprise -- Surprise % -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EARNINGS HISTORY;SURPRISE %; ; ;0;0;0;0
+650;YahooAE;Earnings Surprise -- Surprise % -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EARNINGS HISTORY;SURPRISE %; ; ;0;0;0;0
+651;YahooAE;Earnings Surprise -- Surprise % -- FQ3;https://finance.yahoo.com/q/ae?s=~~~~~;3;EARNINGS HISTORY;SURPRISE %; ; ;0;0;0;0
+652;YahooAE;Earnings Surprise -- Surprise % -- FQ4;https://finance.yahoo.com/q/ae?s=~~~~~;4;EARNINGS HISTORY;SURPRISE %; ; ;0;0;0;0
+653;YahooAE;EPS Revisions -- Date -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EPS REVISIONS;>; ; ;0;0;0;0
+654;YahooAE;EPS Revisions -- Date -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EPS REVISIONS;>; ; ;0;0;0;0
+655;YahooAE;EPS Revisions -- Date -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;EPS REVISIONS;>; ; ;0;0;0;0
+656;YahooAE;EPS Revisions -- Date -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;EPS REVISIONS;>; ; ;0;0;0;0
+657;YahooAE;EPS Revisions -- Up Last 7 Days -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EPS REVISIONS;UP LAST 7 DAYS; ; ;0;0;0;0
+658;YahooAE;EPS Revisions -- Up Last 7 Days -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EPS REVISIONS;UP LAST 7 DAYS; ; ;0;0;0;0
+659;YahooAE;EPS Revisions -- Up Last 7 Days -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;EPS REVISIONS;UP LAST 7 DAYS; ; ;0;0;0;0
+660;YahooAE;EPS Revisions -- Up Last 7 Days -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;EPS REVISIONS;UP LAST 7 DAYS; ; ;0;0;0;0
+661;YahooAE;EPS Revisions -- Up Last 30 Days -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EPS REVISIONS;UP LAST 30 DAYS; ; ;0;0;0;0
+662;YahooAE;EPS Revisions -- Up Last 30 Days -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EPS REVISIONS;UP LAST 30 DAYS; ; ;0;0;0;0
+663;YahooAE;EPS Revisions -- Up Last 30 Days -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;EPS REVISIONS;UP LAST 30 DAYS; ; ;0;0;0;0
+664;YahooAE;EPS Revisions -- Up Last 30 Days -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;EPS REVISIONS;UP LAST 30 DAYS; ; ;0;0;0;0
+665;YahooAE;EPS Revisions -- Down Last 30 Days -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;EPS REVISIONS;DOWN LAST 30 DAYS; ; ;0;0;0;0
+666;YahooAE;EPS Revisions -- Down Last 30 Days -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;EPS REVISIONS;DOWN LAST 30 DAYS; ; ;0;0;0;0
+667;YahooAE;EPS Revisions -- Down Last 30 Days -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;EPS REVISIONS;DOWN LAST 30 DAYS; ; ;0;0;0;0
+668;YahooAE;EPS Revisions -- Down Last 30 Days -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;EPS REVISIONS;DOWN LAST 30 DAYS; ; ;0;0;0;0
+669;YahooAE;EPS Revisions -- Down Last 90 Days -- FQ1;="Obsolete"
+670;YahooAE;EPS Revisions -- Down Last 90 Days -- FQ2;="Obsolete"
+671;YahooAE;EPS Revisions -- Down Last 90 Days -- FY1;="Obsolete"
+672;YahooAE;EPS Revisions -- Down Last 90 Days -- FY2;="Obsolete"
+673;YahooAE;Revenue Estimates -- Date -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>REVENUE EST;>; ; ;0;0;0;0
+674;YahooAE;Revenue Estimates -- Date -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>REVENUE EST;>; ; ;0;0;0;0
+675;YahooAE;Revenue Estimates -- Date -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>REVENUE EST;>; ; ;0;0;0;0
+676;YahooAE;Revenue Estimates -- Date -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>REVENUE EST;>; ; ;0;0;0;0
+677;YahooAE;Revenue Estimates -- Number of Analysts -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>REVENUE EST;NO. OF ANALYSTS; ; ;0;0;0;0
+678;YahooAE;Revenue Estimates -- Number of Analysts -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>REVENUE EST;NO. OF ANALYSTS; ; ;0;0;0;0
+679;YahooAE;Revenue Estimates -- Number of Analysts -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>REVENUE EST;NO. OF ANALYSTS; ; ;0;0;0;0
+680;YahooAE;Revenue Estimates -- Number of Analysts -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>REVENUE EST;NO. OF ANALYSTS; ; ;0;0;0;0
+681;YahooAE;Revenue Estimates -- Low Estimate -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>REVENUE EST;LOW ESTIMATE; ; ;0;0;0;0
+682;YahooAE;Revenue Estimates -- Low Estimate -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>REVENUE EST;LOW ESTIMATE; ; ;0;0;0;0
+683;YahooAE;Revenue Estimates -- Low Estimate -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>REVENUE EST;LOW ESTIMATE; ; ;0;0;0;0
+684;YahooAE;Revenue Estimates -- Low Estimate -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>REVENUE EST;LOW ESTIMATE; ; ;0;0;0;0
+685;YahooAE;Revenue Estimates -- High Estimate -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>REVENUE EST;HIGH ESTIMATE; ; ;0;0;0;0
+686;YahooAE;Revenue Estimates -- High Estimate -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>REVENUE EST;HIGH ESTIMATE; ; ;0;0;0;0
+687;YahooAE;Revenue Estimates -- High Estimate -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>REVENUE EST;HIGH ESTIMATE; ; ;0;0;0;0
+688;YahooAE;Revenue Estimates -- High Estimate -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>REVENUE EST;HIGH ESTIMATE; ; ;0;0;0;0
+689;YahooAE;Revenue Estimates -- Average Estimate -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>REVENUE EST;AVG. ESTIMATE; ; ;0;0;0;0
+690;YahooAE;Revenue Estimates -- Average Estimate -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>REVENUE EST;AVG. ESTIMATE; ; ;0;0;0;0
+691;YahooAE;Revenue Estimates -- Average Estimate -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>REVENUE EST;AVG. ESTIMATE; ; ;0;0;0;0
+692;YahooAE;Revenue Estimates -- Average Estimate -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>REVENUE EST;AVG. ESTIMATE; ; ;0;0;0;0
+693;YahooAE;Revenue Estimates -- Year Ago Sales -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>REVENUE EST;YEAR AGO SALES; ; ;0;0;0;0
+694;YahooAE;Revenue Estimates -- Year Ago Sales -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>REVENUE EST;YEAR AGO SALES; ; ;0;0;0;0
+695;YahooAE;Revenue Estimates -- Year Ago Sales -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>REVENUE EST;YEAR AGO SALES; ; ;0;0;0;0
+696;YahooAE;Revenue Estimates -- Year Ago Sales -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>REVENUE EST;YEAR AGO SALES; ; ;0;0;0;0
+697;YahooAE;Revenue Estimates -- Sales Growth -- FQ1;https://finance.yahoo.com/q/ae?s=~~~~~;1;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;0
+698;YahooAE;Revenue Estimates -- Sales Growth -- FQ2;https://finance.yahoo.com/q/ae?s=~~~~~;2;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;0
+699;YahooAE;Revenue Estimates -- Sales Growth -- FY1;https://finance.yahoo.com/q/ae?s=~~~~~;3;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;0
+700;YahooAE;Revenue Estimates -- Sales Growth -- FY2;https://finance.yahoo.com/q/ae?s=~~~~~;4;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;0
+
+726;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",1,">Down Last 7 Days",,,,1)
+727;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",2,">Down Last 7 Days",,,,1)
+728;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",3,">Down Last 7 Days",,,,1)
+729;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis","td",4,">Down Last 7 Days",,,,1)
+
+938;YahooKS;Date of 52-Week High;="Obsolete"
+939;YahooKS;Date of 52-Week Low;="Obsolete"
+940;YahooKS;Last Split Date;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;LAST SPLIT DATE; ; ; ;0;0;0;0
+941;YahooKS;Market Cap;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/key-statistics","td",1,">Market Cap",,,,1)
+942;YahooKS;Enterprise Value;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;VALUATION MEASURES;ENTERPRISE VALUE; ; ;0;0;0;0
+943;YahooKS;Trailing P/E;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;VALUATION MEASURES;TRAILING P/E; ; ;0;0;0;0
+944;YahooKS;Forward P/E;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;VALUATION MEASURES;FORWARD P/E; ; ;0;0;0;0
+945;YahooKS;Forward PEG Ratio;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;VALUATION MEASURES;PEG RATIO; ; ;0;0;0;0
+946;YahooKS;Price/Sales;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;VALUATION MEASURES;PRICE/SALES; ; ;0;0;0;0
+947;YahooKS;Price/Book;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/key-statistics","td",1,">Price/Book",,,,1)
+948;YahooKS;Enterprise Value/Revenue;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;VALUATION MEASURES;ENTERPRISE VALUE/REVENUE; ; ;0;0;0;0
+949;YahooKS;Enterprise Value/EBITDA;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;VALUATION MEASURES;ENTERPRISE VALUE/EBITDA; ; ;0;0;0;0
+950;YahooKS;Fiscal Year Ends;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;FISCAL YEAR ENDS; ; ;0;0;0;0
+951;YahooKS;Most Recent Quarter;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;MOST RECENT QUARTER; ; ;0;0;0;0
+952;YahooKS;Profit Margin;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;PROFIT MARGIN; ; ;0;0;0;0
+953;YahooKS;Operating Margin;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;OPERATING MARGIN; ; ;0;0;0;0
+954;YahooKS;Return on Assets;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;RETURN ON ASSETS; ; ;0;0;0;0
+955;YahooKS;Return on Equity;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;RETURN ON EQUITY; ; ;0;0;0;0
+956;YahooKS;Revenue;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;REVENUE; ; ;0;0;0;0
+957;YahooKS;Revenue Per Share;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;REVENUE PER SHARE; ; ;0;0;0;0
+958;YahooKS;Quarterly Revenue Growth;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;QUARTERLY REVENUE GROWTH; ; ;0;0;0;0
+959;YahooKS;Gross Profit;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;GROSS PROFIT; ; ;0;0;0;0
+960;YahooKS;EBITDA;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;EBITDA; ; ;0;0;0;0
+961;YahooKS;Net Income Available to Common;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;NET INCOME AVI TO COMMON; ; ;0;0;0;0
+962;YahooKS;Diluted EPS;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;DILUTED EPS; ; ;0;0;0;0
+963;YahooKS;Quarterly Earnings Growth;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;QUARTERLY EARNINGS GROWTH; ; ;0;0;0;0
+964;YahooKS;Total Cash;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;TOTAL CASH; ; ;0;0;0;0
+965;YahooKS;Total Cash Per Share;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;TOTAL CASH PER SHARE; ; ;0;0;0;0
+966;YahooKS;Total Debt;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;TOTAL DEBT; ; ;0;0;0;0
+967;YahooKS;Total Debt/Equity;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;TOTAL DEBT/EQUITY; ; ;0;0;0;0
+968;YahooKS;Current Ratio;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;CURRENT RATIO; ; ;0;0;0;0
+969;YahooKS;Book Value Per Share;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;BOOK VALUE PER SHARE; ; ;0;0;0;0
+970;YahooKS;Operating Cash Flow;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;OPERATING CASH FLOW; ; ;0;0;0;0
+971;YahooKS;Levered Free Cash Flow;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;LEVERED FREE CASH FLOW; ; ;0;0;0;0
+972;YahooKS;Beta;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;BETA; ; ;0;0;0;0
+973;YahooKS;52-Week Change;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;52-WEEK CHANGE; ; ;0;0;0;0
+974;YahooKS;S&P500 52-Week Change;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;S&P500 52-WEEK CHANGE; ; ;0;0;0;0
+975;YahooKS;52-Week High;=RCHGetTableCell("https://finance.yahoo.com/quote/~~~~~/key-statistics",1,">52 week high")
+976;YahooKS;52-Week Low;=RCHGetTableCell("https://finance.yahoo.com/quote/~~~~~/key-statistics",1,">52 week low")
+977;YahooKS;50-Day Moving Average;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;50-DAY MOVING AVERAGE; ; ;0;0;0;0
+978;YahooKS;200-Day Moving Average;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;200-DAY MOVING AVERAGE; ; ;0;0;0;0
+979;YahooKS;Average Volume (3 month);https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;AVG VOL (3 MONTH); ; ;0;0;0;0
+980;YahooKS;Average Volume (10 day);https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;AVG VOL (10 DAY); ; ;0;0;0;0
+981;YahooKS;Shares Outstanding;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;SHARES OUTSTANDING; ; ;0;0;0;0
+982;YahooKS;Float;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;>FLOAT; ; ;0;0;0;0
+983;YahooKS;% Held by Insiders;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;% HELD BY INSIDERS; ; ;0;0;0;0
+984;YahooKS;% Held by Institutions;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;% HELD BY INSTITUTIONS; ; ;0;0;0;0
+985;YahooKS;Shares Short -- Current;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;SHARES SHORT; ; ;0;0;0;0
+986;YahooKS;Short Ratio;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;SHORT RATIO; ; ;0;0;0;0
+987;YahooKS;Short % of Float;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;SHORT % OF FLOAT; ; ;0;0;0;0
+988;YahooKS;Shares Short -- Prior;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;SHARES SHORT (PRIOR MONTH; ; ;0;0;0;0
+989;YahooKS;Dividend;https://finance.yahoo.com/quote/~~~~~/key-statistics;2;Trading Information;FORWARD ANNUAL DIVIDEND RATE; ; ;2;</table;0;0
+990;YahooKS;Dividend Yield;https://finance.yahoo.com/quote/~~~~~/key-statistics;2;Trading Information;FORWARD ANNUAL DIVIDEND YIELD; ; ;2;</table;0;0
+991;YahooKS;Dividend Date;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;DIVIDEND DATE; ; ;0;0;0;0
+992;YahooKS;Ex-Dividend Date;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;EX-DIVIDEND DATE; ; ;0;0;0;0
+993;YahooKS;Last Split Factor;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;LAST SPLIT FACTOR; ; ;0;0;0;0
+1285;YahooAE;Next Earnings Date;=RCHGetTableCell("https://finance.yahoo.com/q?s=~~~~~",1,"Earnings Date")
+1552;YahooQBS;Quarterly Balance Sheet -- Date -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>; ; ;0;0;0;0
+1553;YahooQBS;Quarterly Balance Sheet -- Date -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>; ; ;0;0;0;0
+1554;YahooQBS;Quarterly Balance Sheet -- Date -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>; ; ;0;0;0;0
+1555;YahooQBS;Quarterly Balance Sheet -- Date -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>; ; ;0;0;0;0
+1556;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;0
+1557;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;0
+1558;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;0
+1559;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;0
+1560;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;0
+1561;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;0
+1562;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;0
+1563;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;0
+1564;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;0
+1565;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;0
+1566;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;0
+1567;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;0
+1568;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;0
+1569;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;0
+1570;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;0
+1571;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;0
+1572;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;0
+1573;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;0
+1574;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;0
+1575;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;0
+1576;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;0
+1577;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;0
+1578;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;0
+1579;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;0
+1580;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;0
+1581;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;0
+1582;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;0
+1583;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;0
+1584;YahooQIS;Quarterly Income Statement -- Date -- FQ1;https://finance.yahoo.com/q/is?s=~~~~~;1;PERIOD ENDING;>; ; ;0;0;0;0
+1585;YahooQIS;Quarterly Income Statement -- Date -- FQ2;https://finance.yahoo.com/q/is?s=~~~~~;2;PERIOD ENDING;>; ; ;0;0;0;0
+1586;YahooQIS;Quarterly Income Statement -- Date -- FQ3;https://finance.yahoo.com/q/is?s=~~~~~;3;PERIOD ENDING;>; ; ;0;0;0;0
+1587;YahooQIS;Quarterly Income Statement -- Date -- FQ4;https://finance.yahoo.com/q/is?s=~~~~~;4;PERIOD ENDING;>; ; ;0;0;0;0
+1588;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ1;https://finance.yahoo.com/q/is?s=~~~~~;1;PERIOD ENDING;EARNINGS BEFORE INTEREST AND TAXES; ; ;0;0;0;0
+1589;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ2;https://finance.yahoo.com/q/is?s=~~~~~;2;PERIOD ENDING;EARNINGS BEFORE INTEREST AND TAXES; ; ;0;0;0;0
+1590;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ3;https://finance.yahoo.com/q/is?s=~~~~~;3;PERIOD ENDING;EARNINGS BEFORE INTEREST AND TAXES; ; ;0;0;0;0
+1591;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ4;https://finance.yahoo.com/q/is?s=~~~~~;4;PERIOD ENDING;EARNINGS BEFORE INTEREST AND TAXES; ; ;0;0;0;0
+
+4669;YahooPro;Fund Profile - Lead Manager;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.managementInfo.managerName")
+4670;YahooPro;Fund Profile - Management Information;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.managementInfo.managerBio")
+
+4924;YahooKS;Forward Annual Dividend Rate;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;FORWARD ANNUAL DIVIDEND RATE; ; ;0;0;0;0
+4925;YahooKS;Forward Annual Dividend Yield;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;FORWARD ANNUAL DIVIDEND YIELD; ; ;0;0;0;0
+4926;YahooKS;Trailing Annual Dividend Rate;https://finance.yahoo.com/quote/~~~~~/key-statistics;2;Trading Information;FORWARD ANNUAL DIVIDEND RATE; ; ;2;</table;0;0
+4927;YahooKS;Trailing Annual Dividend Yield;https://finance.yahoo.com/quote/~~~~~/key-statistics;2;Trading Information;FORWARD ANNUAL DIVIDEND YIELD; ; ;2;</table;0;0
+4928;YahooKS;5 Year Average Dividend Yield;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;5 YEAR AVERAGE DIVIDEND YIELD; ; ;0;0;0;0
+4929;YahooKS;Payout Ratio;https://finance.yahoo.com/quote/~~~~~/key-statistics;1;Trading Information;PAYOUT RATIO; ; ;0;0;0;0
+
+4930;YahooPer;Fund Performance -- Morningstar Return Rating;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.morningStarReturnRating.raw")
+4931;YahooPer;Fund Performance -- Year to Date Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.ytdReturnPct.raw")
+4932;YahooPer;Fund Performance -- 5-Year Average Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.fiveYrAvgReturnPct.raw")
+4933;YahooPer;Fund Performance -- Number of Years Up;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.numYearsUp.raw")
+4934;YahooPer;Fund Performance -- Number of Years Down;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.numYearsDown.raw")
+4935;YahooPer;Fund Performance -- Best 1-Yr Total Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.bestOneYrTotalReturn.raw")
+4936;YahooPer;Fund Performance -- Worst 1-Yr Total Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.worstOneYrTotalReturn.raw")
+4937;YahooPer;Fund Performance -- Best 3-Yr Total Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.bestThreeYrTotalReturn.raw")
+4938;YahooPer;Fund Performance -- Worst 3-Yr Total Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.worstThreeYrTotalReturn.raw")
+4939;YahooPer;Fund Performance -- 1-Year Load Adjusted Returns;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.loadAdjustedReturns.oneYear.raw")
+4940;YahooPer;Fund Performance -- 3-Year Load Adjusted Returns;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.loadAdjustedReturns.threeYear.raw")
+4941;YahooPer;Fund Performance -- 5-Year Load Adjusted Returns;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.loadAdjustedReturns.fiveYear.raw")
+4942;YahooPer;Fund Performance -- 10-Year Load Adjusted Returns;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.loadAdjustedReturns.tenYear.raw")
+4943;YahooPer;Fund Performance -- Fund Return -- Year To Date;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturns.ytd.raw")
+4944;YahooPer;Fund Performance -- Fund Return -- 1-Month;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturns.oneMonth.raw")
+4945;YahooPer;Fund Performance -- Fund Return -- 3-Month;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturns.threeMonth.raw")
+4946;YahooPer;Fund Performance -- Fund Return -- 1-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturns.oneYear.raw")
+4947;YahooPer;Fund Performance -- Fund Return -- 3-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturns.threeYear.raw")
+4948;YahooPer;Fund Performance -- Fund Return -- 5-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturns.fiveYear.raw")
+4949;YahooPer;Fund Performance -- Fund Return -- Last Bull Market;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturns.lastBullMkt.raw")
+4950;YahooPer;Fund Performance -- Fund Return -- Last Bear Market;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturns.lastBearMkt.raw")
+4951;YahooPer;Fund Performance -- Category Return -- Year To Date;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsCat.ytd.raw")
+4952;YahooPer;Fund Performance -- Category Return -- 1-Month;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsCat.oneMonth.raw")
+4953;YahooPer;Fund Performance -- Category Return -- 3-Month;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsCat.threeMonth.raw")
+4954;YahooPer;Fund Performance -- Category Return -- 1-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsCat.oneYear.raw")
+4955;YahooPer;Fund Performance -- Category Return -- 3-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsCat.threeYear.raw")
+4956;YahooPer;Fund Performance -- Category Return -- 5-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsCat.fiveYear.raw")
+4957;YahooPer;Fund Performance -- Category Return -- Last Bull Market;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsCat.lastBullMkt.raw")
+4958;YahooPer;Fund Performance -- Category Return -- Last Bear Market;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsCat.lastBearMkt.raw")
+4959;YahooPer;Fund Performance -- Category Difference -- Year To Date;="Obsolete"
+4960;YahooPer;Fund Performance -- Category Difference -- 1-Month;="Obsolete"
+4961;YahooPer;Fund Performance -- Category Difference -- 3-Month;="Obsolete"
+4962;YahooPer;Fund Performance -- Category Difference -- 1-Year;="Obsolete"
+4963;YahooPer;Fund Performance -- Category Difference -- 3-Year;="Obsolete"
+4964;YahooPer;Fund Performance -- Category Difference -- 5-Year;="Obsolete"
+4965;YahooPer;Fund Performance -- Category Difference -- Last Bull Market;="Obsolete"
+4966;YahooPer;Fund Performance -- Category Difference -- Last Bear Market;="Obsolete"
+4967;YahooPer;Fund Performance -- Index Return -- Year To Date;="Obsolete"
+4968;YahooPer;Fund Performance -- Index Return -- 1-Month;="Obsolete"
+4969;YahooPer;Fund Performance -- Index Return -- 3-Month;="Obsolete"
+4970;YahooPer;Fund Performance -- Index Return -- 1-Year;="Obsolete"
+4971;YahooPer;Fund Performance -- Index Return -- 3-Year;="Obsolete"
+4972;YahooPer;Fund Performance -- Index Return -- 5-Year;="Obsolete"
+4973;YahooPer;Fund Performance -- Index Return -- Last Bull Market;="Obsolete"
+4974;YahooPer;Fund Performance -- Index Return -- Last Bear Market;="Obsolete"
+4975;YahooPer;Fund Performance -- Index Difference -- Year To Date;="Obsolete"
+4976;YahooPer;Fund Performance -- Index Difference -- 1-Month;="Obsolete"
+4977;YahooPer;Fund Performance -- Index Difference -- 3-Month;="Obsolete"
+4978;YahooPer;Fund Performance -- Index Difference -- 1-Year;="Obsolete"
+4979;YahooPer;Fund Performance -- Index Difference -- 3-Year;="Obsolete"
+4980;YahooPer;Fund Performance -- Index Difference -- 5-Year;="Obsolete"
+4981;YahooPer;Fund Performance -- Index Difference -- Last Bull Market;="Obsolete"
+4982;YahooPer;Fund Performance -- Index Difference -- Last Bear Market;="Obsolete"
+4983;YahooPer;Fund Performance -- Quarterly Return -- Year -- Y1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.0.year")
+4984;YahooPer;Fund Performance -- Quarterly Return -- Year -- Y2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.1.year")
+4985;YahooPer;Fund Performance -- Quarterly Return -- Year -- Y3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.2.year")
+4986;YahooPer;Fund Performance -- Quarterly Return -- Year -- Y4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.3.year")
+4987;YahooPer;Fund Performance -- Quarterly Return -- Year -- Y5;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.4.year")
+4988;YahooPer;Fund Performance -- Quarterly Return -- Year -- Y6;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.5.year")
+4989;YahooPer;Fund Performance -- Quarterly Return -- Year -- Y7;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.6.year")
+4990;YahooPer;Fund Performance -- Quarterly Return -- Year -- Y8;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.7.year")
+4991;YahooPer;Fund Performance -- Quarterly Return -- Year -- Y9;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.8.year")
+4992;YahooPer;Fund Performance -- Quarterly Return -- Year -- Y10;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.9.year")
+4993;YahooPer;Fund Performance -- Quarterly Return -- Year -- Y11;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.10.year")
+4994;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y1 -- Q1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.0.q1.raw")
+4995;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y2 -- Q1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.1.q1.raw")
+4996;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y3 -- Q1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.2.q1.raw")
+4997;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y4 -- Q1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.3.q1.raw")
+4998;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y5 -- Q1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.4.q1.raw")
+4999;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y6 -- Q1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.5.q1.raw")
+5000;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y7 -- Q1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.6.q1.raw")
+5001;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y8 -- Q1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.7.q1.raw")
+5002;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y9 -- Q1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.8.q1.raw")
+5003;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y10 -- Q1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.9.q1.raw")
+5004;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y11 -- Q1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.10.q1.raw")
+5005;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y1 -- Q2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.0.q2.raw")
+5006;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y2 -- Q2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.1.q2.raw")
+5007;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y3 -- Q2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.2.q2.raw")
+5008;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y4 -- Q2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.3.q2.raw")
+5009;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y5 -- Q2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.4.q2.raw")
+5010;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y6 -- Q2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.5.q2.raw")
+5011;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y7 -- Q2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.6.q2.raw")
+5012;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y8 -- Q2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.7.q2.raw")
+5013;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y9 -- Q2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.8.q2.raw")
+5014;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y10 -- Q2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.9.q2.raw")
+5015;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y11 -- Q2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.10.q2.raw")
+5016;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y1 -- Q3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.0.q3.raw")
+5017;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y2 -- Q3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.1.q3.raw")
+5018;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y3 -- Q3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.2.q3.raw")
+5019;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y4 -- Q3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.3.q3.raw")
+5020;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y5 -- Q3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.4.q3.raw")
+5021;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y6 -- Q3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.5.q3.raw")
+5022;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y7 -- Q3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.6.q3.raw")
+5023;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y8 -- Q3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.7.q3.raw")
+5024;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y9 -- Q3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.8.q3.raw")
+5025;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y10 -- Q3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.9.q3.raw")
+5026;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y11 -- Q3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.10.q3.raw")
+5027;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y1 -- Q4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.0.q4.raw")
+5028;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y2 -- Q4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.1.q4.raw")
+5029;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y3 -- Q4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.2.q4.raw")
+5030;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y4 -- Q4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.3.q4.raw")
+5031;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y5 -- Q4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.4.q4.raw")
+5032;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y6 -- Q4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.5.q4.raw")
+5033;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y7 -- Q4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.6.q4.raw")
+5034;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y8 -- Q4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.7.q4.raw")
+5035;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y9 -- Q4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.8.q4.raw")
+5036;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y10 -- Q4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.9.q4.raw")
+5037;YahooPer;Fund Performance -- Quarterly Return -- Fund -- Y11 -- Q4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.pastQuarterlyReturns.returns.10.q4.raw")
+5038;YahooPer;Fund Performance -- Rank In Category -- Rank -- Year To Date;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.rankInCategory.ytd.raw")
+5039;YahooPer;Fund Performance -- Rank In Category -- Rank -- 1-Month;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.rankInCategory.oneMonth.raw")
+5040;YahooPer;Fund Performance -- Rank In Category -- Rank -- 3-Month;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.rankInCategory.threeMonth.raw")
+5041;YahooPer;Fund Performance -- Rank In Category -- Rank -- 6-Month;="Obsolete"
+5042;YahooPer;Fund Performance -- Rank In Category -- Rank -- 1-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.rankInCategory.oneYear.raw")
+5043;YahooPer;Fund Performance -- Rank In Category -- Rank -- 3-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.rankInCategory.threeYear.raw")
+5044;YahooPer;Fund Performance -- Rank In Category -- Rank -- 5-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.rankInCategory.fiveYear.raw")
+5045;YahooPer;Fund Performance -- Rank In Category -- Total Funds -- Year To Date;="Obsolete"
+5046;YahooPer;Fund Performance -- Rank In Category -- Total Funds -- 1-Month;="Obsolete"
+5047;YahooPer;Fund Performance -- Rank In Category -- Total Funds -- 3-Month;="Obsolete"
+5048;YahooPer;Fund Performance -- Rank In Category -- Total Funds -- 6-Month;="Obsolete"
+5049;YahooPer;Fund Performance -- Rank In Category -- Total Funds -- 1-Year;="Obsolete"
+5050;YahooPer;Fund Performance -- Rank In Category -- Total Funds -- 3-Year;="Obsolete"
+5051;YahooPer;Fund Performance -- Rank In Category -- Total Funds -- 5-Year;="Obsolete"
+5052;YahooPer;Fund Performance -- Rank In Category -- Percent Rank -- Year To Date;="Obsolete"
+5053;YahooPer;Fund Performance -- Rank In Category -- Percent Rank -- 1-Month;="Obsolete"
+5054;YahooPer;Fund Performance -- Rank In Category -- Percent Rank -- 3-Month;="Obsolete"
+5055;YahooPer;Fund Performance -- Rank In Category -- Percent Rank -- 6-Month;="Obsolete"
+5056;YahooPer;Fund Performance -- Rank In Category -- Percent Rank -- 1-Year;="Obsolete"
+5057;YahooPer;Fund Performance -- Rank In Category -- Percent Rank -- 3-Year;="Obsolete"
+5058;YahooPer;Fund Performance -- Rank In Category -- Percent Rank -- 5-Year;="Obsolete"
+5059;YahooPro;Fund Profile -- Category;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.categoryName")
+5060;YahooPro;Fund Profile -- Fund Family;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.family")
+5061;YahooDKS;Fund Profile -- Total Assets;=smfGetYahooJSONField("~~~~~","defaultKeyStatistics","quoteSummary.result.0.defaultKeyStatistics.totalAssets.raw")
+5062;YahooPer;Fund Profile -- Year-to-Date Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.ytdReturnPct.raw")
+5063;YahooSum;Fund Profile -- Yield;=smfGetYahooJSONField("~~~~~","summaryDetail","quoteSummary.result.0.summaryDetail.yield.raw")
+5064;YahooDKS;Fund Profile -- Morningstar Rating;=smfGetYahooJSONField("~~~~~","defaultKeyStatistics","quoteSummary.result.0.defaultKeyStatistics.morningStarOverallRating.raw")
+5065;YahooDKS;Fund Profile -- Fund Inception Date;=smfGetYahooJSONField("~~~~~","defaultKeyStatistics","quoteSummary.result.0.defaultKeyStatistics.fundInceptionDate.fmt")
+5066;YahooAP;Fund Profile -- Fund Summary;=LEFT(smfGetYahooJSONField("~~~~~","assetProfile","quoteSummary.result.0.assetProfile.longBusinessSummary"),255)
+5067;YahooPro;Fund Profile -- Min Initial Investment;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.initInvestment.raw")
+5068;YahooPro;Fund Profile -- Min Initial Investment, IRA;="Obsolete"
+5069;YahooPro;Fund Profile -- Min Initial Investment, AIP;="Obsolete"
+5070;YahooPro;Fund Profile -- Min Subsequent Investment;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.subseqInvestment.raw")
+5071;YahooPro;Fund Profile -- Min Subsequent Investment, IRA;="Obsolete"
+5072;YahooPro;Fund Profile -- Min Subsequent Investment, AIP;="Obsolete"
+5073;YahooPro;Fund Profile -- Last Dividend -- Date;="Obsolete"
+5074;YahooDKS;Fund Profile -- Last Dividend -- Amount;=smfGetYahooJSONField("~~~~~","defaultKeyStatistics","quoteSummary.result.0.defaultKeyStatistics.lastDividendValue.fmt")
+5075;YahooPro;Fund Profile -- Last Cap Gain -- Date;="Obsolete"
+5076;YahooDKS;Fund Profile -- Last Cap Gain -- Amount;=smfGetYahooJSONField("~~~~~","defaultKeyStatistics","quoteSummary.result.0.defaultKeyStatistics.lastCapGain.fmt")
+5077;YahooDKS;Fund Profile -- Annual Holdings Turnover -- Fund;=smfGetYahooJSONField("~~~~~","defaultKeyStatistics","quoteSummary.result.0.defaultKeyStatistics.annualHoldingsTurnover.raw")
+5078;YahooPro;Fund Profile -- Annual Holdings Turnover -- Category;="Obsolete"
+5079;YahooDKS;Fund Profile -- Fees -- Fund -- Annual Report Expense Ratio;=smfGetYahooJSONField("~~~~~","defaultKeyStatistics","quoteSummary.result.0.defaultKeyStatistics.annualReportExpenseRatio.raw")
+5080;YahooPro;Fund Profile -- Fees -- Fund -- Max 12b1 Fee;="Obsolete"
+5081;YahooPro;Fund Profile -- Fees -- Fund -- Max Front End Sales Load;="Obsolete"
+5082;YahooPro;Fund Profile -- Fees -- Fund -- Max Deferred Sales Load;="Obsolete"
+5083;YahooPro;Fund Profile -- Fees -- Fund -- 3-Year Expense Projection;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.feesExpensesInvestment.projectionValues.3y.raw")
+5084;YahooPro;Fund Profile -- Fees -- Fund -- 5-Year Expense Projection;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.feesExpensesInvestment.projectionValues.5y.raw")
+5085;YahooPro;Fund Profile -- Fees -- Fund -- 10-Year Expense Projection;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.feesExpensesInvestment.projectionValues.10y.raw")
+5086;YahooPro;Fund Profile -- Fees -- Category -- Annual Report Expense Ratio;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.feesExpensesInvestmentCat.annualReportExpenseRatio.raw")
+5087;YahooPro;Fund Profile -- Fees -- Category -- Max 12b1 Fee;="Obsolete"
+5088;YahooPro;Fund Profile -- Fees -- Category -- Max Front End Sales Load;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.feesExpensesInvestmentCat.frontEndSalesLoad.raw")
+5089;YahooPro;Fund Profile -- Fees -- Category -- Max Deferred Sales Load;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.feesExpensesInvestmentCat.deferredSalesLoad.raw")
+5090;YahooPro;Fund Profile -- Fees -- Category -- 3-Year Expense Projection;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.feesExpensesInvestmentCat.projectionValuesCat.3y.raw")
+5091;YahooPro;Fund Profile -- Fees -- Category -- 5-Year Expense Projection;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.feesExpensesInvestmentCat.projectionValuesCat.5y.raw")
+5092;YahooPro;Fund Profile -- Fees -- Category -- 10-Year Expense Projection;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.feesExpensesInvestmentCat.projectionValuesCat.10y.raw")
+5093;YahooDKS;Fund Profile -- Morningstar Risk Rating;=smfGetYahooJSONField("~~~~~","defaultKeyStatistics","quoteSummary.result.0.defaultKeyStatistics.morningStarRiskRating.raw")
+5094;YahooPer;Fund Performance -- Number of Years Up;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.numYearsUp.raw")
+5095;YahooPer;Fund Performance -- Number of Years Down;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.numYearsDown.raw")
+5096;YahooPer;Fund Performance -- Best 1-Year Total Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.bestOneYrTotalReturn.raw")
+5097;YahooPer;Fund Performance -- Worst 1-Year Total Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.worstOneYrTotalReturn.raw")
+5098;YahooPer;Fund Performance -- Alpha -- 3-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.1.alpha.raw")
+5099;YahooPer;Fund Performance -- Beta -- 3-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.1.beta.raw")
+5100;YahooPer;Fund Performance -- Mean Annual Return -- 3-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.1.meanAnnualReturn.raw")
+5101;YahooPer;Fund Performance -- R-squared -- 3-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.1.rSquared.raw")
+5102;YahooPer;Fund Performance -- Standard Deviation -- 3-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.1.stdDev.raw")
+5103;YahooPer;Fund Performance -- Sharpe Ratio -- 3-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.1.sharpeRatio.raw")
+5104;YahooPer;Fund Performance -- Treynor Ratio -- 3-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.1.treynorRatio.raw")
+5105;YahooPer;Fund Performance -- Alpha -- 5-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.0.alpha.raw")
+5106;YahooPer;Fund Performance -- Beta -- 5-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.0.beta.raw")
+5107;YahooPer;Fund Performance -- Mean Annual Return -- 5-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.0.meanAnnualReturn.raw")
+5108;YahooPer;Fund Performance -- R-squared -- 5-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.0.rSquared.raw")
+5109;YahooPer;Fund Performance -- Standard Deviation -- 5-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.0.stdDev.raw")
+5110;YahooPer;Fund Performance -- Sharpe Ratio -- 5-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.0.sharpeRatio.raw")
+5111;YahooPer;Fund Performance -- Treynor Ratio -- 5-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.0.treynorRatio.raw")
+5112;YahooPer;Fund Performance -- Alpha -- 10-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.2.alpha.raw")
+5113;YahooPer;Fund Performance -- Beta -- 10-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.2.beta.raw")
+5114;YahooPer;Fund Performance -- Mean Annual Return -- 10-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.2.meanAnnualReturn.raw")
+5115;YahooPer;Fund Performance -- R-squared -- 10-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.2.rSquared.raw")
+5116;YahooPer;Fund Performance -- Standard Deviation -- 10-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.2.stdDev.raw")
+5117;YahooPer;Fund Performance -- Sharpe Ratio -- 10-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.2.sharpeRatio.raw")
+5118;YahooPer;Fund Performance -- Treynor Ratio -- 10-Year -- Fund;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.2.treynorRatio.raw")
+5119;YahooPer;Fund Performance -- Alpha -- 3-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.1.alpha.raw")
+5120;YahooPer;Fund Performance -- Beta -- 3-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.1.beta.raw")
+5121;YahooPer;Fund Performance -- Mean Annual Return -- 3-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.1.meanAnnualReturn.raw")
+5122;YahooPer;Fund Performance -- R-squared -- 3-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.1.rSquared.raw")
+5123;YahooPer;Fund Performance -- Standard Deviation -- 3-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.1.stdDev.raw")
+5124;YahooPer;Fund Performance -- Sharpe Ratio -- 3-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.1.sharpeRatio.raw")
+5125;YahooPer;Fund Performance -- Treynor Ratio -- 3-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.1.treynorRatio.raw")
+5126;YahooPer;Fund Performance -- Alpha -- 5-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.0.alpha.raw")
+5127;YahooPer;Fund Performance -- Beta -- 5-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.0.beta.raw")
+5128;YahooPer;Fund Performance -- Mean Annual Return -- 5-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.0.meanAnnualReturn.raw")
+5129;YahooPer;Fund Performance -- R-squared -- 5-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.0.rSquared.raw")
+5130;YahooPer;Fund Performance -- Standard Deviation -- 5-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.0.stdDev.raw")
+5131;YahooPer;Fund Performance -- Sharpe Ratio -- 5-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.0.sharpeRatio.raw")
+5132;YahooPer;Fund Performance -- Treynor Ratio -- 5-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.0.treynorRatio.raw")
+5133;YahooPer;Fund Performance -- Alpha -- 10-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.2.alpha.raw")
+5134;YahooPer;Fund Performance -- Beta -- 10-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.2.beta.raw")
+5135;YahooPer;Fund Performance -- Mean Annual Return -- 10-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.2.meanAnnualReturn.raw")
+5136;YahooPer;Fund Performance -- R-squared -- 10-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.2.rSquared.raw")
+5137;YahooPer;Fund Performance -- Standard Deviation -- 10-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.2.stdDev.raw")
+5138;YahooPer;Fund Performance -- Sharpe Ratio -- 10-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.2.sharpeRatio.raw")
+5139;YahooPer;Fund Performance -- Treynor Ratio -- 10-Year -- Category;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.2.treynorRatio.raw")
+5140;YahooTop;Fund Holdings -- Overall Composition -- Cash;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.cashPosition.raw")
+5141;YahooTop;Fund Holdings -- Overall Composition -- Stocks;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.stockPosition.raw")
+5142;YahooTop;Fund Holdings -- Overall Composition -- Bonds;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.bondPosition.raw")
+5143;YahooTop;Fund Holdings -- Overall Composition -- Other;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.otherPosition.raw")
+5144;YahooTop;Fund Holdings -- Top 10 -- Name -- #1;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.0.symbol")
+5145;YahooTop;Fund Holdings -- Top 10 -- Symbol -- #1;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.0.holdingName")
+5146;YahooTop;Fund Holdings -- Top 10 -- % of Assets -- #1;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.0.holdingPercent.raw")
+5147;YahooTop;Fund Holdings -- Top 10 -- YTD Return -- #1;="Obsolete"
+5148;YahooTop;Fund Holdings -- Top 10 -- Name -- #2;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.1.symbol")
+5149;YahooTop;Fund Holdings -- Top 10 -- Symbol -- #2;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.1.holdingName")
+5150;YahooTop;Fund Holdings -- Top 10 -- % of Assets -- #2;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.1.holdingPercent.raw")
+5151;YahooTop;Fund Holdings -- Top 10 -- YTD Return -- #2;="Obsolete"
+5152;YahooTop;Fund Holdings -- Top 10 -- Name -- #3;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.2.symbol")
+5153;YahooTop;Fund Holdings -- Top 10 -- Symbol -- #3;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.2.holdingName")
+5154;YahooTop;Fund Holdings -- Top 10 -- % of Assets -- #3;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.2.holdingPercent.raw")
+5155;YahooTop;Fund Holdings -- Top 10 -- YTD Return -- #3;="Obsolete"
+5156;YahooTop;Fund Holdings -- Top 10 -- Name -- #4;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.3.symbol")
+5157;YahooTop;Fund Holdings -- Top 10 -- Symbol -- #4;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.3.holdingName")
+5158;YahooTop;Fund Holdings -- Top 10 -- % of Assets -- #4;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.3.holdingPercent.raw")
+5159;YahooTop;Fund Holdings -- Top 10 -- YTD Return -- #4;="Obsolete"
+5160;YahooTop;Fund Holdings -- Top 10 -- Name -- #5;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.4.symbol")
+5161;YahooTop;Fund Holdings -- Top 10 -- Symbol -- #5;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.4.holdingName")
+5162;YahooTop;Fund Holdings -- Top 10 -- % of Assets -- #5;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.4.holdingPercent.raw")
+5163;YahooTop;Fund Holdings -- Top 10 -- YTD Return -- #5;="Obsolete"
+5164;YahooTop;Fund Holdings -- Top 10 -- Name -- #6;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.5.symbol")
+5165;YahooTop;Fund Holdings -- Top 10 -- Symbol -- #6;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.5.holdingName")
+5166;YahooTop;Fund Holdings -- Top 10 -- % of Assets -- #6;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.5.holdingPercent.raw")
+5167;YahooTop;Fund Holdings -- Top 10 -- YTD Return -- #6;="Obsolete"
+5168;YahooTop;Fund Holdings -- Top 10 -- Name -- #7;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.6.symbol")
+5169;YahooTop;Fund Holdings -- Top 10 -- Symbol -- #7;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.6.holdingName")
+5170;YahooTop;Fund Holdings -- Top 10 -- % of Assets -- #7;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.6.holdingPercent.raw")
+5171;YahooTop;Fund Holdings -- Top 10 -- YTD Return -- #7;="Obsolete"
+5172;YahooTop;Fund Holdings -- Top 10 -- Name -- #8;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.7.symbol")
+5173;YahooTop;Fund Holdings -- Top 10 -- Symbol -- #8;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.7.holdingName")
+5174;YahooTop;Fund Holdings -- Top 10 -- % of Assets -- #8;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.7.holdingPercent.raw")
+5175;YahooTop;Fund Holdings -- Top 10 -- YTD Return -- #8;="Obsolete"
+5176;YahooTop;Fund Holdings -- Top 10 -- Name -- #9;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.8.symbol")
+5177;YahooTop;Fund Holdings -- Top 10 -- Symbol -- #9;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.8.holdingName")
+5178;YahooTop;Fund Holdings -- Top 10 -- % of Assets -- #9;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.8.holdingPercent.raw")
+5179;YahooTop;Fund Holdings -- Top 10 -- YTD Return -- #9;="Obsolete"
+5180;YahooTop;Fund Holdings -- Top 10 -- Name -- #10;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.9.symbol")
+5181;YahooTop;Fund Holdings -- Top 10 -- Symbol -- #10;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.9.holdingName")
+5182;YahooTop;Fund Holdings -- Top 10 -- % of Assets -- #10;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.holdings.9.holdingPercent.raw")
+5183;YahooTop;Fund Holdings -- Top 10 -- YTD Return -- #10;="Obsolete"
+5184;YahooTop;Fund Holdings -- Equity Attributes -- Price/Earnings -- Fund;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.priceToEarnings.raw")
+5185;YahooTop;Fund Holdings -- Equity Attributes -- Price/Book -- Fund;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.priceToBook.raw")
+5186;YahooTop;Fund Holdings -- Equity Attributes -- Price/Sales -- Fund;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.priceToSales.raw")
+5187;YahooTop;Fund Holdings -- Equity Attributes -- Price/Cashflow -- Fund;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.priceToCashflow.raw")
+5188;YahooTop;Fund Holdings -- Equity Attributes -- Median Market Cap -- Fund;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.medianMarketCap.raw")
+5189;YahooTop;Fund Holdings -- Equity Attributes -- 3 Year Earnings Growth -- Fund;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.threeYearEarningsGrowth.raw")
+5190;YahooTop;Fund Holdings -- Equity Attributes -- Price/Earnings -- Category;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.priceToEarningsCat.raw")
+5191;YahooTop;Fund Holdings -- Equity Attributes -- Price/Book -- Category;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.priceToBookCat.raw")
+5192;YahooTop;Fund Holdings -- Equity Attributes -- Price/Sales -- Category;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.priceToSalesCat.raw")
+5193;YahooTop;Fund Holdings -- Equity Attributes -- Price/Cashflow -- Category;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.priceToCashflowCat.raw")
+5194;YahooTop;Fund Holdings -- Equity Attributes -- Median Market Cap -- Category;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.medianMarketCapCat.raw")
+5195;YahooTop;Fund Holdings -- Equity Attributes -- 3 Year Earnings Growth -- Category;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.threeYearEarningsGrowthCat.raw")
+
+1601;YahooPer;Fund Performance -- Annual Return -- Year 0;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.0.annualValue.raw")
+1602;YahooPer;Fund Performance -- Year -- Year 0;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.0.year")
+1603;YahooPer;Fund Performance -- Annual Return -- Year 1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.1.annualValue.raw")
+1604;YahooPer;Fund Performance -- Year -- Year 1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.1.year")
+1605;YahooPer;Fund Performance -- Annual Return -- Year 2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.2.annualValue.raw")
+1606;YahooPer;Fund Performance -- Year -- Year 2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.2.year")
+1607;YahooPer;Fund Performance -- Annual Return -- Year 3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.3.annualValue.raw")
+1608;YahooPer;Fund Performance -- Year -- Year 3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.3.year")
+1609;YahooPer;Fund Performance -- Annual Return -- Year 4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.4.annualValue.raw")
+1610;YahooPer;Fund Performance -- Year -- Year 4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.4.year")
+1611;YahooPer;Fund Performance -- Annual Return -- Year 5;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.5.annualValue.raw")
+1612;YahooPer;Fund Performance -- Year -- Year 5;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.5.year")
+1613;YahooPer;Fund Performance -- Annual Return -- Year 6;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.6.annualValue.raw")
+1614;YahooPer;Fund Performance -- Year -- Year 6;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.6.year")
+1615;YahooPer;Fund Performance -- Annual Return -- Year 7;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.7.annualValue.raw")
+1616;YahooPer;Fund Performance -- Year -- Year 7;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.7.year")
+1617;YahooPer;Fund Performance -- Annual Return -- Year 8;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.8.annualValue.raw")
+1618;YahooPer;Fund Performance -- Year -- Year 8;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.8.year")
+1619;YahooPer;Fund Performance -- Annual Return -- Year 9;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.9.annualValue.raw")
+1620;YahooPer;Fund Performance -- Year -- Year 9;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.9.year")
+1621;YahooPer;Fund Performance -- Annual Return -- Year 10;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.10.annualValue.raw")
+1622;YahooPer;Fund Performance -- Year -- Year 10;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.10.year")
+1623;YahooPer;Fund Performance -- Annual Return -- Year 11;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.11.annualValue.raw")
+1624;YahooPer;Fund Performance -- Year -- Year 11;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.11.year")
+1625;YahooPer;Fund Performance -- Annual Return -- Year 12;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.12.annualValue.raw")
+1626;YahooPer;Fund Performance -- Year -- Year 12;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.12.year")
+1627;YahooPer;Fund Performance -- Annual Return -- Year 13;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.13.annualValue.raw")
+1628;YahooPer;Fund Performance -- Year -- Year 13;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.13.year")
+1629;YahooPer;Fund Performance -- Annual Return -- Year 14;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.14.annualValue.raw")
+1630;YahooPer;Fund Performance -- Year -- Year 14;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.14.year")
+1631;YahooPer;Fund Performance -- Annual Return -- Year 15;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.15.annualValue.raw")
+1632;YahooPer;Fund Performance -- Year -- Year 15;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.15.year")
+1633;YahooPer;Fund Performance -- Annual Return -- Year 16;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.16.annualValue.raw")
+1634;YahooPer;Fund Performance -- Year -- Year 16;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.16.year")
+1635;YahooPer;Fund Performance -- Annual Return -- Year 17;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.17.annualValue.raw")
+1636;YahooPer;Fund Performance -- Year -- Year 17;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.17.year")
+1637;YahooPer;Fund Performance -- Annual Return -- Year 18;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.18.annualValue.raw")
+1638;YahooPer;Fund Performance -- Year -- Year 18;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.18.year")
+1639;YahooPer;Fund Performance -- Annual Return -- Year 19;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.19.annualValue.raw")
+1640;YahooPer;Fund Performance -- Year -- Year 19;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.19.year")
+1641;YahooPer;Fund Performance -- Annual Return -- Year 20;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.20.annualValue.raw")
+1642;YahooPer;Fund Performance -- Year -- Year 20;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.20.year")
+1643;YahooPer;Fund Performance -- Annual Return -- Category -- Year 0;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.0.annualValue.raw")
+1644;YahooPer;Fund Performance -- Year -- Category -- Year 0;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.0.year")
+1645;YahooPer;Fund Performance -- Annual Return -- Category -- Year 1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.1.annualValue.raw")
+1646;YahooPer;Fund Performance -- Year -- Category -- Year 1;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.1.year")
+1647;YahooPer;Fund Performance -- Annual Return -- Category -- Year 2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.2.annualValue.raw")
+1648;YahooPer;Fund Performance -- Year -- Category -- Year 2;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.2.year")
+1649;YahooPer;Fund Performance -- Annual Return -- Category -- Year 3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.3.annualValue.raw")
+1650;YahooPer;Fund Performance -- Year -- Category -- Year 3;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.3.year")
+1651;YahooPer;Fund Performance -- Annual Return -- Category -- Year 4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.4.annualValue.raw")
+1652;YahooPer;Fund Performance -- Year -- Category -- Year 4;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.4.year")
+1653;YahooPer;Fund Performance -- Annual Return -- Category -- Year 5;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.5.annualValue.raw")
+1654;YahooPer;Fund Performance -- Year -- Category -- Year 5;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.5.year")
+1655;YahooPer;Fund Performance -- Annual Return -- Category -- Year 6;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.6.annualValue.raw")
+1656;YahooPer;Fund Performance -- Year -- Category -- Year 6;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.6.year")
+1657;YahooPer;Fund Performance -- Annual Return -- Category -- Year 7;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.7.annualValue.raw")
+1658;YahooPer;Fund Performance -- Year -- Category -- Year 7;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.7.year")
+1659;YahooPer;Fund Performance -- Annual Return -- Category -- Year 8;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.8.annualValue.raw")
+1660;YahooPer;Fund Performance -- Year -- Category -- Year 8;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.8.year")
+1661;YahooPer;Fund Performance -- Annual Return -- Category -- Year 9;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.9.annualValue.raw")
+1662;YahooPer;Fund Performance -- Year -- Category -- Year 9;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.9.year")
+1663;YahooPer;Fund Performance -- Annual Return -- Category -- Year 10;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.10.annualValue.raw")
+1664;YahooPer;Fund Performance -- Year -- Category -- Year 10;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.10.year")
+1665;YahooPer;Fund Performance -- Annual Return -- Category -- Year 11;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.11.annualValue.raw")
+1666;YahooPer;Fund Performance -- Year -- Category -- Year 11;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.11.year")
+1667;YahooPer;Fund Performance -- Annual Return -- Category -- Year 12;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.12.annualValue.raw")
+1668;YahooPer;Fund Performance -- Year -- Category -- Year 12;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.12.year")
+1669;YahooPer;Fund Performance -- Annual Return -- Category -- Year 13;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.13.annualValue.raw")
+1670;YahooPer;Fund Performance -- Year -- Category -- Year 13;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.13.year")
+1671;YahooPer;Fund Performance -- Annual Return -- Category -- Year 14;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.14.annualValue.raw")
+1672;YahooPer;Fund Performance -- Year -- Category -- Year 14;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.14.year")
+1673;YahooPer;Fund Performance -- Annual Return -- Category -- Year 15;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.15.annualValue.raw")
+1674;YahooPer;Fund Performance -- Year -- Category -- Year 15;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.15.year")
+1675;YahooPer;Fund Performance -- Annual Return -- Category -- Year 16;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.16.annualValue.raw")
+1676;YahooPer;Fund Performance -- Year -- Category -- Year 16;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.16.year")
+1677;YahooPer;Fund Performance -- Annual Return -- Category -- Year 17;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.17.annualValue.raw")
+1678;YahooPer;Fund Performance -- Year -- Category -- Year 17;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.17.year")
+1679;YahooPer;Fund Performance -- Annual Return -- Category -- Year 18;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.18.annualValue.raw")
+1680;YahooPer;Fund Performance -- Year -- Category -- Year 18;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.18.year")
+1681;YahooPer;Fund Performance -- Annual Return -- Category -- Year 19;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.19.annualValue.raw")
+1682;YahooPer;Fund Performance -- Year -- Category -- Year 19;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.19.year")
+1683;YahooPer;Fund Performance -- Annual Return -- Category -- Year 20;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.20.annualValue.raw")
+1684;YahooPer;Fund Performance -- Year -- Category -- Year 20;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.20.year")
+1685;YahooPer;Fund Performance -- As of Date;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.asOfDate.fmt")
+1686;YahooPer;Fund Performance -- Avg 5-year Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverviewCat.fiveYrAvgReturnPct.raw")
+1687;YahooPer;Risk Statistic -- Label -- 3-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.1.year")
+1688;YahooPer;Risk Statistic -- Label -- 5-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.0.year")
+1689;YahooPer;Risk Statistic -- Label -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.2.year")
+1690;YahooPer;Risk Statistic -- Category -- Label -- 3-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.1.year")
+1691;YahooPer;Risk Statistic -- Category -- Label -- 5-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.0.year")
+1692;YahooPer;Risk Statistic -- Category -- Label -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.2.year")
+1693;YahooPer;Trailing Returns -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturns.tenYear.raw")
+1694;YahooPer;Trailing Returns Category -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsCat.tenYear.raw")
+1695;YahooPer;Trailing Returns -- NAV -- 1-Month;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsNav.oneMonth.fmt")
+1696;YahooPer;Trailing Returns -- NAV -- 3-Month;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsNav.threeMonth.fmt")
+1697;YahooPer;Trailing Returns -- NAV -- YTD;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsNav.ytd.fmt")
+1698;YahooPer;Trailing Returns -- NAV -- 1-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsNav.oneYear.fmt")
+1699;YahooPer;Trailing Returns -- NAV -- 3-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsNav.threeYear.fmt")
+1700;YahooPer;Trailing Returns -- NAV -- 5-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsNav.fiveYear.fmt")
+1701;YahooPer;Trailing Returns -- NAV -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsNav.tenYear.fmt")
+1702;YahooPro;Fund Profile -- Annual Report Expense Ratio;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.feesExpensesInvestment.annualReportExpenseRatio.raw")
+1703;YahooPro;Fund Profile -- Gross Expense Ratio;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.feesExpensesInvestment.grossExpRatio.raw")
+1704;YahooPro;Fund Profile -- Net Expense Ratio;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.feesExpensesInvestment.netExpRatio.raw")
+1705;YahooPro;Fund Profile -- Legal Type;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.legalType")
+1706;YahooPro;Fund Profile -- Mgmt Info Start Date;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.managementInfo.startdate.fmt")
+1707;YahooPro;Fund Profile -- Style Box URL;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.styleBoxUrl")
+1708;YahooTop;Fund Holdings -- Category Duration;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.bondHoldings.durationCat.raw")
+1709;YahooTop;Fund Holdings -- Maturity Category;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.bondHoldings.maturityCat.raw")
+1710;YahooTop;Fund Holdings -- Bonds Rated AAA;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.bondRatings.2.aaa.fmt")
+1711;YahooTop;Fund Holdings -- Bonds Rated AA;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.bondRatings.1.aa.fmt")
+1712;YahooTop;Fund Holdings -- Bonds Rated A;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.bondRatings.3.a.fmt")
+1713;YahooTop;Fund Holdings -- Bonds Rated BBB;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.bondRatings.6.bbb.fmt")
+1714;YahooTop;Fund Holdings -- Bonds Rated BB;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.bondRatings.0.bb.fmt")
+1715;YahooTop;Fund Holdings -- Bonds Rated B;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.bondRatings.5.b.fmt")
+1716;YahooTop;Fund Holdings -- Bonds Rated Below B;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.bondRatings.7.below_b.fmt")
+1717;YahooTop;Fund Holdings -- Bonds Rated Other;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.bondRatings.4.other.fmt")
+1718;YahooTop;Fund Holdings -- Convertible;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.convertiblePosition.raw")
+1719;YahooTop;Fund Holdings -- Preferred;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.preferredPosition.raw")
+1720;YahooTop;Fund Holdings -- Sector Weight -- Real Estate;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.sectorWeightings.0.realestate.raw")
+1721;YahooTop;Fund Holdings -- Sector Weight -- Consumer Cyclical;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.sectorWeightings.1.consumer_cyclical.raw")
+1722;YahooTop;Fund Holdings -- Sector Weight -- Basic Materials;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.sectorWeightings.2.basic_materials.raw")
+1723;YahooTop;Fund Holdings -- Sector Weight -- Consumer Defensive;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.sectorWeightings.3.consumer_defensive.raw")
+1724;YahooTop;Fund Holdings -- Sector Weight -- Technology;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.sectorWeightings.4.technology.raw")
+1725;YahooTop;Fund Holdings -- Sector Weight -- Communication Services;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.sectorWeightings.5.communication_services.raw")
+1726;YahooTop;Fund Holdings -- Sector Weight -- Financial Services;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.sectorWeightings.6.financial_services.raw")
+1727;YahooTop;Fund Holdings -- Sector Weight -- Utilities;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.sectorWeightings.7.utilities.raw")
+1728;YahooTop;Fund Holdings -- Sector Weight -- Industrials;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.sectorWeightings.8.industrials.raw")
+1729;YahooTop;Fund Holdings -- Sector Weight -- Energy;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.sectorWeightings.9.energy.raw")
+1730;YahooTop;Fund Holdings -- Sector Weight -- Healthcare;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.sectorWeightings.10.healthcare.raw")
+
+
+13822;YahooMS;Market Stats -- NYSE -- Advancing Issues;="Obsolete"
+13823;YahooMS;Market Stats -- NYSE -- Declining Issues;="Obsolete"
+13824;YahooMS;Market Stats -- NYSE -- Unchanged Issues;="Obsolete"
+13825;YahooMS;Market Stats -- NYSE -- Total Issues;="Obsolete"
+13826;YahooMS;Market Stats -- NYSE -- New Highs;="Obsolete"
+13827;YahooMS;Market Stats -- NYSE -- New Lows;="Obsolete"
+13828;YahooMS;Market Stats -- NYSE -- Up Volume;="Obsolete"
+13829;YahooMS;Market Stats -- NYSE -- Down Volume;="Obsolete"
+13830;YahooMS;Market Stats -- NYSE -- Unchanged Volume;="Obsolete"
+13831;YahooMS;Market Stats -- NYSE -- Total Volume;="Obsolete"
+13832;YahooMS;Market Stats -- AMEX -- Advancing Issues;="Obsolete"
+13833;YahooMS;Market Stats -- AMEX -- Declining Issues;="Obsolete"
+13834;YahooMS;Market Stats -- AMEX -- Unchanged Issues;="Obsolete"
+13835;YahooMS;Market Stats -- AMEX -- Total Issues;="Obsolete"
+13836;YahooMS;Market Stats -- AMEX -- New Highs;="Obsolete"
+13837;YahooMS;Market Stats -- AMEX -- New Lows;="Obsolete"
+13838;YahooMS;Market Stats -- AMEX -- Up Volume;="Obsolete"
+13839;YahooMS;Market Stats -- AMEX -- Down Volume;="Obsolete"
+13840;YahooMS;Market Stats -- AMEX -- Unchanged Volume;="Obsolete"
+13841;YahooMS;Market Stats -- AMEX -- Total Volume;="Obsolete"
+13842;YahooMS;Market Stats -- NASDAQ -- Advancing Issues;="Obsolete"
+13843;YahooMS;Market Stats -- NASDAQ -- Declining Issues;="Obsolete"
+13844;YahooMS;Market Stats -- NASDAQ -- Unchanged Issues;="Obsolete"
+13845;YahooMS;Market Stats -- NASDAQ -- Total Issues;="Obsolete"
+13846;YahooMS;Market Stats -- NASDAQ -- New Highs;="Obsolete"
+13847;YahooMS;Market Stats -- NASDAQ -- New Lows;="Obsolete"
+13848;YahooMS;Market Stats -- NASDAQ -- Up Volume;="Obsolete"
+13849;YahooMS;Market Stats -- NASDAQ -- Down Volume;="Obsolete"
+13850;YahooMS;Market Stats -- NASDAQ -- Unchanged Volume;="Obsolete"
+13851;YahooMS;Market Stats -- NASDAQ -- Total Volume;="Obsolete"
+13852;YahooMS;Market Stats -- OTC BB -- Advancing Issues;="Obsolete"
+13853;YahooMS;Market Stats -- OTC BB -- Declining Issues;="Obsolete"
+13854;YahooMS;Market Stats -- OTC BB -- Unchanged Issues;="Obsolete"
+13855;YahooMS;Market Stats -- OTC BB -- Total Issues;="Obsolete"
+13856;YahooMS;Market Stats -- OTC BB -- New Highs;="Obsolete"
+13857;YahooMS;Market Stats -- OTC BB -- New Lows;="Obsolete"
+13858;YahooMS;Market Stats -- OTC BB -- Up Volume;="Obsolete"
+13859;YahooMS;Market Stats -- OTC BB -- Down Volume;="Obsolete"
+13860;YahooMS;Market Stats -- OTC BB -- Unchanged Volume;="Obsolete"
+13861;YahooMS;Market Stats -- OTC BB -- Total Volume;="Obsolete"
+
+13901;YahooMS2;Market Stats -- TSX -- Advancing Issues;="Obsolete"
+13902;YahooMS2;Market Stats -- TSX -- Declining Issues;="Obsolete"
+13903;YahooMS2;Market Stats -- TSX -- Unchanged Issues;="Obsolete"
+13904;YahooMS2;Market Stats -- TSX -- Total Issues;="Obsolete"
+13905;YahooMS2;Market Stats -- TSX -- New Highs;="Obsolete"
+13906;YahooMS2;Market Stats -- TSX -- New Lows;="Obsolete"
+13907;YahooMS2;Market Stats -- TSX -- Up Volume;="Obsolete"
+13908;YahooMS2;Market Stats -- TSX -- Down Volume;="Obsolete"
+13909;YahooMS2;Market Stats -- TSX -- Unchanged Volume;="Obsolete"
+13910;YahooMS2;Market Stats -- TSX -- Total Volume;="Obsolete"
+13911;YahooMS2;Market Stats -- TSX Ventures -- Advancing Issues;="Obsolete"
+13912;YahooMS2;Market Stats -- TSX Ventures -- Declining Issues;="Obsolete"
+13913;YahooMS2;Market Stats -- TSX Ventures -- Unchanged Issues;="Obsolete"
+13914;YahooMS2;Market Stats -- TSX Ventures -- Total Issues;="Obsolete"
+13915;YahooMS2;Market Stats -- TSX Ventures -- New Highs;="Obsolete"
+13916;YahooMS2;Market Stats -- TSX Ventures -- New Lows;="Obsolete"
+13917;YahooMS2;Market Stats -- TSX Ventures -- Up Volume;="Obsolete"
+13918;YahooMS2;Market Stats -- TSX Ventures -- Down Volume;="Obsolete"
+13919;YahooMS2;Market Stats -- TSX Ventures -- Unchanged Volume;="Obsolete"
+13920;YahooMS2;Market Stats -- TSX Ventures -- Total Volume;="Obsolete"
+
+
+13863;Yahoo;Company Name;=smfStrExtr(smfGetTagContent("https://finance.yahoo.com/quote/~~~~~","title"),"~"," (~~~~~")
+13864;YahooIN;Sector Number;="Obsolete"
+13865;YahooIN;Sector Name;=smfStrExtr(RCHGetWebData("https://query2.finance.yahoo.com/v10/finance/quoteSummary/~~~~~?modules=assetProfile","""sector"":",150),":""","""")
+13866;YahooIN;Industry Number;="Obsolete"
+13867;YahooIN;Industry Name;=smfStrExtr(RCHGetWebData("https://query2.finance.yahoo.com/v10/finance/quoteSummary/~~~~~?modules=assetProfile","""industry"":",150),":""","""")
+13868;YahooIN;Industry Symbol;="Obsolete"
