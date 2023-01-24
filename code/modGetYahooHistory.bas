@@ -25,6 +25,7 @@ Public Function RCHGetYahooHistory(pTicker As String, _
     ' 2023-01-22 -- Created new version of RCHGetYahooHistory funtion in modGetYahooHistory
     '               Create routine to build URL as needed to then call RCHGetURLData
     '               Possibly add routine to parse returned table for data as requested in pItems
+    ' 2023-01-24 -- Fixed pPeriod using default.  Added Process period section
     '
     '-----------------------------------------------------------------------------------------------------------*
     Dim sItems As String
@@ -51,13 +52,29 @@ Public Function RCHGetYahooHistory(pTicker As String, _
     startDate = smfDate2Unix(pStartMonth & "/" & pStartDay & "/" & pStartYear)
     endDate = smfDate2Unix(pEndMonth & "/" & pEndDay & "/" & pEndYear)
     
+    '------------------> Set defaults, if necessary
+    If pPeriod = "" Then pPeriod = "d"
+    
+    '------------------> Process period
+    Dim sPeriod As String, sFreq As String, sfilter As String, sInterval As String
+    sPeriod = UCase(pPeriod)
+    Select Case sPeriod
+       Case "D": sInterval = "1d"
+       Case "W": sInterval = "1wk"
+       Case "M": sInterval = "1mo"
+       Case Else: GoTo ErrorExit
+       End Select
+    
     pURL = "https://query1.finance.yahoo.com/v7/finance/download/" & _
             pTicker & _
             "?period1=" & startDate & _
             "&period2=" & endDate & _
-            "&interval=1d&events=history&includeAdjustedClose=true"
+            "&interval=" & sInterval & _
+            "&events=history&includeAdjustedClose=true"
     
     RCHGetYahooHistory = RCHGetYahooQuotes(pURL, "")
+    
+ErrorExit:
     End Function
 
 Public Function RCHGetYahooHistory2(pTicker As String, _
