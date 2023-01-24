@@ -11,6 +11,7 @@ Public Function RCHGetYahooQuotes(ByVal pTickers As Variant, _
     '-----------------------------------------------------------------------------------------------------------*
     ' User defined function to download historical quotes from Yahoo!
     '-----------------------------------------------------------------------------------------------------------*
+    '               Original code written by Randy Harmelink
     ' 2005.02.16 -- New function; Adapted from other VBA modules
     ' 2005.06.18 -- Add code to convert numeric items to values instead of leaving as strings
     ' 2006.08.08 -- Return Yahoo response if no data can be parsed from the response
@@ -39,12 +40,18 @@ Public Function RCHGetYahooQuotes(ByVal pTickers As Variant, _
     ' 2016.05.18 -- Modify heading creation to ease transition between operating systems
     ' 2017.04.26 -- Change "http://" protocol to "https://"
     ' 2017.05.31 -- Add alternative process to get CSV file if "&crumb=" is in the URL
+    ' 2023-01-21 -- Mel Pryor (ClimberMel@gmail.com)
+    '               Note that if calling module such as RCHGetYahooHistory provides a URL in pTickers that will get used later in code
+    '               as long as pItems is ""
+    '
     '-----------------------------------------------------------------------------------------------------------*
     ' > Examples of invocations to get current quotes for IBM and MMM:
-    '
     '   =RCHGetYahooQuotes("IBM,MMM")
     '   =RCHGetYahooQuotes("IBM,MMM",,,NOW())
     '   =RCHGetYahooQuotes("IBM,MMM","l1d1t1",,NOW(),1)
+    '
+    '   Example calling with URL to return table (pItems needs to be "")
+    '   =RCHGetYahooQuotes("https://query1.finance.yahoo.com/v7/finance/download/msft?period1=1262304000&period2=1735689600&interval=1devents=history&includeAdjustedClose=true", "")
     '-----------------------------------------------------------------------------------------------------------*
     
     Dim sURL As String
@@ -145,7 +152,7 @@ Public Function RCHGetYahooQuotes(ByVal pTickers As Variant, _
     
     '------------------> Overrides for specified CSV file
     If sItems = "" Then
-       sURL = pTickers
+       sURL = pTickers      'This switches sURL back to URL provided in pTickers from calling module
        pHeader = 0
        sDel = pDelimiter
        iOffset = 0
