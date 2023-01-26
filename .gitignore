@@ -20,6 +20,7 @@
 #  Also any modules prefixed with test (testGuiProgram.py) will be excluded
 test*/
 test*.py
+test*.*
 
 #  For now exclude image files.  I have some screenshots for VBA setting that are specific for the Add-in
 #  There is a separate images folder docs/images for the web pages
