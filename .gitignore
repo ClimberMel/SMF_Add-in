@@ -22,6 +22,9 @@ test*/
 test*.py
 test*.*
 
+#  web folder with various htm files.  I don't need this online at this point
+web/
+
 #  For now exclude image files.  I have some screenshots for VBA setting that are specific for the Add-in
 #  There is a separate images folder docs/images for the web pages
 img/
