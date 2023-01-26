@@ -1,0 +1,176 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	
+<title>RCHGetTableCell() Documentation</title>
+
+</head>
+
+<body>
+<h2>Documentation for RCHGetTableCell() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Extracts a specified table cell from a web page.
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=RCHGetTableCell( URL, Cell#, [Find1], [Find2], [Find3], [Find4], [Row#], [EndMarker], [Look#], [ErrorMsg], [Type] )</b>
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table><tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><table>
+
+<tbody><tr><td valign="top"><b>
+URL
+</b></td><td valign="top">=&nbsp;&nbsp;</td><td>
+The web page to retrieve the table cell from.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Cell#
+</b></td><td valign="top">=&nbsp;&nbsp;</td><td>
+The number of cells to skip forward (after function is positioned on the
+ page by "Find1" thru "Find4" and "Row#") before returning data.
+<br><br>Using a negative value for this parameter causes the function to
+ skip to the end of the row (i.e. the next "&lt;/tr&gt;" HTML tag), and 
+then search backwards for table cells from there. So, a -1 would target 
+the last table cell in the row.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Find1
+</b></td><td valign="top">=&nbsp;&nbsp;</td><td>
+An optional string value to search for to position the function on the 
+page before skipping ahead rows and cells to find the data to return.  
+Defaults to "&lt;BODY".
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Find2
+</b></td><td valign="top">=&nbsp;&nbsp;</td><td>
+An optional string value to search for to further position the function 
+on the page (after finding the "Find1" string) before skipping ahead 
+rows and cells to find the data to return.  Defaults to " ".
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Find3
+</b></td><td valign="top">=&nbsp;&nbsp;</td><td>
+An optional string value to search for to further position the function 
+on the page (after finding the "Find1" thru "Find2" strings) before 
+skipping ahead rows and cells to find the data to return.  Defaults to "
+ ".
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Find4
+</b></td><td valign="top">=&nbsp;&nbsp;</td><td>
+An optional string value to search for to further position the function 
+on the page (after finding the "Find1" thru "Find3" strings) before 
+skipping ahead rows and cells to find the data to return.  Defaults to "
+ ".
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Row#
+</b></td><td valign="top">=&nbsp;&nbsp;</td><td>
+An option number of rows to skip ahead (after function is positioned on 
+the page by "Find1" thru "Find4") before skipping ahead the specified 
+number of table cells to find the data to return.  Defaults to 0.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+EndMarker
+</b></td><td valign="top">=&nbsp;&nbsp;</td><td>
+An optional string value that marks the end of the skip aheads based on 
+"Cell#" and "Row#". If the next found table cell ia after this point, 
+the error message is returned.  Defaults to "&lt;/BODY", but is usually 
+set to "&lt;/TABLE" when using "Row#" to ensure that the search doesn't 
+go outside the current table when skipping ahead by table rows.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Look#
+</b></td><td valign="top">=&nbsp;&nbsp;</td><td>
+An optional number of consecutive cells to search for data in (ignoring empty table cells).  Rarely used.  Defaults to 0.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+ErrorMsg
+</b></td><td valign="top">=&nbsp;&nbsp;</td><td>
+An optional value to return if the table cell cannot be found based on specified parameters.  Defaults to "Error".
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Type
+</b></td><td valign="top">=&nbsp;&nbsp;</td><td>
+An optional integer value to determine the type of Internet request to 
+make.  Defaults to 0.  For now, other values are experimental:
+<br><br>0 = XMLHTTP "Get" Request
+<br>1 = IE Object Request
+<br>2 = HTMLDocument Request
+<br>3 = XMLHTTP "Post" Request
+<br></td></tr>
+
+</tbody></table></td></tr></tbody></table>
+
+<br><u><b>Examples</b></u>
+<ul>
+<li>To retrieve the "Market Cap" value from the Yahoo! Key Statistics page for ticker symbol "MMM":
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHGetTableCell("http://finance.yahoo.com/q/ks?s=MMM",1,"Market Cap (intraday)")
+<br><br>...which tells the function to retrieve the 
+"http://finance.yahoo.com/q/ks?s=MMM" web page, look for the "Market Cap
+ (intraday)" string on the page, then return the data in the following 
+table cell.
+<br><br></li><li>...more to come
+</li></ul>
+
+<u><b>Usage notes</b></u>
+<ul>
+<li>This is the general process the function uses to extract the data:
+<br><br><ol>
+<li>The source of the web page specified by "URL" is retrieved from the Internet.
+</li><li>A position pointer is set to 1.
+</li><li>The position pointer is advanced to the next location of the string specified by "Find1" found in the web page source.
+</li><li>If "Find2" is nonblank, the position pointer is advanced to the
+ next location of the string specified by "Find2" found in the web page 
+source.
+</li><li>If "Find3" is nonblank, the position pointer is advanced to the
+ next location of the string specified by "Find3" found in the web page 
+source.
+</li><li>If "Find4" is nonblank, the position pointer is advanced to the
+ next location of the string specified by "Find4" found in the web page 
+source.
+</li><li>If "Row#" is not zero, the ending position of the table is set by finding the string specified by "EndMarker".
+</li><li>If "Row#" is not zero, the position pointer is advanced the 
+number of table rows requested, to the start of the table row.  If the 
+next row found is beyond the position set by "EndMarker", an extraction 
+error is signaled.
+</li><li>The position pointer is advanced the number of table cells 
+specified by "Cell#".  If the end of the current table row is hit before
+ the cell is found, an extraction error is signaled.
+</li><li>If "Look#" is zero, the current cell is returned.  Otherwise, 
+it looks for and returns the first non-empty cell up to the number 
+specified by "Look#".
+</li></ol>
+<br></li><li>This function uses the same caching technique as the 
+RCHGetElementNumber() function, so if you are retrieving multiple 
+elements from the same page, only one web page retrieval needs to be 
+done.  The source of the web page will be saved and used for extracton 
+of later data elements.
+<br><br></li><li>...more to come
+</li></ul>
+
+<u><b>Update history</b></u>
+<br><br>
+<table>
+<tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><u><b>Date</b></u></td><td>&nbsp;&nbsp;&nbsp;</td><td><u><b>Description</b></u></td></tr>
+<tr><td>&nbsp;</td><td valign="top">2014-03-08</td><td>&nbsp;</td><td valign="top">Removed several no longer relevant usage notes</td></tr>
+<tr><td>&nbsp;</td><td valign="top">2014-03-08</td><td>&nbsp;</td><td valign="top">Added update history section</td></tr><tr><td>&nbsp;</td><td valign="top">2014-03-08</td><td>&nbsp;</td><td valign="top">Added description of a negative value for the "#Cells" parameter.</td></tr>
+<tr><td>&nbsp;</td><td valign="top">2014-03-08</td><td>&nbsp;</td><td valign="top">Corrected several typos.</td></tr>
+<tr><td>&nbsp;</td><td valign="top">2014-03-08</td><td>&nbsp;</td><td valign="top">Changed "Parameters" layout slightly.</td></tr>
+</tbody></table>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+</body></html>

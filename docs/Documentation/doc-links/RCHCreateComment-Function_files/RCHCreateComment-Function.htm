@@ -1,0 +1,112 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	
+<title>RCHCreateComment() Documentation</title>
+
+</head>
+
+<body>
+<h2>Documentation for RCHCreateComment() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Creates a comment box for the cell that can contain text and/or an image (e.g. a stock chart).
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=RCHCreateComment( Ticker, [Choice], [Width], [Height], [Visible], [Top], [Left], [Scale], [Text], [Return] )</b>
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table><tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><table>
+
+<tbody><tr><td valign="top"><b>
+Ticker
+</b></td><td>
+= Ticker symbol (e.g "MMM")
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Choice
+</b></td><td>
+= Type of date to insert into created comment.  Defaults to a value of 1.  Possible values:
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 = Insert text only
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 = Insert image of daily chart from Stockcharts' Gallery View for passed "Ticker"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 = Insert image of P&amp;F Chart from StockCharts for passed "Ticker"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 = Insert image of 6-month Candleglance Chart from StockCharts for passed "Ticker"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 = Insert image of 6-month chart from Business Week Online for passed "Ticker"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;99 = Insert custom image using the "Ticker" 
+field value as the URL of the image.  Excel appears to have a limit of 
+100 bytes for this URL.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Width
+</b></td><td>= Width (in pixels) of comment box.  Optional except when Choice=99.  Default values vary depending on the value of "Choice".
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Height
+</b></td><td>= Height (in pixels) of comment box.  Optional except when Choice=99.  Default values vary depending on the value of "Choice".
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Visible
+</b></td><td>
+= A binary value to indicate whether the comment should be visible or hidden; optional; defaults to 0 (hidden).
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;0 = Keep comment hidden
+<br>&nbsp;&nbsp;&nbsp;&nbsp;1 = Make comment visible
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Top
+</b></td><td>
+= Top position (in pixels) of comment relative to the top of the cell containing the formula.  Defaults to 1.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Left
+</b></td><td>
+= Leftmost position (in pixels) of comment relative to the left of the cell containing the formula.  Defaults to 1.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Scale
+</b></td><td>
+= Scaling amount to apply to Choice-based height and width sizes.  Defaults to 100%.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Text
+</b></td><td>
+= Text data to place into comment box.  In most cases, you would NOT use this if you are loading an image.  Defaults to "".
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Return
+</b></td><td>
+= Data to return as the value for the cell.  Defaults to "Chart".
+<br><br></td></tr>
+
+</tbody></table></td></tr></tbody></table>
+
+<br><u><b>Examples</b></u>
+<ul>
+<li>Either of these would insert a comment box containing the daily chart from Stockcharts' Gallery View for ticker "IHR":
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHCreateComment("IHR",1,0,0,1,2,1,1,"","Chart")
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHCreateComment("IHR",1)
+<br><br></li><li>This would insert a comment box containing a custom chart for ticker "HLX":
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHCreateComment("http://stockcharts.com/c-sc/sc?s=HLX&amp;p=D&amp;yr=0&amp;mn=6&amp;dy=0&amp;i=t39628903145&amp;r=9933",99,350,360)
+<br><br></li><li>...more to come
+</li></ul>
+
+<u><b>Usage notes</b></u>
+<ul>
+<li>...none at this time
+<br><br></li><li>...none at this time
+</li></ul>
+
+
+
+
+
+</body></html>

@@ -1,0 +1,55 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	
+<title>SMF Context Menu -- Documentation</title>
+
+</head>
+
+<body>
+
+<h2>Preliminary Documentation for SMF Context Menu</h2>
+
+<hr id="LogFile"><h3>SMF log file</h3>
+
+All of the logging options are on the SMF context menu (right mouse click within the workbook). You'd first do:
+
+<br><br><span style="margin-left:40px">&gt; SMF &gt; Logging &gt; Enable</span>
+
+<br><br>...to enable logging. What this does is tell the add-in to 
+append a line to a file (smf-log.csv) in your add-in folder each time 
+the add-in has to go to the Internet to grab a web page or a file. Later
+ on, you can view the log using the context menu:
+
+<br><br><span style="margin-left:40px">&gt; SMF &gt; Logging &gt; Open Log File</span>
+
+<br><br>...which will open the CSV file and put headers on the columns. The resulting worksheet will look something like:
+
+<br><br><table style="margin-left:40px" border="1">
+<tbody><tr><td style=" white-space: nowrap; vertical-align: bottom; text-align: center;"><b>Time Stamp</b></td><td style=" white-space: nowrap; vertical-align: bottom; text-align: right;"><b>Duration</b></td><td style=" white-space: nowrap; vertical-align: bottom; text-align: left;"><b>Called URL</b></td></tr>
+<tr><td style=" white-space: nowrap; vertical-align: bottom; text-align: center;">2017-12-30 20:18:10</td><td style=" white-space: nowrap; vertical-align: bottom; text-align: right;">0.2344</td><td style=" white-space: nowrap; vertical-align: bottom; text-align: left;">http://quicktake.morningstar.com/fundnet/printreport.aspx?symbol=CRAK</td></tr>
+<tr><td style=" white-space: nowrap; vertical-align: bottom; text-align: center;">2017-12-30 20:18:10</td><td style=" white-space: nowrap; vertical-align: bottom; text-align: right;">0.1797</td><td style=" white-space: nowrap; vertical-align: bottom; text-align: left;">https://download.finance.yahoo.com/d/quotes.csv?s=XLY&amp;f=sp2&amp;e=.ignore</td></tr>
+<tr><td style=" white-space: nowrap; vertical-align: bottom; text-align: center;">2017-12-30 20:18:10</td><td style=" white-space: nowrap; vertical-align: bottom; text-align: right;">0.8984</td><td style=" white-space: nowrap; vertical-align: bottom; text-align: left;">https://finance.yahoo.com/q/ks?s=LNCOQ</td></tr>
+<tr><td style=" white-space: nowrap; vertical-align: bottom; text-align: center;">2017-12-30 20:18:11</td><td style=" white-space: nowrap; vertical-align: bottom; text-align: right;">0.7500</td><td style=" white-space: nowrap; vertical-align: bottom; text-align: left;">https://finance.yahoo.com/q/ks?s=MLPQ</td></tr>
+<tr><td style=" white-space: nowrap; vertical-align: bottom; text-align: center;">2017-12-30 20:18:12</td><td style=" white-space: nowrap; vertical-align: bottom; text-align: right;">0.0547</td><td style=" white-space: nowrap; vertical-align: bottom; text-align: left;">https://download.finance.yahoo.com/d/quotes.csv?s=XLP&amp;f=sp2&amp;e=.ignore</td></tr>
+<tr><td style=" white-space: nowrap; vertical-align: bottom; text-align: center;">2017-12-30 20:18:12</td><td style=" white-space: nowrap; vertical-align: bottom; text-align: right;">0.8750</td><td style=" white-space: nowrap; vertical-align: bottom; text-align: left;">https://finance.yahoo.com/q/ks?s=XLF</td></tr>
+</tbody></table>
+
+<br>My logging is always enabled. What I'll sometimes do is close all 
+all workbooks except the one I want to test. Then run the 
+smfForceRecalculation macro and open the log file. Then I can see all of
+ the web pages that workbook had to retrieve when I did the 
+smfForceRecalculation. 
+
+<br><br>For some of my quotes retrieval workbooks, I've been able to get them down to a single Internet request by reviewing the logs. 
+
+<br><br>The average duration is usually very small, but hundreds of them
+ in a workbook can add up. Some web sites can be slow, taking several 
+seconds per request. If you do get a duration of near 60 seconds (or 
+more), it usually means the web site is down and the request timed out. I
+ was getting a lot of timeouts from OptionsXpress earlier in the year, 
+which is why I had stopped using them for options data.
+
+<br><br><hr>
+
+
+</body></html>

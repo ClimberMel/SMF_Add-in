@@ -1,0 +1,81 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	
+<title>RCHGetWebData() Documentation</title>
+
+</head>
+
+<body>
+<h2>Documentation for RCHGetWebData() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>Extracts source data from a web page.  The primary purpose of 
+this function is for testing, to examine the web page data being 
+returned to VBA for processing.  However, it can also be used for ad hoc
+ extractions of data from a web page that isn't table oriented.
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=RCHGetWebData( URL, [Position], [Length], [Offset] )</b>
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table><tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><table>
+
+<tbody><tr><td valign="top"><b>
+URL
+</b></td><td>
+= Web page to retrieve source data to extract from.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Position
+</b></td><td>
+= An optional parameter that has a default value of 1, indicating either:
+<ol>
+<li>A number indicating an absolute position on the page to begin the extraction of data
+</li><li>A string to search for on the page to indicate a relative position on the page to begin the extraction of data
+</li></ol>
+</td></tr>
+
+<tr><td valign="top"><b>
+Length
+</b></td><td>
+= An optional parameter that has a default value of 32767 (the maximum 
+possible value), indicating the length of the data to extract from the 
+web page.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Offset
+</b></td><td>
+= An optional parameter that has a default value of 0, indicating the 
+relative position to offset from parameter "Position" for extraction of 
+data from the web page.
+<br><br></td></tr>
+
+</tbody></table></td></tr></tbody></table>
+
+<u><b>Examples</b></u>
+<ul>
+<li>To retieve the first 32767 bytes of the Yahoo! Key Statistics page for ticker symbol "IHR":
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHGetWebData("http://finance.yahoo.com/q/ks?s=IHR")
+<br><br></li><li>To retrieve successive data from the same web page, you could use these additional formulas:
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHGetWebData("http://finance.yahoo.com/q/ks?s=IHR",32768,32767)
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHGetWebData("http://finance.yahoo.com/q/ks?s=IHR",65535,32767)
+<br><br></li><li>...more to come
+</li></ul>
+
+<u><b>Usage notes</b></u>
+<ul>
+<li>A value of "Error" is returned if the "Position" or "Length" values 
+are invalid for the web page.  However, if the "Position" is within the 
+web page and the "Length" would cause the extraction to go outside of 
+the web page, the "Length" is reset so the extraction only goes to the 
+length of the web page.
+<br><br></li><li>...more to come
+</li></ul>
+
+
+
+
+
+</body></html>
