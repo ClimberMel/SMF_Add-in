@@ -6,7 +6,7 @@ Function smfYahooAPIData(pTicker As String, _
          Optional pOptionSymbol As String = "")
                                     
     '-----------------------------------------------------------------------------------------------------------*
-    ' User defined function to access Yahoo API feeds
+    ' OBSOLETE - User defined function to access Yahoo API feeds
     '-----------------------------------------------------------------------------------------------------------*
     ' 2012.12.11 -- Created by Randy Harmelink (rharmelink@gmail.com)
     '            -- Based on http://www.philadelphia-reflections.com/blog/2392.htm
@@ -17,7 +17,12 @@ Function smfYahooAPIData(pTicker As String, _
     '            -- "f" feed is from yahoo.finance.options
     ' 2017.04.26 -- Change "http://" protocol to "https://"
     '-----------------------------------------------------------------------------------------------------------*
-         
+    ' 2023-01-29 -- Mel Pryor (ClimberMel@gmail.com)               
+    '-----------------------------------------------------------------------------------------------------------*
+    ' As of Thursday, Jan. 3, 2019, the YQL service at query.yahooapis.com will be retired.
+    ' Since this odule is based on that it is now OBSOLETE
+    '-----------------------------------------------------------------------------------------------------------*
+
     Const kURLa = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20csv%20where%20url%3D'http%3A%2F%2Fdownload.finance.yahoo.com%2Fd%2Fquotes.csv%3Fs%3D~~~~~" _
                 & "%26f%3Dsnll1d1t1cc1p2t7va2ibb6aa5pomwj5j6k4k5ers7r1qdyj1t8e7e8e9r6r7r5b4p6p5j4m3m7m8m4m5m6k1b3b2i5x%26e%3D.csv'%20and%20" _
                 & "columns%3D'Symbol%2CName%2CLastTradeWithTime%2CLastTradePriceOnly%2CLastTradeDate%2CLastTradeTime%2CChange%20PercentChange%2CChange%2CChangeinPercent%2CTickerTrend%2CVolume%2CAverageDailyVolume%2CMoreInfo%2CBid%2CBidSize%2CAsk%2CAskSize%2CPreviousClose%2COpen%2CDayRange%2CFiftyTwoWeekRange%2CChangeFromFiftyTwoWeekLow%2CPercentChangeFromFiftyTwoWeekLow%2CChangeFromFiftyTwoWeekHigh%2CPercentChangeFromFiftyTwoWeekHigh%2CEarningsPerShare%2CPE%20Ratio%2CShortRatio%2CDividendPayDate%2CExDividendDate%2CDividendPerShare%2CDividend%20Yield%2CMarketCapitalization%2COneYearTargetPrice%2CEPS%20Est%20Current%20Yr%2CEPS%20Est%20Next%20Year%2CEPS%20Est%20Next%20Quarter%2CPrice%20per%20EPS%20Est%20Current%20Yr%2CPrice%20per%20EPS%20Est%20Next%20Yr%2CPEG%20Ra" _

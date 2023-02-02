@@ -10,6 +10,11 @@ Public Function smfConvertData(ByVal pData As String, _
     ' 2016.05.18 -- Change CDec() to smfCDec() to ease transition between operating systems
     ' 2016.07.13 -- Add "K" suffix
     '-----------------------------------------------------------------------------------------------------------*
+    ' 2023-01-29 -- Mel Pryor (ClimberMel@gmail.com)               
+    '-----------------------------------------------------------------------------------------------------------*
+    ' Calls smfCDec
+    '-----------------------------------------------------------------------------------------------------------*
+
     s1 = Trim(pData)
     On Error GoTo ErrorExit
     If InStr(s1, "/") > 0 Then

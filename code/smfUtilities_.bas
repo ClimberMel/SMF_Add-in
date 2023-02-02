@@ -29,6 +29,7 @@ Public Function smfLogInternetCalls(pLog As String)
        Case Else: smfLogInternetCalls = "Logging off"
        End Select
     End Function
+
 Public Sub smfOpenLogFile()
     '-----------------------------------------------------------------------------------------------------------*
     ' 2014.05.24 -- Created. Macro to open and format SMF log file
@@ -75,12 +76,15 @@ Attribute smfForceRecalculation.VB_ProcData.VB_Invoke_Func = "R\n14"
        Application.CalculateFullRebuild
        End If
     End Sub
+
 Public Sub smfASyncOn() ' Turn Asynchronous XMLHTTP on
     bASync = True
     End Sub
+
 Public Sub smfASyncOff() ' Turn Asynchronous XMLHTTP off
     bASync = False
     End Sub
+
 Public Function RCHGetURLData1(pURL As String, _
                      Optional ByVal pType As String = "GET") As String
                      
@@ -131,7 +135,7 @@ Public Function RCHGetURLData2(pURL As String) As String
        Loop
     RCHGetURLData2 = oIE.Document.documentElement.outerHTML
     oIE.Quit
-       
+    
     
     'With oIE
     '    .Navigate pURL
@@ -202,10 +206,19 @@ Public Function RCHGetURLData(ByVal pURL As String, _
        End If
     
     End Function
+
 Public Function smfCDec(ByVal pString As String) As Variant
     
     '-----------------------------------------------------------------------------------------------------------*
+    ' 2011-04-28 Change cDec() usage to smfConvertData() subroutine in most madules.
     ' 2016.05.18 -- Add routine to ease transition between operating systems
+    '-----------------------------------------------------------------------------------------------------------*
+    ' 2023-01-29 -- Mel Pryor (ClimberMel@gmail.com)               
+    '-----------------------------------------------------------------------------------------------------------*
+    ' The VBA CDec function converts an expression to a decimal data type. The decimal data type is actually a subtype of the variant data type.
+    ' The VBA CCur Converts a value to currency.
+    ' Mainly uses CDec instead of CCur due to increased precision.
+    ' Calls - none
     '-----------------------------------------------------------------------------------------------------------*
     
     smfCDec = pString
@@ -218,7 +231,6 @@ Public Function smfCDec(ByVal pString As String) As Variant
     #End If
 
     End Function
-                         
 
 Public Function smfGetWebPage(ByVal pURL As String, _
                      Optional ByVal pUseIE As Integer = 0, _
@@ -286,6 +298,7 @@ Public Function smfGetWebPage(ByVal pURL As String, _
 Public Function smfGetAData(p1 As Integer, p2 As Integer)
    smfGetAData = Left(aData(p1, p2), 32767)
    End Function
+
 Public Sub smfFixLinks()
     '-----------------------------------------------------------------------------------------------------------*
     ' 2012.01.02 -- Expand to do all sheets in workbook
@@ -338,6 +351,12 @@ Function smfStrExtr(pString As String, _
     ' 2011.07.12 -- Add dummy characters to represent start and end of input string
     ' 2017.07.09 -- Add pConvert parameter
     '-----------------------------------------------------------------------------------------------------------*
+    ' 2023-01-29 -- Mel Pryor (ClimberMel@gmail.com)
+    '               
+    '-----------------------------------------------------------------------------------------------------------*
+    ' Calls smfConvertData
+    '-----------------------------------------------------------------------------------------------------------*
+
     If pStart = "~" Then
        iPos1 = 1
        iPos3 = 2
@@ -404,17 +423,24 @@ ErrorHandler:
 
 Public Function smfStripHTML(ByVal sHTML As String) As String
     '-----------------------------------------------------------------------------------------------------------*
-    ' 2014.04.07 -- Add function
+    ' 2014.04.07 -- Add function Randy
+    '               New utility function to remove HTML tags from text
+    '
+    ' 2023-01-28 -- Mel Pryor (ClimberMel@gmail.com)
+    '               Called by Function smfGetTagContent in modGetTagContent
     '-----------------------------------------------------------------------------------------------------------*
     Dim oDoc As HTMLDocument
     Set oDoc = New HTMLDocument
     oDoc.body.innerHTML = sHTML
     smfStripHTML = oDoc.body.innerText
     End Function
-  
+
 Public Function smfDate2Unix(ByVal pDate As Date) As Long
     '-----------------------------------------------------------------------------------------------------------*
     ' 2017.05.17 -- Add function
+    '
+    ' 2023-01-28 -- Mel Pryor (ClimberMel@gmail.com)
+    '               Called by Function smfGetYahooHistory
     '-----------------------------------------------------------------------------------------------------------*
     smfDate2Unix = DateDiff("s", kUnix1970, pDate)
     End Function
@@ -425,9 +451,14 @@ Public Function smfUnix2Date(pUnixDate As Long) As Date
     '-----------------------------------------------------------------------------------------------------------*
     smfUnix2Date = DateAdd("s", pUnixDate, kUnix1970)
     End Function
+
 Public Function smfHTMLDecode(pString As String) As String
     '-----------------------------------------------------------------------------------------------------------*
-    ' 2017.06.16 -- Add function
+    ' 2017.06.16 -- Add function Randy
+    '               New function to remove HTML entities from a string
+    '
+    ' 2023-01-28 -- Mel Pryor (ClimberMel@gmail.com)
+    '               There is no code that calls this.  Not sure if it is useful for anything.
     '-----------------------------------------------------------------------------------------------------------*
     smfHTMLDecode = pString
     smfHTMLDecode = Replace(smfHTMLDecode, "&quot;", """")
@@ -437,9 +468,9 @@ Public Function smfHTMLDecode(pString As String) As String
     smfHTMLDecode = Replace(smfHTMLDecode, "&apos;", "'")
     smfHTMLDecode = Replace(smfHTMLDecode, "&#39;", "'")
     smfHTMLDecode = Replace(smfHTMLDecode, "&#039;", "'")
-    smfHTMLDecode = Replace(smfHTMLDecode, "&#150;", "–")
+    smfHTMLDecode = Replace(smfHTMLDecode, "&#150;", "ï¿½")
     smfHTMLDecode = Replace(smfHTMLDecode, "&#151;", "-")
     smfHTMLDecode = Replace(smfHTMLDecode, "&mdash;", "-")
-    smfHTMLDecode = Replace(smfHTMLDecode, "&#160;", " ")
+    smfHTMLDecode = Replace(smfHTMLDecode, "&#160;", "ï¿½")
     smfHTMLDecode = Replace(smfHTMLDecode, "&amp;", "&")
     End Function
