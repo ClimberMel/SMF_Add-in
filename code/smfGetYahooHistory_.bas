@@ -24,6 +24,10 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
     ' 2017.05.30 -- Change to use smfGetWebPage() instead of RCHGetURLData(), to remove redundant retrievals
     ' 2017.06.09 -- Remove calculated dividend adjustments, as Yahoo appears to be doing them now
     ' 2017.07.12 -- Add back in adjustments for O/H/L amounts, get adjusted close and close
+    ' 2022-12-30 -- This module is no longer working.  Functions such as RCHGetYahooHistory & smfPrices* modules
+    '               call this and therfore are not working either.
+    ' 2023-01-22 -- Mel Pryor (ClimberMel@gmail.com)
+    '               Created a fix in RCHGetYahooHistory so it doesn't call this module.  Will continue to look for a fix.
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation to get daily quotes for 2004 for IBM:
     '
