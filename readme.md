@@ -1,3 +1,4 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/ClimberMel/SMF_Add-in)
 # SMF Add-in 
 
 ## Stock Market Financials Add-in for Excel
