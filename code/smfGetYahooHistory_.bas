@@ -28,6 +28,7 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
     '               call this and therfore are not working either.
     ' 2023-01-22 -- Mel Pryor (ClimberMel@gmail.com)
     '               Created a fix in RCHGetYahooHistory so it doesn't call this module.  Will continue to look for a fix.
+    '               This module is called if the URL contains &crumb= I'm not sure what that is yet
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation to get daily quotes for 2004 for IBM:
     '
