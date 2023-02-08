@@ -24,11 +24,9 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
     ' 2017.05.30 -- Change to use smfGetWebPage() instead of RCHGetURLData(), to remove redundant retrievals
     ' 2017.06.09 -- Remove calculated dividend adjustments, as Yahoo appears to be doing them now
     ' 2017.07.12 -- Add back in adjustments for O/H/L amounts, get adjusted close and close
-    ' 2022-12-30 -- This module is no longer working.  Functions such as RCHGetYahooHistory & smfPrices* modules
-    '               call this and therfore are not working either.
     ' 2023-01-22 -- Mel Pryor (ClimberMel@gmail.com)
-    '               Created a fix in RCHGetYahooHistory so it doesn't call this module.  Will continue to look for a fix.
-    '               This module is called if the URL contains &crumb= I'm not sure what that is yet
+    ' 2023-02-08 -- Fixed issues with module trying to scrape json data when Yahoo is now csv data
+    '               It now uses RCHGetURLData() as it works well with CSV data
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation to get daily quotes for 2004 for IBM:
     '
@@ -41,6 +39,7 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
     Dim vDivAmt As Variant, vNum As Variant, vDen As Variant
     Dim dAdj As Double, d1 As Double, d2 As Double, dSplitAdj As Double
     Dim vByDay As Variant
+    Dim vItem As Variant
     ReDim vData(1 To 1, 1 To 1) As Variant
     
     vData(1, 1) = "Error"
@@ -49,7 +48,7 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
     
     '------------------> Set defaults, if necessary
     If pPeriod = "" Then pPeriod = "d"
-    If pItems = "" Then pItems = "dohlcvufgxs"
+    If pItems = "" Then pItems = "dohlcva"
     
     '------------------> Null Return Item
     If pTicker = "None" Or pTicker = "" Then
@@ -61,7 +60,7 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
     Dim dBegin As Double, dEnd As Double
     vData(1, 1) = "Error on starting date: " & pStartDate
     Select Case True
-          Case VarType(pStartDate) = vbDate Or VarType(pStartDate) = vbDouble
+          Case VarType(pStartDate) = vbDate Or VarType(pStartDate) = vbDouble   'vbDate = 7 so if VarType(pStartDate) = 7 then pStartDate is a Date)
                dBegin = smfDate2Unix(pStartDate)
           Case pStartDate = ""
                dBegin = smfDate2Unix(DateValue("1/1/1970"))
@@ -112,29 +111,35 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
        Case "D": sFreq = "1d": sfilter = "history": sInterval = "1d"
        Case "W": sFreq = "1wk": sfilter = "history": sInterval = "1wk"
        Case "A", "Q", "M": sFreq = "1mo": sfilter = "history": sInterval = "1mo"
-       Case "V": sFreq = "1d": sfilter = "div": sInterval = "div|split"
-       Case "S": sFreq = "1d": sfilter = "split": sInterval = "div|split"
+       Case "V": sFreq = "1d": sfilter = "div": sInterval = "1d"
+       Case "S": sFreq = "1d": sfilter = "split": sInterval = "1d"
        Case Else: GoTo ErrorExit
        End Select
     vData(1, 1) = "Error"
     
     '------------------> Verify and Process pItems parameter
-    Const kItemList As String = "Ticker,Date,Open,High,Low,Close,Volume,Unadj,Div Adj,Split Adj,Dividend,Split"
-    Dim sItems As String, aItems(1 To 12) As Integer
-    For i1 = 1 To 12: aItems(i1) = 0: Next i1
+    '  aItems will contain a list of the pItems requested and the order for the columns to return the data to
+    
+    'Const kItemList As String = "Ticker,Date,Open,High,Low,Close,Volume,Unadj,Div Adj,Split Adj,Dividend,Split"
+    'Yahoo provides split & div adjusted close, so I'm not going to try to manually calculate it for both splits and dividends
+    
+    Const kItemList As String = "Ticker,Date,Open,High,Low,Close,AdjClose,Volume,Dividend,Split"
+    Dim sItems As String, aItems(1 To 10) As Integer
+    For i1 = 1 To 10: aItems(i1) = 0: Next i1
     sItems = UCase(pItems)
-    Select Case sPeriod
-       Case "V"
-            If InStr(sItems, "T") > 0 Then aItems(1) = 1
-            aItems(2) = 1 + aItems(1)  ' Date
-            aItems(11) = 2 + aItems(1) ' Dividends
-       Case "S"
-            If InStr(sItems, "T") > 0 Then aItems(1) = 1
-            aItems(2) = 1 + aItems(1)  ' Date
-            aItems(12) = 2 + aItems(1) ' Splits
-       Case Else
+    Select Case sPeriod                                     ' sPeriod is Day, Week, Month for historical data or V for Dividends or S for Splits
+       Case "V"                                             ' Just bring back Date and Dividend
+            If InStr(sItems, "T") > 0 Then aItems(1) = 1    ' include Ticker
+            aItems(2) = 1 + aItems(1)                       ' Date
+            aItems(9) = 2 + aItems(1)                       ' Dividends
+       Case "S"                                             ' Just bring back Date and Splits
+            If InStr(sItems, "T") > 0 Then aItems(1) = 1    ' include Ticker
+            aItems(2) = 1 + aItems(1)                       ' Date
+            aItems(9) = 2 + aItems(1)                      ' Splits
+       Case Else                                            ' Just checks that all sItems are valid
             For i1 = 1 To Len(sItems)
-                i2 = InStr("TDOHLCVUFGXS", Mid(sItems, i1, 1))
+                'i2 = InStr("TDOHLCVUFGXS", Mid(sItems, i1, 1))
+                i2 = InStr("TDOHLCAVXS", Mid(sItems, i1, 1))
                 If i2 = 0 Then
                    vData(1, 1) = "Invalid data item requested: " & Mid(sItems, i1, 1)
                    GoTo ErrorExit
@@ -143,11 +148,14 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
                 Next i1
         End Select
   
-    '------------------> Verify and Process pNames parameter
+    '------------------> Verify and Process pNames parameter (Headers)
+    ' If pNames =1 then insert Headings into vData(1)
+    'CALL to smfWord to get Heading name and insert into vData based on order from aItems
+    
     Select Case pNames
        Case 0
        Case 1
-            For i1 = 1 To 12
+            For i1 = 1 To 10
                 If aItems(i1) > 0 Then vData(1, aItems(i1)) = smfWord(kItemList, i1, ",")
                 Next i1
        Case Else
@@ -155,88 +163,44 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
        End Select
   
     '------------------> Create URL and retrieve data
-    sURL = "https://finance.yahoo.com/quote/" & pTicker & "/history?period1=" & dBegin & "&period2=" & dEnd & _
-           "&interval=" & sInterval & "&filter=" & sfilter & "&frequency=" & sFreq
-    'sData = RCHGetURLData(sURL)
-    sData = smfGetWebPage(sURL)
-    sData = smfStrExtr(sData, "HistoricalPriceStore", "]")   ' Keep only the "HistoricalPriceStore" JSON data
-    vByDay = Split(sData, "},{")
+    sURL = "https://query1.finance.yahoo.com/v7/finance/download/" & pTicker & "?period1=" & dBegin & "&period2=" & dEnd & _
+           "&interval=" & sInterval & "&events=" & sfilter & "&includeAdjustedClose=true"
+    sData = RCHGetURLData(sURL)
+    vByDay = Split(sData, Chr(10))
   
     '------------------> Extract data
     dAdj = 1
     dSplitAdj = 1
     vDivAmt = 0
-    vDen = 0
+    vDen = 0            'Denominator used if calculating Split adjusted prices
     iRow = pNames
-    For i1 = 0 To UBound(vByDay)
-       s1 = vByDay(i1) & "}"
+    
+    'For i1 = 0 To UBound(vByDay) Incremented this to skip the header row returned from Yahoo
+    For i1 = 1 To UBound(vByDay)
+       s1 = vByDay(i1)
        s1 = Replace(s1, "null", 0)
-       Select Case True
-          Case InStr(s1, "DIVIDEND") > 0
-               vDivAmt = smfStrExtr(s1, """amount"":", ",", 1)
-          Case InStr(s1, "SPLIT") > 0
-               vDen = smfStrExtr(s1, """denominator"":", ",", 1)
-               vNum = smfStrExtr(s1, """numerator"":", ",", 1)
-          Case Else
-               If iRow > iRows Then Exit For
-               Select Case True
-                  Case vDivAmt > 0 And sPeriod <> "S"
-                       If sPeriod = "V" Then iRow = iRow + 1
-                       i2 = aItems(11)
-                       If i2 > 0 And iRow > pNames Then
-                          If VarType(vData(iRow, i2)) = vbString Then vData(iRow, i2) = 0
-                          vData(iRow, i2) = vData(iRow, i2) + vDivAmt
-                          End If
-                       d1 = smfStrExtr(s1, """close"":", ",", 1)
-                       If d1 <> 0 Then dAdj = dAdj * (d1 - vDivAmt) / d1
-                       vDivAmt = 0
-                  Case vDen > 0 And sPeriod <> "V"
-                       If sPeriod = "S" Then iRow = iRow + 1
-                       If aItems(12) > 0 Then vData(iRow, aItems(12)) = vDen & " for " & vNum
-                       dSplitAdj = dSplitAdj * vNum / vDen
-                       vDen = 0
-                       vNum = 0
-                  End Select
-               d1 = Int(smfUnix2Date(smfStrExtr(s1, """date"":", ",")))
-               Select Case True
-                  Case iRow > pNames And sPeriod = "A" And Month(d1) <> 1
-                  Case iRow > pNames And sPeriod = "Q" And Month(d1) <> 1 And Month(d1) <> 4 And Month(d1) <> 7 And Month(d1) <> 10
-                  Case Else
-                       If iRow = iRows Then Exit For
-                       iRow = iRow + 1
-                       If aItems(1) > 0 Then vData(iRow, aItems(1)) = pTicker
-                       If aItems(2) > 0 Then vData(iRow, aItems(2)) = d1
-                       If aItems(3) > 0 Then vData(iRow, aItems(3)) = smfStrExtr(s1, """open"":", ",", 1) * dAdj
-                       If aItems(4) > 0 Then vData(iRow, aItems(4)) = smfStrExtr(s1, """high"":", ",", 1) * dAdj
-                       If aItems(5) > 0 Then vData(iRow, aItems(5)) = smfStrExtr(s1, """low"":", ",", 1) * dAdj
-                       d2 = smfStrExtr(s1, """adjclose"":", "}", 1) ' * dAdj
-                       If aItems(6) > 0 Then vData(iRow, aItems(6)) = d2
-                       If aItems(7) > 0 Then vData(iRow, aItems(7)) = smfStrExtr(s1, """volume"":", ",", 1)
-                       'If aItems(8) > 0 Then vData(iRow, aItems(8)) = smfStrExtr(s1, """unadjclose"":", "}".1)
-                       If aItems(8) > 0 Then vData(iRow, aItems(8)) = smfStrExtr(s1, """close"":", ",", 1)
-                       If aItems(9) > 0 Then vData(iRow, aItems(9)) = dAdj
-                       If aItems(10) > 0 Then vData(iRow, aItems(10)) = dSplitAdj
-                       '----------------------------* Forward fill missing data
-                       If d2 > 0 Then
-                          For i4 = 3 To 6
-                              If aItems(i4) > 0 Then
-                                 For i2 = iRow - 1 To pNames + 1 Step -1
-                                     If vData(i2, aItems(i4)) <> 0 Then Exit For
-                                     If aItems(i4) > 0 Then vData(i2, aItems(i4)) = d2
-                                     Next i2
-                                 End If
-                              Next i4
-                          If aItems(8) > 0 Then
-                             For i2 = iRow - 1 To pNames + 1 Step -1
-                                 If vData(i2, aItems(8)) <> 0 Then Exit For
-                                 vData(i2, aItems(8)) = vData(iRow, aItems(8))
-                                 Next i2
-                              End If
-                          End If
-                       If sPeriod = "S" Or sPeriod = "V" Then iRow = iRow - 1
-                   End Select
-          End Select
-       Next i1
+       vItem = Split(s1, ",")
+       d1 = DateValue(vItem(0))    ' Get the date from the first field
+            
+        Select Case True
+           Case iRow > pNames And sPeriod = "A" And Month(d1) <> 1
+           Case iRow > pNames And sPeriod = "Q" And Month(d1) <> 1 And Month(d1) <> 4 And Month(d1) <> 7 And Month(d1) <> 10
+           Case Else
+                If iRow = iRows Then Exit For
+                iRow = iRow + 1
+                If aItems(1) > 0 Then vData(iRow, aItems(1)) = pTicker                  'ticker
+                If aItems(2) > 0 Then vData(iRow, aItems(2)) = DateValue(vItem(0))      'date
+                If aItems(3) > 0 Then vData(iRow, aItems(3)) = vItem(1)                 'open
+                If aItems(4) > 0 Then vData(iRow, aItems(4)) = vItem(2)                 'high
+                If aItems(5) > 0 Then vData(iRow, aItems(5)) = vItem(3)                 'low
+                If aItems(6) > 0 Then vData(iRow, aItems(6)) = vItem(4)                 'close
+                If aItems(7) > 0 Then vData(iRow, aItems(7)) = vItem(5)                 'adj close
+                If aItems(8) > 0 Then vData(iRow, aItems(8)) = vItem(6)                 'volume
+                If aItems(9) > 0 Then vData(iRow, aItems(9)) = vItem(1)                 'dividend
+                If aItems(10) > 0 Then vData(iRow, aItems(10)) = vItem(1)               'split
+        End Select
+    Next i1
+    
     If sPeriod = "S" Or sPeriod = "V" Then
        For i1 = 1 To iCols
            If iRow + 1 > UBound(vData) Then Exit For
@@ -264,3 +228,5 @@ ErrorExit:
     smfGetYahooHistory = vData
     
     End Function
+
+
