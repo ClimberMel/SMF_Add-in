@@ -70,7 +70,7 @@ Public Function smfPricesBetween(ByVal pTicker As String, _
    
    For i1 = 1 To UBound(vHQ, 1)
        Select Case vHQ(i1, 1)
-          Case Is > pEndDate
+          Case Is > pEndDate: Exit For
           Case Is < pBegDate
           Case Else
                If vData(1, 8) = 0 Then
