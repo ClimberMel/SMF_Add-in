@@ -354,7 +354,7 @@ Function smfStrExtr(pString As String, _
     ' 2023-01-29 -- Mel Pryor (ClimberMel@gmail.com)
     '               
     '-----------------------------------------------------------------------------------------------------------*
-    ' Calls smfConvertData
+    ' If pConvert = 1: Calls smfConvertData
     '-----------------------------------------------------------------------------------------------------------*
 
     If pStart = "~" Then
