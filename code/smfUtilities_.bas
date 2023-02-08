@@ -340,7 +340,10 @@ Function smfStrExtr(pString As String, _
     ' 2023-02-06 -- Mel Pryor (ClimberMel@gmail.com)
     '               when called from smfGetYahooHistory with formula d1 = Int(smfUnix2Date(smfStrExtr(s1, """date"":", ",")))
     '               it would exit both this function and the calling function
-    '
+    '-----------------------------------------------------------------------------------------------------------*
+    ' 2023-01-29 -- Mel Pryor (ClimberMel@gmail.com)
+    '-----------------------------------------------------------------------------------------------------------*
+    ' If pConvert = 1: Calls smfConvertData
     '-----------------------------------------------------------------------------------------------------------*
     If pStart = "~" Then
        iPos1 = 1
@@ -446,9 +449,9 @@ Public Function smfHTMLDecode(pString As String) As String
     smfHTMLDecode = Replace(smfHTMLDecode, "&apos;", "'")
     smfHTMLDecode = Replace(smfHTMLDecode, "&#39;", "'")
     smfHTMLDecode = Replace(smfHTMLDecode, "&#039;", "'")
-    smfHTMLDecode = Replace(smfHTMLDecode, "&#150;", "–")
+    smfHTMLDecode = Replace(smfHTMLDecode, "&#150;", "Â–")
     smfHTMLDecode = Replace(smfHTMLDecode, "&#151;", "-")
     smfHTMLDecode = Replace(smfHTMLDecode, "&mdash;", "-")
-    smfHTMLDecode = Replace(smfHTMLDecode, "&#160;", " ")
+    smfHTMLDecode = Replace(smfHTMLDecode, "&#160;", "Â ")
     smfHTMLDecode = Replace(smfHTMLDecode, "&amp;", "&")
     End Function

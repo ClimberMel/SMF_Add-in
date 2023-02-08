@@ -7,7 +7,7 @@ Public Function RCHGetYahooHistory(pTicker As String, _
                           Optional pEndMonth As Integer = 12, _
                           Optional pEndDay As Integer = 31, _
                           Optional pPeriod As String = "d", _
-                          Optional pItems As String = "DOHLCVU", _
+                          Optional pItems As String = "DOHLCA", _
                           Optional pNames As Integer = 1, _
                           Optional pAdjust As Integer = 1, _
                           Optional pResort As Integer = 0, _
@@ -17,8 +17,7 @@ Public Function RCHGetYahooHistory(pTicker As String, _
     '-----------------------------------------------------------------------------------------------------------*
     ' User defined function to create backward compatible RCHGetYahooHistory() function
     '-----------------------------------------------------------------------------------------------------------*
-    ' 2017.05.25 -- Original code written by Randy Harmelink
-    '               Added for backward compatibility
+    ' 2017.05.25 -- Added for backward compatibility
     ' 2017.05.26 -- Check if pDim1 and pDim2 are overridden
     '-----------------------------------------------------------------------------------------------------------*
     ' 2023-01-22 -- Mel Pryor (climbermel@gmail.com)
@@ -26,14 +25,16 @@ Public Function RCHGetYahooHistory(pTicker As String, _
     '               Create routine to build URL as needed to then call RCHGetURLData
     '               Possibly add routine to parse returned table for data as requested in pItems
     ' 2023-01-24 -- Fixed pPeriod using default.  Added Process period section
-    '
+    ' 2023-02-07 -- Restored previous version since issue was with smfGetYahooHistory
     '-----------------------------------------------------------------------------------------------------------*
+
     Dim sItems As String
     sItems = UCase(pItems)
-    Select Case True
-       Case InStr(sItems, "C") > 0: sItems = Replace(sItems, "A", "")
-       Case Else: sItems = Replace(sItems, "A", "C")
-       End Select
+    ' Adjusted Close is provided by Yahoo so A is now acceptable
+    'Select Case True
+    '   Case InStr(sItems, "C") > 0: sItems = Replace(sItems, "A", "")
+    '   Case Else: sItems = Replace(sItems, "A", "C")
+    '   End Select
     
     If pAdjust = 0 Then
        RCHGetYahooHistory = "Error: All data is now adjusted"
@@ -49,32 +50,11 @@ Public Function RCHGetYahooHistory(pTicker As String, _
        iDim2 = Application.Caller.Columns.Count
        End If
    
-    startDate = smfDate2Unix(pStartMonth & "/" & pStartDay & "/" & pStartYear)
-    endDate = smfDate2Unix(pEndMonth & "/" & pEndDay & "/" & pEndYear)
-    
-    '------------------> Set defaults, if necessary
-    If pPeriod = "" Then pPeriod = "d"
-    
-    '------------------> Process period
-    Dim sPeriod As String, sFreq As String, sfilter As String, sInterval As String
-    sPeriod = UCase(pPeriod)
-    Select Case sPeriod
-       Case "D": sInterval = "1d"
-       Case "W": sInterval = "1wk"
-       Case "M": sInterval = "1mo"
-       Case Else: GoTo ErrorExit
-       End Select
-    
-    pURL = "https://query1.finance.yahoo.com/v7/finance/download/" & _
-            pTicker & _
-            "?period1=" & startDate & _
-            "&period2=" & endDate & _
-            "&interval=" & sInterval & _
-            "&events=history&includeAdjustedClose=true"
-    
-    RCHGetYahooHistory = RCHGetYahooQuotes(pURL, "")
-    
-ErrorExit:
+    RCHGetYahooHistory = testGetYahooHistory(pTicker, _
+                                            pStartMonth & "/" & pStartDay & "/" & pStartYear, _
+                                            pEndMonth & "/" & pEndDay & "/" & pEndYear, _
+                                            pPeriod, sItems, pNames, pResort, iDim1, iDim2)
+
     End Function
 
 Public Function RCHGetYahooHistory2(pTicker As String, _
