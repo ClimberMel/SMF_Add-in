@@ -3,7 +3,7 @@ Public Function RCHGetYahooHistory(pTicker As String, _
                           Optional pStartYear As Integer = 1970, _
                           Optional pStartMonth As Integer = 1, _
                           Optional pStartDay As Integer = 1, _
-                          Optional pEndYear As Integer = 2020, _
+                          Optional pEndYear As Integer = 2023, _
                           Optional pEndMonth As Integer = 12, _
                           Optional pEndDay As Integer = 31, _
                           Optional pPeriod As String = "d", _
@@ -50,7 +50,7 @@ Public Function RCHGetYahooHistory(pTicker As String, _
        iDim2 = Application.Caller.Columns.Count
        End If
    
-    RCHGetYahooHistory = testGetYahooHistory(pTicker, _
+    RCHGetYahooHistory = smfGetYahooHistory(pTicker, _
                                             pStartMonth & "/" & pStartDay & "/" & pStartYear, _
                                             pEndMonth & "/" & pEndDay & "/" & pEndYear, _
                                             pPeriod, sItems, pNames, pResort, iDim1, iDim2)
@@ -149,10 +149,10 @@ Public Function RCHGetYahooHistory2(pTicker As String, _
        pEndMonth = 0 And _
        pEndDay = 0 Then
     Else
-       If pStartYear < 1900 Or pStartYear > 2100 Or _
+       If pStartYear < 1900 Or pStartYear > 2400 Or _
              pStartMonth < 1 Or pStartMonth > 12 Or _
              pStartDay < 1 Or pStartDay > 31 Or _
-             pEndYear < 1900 Or pEndYear > 2100 Or _
+             pEndYear < 1900 Or pEndYear > 2400 Or _
              pEndMonth < 1 Or pEndMonth > 12 Or _
              pEndDay < 1 Or pEndDay > 31 Or _
                  pStartYear & Right("0" & pStartMonth, 2) & Right("0" & pStartDay, 2) > _
