@@ -26,6 +26,8 @@ Public Function RCHGetYahooHistory(pTicker As String, _
     '               Possibly add routine to parse returned table for data as requested in pItems
     ' 2023-01-24 -- Fixed pPeriod using default.  Added Process period section
     ' 2023-02-07 -- Restored previous version since issue was with smfGetYahooHistory
+    ' 2023-02-09 -- MelPryor (ClimberMel@gmail.com)
+    '               Changed default for pEndYear from 2020 to 2024
     '-----------------------------------------------------------------------------------------------------------*
 
     Dim sItems As String
@@ -106,10 +108,13 @@ Public Function RCHGetYahooHistory2(pTicker As String, _
     ' 2012.07.09 -- Fix handling of doubling up on current date
     ' 2017.04.17 -- Change protocol from "http://" to "https://"
     ' 2017.05.31 -- Add call to smfGetYahooHistoryCSV()
+    ' 2023-02-09 -- MelPryor (ClimberMel@gmail.com)
+    '               Changed error for pStartYear < 1900 Or pStartYear > 2100
+    '               to                pStartYear < 1900 Or pStartYear > 2400
     '-----------------------------------------------------------------------------------------------------------*
-    ' > Example of an invocation to get daily quotes for 2004 for IBM:
+    ' > Example of an invocation to get daily quotes for 2022 for IBM:
     '
-    '   =RCHGetYahooHistory2("IBM",2004,1,1,2004,12,31,"d")
+    '   =RCHGetYahooHistory2("IBM",2022,1,1,2022,12,31,"d")
     '-----------------------------------------------------------------------------------------------------------*
     Dim sURL As String
     
