@@ -27,6 +27,9 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
     ' 2023-01-22 -- Mel Pryor (ClimberMel@gmail.com)
     ' 2023-02-08 -- Fixed issues with module trying to scrape json data when Yahoo is now csv data
     '               It now uses RCHGetURLData() as it works well with CSV data
+    ' 2023-02-15 -- Returned data seems to default to oldest to newest, resort=1 gives newest to oldest
+    '               Returned values are string not numbers.  Should be float.
+    '               Changed to call smfCDec to convert them
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation to get daily quotes for 2004 for IBM:
     '
@@ -135,7 +138,7 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
        Case "S"                                             ' Just bring back Date and Splits
             If InStr(sItems, "T") > 0 Then aItems(1) = 1    ' include Ticker
             aItems(2) = 1 + aItems(1)                       ' Date
-            aItems(9) = 2 + aItems(1)                      ' Splits
+            aItems(10) = 2 + aItems(1)                       ' Splits
        Case Else                                            ' Just checks that all sItems are valid
             For i1 = 1 To Len(sItems)
                 'i2 = InStr("TDOHLCVUFGXS", Mid(sItems, i1, 1))
@@ -190,15 +193,16 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
                 iRow = iRow + 1
                 If aItems(1) > 0 Then vData(iRow, aItems(1)) = pTicker                  'ticker
                 If aItems(2) > 0 Then vData(iRow, aItems(2)) = DateValue(vItem(0))      'date
-                If aItems(3) > 0 Then vData(iRow, aItems(3)) = vItem(1)                 'open
-                If aItems(4) > 0 Then vData(iRow, aItems(4)) = vItem(2)                 'high
-                If aItems(5) > 0 Then vData(iRow, aItems(5)) = vItem(3)                 'low
-                If aItems(6) > 0 Then vData(iRow, aItems(6)) = vItem(4)                 'close
-                If aItems(7) > 0 Then vData(iRow, aItems(7)) = vItem(5)                 'adj close
-                If aItems(8) > 0 Then vData(iRow, aItems(8)) = vItem(6)                 'volume
-                If aItems(9) > 0 Then vData(iRow, aItems(9)) = vItem(1)                 'dividend
+                If aItems(3) > 0 Then vData(iRow, aItems(3)) = smfCDec(vItem(1))        'open
+                If aItems(4) > 0 Then vData(iRow, aItems(4)) = smfCDec(vItem(2))        'high
+                If aItems(5) > 0 Then vData(iRow, aItems(5)) = smfCDec(vItem(3))        'low
+                If aItems(6) > 0 Then vData(iRow, aItems(6)) = smfCDec(vItem(4))        'close
+                If aItems(7) > 0 Then vData(iRow, aItems(7)) = smfCDec(vItem(5))        'adj close
+                If aItems(8) > 0 Then vData(iRow, aItems(8)) = smfCDec(vItem(6))        'volume
+                If aItems(9) > 0 Then vData(iRow, aItems(9)) = smfCDec(vItem(1))        'dividend
                 If aItems(10) > 0 Then vData(iRow, aItems(10)) = vItem(1)               'split
         End Select
+        
     Next i1
     
     If sPeriod = "S" Or sPeriod = "V" Then
