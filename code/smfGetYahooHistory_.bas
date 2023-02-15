@@ -30,8 +30,9 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
     ' 2023-02-15 -- Returned data seems to default to oldest to newest, resort=1 gives newest to oldest
     '               Returned values are string not numbers.  Should be float.
     '               Changed to call smfCDec to convert them
+    '               Changed pStartDate to default to 1950 instead of 1970
     '-----------------------------------------------------------------------------------------------------------*
-    ' > Example of an invocation to get daily quotes for 2004 for IBM:
+    ' > Example of an invocation to get daily quotes for 2017 for IBM:
     '
     '   =smfGetYahooHistory("IBM","1/1/2017","5/18/2017","d")
     '-----------------------------------------------------------------------------------------------------------*
@@ -66,7 +67,7 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
           Case VarType(pStartDate) = vbDate Or VarType(pStartDate) = vbDouble   'vbDate = 7 so if VarType(pStartDate) = 7 then pStartDate is a Date)
                dBegin = smfDate2Unix(pStartDate)
           Case pStartDate = ""
-               dBegin = smfDate2Unix(DateValue("1/1/1970"))
+               dBegin = smfDate2Unix(DateValue("1/1/1950"))
           Case Else
                dBegin = smfDate2Unix(DateValue(pStartDate))
           End Select
