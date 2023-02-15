@@ -1,9 +1,9 @@
 Attribute VB_Name = "modGetYahooHistory"
 Public Function RCHGetYahooHistory(pTicker As String, _
-                          Optional pStartYear As Integer = 1970, _
+                          Optional pStartYear As Integer = 1950, _
                           Optional pStartMonth As Integer = 1, _
                           Optional pStartDay As Integer = 1, _
-                          Optional pEndYear As Integer = 2023, _
+                          Optional pEndYear As Integer = 2030, _
                           Optional pEndMonth As Integer = 12, _
                           Optional pEndDay As Integer = 31, _
                           Optional pPeriod As String = "d", _
@@ -27,9 +27,14 @@ Public Function RCHGetYahooHistory(pTicker As String, _
     ' 2023-01-24 -- Fixed pPeriod using default.  Added Process period section
     ' 2023-02-07 -- Restored previous version since issue was with smfGetYahooHistory
     ' 2023-02-09 -- MelPryor (ClimberMel@gmail.com)
-    '               Changed default for pEndYear from 2020 to 2024
+    '               Changed default for pEndYear from 2020 to 2030
+    ' 2023-02-15 -- Changed default for pEndYear from 2020 to 2030
+    '               Changed default for pStartYear from 1970 to 1950 (Yahoo data goes to 1962-01-02 I believe)
+    '               Add error checking if zeros are set due to empty cell in sheet for date items
     '-----------------------------------------------------------------------------------------------------------*
 
+    Dim currYear As Integer
+    
     Dim sItems As String
     sItems = UCase(pItems)
     ' Adjusted Close is provided by Yahoo so A is now acceptable
@@ -42,6 +47,34 @@ Public Function RCHGetYahooHistory(pTicker As String, _
        RCHGetYahooHistory = "Error: All data is now adjusted"
        Exit Function
        End If
+       
+    ' Check dates
+    currYear = Year(Now)
+    
+    If pStartYear = 0 Then
+       pStartYear = 1962
+    End If
+    
+    If pStartMonth = 0 Then
+       pStartMonth = 1
+    End If
+    
+    If pStartDay = 0 Then
+       pStartDay = 1
+    End If
+    
+    If pEndYear = 0 Then
+       pEndYear = currYear
+    End If
+    
+    If pEndMonth = 0 Then
+       pEndMonth = 12
+    End If
+       
+    If pEndDay = 0 Then
+       pEndDay = 31
+    End If
+    
        
     Dim iDim1 As Integer, iDim2 As Integer
     iDim1 = pDim1
