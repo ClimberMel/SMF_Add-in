@@ -28,9 +28,10 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
     ' 2023-02-08 -- Fixed issues with module trying to scrape json data when Yahoo is now csv data
     '               It now uses RCHGetURLData() as it works well with CSV data
     ' 2023-02-15 -- Returned data seems to default to oldest to newest, resort=1 gives newest to oldest
-    '               Returned values are string not numbers.  Should be float.
+    '               Returned values are string not numbers.  Should be float.   Issue #10
     '               Changed to call smfCDec to convert them
     '               Changed pStartDate to default to 1950 instead of 1970
+    '               Fixed Issue# 16 with data retreived from start date
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation to get daily quotes for 2017 for IBM:
     '
@@ -171,7 +172,7 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
            "&interval=" & sInterval & "&events=" & sfilter & "&includeAdjustedClose=true"
     sData = RCHGetURLData(sURL)
     vByDay = Split(sData, Chr(10))
-  
+    
     '------------------> Extract data
     dAdj = 1
     dSplitAdj = 1
@@ -180,7 +181,11 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
     iRow = pNames
     
     'For i1 = 0 To UBound(vByDay) Incremented this to skip the header row returned from Yahoo
-    For i1 = 1 To UBound(vByDay)
+    'For i1 = 1 To UBound(vByDay)
+    
+    '------------------> Change data order to start with most recent date see Issue #16
+
+    For i1 = UBound(vByDay) To 1 Step -1
        s1 = vByDay(i1)
        s1 = Replace(s1, "null", 0)
        vItem = Split(s1, ",")
