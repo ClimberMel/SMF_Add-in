@@ -57,11 +57,11 @@ Public Function RCHGetYahooHistory(pTicker As String, _
    ' Check dates
    currYear = Year(Now)
    
-   If pStartYear = 0 Then 
+   If pStartYear = 0 Then
       pStartYear = 1962
    End If
    
-   If pStartMonth < 1 Or pStartMonth > 12 Then 
+   If pStartMonth < 1 Or pStartMonth > 12 Then
       pStartMonth = 1
    End If
    

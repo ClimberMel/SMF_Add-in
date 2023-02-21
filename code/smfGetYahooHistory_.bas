@@ -32,6 +32,12 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
     '               Changed to call smfCDec to convert them
     '               Changed pStartDate to default to 1950 instead of 1970
     '               Fixed Issue# 16 with data retreived from start date
+    ' 2023-02-21 -- The original code for smfGetYahooHistory used C for Adjusted Close and U for Unadjusted close
+    '               A is now accepted but changed to C
+    '               RCHGetYahooHistory in modGetYahooHistory has been updated to match
+    '               with the use of U for unadjusted close, C & A for adjusted close
+    '-----------------------------------------------------------------------------------------------------------*
+
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation to get daily quotes for 2017 for IBM:
     '
@@ -127,9 +133,22 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
     
     'Const kItemList As String = "Ticker,Date,Open,High,Low,Close,Volume,Unadj,Div Adj,Split Adj,Dividend,Split"
     'Yahoo provides split & div adjusted close, so I'm not going to try to manually calculate it for both splits and dividends
-    
+   
+   Dim currYear As Integer
+   
+   Dim sItems As String, aItems(1 To 10) As Integer
+   
+   sItems = UCase(pItems)
+   
+   Select Case True
+      ' Note that C is for Adjusted Close so if C was requested, there is no point in having A as well
+      ' U would be used to request Unadjusted close
+      Case InStr(sItems, "C") > 0: sItems = Replace(sItems, "A", "")
+      ' If A was requested for adjusted close, replace with C as that is used to call the adjusted close
+      Case Else: sItems = Replace(sItems, "A", "C")
+      End Select
+
     Const kItemList As String = "Ticker,Date,Open,High,Low,Close,AdjClose,Volume,Dividend,Split"
-    Dim sItems As String, aItems(1 To 10) As Integer
     For i1 = 1 To 10: aItems(i1) = 0: Next i1
     sItems = UCase(pItems)
     Select Case sPeriod                                     ' sPeriod is Day, Week, Month for historical data or V for Dividends or S for Splits
@@ -140,11 +159,11 @@ Function smfGetYahooHistory(ByVal pTicker As String, _
        Case "S"                                             ' Just bring back Date and Splits
             If InStr(sItems, "T") > 0 Then aItems(1) = 1    ' include Ticker
             aItems(2) = 1 + aItems(1)                       ' Date
-            aItems(10) = 2 + aItems(1)                       ' Splits
+            aItems(10) = 2 + aItems(1)                      ' Splits
        Case Else                                            ' Just checks that all sItems are valid
             For i1 = 1 To Len(sItems)
                 'i2 = InStr("TDOHLCVUFGXS", Mid(sItems, i1, 1))
-                i2 = InStr("TDOHLCAVXS", Mid(sItems, i1, 1))
+                i2 = InStr("TDOHLUCVXS", Mid(sItems, i1, 1))
                 If i2 = 0 Then
                    vData(1, 1) = "Invalid data item requested: " & Mid(sItems, i1, 1)
                    GoTo ErrorExit

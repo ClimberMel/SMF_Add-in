@@ -416,7 +416,7 @@ Public Function smfStripHTML(ByVal sHTML As String) As String
 Public Function smfDate2Unix(ByVal pDate As Date) As Long
     '-----------------------------------------------------------------------------------------------------------*
     ' 2017.05.17 -- Add function
-    ' 2023-02-21 -- Converts a date object to Unix style of seconds from Epoch 
+    ' 2023-02-21 -- Converts a date object to Unix style of seconds from Epoch
     '-----------------------------------------------------------------------------------------------------------*
     smfDate2Unix = DateDiff("s", kUnix1970, pDate)
     End Function
