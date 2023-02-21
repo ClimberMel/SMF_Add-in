@@ -29,6 +29,7 @@ Public Function smfLogInternetCalls(pLog As String)
        Case Else: smfLogInternetCalls = "Logging off"
        End Select
     End Function
+
 Public Sub smfOpenLogFile()
     '-----------------------------------------------------------------------------------------------------------*
     ' 2014.05.24 -- Created. Macro to open and format SMF log file
@@ -75,12 +76,15 @@ Attribute smfForceRecalculation.VB_ProcData.VB_Invoke_Func = "R\n14"
        Application.CalculateFullRebuild
        End If
     End Sub
+
 Public Sub smfASyncOn() ' Turn Asynchronous XMLHTTP on
     bASync = True
     End Sub
+
 Public Sub smfASyncOff() ' Turn Asynchronous XMLHTTP off
     bASync = False
     End Sub
+
 Public Function RCHGetURLData1(pURL As String, _
                      Optional ByVal pType As String = "GET") As String
                      
@@ -202,10 +206,13 @@ Public Function RCHGetURLData(ByVal pURL As String, _
        End If
     
     End Function
+
 Public Function smfCDec(ByVal pString As String) As Variant
     
     '-----------------------------------------------------------------------------------------------------------*
     ' 2016.05.18 -- Add routine to ease transition between operating systems
+    ' 2023-02-21 -- Mel Pryor (ClimberMel@gmail.com)
+    '               Takes a string and converts it to a decimal number (or currency number on Mac)
     '-----------------------------------------------------------------------------------------------------------*
     
     smfCDec = pString
@@ -286,6 +293,7 @@ Public Function smfGetWebPage(ByVal pURL As String, _
 Public Function smfGetAData(p1 As Integer, p2 As Integer)
    smfGetAData = Left(aData(p1, p2), 32767)
    End Function
+
 Public Sub smfFixLinks()
     '-----------------------------------------------------------------------------------------------------------*
     ' 2012.01.02 -- Expand to do all sheets in workbook
@@ -302,23 +310,6 @@ Public Sub smfFixLinks()
             ReplaceFormat:=False
         Next Sht
     End Sub
-
-Function IfError(formula As Variant, show As String)
-
-    On Error GoTo ErrorHandler
-
-    If IsError(formula) Then
-        IfError = show
-    Else
-        IfError = formula
-    End If
-
-    Exit Function
-
-ErrorHandler:
-    Resume Next
-
-End Function
 
 Public Function fnWait(iSeconds As Integer)
    Dim varStart As Variant
@@ -337,11 +328,9 @@ Function smfStrExtr(pString As String, _
     ' 2010.06.06 -- Add error checking
     ' 2011.07.12 -- Add dummy characters to represent start and end of input string
     ' 2017.07.09 -- Add pConvert parameter
-    ' 2023-02-06 -- Mel Pryor (ClimberMel@gmail.com)
-    '               when called from smfGetYahooHistory with formula d1 = Int(smfUnix2Date(smfStrExtr(s1, """date"":", ",")))
-    '               it would exit both this function and the calling function
-    '-----------------------------------------------------------------------------------------------------------*
     ' 2023-01-29 -- Mel Pryor (ClimberMel@gmail.com)
+    ' 2023-02-06 -- when called from smfGetYahooHistory with formula d1 = Int(smfUnix2Date(smfStrExtr(s1, """date"":", ",")))
+    '               it would exit both this function and the calling function
     '-----------------------------------------------------------------------------------------------------------*
     ' If pConvert = 1: Calls smfConvertData
     '-----------------------------------------------------------------------------------------------------------*
@@ -427,6 +416,7 @@ Public Function smfStripHTML(ByVal sHTML As String) As String
 Public Function smfDate2Unix(ByVal pDate As Date) As Long
     '-----------------------------------------------------------------------------------------------------------*
     ' 2017.05.17 -- Add function
+    ' 2023-02-21 -- Converts a date object to Unix style of seconds from Epoch 
     '-----------------------------------------------------------------------------------------------------------*
     smfDate2Unix = DateDiff("s", kUnix1970, pDate)
     End Function
@@ -434,9 +424,11 @@ Public Function smfDate2Unix(ByVal pDate As Date) As Long
 Public Function smfUnix2Date(pUnixDate As Long) As Date
     '-----------------------------------------------------------------------------------------------------------*
     ' 2017.05.17 -- Add function
+    ' 2023-02-21 -- Converts a Unix style date back to a regular datetime object
     '-----------------------------------------------------------------------------------------------------------*
     smfUnix2Date = DateAdd("s", pUnixDate, kUnix1970)
     End Function
+
 Public Function smfHTMLDecode(pString As String) As String
     '-----------------------------------------------------------------------------------------------------------*
     ' 2017.06.16 -- Add function
