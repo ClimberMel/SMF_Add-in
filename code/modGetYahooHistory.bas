@@ -42,7 +42,10 @@ Public Function RCHGetYahooHistory(pTicker As String, _
    sItems = UCase(pItems)
    
    Select Case True
+      ' Note that C is for Adjusted Close so if C was requested, there is no point in having A as well
+      ' U would be used to request Unadjusted close
       Case InStr(sItems, "C") > 0: sItems = Replace(sItems, "A", "")
+      ' If A was requested for adjusted close, replace with C as that is used to call the adjusted close
       Case Else: sItems = Replace(sItems, "A", "C")
       End Select
    
