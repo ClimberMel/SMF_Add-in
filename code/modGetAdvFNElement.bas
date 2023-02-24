@@ -11,7 +11,7 @@ Function smfGetADVFNElement(ByVal pTicker As String, _
    '-----------------------------------------------------------------------------------------------------------*
    ' Function to return a financial statements data element from AdvFN
    '-----------------------------------------------------------------------------------------------------------*
-   ' 2009.11.04 -- Created by Randy Harmelink
+   ' 2009.11.04 -- Created by Randy Harmelink (rharmelink@gmail.com)
    ' 2009.12.19 -- Add smfConvertYahooTicker() processing
    ' 2012.01.30 -- Change AdvFn URL from "http://www..." to "http://us...."
    ' 2012.02.02 -- Make AdvFN URL prefix a variable
@@ -23,9 +23,6 @@ Function smfGetADVFNElement(ByVal pTicker As String, _
    ' 2015.03.21 -- Allow exchange prefix on ticker symbol
    ' 2017.05.05 -- Add smfSetAdvFNPrefix() sub
    ' 2018.01.24 -- Change AdvFN URL from "http://" to "https://"
-   ' 2023-01-24 -- Testing by Mel Pryor (ClimberMel@gmail.com)
-   '               Currently this is returning all "--"
-   '
    '-----------------------------------------------------------------------------------------------------------*
    ' Sample of use:
    '
