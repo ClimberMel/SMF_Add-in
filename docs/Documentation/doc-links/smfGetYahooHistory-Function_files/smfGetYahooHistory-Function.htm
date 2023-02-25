@@ -1,0 +1,174 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><script src="smfGetYahooHistory-Function_data/pdguierr.f_005.htm" type="text/javascript" id="pdguierr.f.kk[6]"></script><script src="smfGetYahooHistory-Function_data/pdguierr.f_002.htm" type="text/javascript" id="pdguierr.f.kk[5]"></script><script src="smfGetYahooHistory-Function_data/pdguierr.f_006.htm" type="text/javascript" id="pdguierr.f.kk[4]"></script><script src="smfGetYahooHistory-Function_data/pdguierr.f_003.htm" type="text/javascript" id="pdguierr.f.kk[3]"></script><script src="smfGetYahooHistory-Function_data/pdguierr.f_007.htm" type="text/javascript" id="pdguierr.f.kk[2]"></script><script src="smfGetYahooHistory-Function_data/pdguierr.f.htm" type="text/javascript" id="pdguierr.f.kk[1]"></script><script src="smfGetYahooHistory-Function_data/pdguierr.f_004.htm" type="text/javascript" id="pdguierr.f.kk[0]"></script><script id="lexity-pixel" type="text/javascript" async="" src="smfGetYahooHistory-Function_data/9eab478080d55ba578e2d83c3df19680"></script><script type="text/javascript" src="bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://ogres-crypt.com/SMF/Documentation/smfGetYahooHistory-Function.html","20211024220528","https://web.archive.org/","web","/_static/",
+	      "1635113128");
+</script>
+<link rel="stylesheet" type="text/css" href="banner-styles.css">
+<link rel="stylesheet" type="text/css" href="iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+	
+<title>smfGetYahooHistory() -- Documentation</title>
+
+</head>
+
+<body>
+
+<h2>Documentation for smfGetYahooHistory() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns historical stock quotes from Yahoo
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetYahooHistory( Ticker, [Start Date], [End Date], [Period], [Items], [Headers], [Resort], [Rows], [Columns] )</b>
+
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table>
+
+<tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Ticker</b></td><td valign="top">=</td><td>
+Ticker symbol (e.g "MMM")<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Start&nbsp;Date</b></td><td valign="top">=</td><td>
+An optional starting date. The date can either be a string value (e.g. 
+"mm/dd/yyyy") or an EXCEL serial date value. If none is specifed, the 
+default is "1/1/1970".<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>End Date</b></td><td valign="top">=</td><td>
+An optional ending date. The date can either be a string value (e.g. 
+"mm/dd/yyyy") or an EXCEL serial date value. If none is specifed, the 
+default is tomorrow's date.<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Period</b></td><td valign="top">=</td><td>
+An optional character indicating the type of data period to retrieve. The default value is "d". Possible values:
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"d" = Daily quotes
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"w" = Weekly quotes  (Yahoo chooses to use the first trading day of the week as the end of the period)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"m" = Monthly quotes (Yahoo chooses to use the first trading day of the month as the end of the period)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"q" = Quarterly quotes (Yahoo chooses to use
+ the first trading day of the month as the end of the period)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"s" = Semi-annual quotes (Yahoo chooses to 
+use the first trading day of the month as the end of the period)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"a" = Annual quotes (Yahoo chooses to use the first trading day of the month as the end of the period)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"v" = Dividend history ("T" is the only 
+"Item" that makes a difference – Date and Dividend amount are automatic)
+<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Items</b></td><td valign="top">=</td><td>
+An optional character string indicating which data items to retrieve. 
+The default value is "DOHLCVUFGXS". Possible values within the character
+ string:
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"T" = Ticker symbol
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"D" = Ending date of the period
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"O" = Opening price of the period
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"H" = High price for the period
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"L" = Low price for the period
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"C" = Adjusted closing price for the period
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"V" = Trading volume for the period
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"U" = Unadjusted closing price for the period
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"F" =  Factor of dividend adjustments (1 = None)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"G" =  Factor of split adjustments (1 = None)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"X" =  Amount of dividends paid in period
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"S" =  Text indication of split amount
+<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Headers</b></td><td valign="top">=</td><td>
+An optional binary value to indicate whether headers should be returned 
+for the column(s) of data. The value defaults to 1. Possible values:
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;0 = Suppress column headings
+<br>&nbsp;&nbsp;&nbsp;&nbsp;1 = Display column headings
+<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Resort</b></td><td valign="top">=</td><td>
+An optional binary value to indicate whether data should be resorted or not. The value defaults to 0. Possible Values
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;0 = Do not resort data; present raw data as 
+returned from Yahoo!; newest data will be on the top rows of table.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;1 = Reverse the order of data returned from Yahoo!; oldest data will be on the top rows of table.
+<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Rows</b></td><td valign="top">=</td><td>
+An optional integer value that can override the number of rows of 
+desired output. This is typically not relevant, as it is automatically 
+based on the number of rows you array-entered the formula over.
+<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Columns</b></td><td valign="top">=</td><td>
+An optional interger that can override the number of columns of desired 
+output. This is typically not relevant, as it is automatically based on 
+the number of columns you array-entered the formula over.
+
+<br><br></td></tr>
+
+</tbody></table>
+
+<br><u><b>Examples</b></u>
+<ul>
+
+<li>This would return the twelve default data items for ticker symbol IBM:
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetYahooHistory("IBM")
+<br><br>If you array-entered the above formula over a 10-row by11-column
+ range, you would get the D/O/H/L/C/V/U/F/G/X/S data items for the 
+latest 9 days of history.
+
+<br><br></li><li>This would return a single item -- the adjusted closing price for ticker symbol IBM for January 3rd, 2007:
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetYahooHistory("IBM",,"1/3/2007",,"c",0)
+
+<br><br></li><li>This would return a single item -- the current 5-day moving average for ticker symbol MMM:
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=AVERAGE(smfGetYahooHistory("MMM",,,,"c",0,,5,1))
+
+<br><br></li><li>...more to come
+
+</li></ul>
+
+<u><b>Usage notes</b></u>
+<ul>
+
+<li>In most cases, this will need to be an array-entered formula.  To 
+array-enter a formula in EXCEL, first highlight the range of cells where
+ you would like the returned data to appear -- the number of rows for 
+the range should be the number of periods of data you are requesting 
+from the function, while the number of columns for the range should be 
+the number of data items you are requesting for each date from the 
+function.  Next, enter your formula and then press Ctrl-Shift-Enter. 
+
+<br><br></li><li>If the function is array-entered over a range that is 
+larger than the amount of data available from Yahoo, the excess portion 
+of the range will be filled with blanks.
+
+<br><br></li><li>If the function is array-entered over a range that is 
+smaller than the amount of data returned from Yahoo, the excess Yahoo 
+data will simply be ignored.  A user-defined function can only return 
+data to a cell or a range that it has been given access to -- in this 
+case, by the range used when array-entering the function.
+
+<br><br></li><li>...more to come
+
+</li></ul>
+
+
+<script type="text/javascript"> (function(d, w) { var x = d.getElementsByTagName('SCRIPT')[0]; var f = function() { var _id = 'lexity-pixel'; var _s = d.createElement('script'); _s.id = _id; _s.type = 'text/javascript'; _s.async = true; _s.src = "//web.archive.org/web/20211024220528/http://np.lexity.com/embed/YW/9eab478080d55ba578e2d83c3df19680?id=f0ba64b2b761"; if (!document.getElementById(_id)) { x.parentNode.insertBefore(_s, x); } }; w.attachEvent ? w.attachEvent('onload', f) : w.addEventListener('load', f, false); }(document, window)); </script><!--
+     FILE ARCHIVED ON 22:05:28 Oct 24, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 03:27:41 Feb 25, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 68.119
+  exclusion.robots: 0.078
+  exclusion.robots.policy: 0.069
+  cdx.remote: 0.062
+  esindex: 0.008
+  LoadShardBlock: 46.025 (3)
+  PetaboxLoader3.datanode: 60.684 (4)
+  load_resource: 58.043
+  PetaboxLoader3.resolve: 33.404
+--></body></html>
