@@ -1,11 +1,11 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/ClimberMel/SMF_Add-in)
 # SMF Add-in 
 
-## Stock Market Financials Add-in for Excel
+## Stock Market Functions Add-in for Excel
 
-* The SMF (Stock Market Functions) add-in adds a number of functions to EXCEL that can allow data to be retrieved from the web and placed directly into EXCEL cells or ranges. This website contains the add-in and its supporting files -- documentation, templates, FAQs, etc.
+* The Add-In provides additional functions to EXCEL that can allow data to be retrieved from the web and placed directly into EXCEL cells or ranges. This repository contains the add-in and its supporting files.
 
-* Questions about this website and the SMF add-in should be directed to the discussion group on [Google](https://groups.google.com/g/smf-addin). The website for the add-in is https://climbermel.github.io/SMF_Add-in/ and check the [Blog](https://smfxl-add-in.blogspot.com/) for details and tips
+* Questions about the SMF Add-In should be directed to the discussion group on [Google](https://groups.google.com/g/smf-addin). For details and tips check the [website](https://climbermel.github.io/SMF_Add-in/) and the [Blog](https://smfxl-add-in.blogspot.com/)
 
 ##### Donation Button
 
