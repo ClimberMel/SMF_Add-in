@@ -52,7 +52,7 @@ Public Function RCHGetYahooQuotes(ByVal pTickers As Variant, _
     '   =RCHGetYahooQuotes("IBM,MMM","l1d1t1",,NOW(),1)     OBSOLETE
     '
     '   Example calling with URL to return table (pItems needs to be "")
-    '   =RCHGetYahooQuotes("https://query1.finance.yahoo.com/v7/finance/download/msft?period1=1262304000&period2=1735689600&interval=1devents=history&includeAdjustedClose=true", "")
+    '   =RCHGetYahooQuotes("https://query1.finance.yahoo.com/v7/finance/download/msft?period1=1262304000&period2=1735689600&interval=1d&events=history&includeAdjustedClose=true", "")
     '-----------------------------------------------------------------------------------------------------------*
     
     Dim sURL As String
