@@ -1,3 +1,0 @@
-https://       finance.yahoo.com/quote/AAPL/history?period1=1609632000&period2=1625097600&interval=1d&filter=history&frequency=1d
-
-https://query1.finance.yahoo.com/v7/finance/download/AAPL?period1=1641132666&period2=1672668666&interval=1d&events=history&includeAdjustedClose=true
