@@ -43,12 +43,13 @@ Public Function RCHGetYahooQuotes(ByVal pTickers As Variant, _
     ' 2023-01-21 -- Mel Pryor (ClimberMel@gmail.com)
     '               Note that if calling module such as RCHGetYahooHistory provides a URL in pTickers that will get used later in code
     '               as long as pItems is ""
-    '
+    ' 2023-03-01    NOTE that the RCHGetYahooQuotes function is considered OBSOLETE.  The only part of this function that works is
+    '               calling it with a URL and pItems = "" (see example below)
     '-----------------------------------------------------------------------------------------------------------*
     ' > Examples of invocations to get current quotes for IBM and MMM:
-    '   =RCHGetYahooQuotes("IBM,MMM")
-    '   =RCHGetYahooQuotes("IBM,MMM",,,NOW())
-    '   =RCHGetYahooQuotes("IBM,MMM","l1d1t1",,NOW(),1)
+    '   =RCHGetYahooQuotes("IBM,MMM")                       OBSOLETE
+    '   =RCHGetYahooQuotes("IBM,MMM",,,NOW())               OBSOLETE
+    '   =RCHGetYahooQuotes("IBM,MMM","l1d1t1",,NOW(),1)     OBSOLETE
     '
     '   Example calling with URL to return table (pItems needs to be "")
     '   =RCHGetYahooQuotes("https://query1.finance.yahoo.com/v7/finance/download/msft?period1=1262304000&period2=1735689600&interval=1devents=history&includeAdjustedClose=true", "")
