@@ -8,7 +8,8 @@
 #  Output files
 #   I removed *.txt since the smf-elements are all txt files
 #   I removed *.xls* since there are sample Excel files
-
+#   I added ~$*.xls* to exclude temp Excel files if I open one
+~$*.xls*
 
 #  Flowchart and Word documents
 *.dia
