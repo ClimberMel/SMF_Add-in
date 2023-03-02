@@ -1,6 +1,6 @@
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
-html,body{font-family:'Times New Roman', Times, serif;font-size:14px;line-height:1}html{overflow-x:hidden}
+html,body{font-family:'Times New Roman', Times, serif;font-size: 100%;line-height:1}html{overflow-x:hidden}
 h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
 .w3-serif{font-family:serif}.w3-sans-serif{font-family:sans-serif}.w3-cursive{font-family:cursive}.w3-monospace{font-family:monospace}
 h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}
@@ -210,6 +210,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
 
+/* SMF styles */
 .recent {
     background-color:yellow;
     font-weight: bold;
@@ -218,6 +219,9 @@ div.fixed {
     position: fixed; top: 8px; height: 110px; width: 100%;
     border: 1px solid black;
 }
+
+/* top and bottom 0, left and right 5px */
+img { margin: 0 5px; } 
 
 #mainHeader {
 background-color: #BCD8FA;
