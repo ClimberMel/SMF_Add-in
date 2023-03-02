@@ -216,16 +216,19 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     font-weight: bold;
 }
 div.fixed {
-    position: fixed; top: 8px; height: 110px; width: 100%;
-    border: 1px solid black;
+    position: fixed; top: 24px; height: 90px; width: 100%;
+    vertical-align: top;
+    border-bottom: 1px solid black;
 }
+.top-table{border-collapse:collapse;border-spacing:0;width:100%;display:table}
+.top-table td, .top-table th{padding:1px 8px;display:table-cell;text-align:left;vertical-align:top}
 
 /* top and bottom 0, left and right 5px */
 img { margin: 0 5px; } 
 
 #mainHeader {
 background-color: #BCD8FA;
-vertical-align: bottom;
+vertical-align: top;
 font-family: 'Times New Roman', Times, serif;
 font-weight: Bold;
 }
