@@ -226,6 +226,7 @@ div.fixed {
 /* top and bottom 0, left and right 5px */
 img { margin: 0 5px; } 
 
+/* Top Nav bar */
 #mainHeader {
 background-color: #BCD8FA;
 vertical-align: top;
