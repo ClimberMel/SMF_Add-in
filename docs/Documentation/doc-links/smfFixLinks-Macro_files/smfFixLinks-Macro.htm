@@ -1,0 +1,40 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	
+<title>smfFixLinks-Macro -- Documentation</title>
+
+</head>
+
+<body>
+
+<h2>Preliminary Documentation for smfFixLinks-Macro</h2>
+
+<br><br>There was no documentation found for the SMFFixLinks Macro so I will add this to the TO-DO list.
+
+<br><br>I have always had the smfFixLinks-Macro in my own personal macros and then have a shortcut on my menu bar to access both it 
+        and the Force Recalculation macro.  This allows me to run them quickly and also resolves when on occasion the add-in 
+        doesn't appear when first opening a new workbook.
+
+        Here is the macro if you want to copy it to your own personal macros:<br><br>
+
+<p style="margin-left:40px">
+    Public Sub smfFixLinks()<br>
+&nbsp&nbsp    Dim Sht As Worksheet<br>
+&nbsp&nbsp    For Each Sht In Worksheets<br>
+&nbsp&nbsp&nbsp&nbsp        Sht.Cells.Replace _<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            What:="'*\RCH_Stock_Market_Functions.xla'!", _<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            Replacement:="", _<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            LookAt:=xlPart, _<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            SearchOrder:=xlByRows, _<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            MatchCase:=False, _<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            SearchFormat:=False, _<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            ReplaceFormat:=False<br>
+&nbsp&nbsp&nbsp&nbsp        Next Sht<br>
+&nbsp&nbsp    End Sub<br>
+    <br>
+</p>    
+... to be continued.
+<br><br><hr>
+
+
+</body></html>
