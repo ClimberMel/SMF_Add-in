@@ -1,0 +1,96 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><script id="lexity-pixel" type="text/javascript" async="" src="smfGetCSVFile-Function_data/9eab478080d55ba578e2d83c3df19680"></script><script type="text/javascript" src="bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://ogres-crypt.com/SMF/Documentation/smfGetCSVFile-Function.html","20210227052855","https://web.archive.org/","web","/_static/",
+	      "1614403735");
+</script>
+<link rel="stylesheet" type="text/css" href="banner-styles.css">
+<link rel="stylesheet" type="text/css" href="iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+	
+<title>smfGetCSVFile() Documentation</title>
+
+</head>
+
+<body>
+<h2>Documentation for smfGetCSVFile() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>Parses data from a CSV file into an EXCEL range.
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetCSVFile( URL )</b>
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table><tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><table>
+
+<tbody><tr><td valign="top"><b>
+URL
+</b></td><td>
+= CSV file to parse data from (can also be a local file name instead of a URL).
+<br><br></td></tr>
+
+</tbody></table></td></tr></tbody></table>
+
+<u><b>Examples</b></u>
+<ul>
+
+<li>To retrieve NASDAQ advancing issues data from Unicorn:
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetCSVFile("http://unicorn.us.com/advdec/NASDAQ_advn.csv")
+
+<br><br></li><li>To retrieve a local file:
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetCSVFile("C:\Users\Randy\Documents\Temp\Test3.csv")
+
+<br><br></li><li>An alternative way to grab current quotes data from Yahoo:
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetCSVFile("http://download.finance.yahoo.com/d/quotes.csv?s=MMM&amp;f;=sl1d1t1c1ohgv&amp;e;=.csv")
+
+<br><br></li><li>An alternative way to grab dividend data from Yahoo historical quotes:
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetCSVFile("http://ichart.finance.yahoo.com/table.csv?s=MMM&amp;g;=v&amp;ignore;=.csv")
+
+<br><br></li><li>...more to come
+
+</li></ul>
+
+<u><b>Usage notes</b></u>
+<ul>
+<li>This function returns an array of data, so it needs to be 
+array-entered.  To array-enter a formula in EXCEL, first highlight the 
+range of cells where you would like the returned data to appear -- the 
+number of rows and columns for the range will depend on the size of the 
+CSV file you want parsed and how much of that CSV file you want to see. 
+ Next, enter your formula and then press Ctrl-Shift-Enter.
+
+<br><br></li><li>This function is only available in version 2.0i or later of the add-in.
+
+<br><br></li><li>...more to come
+
+</li></ul>
+
+
+
+
+
+<script type="text/javascript"> (function(d, w) { var x = d.getElementsByTagName('SCRIPT')[0]; var f = function() { var _id = 'lexity-pixel'; var _s = d.createElement('script'); _s.id = _id; _s.type = 'text/javascript'; _s.async = true; _s.src = "//web.archive.org/web/20210227052855/http://np.lexity.com/embed/YW/9eab478080d55ba578e2d83c3df19680?id=f0ba64b2b761"; if (!document.getElementById(_id)) { x.parentNode.insertBefore(_s, x); } }; w.attachEvent ? w.attachEvent('onload', f) : w.addEventListener('load', f, false); }(document, window)); </script><!--
+     FILE ARCHIVED ON 05:28:55 Feb 27, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:57:09 Feb 28, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 544.257
+  exclusion.robots: 0.106
+  exclusion.robots.policy: 0.097
+  cdx.remote: 0.061
+  esindex: 0.01
+  LoadShardBlock: 509.322 (3)
+  PetaboxLoader3.datanode: 37.746 (5)
+  PetaboxLoader3.resolve: 739.56 (3)
+  load_resource: 361.144
+  loaddict: 28.269
+--></body></html>

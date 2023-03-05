@@ -1,0 +1,154 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><script src="https://web.archive.org/web/20160810104927js_/http://np.lexity.com/embed/YW/9eab478080d55ba578e2d83c3df19680/h/1/v/yKUsqkyMXgH9/k/wuhEbH4ceqPF/u/http%3A%2F%2Fogres-crypt.com%2FSMF%2FDocumentation%2FsmfGetTagContent-Function.html/n/1508873963951/t/smfGetTagContent()%20Documentation/r/http%3A%2F%2Fogres-crypt.com%2FSMF%2FDocumentation%2Fviewer.php%3Fname%3DsmfGetTagContent-Function.html/vn/1/c/lhbojfvk.f.kk[4]?id=f0ba64b2b761&amp;ts=1470826186435" type="text/javascript" id="lhbojfvk.f.kk[4]"></script><script src="smfGetTagContent-Function_data/lhbojfvk.f_002.htm" type="text/javascript" id="lhbojfvk.f.kk[3]"></script><script src="smfGetTagContent-Function_data/lhbojfvk.f_004.htm" type="text/javascript" id="lhbojfvk.f.kk[2]"></script><script src="smfGetTagContent-Function_data/lhbojfvk.f_003.htm" type="text/javascript" id="lhbojfvk.f.kk[1]"></script><script src="smfGetTagContent-Function_data/lhbojfvk.f.htm" type="text/javascript" id="lhbojfvk.f.kk[0]"></script><script type="text/javascript" async="" src="smfGetTagContent-Function_data/9eab478080d55ba578e2d83c3df19680"></script><script type="text/javascript" src="bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://ogres-crypt.com:80/SMF/Documentation/smfGetTagContent-Function.html","20160810104927","https://web.archive.org/","web","/_static/",
+	      "1470826167");
+</script>
+<link rel="stylesheet" type="text/css" href="banner-styles.css">
+<link rel="stylesheet" type="text/css" href="iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+	
+<title>smfGetTagContent() Documentation</title>
+
+</head>
+
+<body>
+<h2>Documentation for smfGetTagContent() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;An experimental (i.e. it might change) 
+function that extracts the content from a specified HTML tag from the 
+source code of a web page.
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetTagContent( URL, Tag, Tag#, [Find1], [Find2], [Find3], [Find4], [Convert],  [ErrorMsg], [Type] )</b>
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table><tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><table>
+
+<tbody><tr><td valign="top"><b>
+URL
+</b></td><td>
+= Web page to retrieve the HTML tag content from.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Tag
+</b></td><td>
+= The type of tag to retrieve content from -- "table", "td", "li", "span", etc.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Tag#
+</b></td><td>
+= The number of tags to skip backward or forward, after function is 
+positioned on the page by "Find1" thru "Find4", before returning data. 
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Find1
+</b></td><td>= An optional string value to search for to position the 
+function on the page before skipping backward or forward to find the 
+data to return.  Defaults to "&lt;", which should position you at the 
+top of the document.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Find2
+</b></td><td>= An optional string value to search for to further 
+position the function on the page (after finding the "Find1" string) 
+before skipping backword or forward to find the data to return.  
+Defaults to " ".
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Find3
+</b></td><td>= An optional string value to search for to further 
+position the function on the page (after finding the "Find1" thru 
+"Find2" strings) before skipping backward or forward to find the data to
+ return.  Defaults to " ".
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Find4
+</b></td><td>= An optional string value to search for to further 
+position the function on the page (after finding the "Find1" thru 
+"Find3" strings) before skipping backward or forward to find the data to
+ return.  Defaults to " ".
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Convert
+</b></td><td>= An indicator of whether the data found within the tag should be converted or parsed.  Unused at this time.  Defaults to 0.
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+ErrorMsg
+</b></td><td>= An optional value to return if the table cell cannot be found based on specified parameters.  Defaults to "Error".
+<br><br></td></tr>
+
+<tr><td valign="top"><b>
+Type
+</b></td><td>= An optional integer value to determine the type of 
+Internet request to make.  Defaults to 0.  For now, other values are 
+experimental:
+<br><br>0 = XMLHTTP "Get" Request
+<br>1 = IE Object Request
+<br>2 = HTMLDocument Request
+<br>3 = XMLHTTP "Post" Request
+<br></td></tr>
+
+</tbody></table></td></tr></tbody></table>
+
+<br><u><b>Examples</b></u>
+<ul>
+<li>To retieve the "Title" value from the Yahoo! Key Statistics page for ticker symbol "MMM":
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetTagContent("http://finance.yahoo.com/q/ks?s=MMM","title",1)
+<br><br>...which tells the function to retrieve the 
+"http://finance.yahoo.com/q/ks?s=MMM" web page, look for the first 
+"&lt;title&gt;" HTML tag on the page, then return the data within that 
+HTML tag. In this case, it returns "MMM: Key Statistics for 3M Company 
+Common Stock - Yahoo! Finance".
+<br><br></li><li>...more to come
+</li></ul>
+
+<u><b>Usage notes</b></u>
+<ul>
+<li>This function uses the same caching technique as the 
+RCHGetElementNumber() function, so if you are retrieving multiple 
+elements from the same page, only one web page retrieval is done by the 
+add-in.  The source of the web page will be saved and used for 
+extraction of later data elements.
+<br><br></li><li>...more to come
+</li></ul>
+
+
+
+
+
+<script language="JavaScript" src="smfGetTagContent-Function_data/whv2_001.js"></script><script language="javascript">geovisit();</script><img style="display:none" src="smfGetTagContent-Function_data/visit.htm" border="0">
+<noscript><img src="https://web.archive.org/web/20160810104927im_/http://visit.webhosting.yahoo.com/visit.gif?us1470826167" alt="setstats" border="0" width="1" height="1"></noscript><script type="text/javascript">(function (d, w) {var x = d.getElementsByTagName('SCRIPT')[0];var f = function () {var s = d.createElement('SCRIPT');s.type = 'text/javascript';s.async = true;s.src = "//web.archive.org/web/20160810104927/http://np.lexity.com/embed/YW/9eab478080d55ba578e2d83c3df19680?id=f0ba64b2b761";x.parentNode.insertBefore(s, x);};w.attachEvent ? w.attachEvent('onload',f) :w.addEventListener('load',f,false);}(document, window));</script><!--
+     FILE ARCHIVED ON 10:49:27 Aug 10, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:02:21 Feb 28, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 171.389
+  exclusion.robots: 0.071
+  exclusion.robots.policy: 0.061
+  RedisCDXSource: 88.513
+  esindex: 0.01
+  LoadShardBlock: 64.355 (3)
+  PetaboxLoader3.datanode: 90.116 (4)
+  load_resource: 98.716
+  PetaboxLoader3.resolve: 30.943
+--></body></html>
+<!-- text below generated by server. PLEASE REMOVE -->
+<!-- Counter/Statistics data collection code -->
