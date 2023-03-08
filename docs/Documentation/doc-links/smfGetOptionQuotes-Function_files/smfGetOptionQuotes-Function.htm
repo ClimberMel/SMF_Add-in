@@ -1,0 +1,334 @@
+<html><head>
+   <title>smfGetOptionQuotes() -- Documentation</title>
+</head>
+
+<body>
+<h2>Documentation for smfGetOptionQuotes() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns delayed quotes and related data 
+for options <s>from a number of different data sources, including</s> Yahoo <s>or 
+Google</s>.  
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Most other sources are no longer accessible.</b>
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetOptionQuotes( tickerlist, datacodelist, [headers], [source] )</b>
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table>
+
+<tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>tickerlist</b></td><td valign="top">=</td><td>
+A list of special format ticker symbols to get quotes and/or other data 
+on options.  This list can either be a single ticker symbol, a 
+comma-delimited list of ticker symbols, a cell reference, or a range 
+reference. The ticker symbols being used for this function are a special
+ format of the add-in -- not ticker symbols used by the different data 
+sources.  Each ticker symbol consists of five strings with a space in 
+between (e.g. "SPY Jun 2010 $100 Call"). The five strings are:<br><br>
+
+<table>
+   <tbody><tr><td valign="top" nowrap="nowrap">� Ticker symbol</td><td valign="top">&nbsp;=&nbsp;</td><td>The ticker symbol of the underlying equity (e.g. "MMM" or "SPY").</td></tr>
+   <tr><td valign="top" nowrap="nowrap">� Expiration Period</td><td valign="top">&nbsp;=&nbsp;</td><td>There are a number of choices for this string:<br><br>
+       <table border="1">
+       <tbody><tr><td><b>String</b></td><td><b>Description</b></td></tr>
+       <tr><td>Jan thru Dec</td><td>Month-end option expiration</td></tr>
+       <tr><td>1 thru 12</td><td>Month-end option expiration</td></tr>
+       <tr><td>Q1 thru Q4</td><td>Quarter-end option expiration</td></tr>
+       <tr><td>W or Week or W1 thru W7</td><td>Week-end option expiration</td></tr>
+       <tr><td>M or M1 thru M5</td><td>Relative month-end option expiration</td></tr>
+       <tr><td>m/d</td><td>An actual month and day option expiration (e.g. 9/10)</td></tr>
+       </tbody></table>
+       <br>Note that week-end and quarter-end option expirations are only available for a limited number of equities.</td></tr>
+   <tr><td valign="top" nowrap="nowrap">� Expiration Year</td><td valign="top">&nbsp;=&nbsp;</td><td>A 4-digit expiration year (e.g. "2010").</td></tr>
+   <tr><td valign="top" nowrap="nowrap">� Strike Price</td><td valign="top">&nbsp;=&nbsp;</td><td>The desired strike price, either with or without a leading dollar sign. <strike>In
+ addition, you can use values like "OTM1", "OTM2", "ITM1", or "ITM2" to 
+get the first or second in-the-money or out-of-the-money strike prices 
+(currently only available for Yahoo and MarketWatch data sources).</strike></td></tr>
+   <tr><td valign="top" nowrap="nowrap">� Call/Put</td><td valign="top">&nbsp;=&nbsp;</td><td>A literal value of "Put" or "Call" to indicate the type of option data that is desired. Can be abbreviated to "P" or "C".</td></tr>
+   </tbody></table> 
+
+<br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>datacodelist</b></td><td valign="top">=</td><td>
+A list of data codes telling indicating which data elements you want 
+retrieved.  This list can either be a string concatenation of all 
+desired data codes, a cell reference, or a range reference. Here is a 
+table indicating the data codes available from the various data sources:<br><br>
+
+<table border="1">
+   <tbody><tr><td rowspan="2" valign="bottom" align="center"><b>Code</b></td><td rowspan="2" valign="bottom"><b>Description</b></td><td colspan="7" align="center"><b>Data sources</b></td></tr>
+   <tr><td align="center"><b>(1)<br>Y</b></td><td align="center"><b>(3)<br>OX</b></td><td align="center"><b>(5)<br>OX2</b></td><td align="center"><b>(6)<br>Google</b></td><td align="center"><b>(7)<br>OX3</b></td><td align="center"><b>(8)<br>8</b></td><td align="center"><b>--</b></td></tr>
+
+   <tr><td align="center">%</td><td>% Change</td><td align="center">Slow</td><td align="center">--</td><td align="center">--</td><td align="center">Fast</td><td align="center">--</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">a</td><td>Ask Price</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">b</td><td>Bid Price</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">c</td><td>$ Change</td><td align="center">Slow</td><td align="center">--</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">e</td><td>Bid Size</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td></tr>
+   <tr><td align="center">f</td><td>Ask Size</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td></tr>
+   <tr><td align="center">g</td><td>Daily Low</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td></tr>
+   <tr><td align="center">h</td><td>Daily High</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td></tr>
+   <tr><td align="center">i</td><td>Open Interest</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">--</td><td align="center">Fast</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">j</td><td>Contract Low</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td></tr>
+   <tr><td align="center">k</td><td>Contract High</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td></tr>
+   <tr><td align="center">l</td><td>Last Price</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">o</td><td>Open Price</td><td align="center">Slow</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td></tr>
+   <tr><td align="center">p</td><td>Previous Close</td><td align="center">Slow</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td></tr>
+   <tr><td align="center">s</td><td>Strike Price</td><td align="center">Fast</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">t</td><td>Last Trade Time</td><td align="center">Slow</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td></tr>
+   <tr><td align="center">u</td><td>Underlying Equity Price</td><td align="center">--</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">v</td><td>Volume</td><td align="center">Slow</td><td align="center">--</td><td align="center">--</td><td align="center">Fast</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">x</td><td>Expiration Date</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">y</td><td>Time/Theo. Value</td><td align="center">--</td><td align="center">Slow</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td></tr>
+   <tr><td align="center">z</td><td>Option Symbol</td><td align="center">Fast</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">Slow</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">1</td><td>Vega</td><td align="center">--</td><td align="center">Slow</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">2</td><td>Theta</td><td align="center">--</td><td align="center">Slow</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">3</td><td>Rho</td><td align="center">--</td><td align="center">Slow</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">4</td><td>Gamma</td><td align="center">--</td><td align="center">Slow</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">5</td><td>Delta</td><td align="center">--</td><td align="center">Slow</td><td align="center">Slow</td><td align="center">--</td><td align="center">--</td><td>&nbsp;</td><td align="center">--</td></tr>
+   <tr><td align="center">6</td><td>Implied Volatility</td><td align="center">--</td><td align="center">--</td><td align="center">Slow</td><td align="center">--</td><td align="center">--</td><td align="center">Fast</td><td align="center">--</td></tr>
+   <tr><td align="center">7</td><td>Alpha</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">--</td><td align="center">Fast</td><td align="center">--</td></tr>
+
+   </tbody></table>
+
+<p>The difference between the "Fast" and "Slow" data items is that you 
+can retrieve all of the "Fast" items for all of the different options in
+ the same expiration month with a single Internet access, while the 
+"Slow" data items require a new Internet access for each individual 
+option for which the various items are collected.</p>
+
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>headers</b></td><td valign="top">=</td><td>
+An optional parameter that allows column headings to be generated for 
+the returned columns of data. Defaults to 0. Set to 1 if you desire a 
+row of headers to be displayed.<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>source</b></td><td valign="top">=</td><td>
+An optional parameter that indicates the source you want to use for options data. Defaults to "Y". Possible values:<br><br>
+
+<table border="1">
+<tbody><tr><td align="center"><b>Value</b></td><td align="center"><b>"DataCode" prefix</b></td><td><b>Data Source</b></td></tr>
+<tr><td align="center">G</td><td align="center">6</td><td>Google</td></tr>
+<tr><td align="center">OX</td><td align="center">3</td><td>OptionsXPress (Greeks of calls only, not puts)</td></tr>
+<tr><td align="center">OX2</td><td align="center">5</td><td>OptionsXPress (limited Put and Call data items, including delta and implied volatity)</td></tr>
+<tr><td align="center">OX3</td><td align="center">7</td><td>OptionsXPress (limited Put and Call data items, including volume and open interest)</td></tr>
+<tr><td align="center">Y</td><td align="center">1</td><td>Yahoo</td></tr>
+<tr><td align="center">8</td><td align="center">8</td><td>888options.com (requires security cookie)</td></tr><tr><td valign="top" align="center">2</td><td valign="top" align="center">--</td><td valign="top">Multiple
+ sources. If this value is passed, all datacodes will be 2-byte values, 
+where the first byte is the "DataCode" prefix shown in this table.</td></tr>
+</tbody></table></td></tr>
+
+</tbody></table>
+
+<br>
+<u><b>Examples</b></u>
+<ul>
+<li>This function invocation: 
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetOptionQuotes("SPY Jun 2010 $100 Call,SPY Jun 2010 $110 Call","zba",1)
+<br><br>...returns:
+<br><br>
+<!-- Please do not remove this header -->
+<!-- Table easily created from Excel with ASAP Utilities (http://www.asap-utilities.com)  -->
+<table bordercolordark="#FFFFFF" cellspacing="0" cellpadding="2" bordercolor="#C0C0C0" border="1">
+ <tbody><tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Ticker Symbol</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Bid Price</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Ask Price</td>
+ </tr>
+ <tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">SPY100619C00100000</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$7.84</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$8.02</td>
+ </tr>
+ <tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">SPY100619C00110000</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$1.17</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$1.21</td>
+ </tr>
+</tbody></table>
+
+<br></li><li>This function invocation: 
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetOptionQuotes("SPY Jun 2010 $100 Call,SPY Q2 2010 $100 Call","zba",1,"MSN")
+<br><br>...returns:
+<br><br>
+<!-- Please do not remove this header -->
+<!-- Table easily created from Excel with ASAP Utilities (http://www.asap-utilities.com)  -->
+<table bordercolordark="#FFFFFF" cellspacing="0" cellpadding="2" bordercolor="#C0C0C0" border="1">
+ <tbody><tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Ticker Symbol</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Bid Price</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Ask Price</td>
+ </tr>
+ <tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">.SPY\10F19\100.0</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$7.84</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$8.02</td>
+ </tr>
+ <tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">.SPY\10F30\100.0</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$8.28</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$8.46</td>
+ </tr>
+</tbody></table>
+
+<br></li><li>This function invocation, when SPY was trading at $106.82: 
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetOptionQuotes("SPY Jul 2010 ITM1 Call,SPY Jul 2010 OTM1 Call","zsba",1)
+<br><br>...returns:
+<br><br>
+<!-- Please do not remove this header -->
+<!-- Table easily created from Excel with ASAP Utilities (http://www.asap-utilities.com)  -->
+<table bordercolordark="#FFFFFF" cellspacing="0" cellpadding="2" bordercolor="#C0C0C0" border="1">
+ <tbody><tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Ticker Symbol</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Strike Price</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Bid Price</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Ask Price</td>
+ </tr>
+ <tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">SPY100717C00106000</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$106.00</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$4.63</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$4.73</td>
+ </tr>
+ <tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">SPY100717C00107000</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$107.00</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$4.03</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">$4.12</td>
+ </tr>
+</tbody></table>
+
+<br></li><li>This function invocation: 
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetOptionQuotes("SPY Aug 2010 $110 Call,SPY Aug 2010 $111 Call","1z2z3z4z",1,2)
+<br><br>...returns:
+<br><br>
+<!-- Please do not remove this header -->
+<!-- Table easily created from Excel with ASAP Utilities (http://www.asap-utilities.com)  -->
+<table bordercolordark="#FFFFFF" cellspacing="0" cellpadding="2" bordercolor="#C0C0C0" border="1">
+ <tbody><tr>
+ <th style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Ticker Symbol</th>
+ <th style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Ticker Symbol</th>
+ <th style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Ticker Symbol</th>
+ <th style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Ticker Symbol</th>
+ </tr>
+ <tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">SPY100821C00110000</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">.SPY\10H21\110.0</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">SPY^^^100821C00110000</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">SPY100821C00110000</td>
+ </tr>
+ <tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">SPY100821C00111000</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">.SPY\10H21\111.0</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">SPY^^^100821C00111000</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">SPY100821C00111000</td>
+ </tr>
+</tbody></table>
+<br>...which is basically returning the ticker symbols used by Yahoo (1z), MSN (2z), OptionsXpress (3z), and MarketWatch (4z).
+
+<br><br></li><li>This function invocation: 
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetOptionQuotes(A3:A4,B1:C1,1)
+<br><br>...returns:
+<br><br>
+<!-- Please do not remove this header -->
+<!-- Table easily created from Excel with ASAP Utilities (http://www.asap-utilities.com)  -->
+<table bordercolordark="#FFFFFF" cellspacing="0" cellpadding="2" bordercolor="#C0C0C0" border="1">
+ <tbody><tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF" align="right">&nbsp;</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFF00" align="right">b</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFF00" align="right">a</td>
+ </tr>
+ <tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#FFFFFF">Option Symbols</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#C5D9F1" align="right">Bid Price</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#C5D9F1" align="right">Ask Price</td>
+ </tr>
+ <tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#C2D69A">SPY Jun 2010 $100 Call</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#C5D9F1" align="right">$7.84</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#C5D9F1" align="right">$8.02</td>
+ </tr>
+ <tr>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#C2D69A">SPY Jun 2010 $110 Call</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#C5D9F1" align="right">$1.17</td>
+ <td style="white-space: nowrap" valign="bottom" bgcolor="#C5D9F1" align="right">$1.21</td>
+ </tr>
+</tbody></table>
+<br>...where the range A3:A4 containing the ticker symbols is the 
+green-shaded area, range B1:C1 containing the data codes ot retrieve is 
+the yellow-shaded area, and the formula was array-entered over the 
+blue-shaded range of B2:C4.
+
+<br><br></li><li>...more to come
+
+</li></ul>
+
+<u><b>Usage notes</b></u>
+<ul>
+
+<li>In most cases, this will need to be an array-entered formula.  To 
+array-enter a formula in EXCEL, first highlight the range of cells where
+ you would like the returned data to appear -- the number of rows for 
+the range should be AT LEAST the number of ticker symbols you are 
+requesting from the function, while the number of columns for the range 
+should be AT LEAST the number of data items you are requesting for each 
+ticker symbol from the function.  Next, enter your formula and then 
+press Ctrl-Shift-Enter. 
+
+<br><br></li><li>This function actually parses through the ticker list 
+and data code list and does individual calls to "building block" 
+functions like smfGetYahooOptionQuote() or smfGetMSNOptionQuote() for 
+each data item requested. Those functions, in turn, generally execute 
+the RCHGetTableCell() function. That means the only way to update the 
+quotes is to run the smfForceRecalculation macro (see "Links" area of 
+Yahoo group for more info on it).
+
+<br><br></li><li>The "ITMn" and "OTMn" strike price options have been 
+removed, possibly temporarily. A better alternative would be to use the 
+smfGetOptionStrikes() function.
+
+<br><br></li><li>For the quickest option quotes, use the new 
+smfGetYahooPortfolioView() function. It can retrieve hundfred of option 
+and stock quotes with a single Internet access. 
+
+<br><br></li><li>...more to come
+
+</li></ul>
+
+
+<br><u><b>Updates</b></u><br><br>
+
+<table>
+
+<tbody><tr><td align="center">2015-02-21</td><td align="center"> = </td><td valign="top" align="left">Obsoleted MSN and MarketWatch items</td></tr>
+<tr><td align="center">2015-02-21</td><td align="center"> = </td><td valign="top" align="left">Struck out OTMx and ITMx reference. May be added back later.</td></tr>
+<tr><td align="center">2015-02-21</td><td align="center"> = </td><td valign="top" align="left">Added W1 thru W7 and M1 thru M5 relative date references.</td></tr>
+<tr><td align="center">2016-08-05</td><td align="center"> = </td><td valign="top" align="left">Dropped MSN and MW and added 8 (888options.com) as data sources.</td></tr>
+
+</tbody></table>
+
+
+<script language="JavaScript" src="smfGetOptionQuotes-Function_data/whv2_001.js"></script><script language="javascript">geovisit();</script><img style="display:none" src="smfGetOptionQuotes-Function_data/visit.htm" border="0">
+<noscript><img src="https://web.archive.org/web/20161115010909im_/http://visit.webhosting.yahoo.com/visit.gif?us1479172149" alt="setstats" border="0" width="1" height="1"></noscript><script type="text/javascript">(function (d, w) {var x = d.getElementsByTagName('SCRIPT')[0];var f = function () {var s = d.createElement('SCRIPT');s.type = 'text/javascript';s.async = true;s.src = "//web.archive.org/web/20161115010909/http://np.lexity.com/embed/YW/9eab478080d55ba578e2d83c3df19680?id=f0ba64b2b761";x.parentNode.insertBefore(s, x);};w.attachEvent ? w.attachEvent('onload',f) :w.addEventListener('load',f,false);}(document, window));</script><!--
+     FILE ARCHIVED ON 01:09:09 Nov 15, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:01:04 Feb 28, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 3071.609
+  exclusion.robots: 0.073
+  exclusion.robots.policy: 0.063
+  RedisCDXSource: 93.568
+  esindex: 0.011
+  LoadShardBlock: 2957.468 (3)
+  PetaboxLoader3.datanode: 2973.84 (4)
+  PetaboxLoader3.resolve: 73.961 (2)
+  load_resource: 137.747
+--></body></html>
+<!-- text below generated by server. PLEASE REMOVE -->
+<!-- Counter/Statistics data collection code -->
