@@ -1,103 +1,69 @@
 <html><head>
-<meta http-equiv="content-type" content="text/html; charset=windows-1252"><script type="text/javascript" src="bundle-playback.js" charset="utf-8"></script>
-<script type="text/javascript" src="wombat.js" charset="utf-8"></script>
-<script type="text/javascript">
-  __wm.init("https://web.archive.org/web");
-  __wm.wombat("http://ogres-crypt.com/SMF/Documentation/smfGetYahooJSONData-Function.html","20220121052040","https://web.archive.org/","web","/_static/",
-	      "1642742440");
-</script>
-<link rel="stylesheet" type="text/css" href="banner-styles.css">
-<link rel="stylesheet" type="text/css" href="iconochive.css">
-<!-- End Wayback Rewrite JS Include -->
-
-	
-<title>smfGetYahooJSONData() -- Documentation</title>
-
+  <title>smfGetYahooJSONData() -- Documentation</title>
 </head>
 
 <body>
 
-<h2>Documentation for smfGetYahooJSONData() function</h2>
+  <h2>Documentation for smfGetYahooJSONData() function</h2>
 
-<br><u><b>Description</b></u>
-<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns a field extracted from one or more of Yahoo's JSON modules
+  <br><u><b>Description</b></u>
+  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns a field extracted from one or more of Yahoo's JSON modules
 
-<br><br><u><b>Syntax</b></u>
-<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetYahooJSONData( Ticker, Module Name, Field Name, [Occurrence], [Type] )</b>
-
-
-<br><br><u><b>Parameters</b></u><br><br>
-<table>
-
-<tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Ticker</b></td><td valign="top">=</td><td>
-Ticker symbol (e.g "MMM")<br><br></td></tr>
-
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Module Name</b></td><td valign="top">=</td><td>
-The modules(s) from which to extract the data. This can also be a URL, 
-since some JSON code can be found within the source code of a web page. 
-There are numerous modules (e.g. "defaultKeyStatistics" or 
-"assetProfile")<br><br></td></tr>
-
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Field Name</b></td><td valign="top">=</td><td>
-The name of the field to extract from the JSON file. This is used as a 
-"search" criteria in the JSON file. For example, "yield" or 
-"rankInCategory.oneYear". In the second case, the function would first 
-look for a field name of "rankInCategory", and then look for a field 
-name of "oneYear". At this point, there is no guarantee that the 
-"oneYear" will be from the "rankInCategory" group -- it's just a search 
-and I don't know how the full JSON file will be structured.<br><br></td></tr>
-
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Occurrence</b></td><td valign="top">=</td><td>
-The number of times the (final) field name should be searched for; optional; defaults to a value of 1.<br><br></td></tr>
-
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Type</b></td><td valign="top">=</td><td>
-Type of data to retrieve for the field name; optional; defaults to "raw"; other possible values might be "" or "fmt".
-<br><br></td></tr>
-
-</tbody></table>
-
-<br><u><b>Examples</b></u>
-<ul>
-
-<li>=smfGetYahooJSONData("VWEAX","fundProfile","initInvestment")
-<br><br></li><li>=smfGetYahooJSONData("VWEAX","fundProfile","startdate",,"fmt")
-<br><br></li><li>=smfGetYahooJSONData("VWEAX","fundPerformance","trailingReturns.oneYear")
-<br><br></li><li>=smfGetYahooJSONData("VWEAX","fundPerformance","annualTotalReturns.returns.year",15,"")
-<br><br></li><li>=smfGetYahooJSONData("VWEAX","fundProfile","categoryName",,"")
-<br><br></li><li>...more to come
-
-</li></ul>
-
-<u><b>Usage notes</b></u>
-<ul>
-
-<li>Only available on version 2017.04.24 and later. Experimental at this time.
-
-<br><br></li><li>...more to come time
-
-</li></ul>
+  <br><br><u><b>Syntax</b></u>
+  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetYahooJSONData( Ticker, Module Name, Field Name, [Occurrence], [Type] )</b>
 
 
+  <br><br><u><b>Parameters</b></u><br><br>
+  <table>
 
+  <tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Ticker</b></td><td valign="top">=</td><td>
+  Ticker symbol (e.g "MMM")<br><br></td></tr>
 
-</body></html>
-<!--
-     FILE ARCHIVED ON 05:20:40 Jan 21, 2022 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 18:02:49 Feb 28, 2023.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Module Name</b></td><td valign="top">=</td><td>
+  The modules(s) from which to extract the data. This can also be a URL, 
+  since some JSON code can be found within the source code of a web page. 
+  There are numerous modules (e.g. "defaultKeyStatistics" or 
+  "assetProfile")<br><br></td></tr>
 
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
--->
-<!--
-playback timings (ms):
-  captures_list: 223.858
-  exclusion.robots: 0.067
-  exclusion.robots.policy: 0.06
-  cdx.remote: 0.049
-  esindex: 0.008
-  LoadShardBlock: 176.748 (3)
-  PetaboxLoader3.datanode: 175.785 (4)
-  load_resource: 1376.411
-  PetaboxLoader3.resolve: 1328.653
--->
+  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Field Name</b></td><td valign="top">=</td><td>
+  The name of the field to extract from the JSON file. This is used as a 
+  "search" criteria in the JSON file. For example, "yield" or 
+  "rankInCategory.oneYear". In the second case, the function would first 
+  look for a field name of "rankInCategory", and then look for a field 
+  name of "oneYear". At this point, there is no guarantee that the 
+  "oneYear" will be from the "rankInCategory" group -- it's just a search 
+  and I don't know how the full JSON file will be structured.<br><br></td></tr>
+
+  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Occurrence</b></td><td valign="top">=</td><td>
+  The number of times the (final) field name should be searched for; optional; defaults to a value of 1.<br><br></td></tr>
+
+  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Type</b></td><td valign="top">=</td><td>
+  Type of data to retrieve for the field name; optional; defaults to "raw"; other possible values might be "" or "fmt".
+  <br><br></td></tr>
+
+  </tbody>
+  </table>
+
+  <br><u><b>Examples</b></u>
+  <ul>
+
+  <li>=smfGetYahooJSONData("VWEAX","fundProfile","initInvestment")
+  <br><br></li><li>=smfGetYahooJSONData("VWEAX","fundProfile","startdate",,"fmt")
+  <br><br></li><li>=smfGetYahooJSONData("VWEAX","fundPerformance","trailingReturns.oneYear")
+  <br><br></li><li>=smfGetYahooJSONData("VWEAX","fundPerformance","annualTotalReturns.returns.year",15,"")
+  <br><br></li><li>=smfGetYahooJSONData("VWEAX","fundProfile","categoryName",,"")
+  <br><br></li><li>...more to come
+
+  </li></ul>
+
+  <u><b>Usage notes</b></u>
+  <ul>
+
+  <li>Only available on version 2017.04.24 and later. Experimental at this time.
+
+  <br><br></li><li>...more to come time
+
+  </li></ul>
+
+</body>
+</html>
