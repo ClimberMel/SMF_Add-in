@@ -1,0 +1,101 @@
+<html>
+<head>
+	
+<title>smfTech() Documentation</title>
+
+</head>
+
+<body>
+<h2>Documentation for smfTech() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>*BETA version*</b> Allows the creation of technical analysis indicators from a range of D/O/H/L/C/V data.
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfTech( datarange, indicator, [parm1], [parm2], [parm3], [parm4], [parm5], [parm6] )</b>
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><table>
+
+<tr><td valign=top><b>
+datarange
+</td><td>
+= A range or array of data consisting of 7 columns of data (Date, Open, High, Low, Close, and Volume), sorted in ascending date sequence with the first row as text headers.
+<br><br></td></tr>
+
+<tr><td valign=top><b>
+indicator
+</b></td><td>
+= A string value indicating the type of technical analysis values to create:
+<br>
+<pre>
+    ADL  = Accumulation/Distribution Line
+           -- No parameters are used
+
+    ATR  = Average True Range
+           -- parm1 = period, defaults to 20
+
+    CCI  = Commodity Channel Index
+           -- parm1 = period, defaults to 20
+
+    EMA  = Exponential Moving Average
+           -- parm1 = period, defaults to 50
+
+    MACD = Moving Average Convergence Divergence
+           -- parm1 = period of 1st moving average, defaults to 12
+           -- parm2 = period of 2nd moving average, defaults to 26
+           -- parm3 = smoothing period for difference of the two moving averages, defaults to 9
+
+    OBV  = On Balance Volume
+           -- No parameters are used
+
+    ROC  = % Rate of Change 
+           -- parm1 = period, defaults to 21
+
+    RSI  = Relative Strength Index
+           -- parm1 = period, defaults to 20
+
+    SMA  = Simple Moving Average
+           -- parm1 = period, defaults to 50
+
+    STO  = Stochastics
+           -- parm1 = %K period, defaults to 14
+           -- parm2 = %D period, defaults to 5
+           -- parm3 = smoothing period, defaults to 1
+</pre>
+</td></tr>
+
+<tr><td valign=top><b>
+parm1-parm6
+</b></td><td>= Parameters to be used to create the technical analysis values.  See the "indicator" list for details on each.
+<br><br></td></tr>
+
+</table></td></tr></table>
+
+<br><u><b>Examples</b></u>
+<ul>
+<li>See the <a href="http://finance.groups.yahoo.com/group/smf_addin/files/Templates and Examples/SMF-Template-SMFTech-Beta.xls">template</a> in the files area for sample usage of each.
+</ul>
+
+<u><b>Usage notes</b></u>
+<ul>
+<li>Verify values before trusting...this is a function that is under development.
+<br><br><li>This function needs to be array-entered when using it to return a range of data in the workbook.  In some cases, an indicator may return multiple columns of data.  However, the first column contains the values for the indicator.  If they exist, the other columns will contain intermediate calculations that may be of use.
+<br><br><li>This function can also be used to generate single "on the fly" technical analysis values.  For example:
+<br><br>=INDEX(smfTech(RCHGetYahooHistory("MMM",,,,,,,,,,1,1,11,6),"SMA",10),11)
+<br><br>...would return the current 10-day simple moving average for ticker "MMM".  That is:<br><br>
+<ul>
+<li>RCHGetYahooHistory("MMM",,,,,,,,,,1,1,11,6)
+<br><br>...gets 10 days of historical quotes (plus the header row).<br><br></li>
+<li>smfTech(...,"SMA",10)
+<br><br>...generates the 10-day simple moving average on that returned historical data.<br><br></li>
+<li>INDEX(...,11)
+<br><br>...gets the 11th array element returned -- which is the current day's value.  That's because the Yahoo historical quotes are sorted from oldest data to newest data.</li>
+</ul>
+<br><li>...more to come
+</ul>
+
+</body>
+</html>
+
+

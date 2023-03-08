@@ -2,7 +2,9 @@
 
 ## There is currently no content for this page.
 
-## You can request content to be created at:
+## This function still works, so it should have documentation created for it.
+
+## You can request or comment on content to be created at:
 
 - the [blog](https://smfxl-add-in.blogspot.com/)
 - create an issue on GitHub [New Issue](https://github.com/ClimberMel/SMF_Add-in/issues)
