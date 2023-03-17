@@ -26,7 +26,7 @@ Ticker symbol (e.g "MMM")<br><br></td></tr>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Start Year</b></td><td valign="top">=</td><td>
 Year to use as the starting date of the historical quotes; must be four 
-digits (e.g. 2005); optional; default is to fill your array-entered 
+digits (e.g. 2022); optional; default is to fill your array-entered 
 range.<br><br></td></tr>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Start Month</b></td><td valign="top">=</td><td>
@@ -37,7 +37,7 @@ Day to use as the starting date of the historical quotes; optional; default is t
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>End Year</b></td><td valign="top">=</td><td>
 Year to use as the ending date of the historical quotes; must be four 
-digits (e.g. 2005); optional; defaults to most recent date available.<br><br></td></tr>
+digits (e.g. 2023); optional; defaults to most recent date available.<br><br></td></tr>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>End Month</b></td><td valign="top">=</td><td>
 Month to use as the ending date of the historical quotes; optional; defaults to most recent date available.<br><br></td></tr>
@@ -52,7 +52,7 @@ Type of data period to retrieve; optional; defaults to "d"; possible values:
 <br>&nbsp;&nbsp;&nbsp;&nbsp;"w" = Weekly quotes  (Yahoo chooses to use the first trading day of the week as the end of the period)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;"m" = Monthly quotes (Yahoo chooses to use the first trading day of the month as the end of the period)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;"v" = Dividend history ("T" is the only 
-"Data Item" that makes a difference – Date and Dividend amount are 
+"Data Item" that makes a difference ï¿½ Date and Dividend amount are 
 automatic)
 <br><br></td></tr>
 
@@ -65,9 +65,11 @@ defaults to "DOHLCVA"; possible values within the character string:
 <br>&nbsp;&nbsp;&nbsp;&nbsp;"O" = Opening price of the period
 <br>&nbsp;&nbsp;&nbsp;&nbsp;"H" = High price for the period
 <br>&nbsp;&nbsp;&nbsp;&nbsp;"L" = Low price for the period
-<br>&nbsp;&nbsp;&nbsp;&nbsp;"C" = Closing price for the period
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"C" = Adjusted Closing price for the period
 <br>&nbsp;&nbsp;&nbsp;&nbsp;"V" = Trading volume for the period
-<br>&nbsp;&nbsp;&nbsp;&nbsp;"A" = Adjusted closing price for the period
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"U" = Adjusted closing price for the period
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"A" = Accepted as input but same as C - Adjusted close (only one will display)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If C and A are provided, A will be dropped
 <br><br></td></tr>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Header Line</b></td><td valign="top">=</td><td>
@@ -79,11 +81,10 @@ column(s) of data; optional; defaults to 1; possible values:
 <br><br></td></tr>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Adjust</b></td><td valign="top">=</td><td>
-A binary value to indicate whether data should be adjusted or not; optional; defaults to 0.
+A binary value to indicate whether data should be adjusted or not; optional; defaults to 1.  Left in for compatibility.
 <br>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;0 = Do not adjust data; returns the raw data as returned from Yahoo!
-<br>&nbsp;&nbsp;&nbsp;&nbsp;1 = Adjust O/H/L/C prices based on the value
- of the Adjusted Close and Close amounts returned from Yahoo!
+<br>&nbsp;&nbsp;&nbsp;&nbsp;0 = Do not attempt to adjust data; now returns error if used
+<br>&nbsp;&nbsp;&nbsp;&nbsp;1 = Returns data as adjusted by Yahoo
 <br><br></td></tr>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Resort</b></td><td valign="top">=</td><td>
@@ -102,11 +103,11 @@ returned from Yahoo!; newest data will be on the top rows of table.
 <li>This would return the seven default data items for ticker symbol IBM:
 <br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHGetYahooHistory("IBM")
 <br><br>If you array-entered the above formula over a 10-row by 7-column
- range, you would get the D/O/H/L/C/V/A data items for the latest 9 days
+ range, you would get the D/O/H/L/C/V/U data items for the latest 9 days
  of history.
 
 <br><br></li><li>This would return a single item -- the adjusted closing price for ticker symbol IBM for January 3rd, 2007:
-<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHGetYahooHistory("IBM",2007,1,3,2007,1,3,,"A",0)
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;=RCHGetYahooHistory("IBM",2023,1,3,2023,1,3,,"C",0)
 
 <br><br></li><li>...more to come
 
