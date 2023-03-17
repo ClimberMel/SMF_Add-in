@@ -7,7 +7,7 @@ Public Function RCHGetYahooHistory(pTicker As String, _
                         Optional pEndMonth As Integer = 12, _
                         Optional pEndDay As Integer = 31, _
                         Optional pPeriod As String = "d", _
-                        Optional pItems As String = "DOHLCA", _
+                        Optional pItems As String = "DOHLCVU", _
                         Optional pNames As Integer = 1, _
                         Optional pAdjust As Integer = 1, _
                         Optional pResort As Integer = 0, _
@@ -34,6 +34,9 @@ Public Function RCHGetYahooHistory(pTicker As String, _
    '               Adjusted Close is provided by Yahoo so A is now acceptable
    ' 2023-02-21 -- However, original code for smfGetYahooHistory used C for Adjusted Close and U for Unadjusted close
    '               A was accepted but changed to C for the call to smfGetYahooHistory
+   ' 2023-03-17 -- Corrected the default pItems back to previous values
+   '               https://github.com/ClimberMel/SMF_Add-in/issues/24
+   ' 2023-03-18 -- New version release 3.0.2023.03.18 to include issue#24 fix
    '-----------------------------------------------------------------------------------------------------------*
 
    Dim currYear As Integer
