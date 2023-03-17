@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <title>SMF Add-In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/documentation.css">
+</head>
+
+<body>
+<!--
+The HEADING Section use id="mainHeader"
+-->
+<div id="mainHeader">
+    <table>
+        <tr>
+            <td>&#160;&gt; 
+                <img src="icons/folder.ico" height="13" border="0" width="15" hspace="0">
+                <a href="https://climbermel.github.io/SMF_Add-in"> SMF add-in Top-Level Directory</a>&#160;&gt; 
+                <img src="icons/folder_open.ico" height="16" border="0" width="13" hspace="2">Templates</font></b>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <br>
+
+
+<!--
+The TOP Section (Menu for selecting various sections).
+use id="top"
+-->
+<div  class="fixed">
+    <table class="top-table fixed">
+        <tr>
+            <th style="width:12%">&nbsp;</th>
+            <th style="width:12%">&nbsp;</th>
+            <th style="width:12%">&nbsp;</th>
+            <th style="width:12%">&nbsp;</th>
+            <th style="width:12%">&nbsp;</th>
+            <th style="width:12%">&nbsp;</th>
+            <th>&nbsp;</th>
+        </tr>
+        <tr>
+            <td><b>In General:</B></td>  
+            <td><a href="#All">All Files</a></td>
+            <td><a href="#Debug">Debug</a></td>
+            <td><a href="#Recent">Recent Updates</a></td>
+            <td><a href="#Dividends">Dividends</a></td>
+            <td><a href="#Options">Options</a></td>
+    
+        </tr>
+        <tr>
+            <td><b>By Function:</b></td>
+            <td><a href="#RCHGetElementNumber()">RCHGetElementNumber()</a></td>
+            <td><a href="#RCHGetHTMLTable()">RCHGetHTMLTable()</a></td>
+            <td><a href="#RCHGetTableCell()">RCHGetTableCell()</a></td>
+            <td><a href="#RCHGetYahooHistory()">RCHGetYahooHistory()</a></td>
+            <td><a href="#smfGetTagContent()">smfGetTagContent()</a></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><a href="#smfGetCSVFile()">smfGetCSVFile()</a></td>
+            <td><a href="#smfGetOptionQuotes()">smfGetOptionQuotes()</a></td>
+            <td><a href="#smfGetYahooPortfolioView()">smfGetYahooPortfolioView()</a></td>
+            <td><a href="#smfPricesByDates()">smfPricesByDates()</a></td>
+            <td><a href="#smfUpdateDownloadTable">smfUpdateDownloadTable</a></td>
+        </tr>
+    </table>
+</div>
+
+<!--
+    The MAIN Table Section 
+    Recent Uploads List is the top and lists file loaded the current year 
+-->    
+<div class="w3-container" style="position: fixed; top: 120px;height: 800px; overflow: auto;">
+    <table class="w3-table w3-striped w3-bordered">
+        <tr>
+            <td style="border:none" id="All">  <!-- Link to All Files for top menu to come here -->
+                <br>
+                <h4><b>Recently Updated Files</b></h4>
+            </td>
+            <td style="border:none" colspan="3">
+        </td>
+        <tr>
+            <td><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filename</b></td>
+            <td><b>Last Modified</b></td>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td valign="top" nowrap="nowrap"><img src="icons/xls.ico"> <a href="samples/RCHGetElementNumber-Template-Yahoo-Key-Statistics.xls">RCHGetElementNumber-Template-Yahoo-Key-Statistics.xls</a></td>
+            <td valign="top" nowrap="nowrap">
+                <div class="recent">2023-02-12</div>
+            </td>
+            <td valign="top">A template that shows the data elements available from the Yahoo! Key Statistics web page. 
+                Basically, this is just element numbers 938 through 993 shown in context.
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" nowrap="nowrap"><img src="icons/xls.ico"> <a href="samples/RCHGetYahooHistory.xlsx">RCHGetYahooHistory.xlsx</a></td>
+            <td valign="top" nowrap="nowrap">
+                <div class="recent">2023-02-13</div>
+            </td>
+            <td valign="top">A template showing a small example of retrieving historical quotes from Yahoo using RCHGetYahooHistory() Function. 
+                All of the parameters for the function can be played with, to see how their changing values can change what the function returns.
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" nowrap="nowrap"><img src="icons/xls.ico"> <a href="samples/smfGetYahooHistory.xlsx">smfGetYahooHistory Function</a></td>
+            <td valign="top" nowrap="nowrap">
+                <div class="recent">2023-03-17</div>
+            </td>
+            <td valign="top">A template showing an example of retrieving historical quotes from Yahoo using smfGetYahooHistory() Function. 
+                All of the parameters for the function can be played with, to see how their changing values can change what the function returns.
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" nowrap="nowrap"><img src="icons/xls.ico"> <a href="samples/smfGetYahooHistory.xlsx">smfGetYahooHistory Function</a></td>
+            <td valign="top" nowrap="nowrap">
+                <div class="recent">2023-03-17</div>
+            </td>
+            <td valign="top">A template showing an example of retrieving historical quotes from Yahoo using smfGetYahooHistory() Function. 
+                All of the parameters for the function can be played with, to see how their changing values can change what the function returns.
+            </td>
+        </tr> 
+    </table>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+</body>
+
+</html>
