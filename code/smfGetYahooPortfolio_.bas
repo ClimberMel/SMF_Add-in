@@ -29,7 +29,8 @@ Public Function smfGetYahooPortfolioView(ByVal pTickers As Variant, _
     ' 2017.11.09 -- Fixed field list adjustment when only default fields are requested
     ' 2017.11.17 -- Allow a ticker symbol to be returned more than once
     ' 2023-05-09 -- Mel Pryor
-    ' 2023-05-09 -- In sURL change v7 to v6.  Appears that the Export button in Yahoo Portfolio has changed that.
+    ' 2023-05-09 -- see Change #27 
+    '               In sURL change v7 to v6.  Appears that the Export button in Yahoo Portfolio has changed that.
     '-----------------------------------------------------------------------------------------------------------*
     ' > Examples of invocations to get portfolio quotes for IBM and MMM:
     '

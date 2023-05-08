@@ -186,6 +186,7 @@ Public Function RCHGetURLData(ByVal pURL As String, _
     ' 2014.05.25 -- Add double quotes around URL
     ' 2016.05.18 -- Add Application.PathSeparator to ease transition between operating systems
     ' 2016.05.18 -- Add call to RCHGetURLData1Mac for Mac usage
+    ' 2023-05-09 -- Are RCHGetURLData2 and RCHGetURLData3 ever used?
     '-----------------------------------------------------------------------------------------------------------*
     
     Dim i1 As Integer

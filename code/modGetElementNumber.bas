@@ -157,7 +157,7 @@ Public Function RCHGetElementNumber(ByVal pTicker As String, _
     '   =RCHGetElementNumber("IBM", 701)
     '   =RCHGetTableCell("http://quote.barchart.com/texpert.asp?sym=IBM",1,"Trend Spotter",,,,,1,3)
     '
-    '   The first is the preferred method.
+    '   The first is the preferred method. 
     '-----------------------------------------------------------------------------------------------------------*
        
     Dim sURL As String
