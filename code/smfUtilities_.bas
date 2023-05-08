@@ -93,6 +93,13 @@ Public Function RCHGetURLData1(pURL As String, _
     ' 2009.01.26 -- Allow "GET" or "POST" requests
     ' 2014.06.13 -- Add bASync parameter
     ' 2017.05.01 -- Add "User-Agent" option
+    ' 2023-05-05 -- Mel Pryor
+    ' 2023-05-05 -- Note on oHTTP.ReadyState
+    '               0   UNSENT  Client has been created. open() not called yet.
+    '               1   OPENED  open() has been called.
+    '               2   HEADERS_RECEIVED    send() has been called, and headers and status are available.
+    '               3   LOADING     Downloading; responseText holds partial data.
+    '               4   DONE    The operation is complete.
     '-----------------------------------------------------------------------------------------------------------*
     On Error GoTo ErrorExit
     Dim oHTTP As New XMLHTTP

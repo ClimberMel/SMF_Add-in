@@ -1,5 +1,5 @@
 Attribute VB_Name = "modGetElementNumber"
-Const kVersion = "3.0.2023.03.18"                   ' Version number of add-in
+Const kVersion = "3.0.2023.05.08"                   ' Version number of add-in
     
 Const kElements = 20000                             ' Number of data elements
 Dim aParms(1 To kElements) As String                ' Extraction parameters for each element
@@ -149,6 +149,8 @@ Public Function RCHGetElementNumber(ByVal pTicker As String, _
     ' 2023-02-21 -- Fix Issues#9, Issues#19, Issues#18
     '               New version number 3.0.2023.02.24
     ' 2023-03-18 -- Fix for Issue#24 in modGetYahooHistory
+    ' 2023-05-08 -- Fix for Issue#27 in smfGetYahooPortfolio_.bas
+    '               New version number 3.0.2023.05.09
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation to get The "Trend Spotter" value for IBM from the BarChart website:
     '

@@ -28,6 +28,8 @@ Public Function smfGetYahooPortfolioView(ByVal pTickers As Variant, _
     ' 2017.11.09 -- Backed out percentage adjustments for fields 58, 61, 65, 68
     ' 2017.11.09 -- Fixed field list adjustment when only default fields are requested
     ' 2017.11.17 -- Allow a ticker symbol to be returned more than once
+    ' 2023-05-09 -- Mel Pryor
+    ' 2023-05-09 -- In sURL change v7 to v6.  Appears that the Export button in Yahoo Portfolio has changed that.
     '-----------------------------------------------------------------------------------------------------------*
     ' > Examples of invocations to get portfolio quotes for IBM and MMM:
     '
@@ -124,7 +126,7 @@ Public Function smfGetYahooPortfolioView(ByVal pTickers As Variant, _
     
     '------------------> Extract requested data items
     Dim iPtr As Long, iPos1 As Long, sData As String, sLine As String, sURL As String, v1 As Variant, vGMTOffset As Variant
-    sURL = "https://query1.finance.yahoo.com/v7/finance/quote?fields=" & sFieldList & "&formatted=false&symbols=" & Replace(sTickers, ",XXXXX", "")
+    sURL = "https://query1.finance.yahoo.com/v6/finance/quote?fields=" & sFieldList & "&formatted=false&symbols=" & Replace(sTickers, ",XXXXX", "")
     iPtr = 1
     sData = RCHGetWebData(sURL, iPtr, 6000)
     iPos1 = InStr(2, sData, "result")
