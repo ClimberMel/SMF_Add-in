@@ -9,7 +9,8 @@ Public Function smfGetTagContent(ByVal pURL As String, _
                         Optional ByVal pConv As Integer = 0, _
                         Optional ByVal pError As Variant = "Error", _
                         Optional ByVal pType As Integer = 0, _
-                        Optional ByVal pLen As Integer = 32767) As Variant
+                        Optional ByVal pLen As Integer = 32767, _
+                        Optional ByVal pTag2 As String = " ") As Variant
                         
     '-----------------------------------------------------------------------------------------------------------*
     ' User defined function to return content from between a paired HTML tags
@@ -21,6 +22,9 @@ Public Function smfGetTagContent(ByVal pURL As String, _
     ' 2012.01.27 -- Added "pLen" parm to prevent excessive length of returned data
     ' 2014.04.10 -- Add call to smfStripHTML() for pConv=1
     ' 2017.11.11 -- Allow text string to be passed instead of a URL
+    ' 2023       -- Mel Pryor
+    '            -- see GitHub for issue details: https://github.com/ClimberMel/SMF_Add-in/issues
+    ' 2023-05-20 -- Issue #32 - Added pTag2 paramenter for additional cases
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation:
     '
@@ -75,6 +79,10 @@ Public Function smfGetTagContent(ByVal pURL As String, _
        If iPos4 > 0 And (iPos3 = 0 Or iPos3 > iPos4) Then iPos3 = iPos4
        End If
     
+    If pTag2 > " " Then
+       iPos3 = InStr(iPos2, sData2, UCase(pTag2))
+       End If
+    
     s1 = Trim(Mid(sData1, iPos2 + 1, iPos3 - iPos2 - 1))
     If pConv = 1 Then
        s1 = smfStripHTML(s1)
@@ -89,5 +97,3 @@ Public Function smfGetTagContent(ByVal pURL As String, _
 ErrorExit: smfGetTagContent = vError
    
    End Function
-
-
