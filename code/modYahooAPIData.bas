@@ -16,6 +16,9 @@ Function smfYahooAPIData(pTicker As String, _
     '            -- "e" feed is from yahoo.finance.stocks
     '            -- "f" feed is from yahoo.finance.options
     ' 2017.04.26 -- Change "http://" protocol to "https://"
+    '
+    ' 2023-05-28 -- This is deprecated due to the shutdown of query.yahooapis.com
+    '
     '-----------------------------------------------------------------------------------------------------------*
          
     Const kURLa = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20csv%20where%20url%3D'http%3A%2F%2Fdownload.finance.yahoo.com%2Fd%2Fquotes.csv%3Fs%3D~~~~~" _
