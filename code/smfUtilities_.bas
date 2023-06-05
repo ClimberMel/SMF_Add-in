@@ -102,13 +102,13 @@ Public Function RCHGetURLData1(pURL As String, _
     '               4   DONE    The operation is complete.
     '-----------------------------------------------------------------------------------------------------------*
     On Error GoTo ErrorExit
-    Dim oHTTP As New XMLHTTP
+    Dim oHTTP As New xmlhttp
     oHTTP.Open pType, pURL, bASync
     oHTTP.setRequestHeader "User-Agent", "XMLHTTP/1.0"
     oHTTP.send
     Do While bASync
        DoEvents
-       If oHTTP.ReadyState = 4 Then Exit Do
+       If oHTTP.readyState = 4 Then Exit Do
        Loop
     Select Case oHTTP.Status
        Case 0: RCHGetURLData1 = oHTTP.responseText
@@ -131,12 +131,12 @@ Public Function RCHGetURLData2(pURL As String) As String
     oIE.Navigate pURL
 
     Application.Wait Now + (1 / 864000)
-    While oIE.Busy Or oIE.ReadyState <> 4
+    While oIE.Busy Or oIE.readyState <> 4
        Application.Wait Now + (1 / 864000)
        DoEvents
        Wend
     Application.Wait Now + (1 / 864000)
-    Do While oIE.Busy Or oIE.ReadyState <> 4
+    Do While oIE.Busy Or oIE.readyState <> 4
        Application.Wait Now + (1 / 864000)
        DoEvents
        Loop
@@ -168,7 +168,7 @@ Public Function RCHGetURLData3(pURL As String) As String
     On Error GoTo ErrorExit
     Dim oHTML As New HTMLDocument
     Set oDoc = oHTML.createDocumentFromUrl(pURL, vbNullString)
-    Do: DoEvents: Loop Until oDoc.ReadyState = "complete"
+    Do: DoEvents: Loop Until oDoc.readyState = "complete"
     Call fnWait(2)  ' Wait for JavaScript to run on page?
     RCHGetURLData3 = oDoc.documentElement.outerHTML
     Exit Function
@@ -435,6 +435,22 @@ Public Function smfUnix2Date(pUnixDate As Long) As Date
     '-----------------------------------------------------------------------------------------------------------*
     smfUnix2Date = DateAdd("s", pUnixDate, kUnix1970)
     End Function
+
+Public Function smfUnix2DateStr(pUnixDate As Long, _
+                       Optional pFormat As String = "yyyy-mm-dd")
+    '-----------------------------------------------------------------------------------------------------------*
+    ' 2017.05.17 -- Add function
+    ' 2023-02-21 -- Converts a Unix style date back to a regular datetime object
+    '-----------------------------------------------------------------------------------------------------------*
+    ' DateAdd(interval, number, date)
+    ' interval = s is second
+    ' pUnixDate is the Unix Date passed to the function
+    ' kUnix1970 = 25569          "CDbl(DateSerial(1970, 1, 1))" from Constants at top
+    ' So the following will create a serial date for Excel from the Unix date provided
+    unix2Date = DateAdd("s", pUnixDate, kUnix1970)
+    smfUnix2DateStr = Format(unix2Date, pFormat)
+
+End Function
 
 Public Function smfHTMLDecode(pString As String) As String
     '-----------------------------------------------------------------------------------------------------------*

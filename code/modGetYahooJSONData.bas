@@ -15,6 +15,7 @@ Public Function smfGetYahooJSONField(ByVal pTicker As String, _
    ' 2017.10.12 -- Add error exit
    ' 2017.10.21 -- Fix "portfolioView" URL
    ' 2018.12.13 -- Change RCHGetWebData() to smfGetWebPage()
+   ' 2023-05-29 -- Will not work with 64bit Excel due to ScriptEngine only having 32bit available.
    '-----------------------------------------------------------------------------------------------------------*
    ' > Example of an invocation:
    '
@@ -58,11 +59,14 @@ Public Function smfGetYahooJSONData(ByVal pTicker As String, _
    '-----------------------------------------------------------------------------------------------------------*
    ' 2017.04.19 -- Created function (rharmelink@gmail.com)
    ' 2017.04.21 -- Add multi-level pField parameter
+   ' 2023-06-05 -- Add "num format type to deal with unquoted numbers in the JSON data
+   '            -- see https://github.com/ClimberMel/SMF_Add-in/issues/37 for details
    '-----------------------------------------------------------------------------------------------------------*
    ' > Example of an invocation:
    '
    '   =smfGetYahooJSONData("MMM", "cashFlowStatementHistory", "changeInCash")
    '   =smfGetYahooJSONData("MMM","financialData","targetMeanPrice")
+   '   =smfGetYahooJSONData("AAPL", "quoteType", "gmtOffSetMilliseconds", , "num")
    '-----------------------------------------------------------------------------------------------------------*
                                       
    Dim sURL As String, s1 As String, aSplit As Variant, i1 As Integer
@@ -84,6 +88,7 @@ Public Function smfGetYahooJSONData(ByVal pTicker As String, _
       Case "": s1 = smfStrExtr(s1, """", """")
       Case "fmt": s1 = smfStrExtr(s1, """fmt"":""", """")
       Case "raw": s1 = smfStrExtr(s1, """raw"":", ",")
+      Case "num": s1 = smfStrExtr(s1, "~", ",""")
       Case Else: s1 = smfStrExtr(s1, """raw"":", ",")
       End Select
    If s1 = "" Then s1 = "Not found"
