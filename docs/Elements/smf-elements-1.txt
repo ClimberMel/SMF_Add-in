@@ -83,9 +83,7 @@
 75;YahooPrice;Pre Mkt Chg;=smfGetYahooJSONData("~~~~~","price","preMarketChange")
 76;YahooPrice;Pre Mkt Chg%;=smfGetYahooJSONData("~~~~~","price","preMarketChangePercent")
 77;YahooSD;Tradeable;="No data"
-
 78;YahooPrice;Last Traded Date;=smfUnix2DateStr(smfGetYahooJSONData("~~~~~","price","regularMarketTime",,"num"))
-
 79;YahooPrice;Last Traded Time;=smfUnix2DateStr(smfGetYahooJSONData("~~~~~","price","regularMarketTime",,"num"),"HH:MM")
 80;YahooPrice;Ex-Dividend Date;=smfGetYahooJSONData("~~~~~","calendarEvents","exDividendDate",,"fmt")
 81;YahooCE;Dividend Payment Date;=smfGetYahooJSONData("~~~~~","calendarEvents","dividendDate",,"fmt")
@@ -94,17 +92,14 @@
 84;YahooPrice;Post-Mkt Time;==smfUnix2DateStr(smfGetYahooJSONData("~~~~~","price","postMarketTime",,"num"),"HH:MM")
 85;YahooPrice;Pre-Mkt Date;=smfUnix2DateStr(smfGetYahooJSONData("~~~~~","price","preMarketTime",,"num"))
 86;YahooPrice;Pre-Mkt Time;=smfUnix2DateStr(smfGetYahooJSONData("~~~~~","price","preMarketTime",,"num"),"HH:MM")
-
 87;YahooPrice;Last Traded Date/Time;=smfUnix2DateStr(smfGetYahooJSONData("~~~~~","price","regularMarketTime",,"num"),"yyyy-mm-dd HH:MM")
-
 88;YahooPrice;Post-Mkt Date/Time;=smfUnix2DateStr(smfGetYahooJSONData("~~~~~","price","postMarketTime",,"num"),"yyyy-mm-dd HH:MM")
-
 89;YahooPrice;Pre-Mkt Date/Time;=smfUnix2DateStr(smfGetYahooJSONData("~~~~~","price","preMarketTime",,"num"),"yyyy-mm-dd HH:MM")
 
 90;YahooPrice;Earnings Date Start;="Not defined yet"
 
 91;YahooPrice;Earnings Date End;="Not defined yet"
 
-
+92;YahooPrice;Last Traded Date/Time;=smfUnix2DateStr(smfGetYahooJSONData("~~~~~","price","regularMarketTime",,"num"),"m/dd/yy")
 
 

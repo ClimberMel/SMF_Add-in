@@ -210,6 +210,11 @@
 1137;BarChartMM;OTC -- Percent Declining Issues;=smfGetYahooJSONField("None","barChartMM","data.2.raw.percentDecliningIssues")
 1138;BarChartMM;OTC -- Percent Unchanged Issues;=smfGetYahooJSONField("None","barChartMM","data.2.raw.percentUnchangedIssues")
 
+1141;BarChartMM;Percent of Stocks Above 5-Day MA -- Today;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",1,">Market Average",">Today")
+1142;BarChartMM;Percent of Stocks Above 5-Day MA -- Yesterday;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",1,">Market Average",">Yesterday")
+1143;BarChartMM;Percent of Stocks Above 5-Day MA -- Last Week;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",1,">Market Average",">Last Week")
+1144;BarChartMM;Percent of Stocks Above 5-Day MA -- Last Month;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",1,">Market Average",">Last Month")
+
 1146;BarChartMM;Market Momentum -- Date;=smfGetTagContent("https://www.barchart.com/stocks/momentum","span",1,"class=""date-column")
 1147;BarChartMM;NYSE -- Advancing Issues;=smfGetYahooJSONField("None","barChartMM","data.1.raw.advancingIssues")
 1148;BarChartMM;NYSE -- Declining Issues;=smfGetYahooJSONField("None","barChartMM","data.1.raw.decliningIssues")
@@ -243,7 +248,6 @@
 1176;BarChartMM;OTCBB -- Unchanged Volume;=smfGetYahooJSONField("None","barChartMM","data.2.raw.unchangedVolume")
 1177;BarChartMM;OTCBB -- New Highs;=smfGetYahooJSONField("None","barChartMM","data.2.raw.newHighs")
 1178;BarChartMM;OTCBB -- New Lows;=smfGetYahooJSONField("None","barChartMM","data.2.raw.newLows")
-
 1179;BarChartMM;Market Momentum -- Today;="Obsolete"
 1180;BarChartMM;Market Momentum -- Yesterday;="Obsolete"
 1181;BarChartMM;Market Momentum -- Last Week;="Obsolete"
@@ -260,28 +264,26 @@
 1192;BarChartMM;Market -- Declining Issues -- Yesterday;="Obsolete"
 1193;BarChartMM;Market -- Declining Issues -- Last Week;="Obsolete"
 1194;BarChartMM;Market -- Declining Issues -- Last Month;="Obsolete"
-
-1195;BarChartMM;Percent of Stocks Above 20-Day MA -- Today;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",1,">Market Average",">Today")
-1196;BarChartMM;Percent of Stocks Above 20-Day MA -- Yesterday;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",1,">Market Average",">Yesterday")
-1197;BarChartMM;Percent of Stocks Above 20-Day MA -- Last Week;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",1,">Market Average",">Last Week")
-1198;BarChartMM;Percent of Stocks Above 20-Day MA -- Last Month;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",1,">Market Average",">Last Month")
-1199;BarChartMM;Percent of Stocks Above 50-Day MA -- Today;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",2,">Market Average",">Today")
-1200;BarChartMM;Percent of Stocks Above 50-Day MA -- Yesterday;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",2,">Market Average",">Yesterday")
-1201;BarChartMM;Percent of Stocks Above 50-Day MA -- Last Week;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",2,">Market Average",">Last Week")
-1202;BarChartMM;Percent of Stocks Above 50-Day MA -- Last Month;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",2,">Market Average",">Last Month")
-1203;BarChartMM;Percent of Stocks Above 100-Day MA -- Today;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",3,">Market Average",">Today")
-1204;BarChartMM;Percent of Stocks Above 100-Day MA -- Yesterday;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",3,">Market Average",">Yesterday")
-1205;BarChartMM;Percent of Stocks Above 100-Day MA -- Last Week;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",3,">Market Average",">Last Week")
-1206;BarChartMM;Percent of Stocks Above 100-Day MA -- Last Month;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",3,">Market Average",">Last Month")
-1207;BarChartMM;Percent of Stocks Above 150-Day MA -- Today;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",4,">Market Average",">Today")
-1208;BarChartMM;Percent of Stocks Above 150-Day MA -- Yesterday;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",4,">Market Average",">Yesterday")
-1209;BarChartMM;Percent of Stocks Above 150-Day MA -- Last Week;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",4,">Market Average",">Last Week")
-1210;BarChartMM;Percent of Stocks Above 150-Day MA -- Last Month;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",4,">Market Average",">Last Month")
-1211;BarChartMM;Percent of Stocks Above 200-Day MA -- Today;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",5,">Market Average",">Today")
-1212;BarChartMM;Percent of Stocks Above 200-Day MA -- Yesterday;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",5,">Market Average",">Yesterday")
-1213;BarChartMM;Percent of Stocks Above 200-Day MA -- Last Week;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",5,">Market Average",">Last Week")
-1214;BarChartMM;Percent of Stocks Above 200-Day MA -- Last Month;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",5,">Market Average",">Last Month")
-
+1195;BarChartMM;Percent of Stocks Above 20-Day MA -- Today;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",2,">Market Average",">Today")
+1196;BarChartMM;Percent of Stocks Above 20-Day MA -- Yesterday;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",2,">Market Average",">Yesterday")
+1197;BarChartMM;Percent of Stocks Above 20-Day MA -- Last Week;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",2,">Market Average",">Last Week")
+1198;BarChartMM;Percent of Stocks Above 20-Day MA -- Last Month;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",2,">Market Average",">Last Month")
+1199;BarChartMM;Percent of Stocks Above 50-Day MA -- Today;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",3,">Market Average",">Today")
+1200;BarChartMM;Percent of Stocks Above 50-Day MA -- Yesterday;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",3,">Market Average",">Yesterday")
+1201;BarChartMM;Percent of Stocks Above 50-Day MA -- Last Week;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",3,">Market Average",">Last Week")
+1202;BarChartMM;Percent of Stocks Above 50-Day MA -- Last Month;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",3,">Market Average",">Last Month")
+1203;BarChartMM;Percent of Stocks Above 100-Day MA -- Today;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",4,">Market Average",">Today")
+1204;BarChartMM;Percent of Stocks Above 100-Day MA -- Yesterday;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",4,">Market Average",">Yesterday")
+1205;BarChartMM;Percent of Stocks Above 100-Day MA -- Last Week;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",4,">Market Average",">Last Week")
+1206;BarChartMM;Percent of Stocks Above 100-Day MA -- Last Month;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",4,">Market Average",">Last Month")
+1207;BarChartMM;Percent of Stocks Above 150-Day MA -- Today;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",5,">Market Average",">Today")
+1208;BarChartMM;Percent of Stocks Above 150-Day MA -- Yesterday;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",5,">Market Average",">Yesterday")
+1209;BarChartMM;Percent of Stocks Above 150-Day MA -- Last Week;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",5,">Market Average",">Last Week")
+1210;BarChartMM;Percent of Stocks Above 150-Day MA -- Last Month;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",5,">Market Average",">Last Month")
+1211;BarChartMM;Percent of Stocks Above 200-Day MA -- Today;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",6,">Market Average",">Today")
+1212;BarChartMM;Percent of Stocks Above 200-Day MA -- Yesterday;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",6,">Market Average",">Yesterday")
+1213;BarChartMM;Percent of Stocks Above 200-Day MA -- Last Week;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",6,">Market Average",">Last Week")
+1214;BarChartMM;Percent of Stocks Above 200-Day MA -- Last Month;=RCHGetTableCell("https://www.barchart.com/stocks/momentum",6,">Market Average",">Last Month")
 1215;BarChartTech;Group1 -- Period -- 1;=smfGetTagContent("https://www.barchart.com/stocks/quotes/~~~~~/technical-analysis","td",1,">Average Volume",,,,1)
 1216;BarChartTech;Moving Average -- 1;=smfGetTagContent("https://www.barchart.com/stocks/quotes/~~~~~/technical-analysis","td",2,">Average Volume",,,,1)
 1217;BarChartTech;Price Change -- 1;=smfGetTagContent("https://www.barchart.com/stocks/quotes/~~~~~/technical-analysis","td",3,">Average Volume",,,,1)
