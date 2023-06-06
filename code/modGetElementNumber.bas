@@ -1,5 +1,5 @@
 Attribute VB_Name = "modGetElementNumber"
-Const kVersion = "3.0.2023.05.08"                   ' Version number of add-in
+Const kVersion = "3.0.2023.06.05"                   ' Version number of add-in
     
 Const kElements = 20000                             ' Number of data elements
 Dim aParms(1 To kElements) As String                ' Extraction parameters for each element
@@ -151,13 +151,16 @@ Public Function RCHGetElementNumber(ByVal pTicker As String, _
     ' 2023-03-18 -- Fix for Issue#24 in modGetYahooHistory
     ' 2023-05-08 -- Fix for Issue#27 in smfGetYahooPortfolio_.bas
     '               New version number 3.0.2023.05.09
+    ' 2023-05-20 -- Fix Issues #31, 32 New version number 3.0.2023.05.20
+    ' 2023-06-05 -- Fix Issue #37, add new Function to smfUtilities_ and update elements-1, 6 & 9
+    '
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation to get The "Trend Spotter" value for IBM from the BarChart website:
     '
     '   =RCHGetElementNumber("IBM", 701)
     '   =RCHGetTableCell("http://quote.barchart.com/texpert.asp?sym=IBM",1,"Trend Spotter",,,,,1,3)
     '
-    '   The first is the preferred method. 
+    '   The first is the preferred method.
     '-----------------------------------------------------------------------------------------------------------*
        
     Dim sURL As String
