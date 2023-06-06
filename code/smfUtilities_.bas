@@ -439,15 +439,31 @@ Public Function smfUnix2Date(pUnixDate As Long) As Date
 Public Function smfUnix2DateStr(pUnixDate As Long, _
                        Optional pFormat As String = "yyyy-mm-dd")
     '-----------------------------------------------------------------------------------------------------------*
-    ' 2017.05.17 -- Add function
-    ' 2023-02-21 -- Converts a Unix style date back to a regular datetime object
+    ' 2023-06-04 -- Add function
+    '               Converts a Unix style date to a regular datetime object in string format
     '-----------------------------------------------------------------------------------------------------------*
     ' DateAdd(interval, number, date)
-    ' interval = s is second
-    ' pUnixDate is the Unix Date passed to the function
-    ' kUnix1970 = 25569          "CDbl(DateSerial(1970, 1, 1))" from Constants at top
+    '   interval = s is second
+    '   pUnixDate is the Unix Date passed to the function
+    '   kUnix1970 = 25569          "CDbl(DateSerial(1970, 1, 1))" from Constants at top
     ' So the following will create a serial date for Excel from the Unix date provided
+    '-----------------------------------------------------------------------------------------------------------*
+    '
+    ' Example:
+    '   =smfUnix2DateStr(Date)
+    '   returns a string of the UNIX date in format "2023-06-04"
+    '
+    '   =smfUnix2DateStr(Date, "d/m/yy")
+    '   returns a string of the UNIX date in format "4/6/23"
+    '
+    '   =smfUnix2DateStr(smfGetYahooJSONData("~~~~~","price","regularMarketTime",,"num"),"yyyy-mm-dd HH:MM")
+    '   returns a string of the UNIX date from the json file as "2023-06-04 15:22"
+    '-----------------------------------------------------------------------------------------------------------*
+    
     unix2Date = DateAdd("s", pUnixDate, kUnix1970)
+    
+    ' Then this will return it in a String format based on the pFormat
+    
     smfUnix2DateStr = Format(unix2Date, pFormat)
 
 End Function
