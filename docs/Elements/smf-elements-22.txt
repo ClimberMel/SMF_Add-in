@@ -1,4 +1,4 @@
-' ====================> Define constants for use by element definitions 
+' ====================> Define constants for use by element definitions
 
 Constant;1;Barchart Momentum URL;https://core-api.barchart.com/v1/momentum/get?raw=1&fields=exchange,high52w,low52w,newHighs,newLows,advancingVolume,unchangedVolume,decliningVolume,advancingIssues,percentAdvancingIssues,unchangedIssues,percentUnchangedIssues,decliningIssues,percentDecliningIssues&exchanges=NASDAQ,NYSE,OTC,AMEX
 Constant;2;Yahoo Portfolio View URL;https://query1.finance.yahoo.com/v6/finance/quote?fields=symbol,longName,shortName,regularMarketPrice,regularMarketTime,regularMarketChange,regularMarketDayHigh,regularMarketDayLow,regularMarketPrice,regularMarketOpen,regularMarketVolume,averageDailyVolume3Month,marketCap,bid,ask,dividendYield,dividendsPerShare,exDividendDate,trailingPE,priceToSales,targetPriceMean&formatted=false&symbols=~~~~~
