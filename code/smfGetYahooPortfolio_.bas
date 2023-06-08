@@ -1,11 +1,11 @@
 Attribute VB_Name = "smfGetYahooPortfolio_"
 Option Explicit
 Public Function smfGetYahooPortfolioView(ByVal pTickers As Variant, _
-                         Optional ByVal pItems As Variant = "01020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091", _
-                         Optional ByVal pMultiple As String = "N", _
-                         Optional ByVal pHeader As Integer = 0, _
-                         Optional ByVal pDim1 As Integer = 0, _
-                         Optional ByVal pDim2 As Integer = 0)
+                            Optional ByVal pItems As Variant = "01020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091", _
+                            Optional ByVal pMultiple As String = "N", _
+                            Optional ByVal pHeader As Integer = 0, _
+                            Optional ByVal pDim1 As Integer = 0, _
+                            Optional ByVal pDim2 As Integer = 0)
                     
     '-----------------------------------------------------------------------------------------------------------*
     ' User defined function to download columns from a portfolio view on Yahoo!
@@ -54,14 +54,14 @@ Public Function smfGetYahooPortfolioView(ByVal pTickers As Variant, _
     iRows = pDim1  ' Rows
     iCols = pDim2  ' Columns
     If pDim1 = 0 Or pDim2 = 0 Then
-       If pDim1 = 0 Then iRows = 200   ' Old default
-       If pDim2 = 0 Then iCols = 100   ' Old default
-       On Error Resume Next
-       iRows = Application.Caller.Rows.Count
-       iCols = Application.Caller.Columns.Count
-       On Error GoTo ErrorExit
-       End If
-  
+        If pDim1 = 0 Then iRows = 200   ' Old default
+        If pDim2 = 0 Then iCols = 100   ' Old default
+        On Error Resume Next
+        iRows = Application.Caller.Rows.Count
+        iCols = Application.Caller.Columns.Count
+        On Error GoTo ErrorExit
+        End If
+
     '------------------> Initialize return array
     ReDim vData(1 To iRows, 1 To iCols) As Variant
     For i1 = 1 To iRows
@@ -75,12 +75,12 @@ Public Function smfGetYahooPortfolioView(ByVal pTickers As Variant, _
     Dim iFind As Integer, aTickers As Variant
     Select Case VarType(pItems)
         Case vbString
-             sItems = LCase(Replace(pItems, " ", ""))
+            sItems = LCase(Replace(pItems, " ", ""))
         Case Is >= 8192
-             sItems = ""
-             For Each oCell In pItems
-                 If oCell.Value > "" Then sItems = sItems & Right(LCase(Format(oCell.Value, "00")), 2)
-                 Next oCell
+            sItems = ""
+            For Each oCell In pItems
+                If oCell.Value > "" Then sItems = sItems & Right(LCase(Format(oCell.Value, "00")), 2)
+                Next oCell
         Case Else
             smfGetYahooPortfolioView = "Invalid items parameter: " & pItems
             Exit Function
@@ -91,26 +91,26 @@ Public Function smfGetYahooPortfolioView(ByVal pTickers As Variant, _
     For i1 = 1 To iCols
         s1 = Mid(sItems & String$(68, "0"), 2 * i1 - 1, 2)
         Select Case s1
-           Case "00" To "91"
+            Case "00" To "91"
                 aCols(i1) = CInt(s1)
                 If aFieldNeed(s1) <> 0 Then
-                   iFind = InStr(sFieldList, "," & aFieldName(s1) & ",")
-                   If iFind = 0 Then sFieldList = sFieldList & aFieldName(s1) & ","
-                   End If
-           Case Else: aCols(i1) = 0
-           End Select
+                    iFind = InStr(sFieldList, "," & aFieldName(s1) & ",")
+                    If iFind = 0 Then sFieldList = sFieldList & aFieldName(s1) & ","
+                    End If
+            Case Else: aCols(i1) = 0
+            End Select
         Next i1
     If Len(sFieldList) > 2 Then sFieldList = Mid(sFieldList, 2, Len(sFieldList) - 2)  ' Remove leading and trailing comma
-           
+
     Select Case VarType(pTickers)
         Case vbString
-             sTickers = UCase(pTickers)
+            sTickers = UCase(pTickers)
         Case Is >= 8192
-             sTickers = ""
-             For Each oCell In pTickers
-                 sTickers = sTickers & IIf(oCell.Value <> "", UCase(oCell.Value), "XXXXX") & ","
-                 Next oCell
-             sTickers = Left(sTickers, Len(sTickers) - 1)
+            sTickers = ""
+            For Each oCell In pTickers
+                sTickers = sTickers & IIf(oCell.Value <> "", UCase(oCell.Value), "XXXXX") & ","
+                Next oCell
+            sTickers = Left(sTickers, Len(sTickers) - 1)
         Case Else
             smfGetYahooPortfolioView = "Invalid tickers parameter: " & pTickers
             Exit Function
@@ -119,10 +119,10 @@ Public Function smfGetYahooPortfolioView(ByVal pTickers As Variant, _
     
     '------------------> Create header if requested
     If pHeader = 1 Then
-       For i1 = 1 To iCols
-           vData(1, i1) = aHeading(aCols(i1))
-           Next i1
-       End If
+        For i1 = 1 To iCols
+            vData(1, i1) = aHeading(aCols(i1))
+            Next i1
+        End If
     If aTickers(0) = "NONE" Then GoTo ErrorExit
     
     '------------------> Extract requested data items
@@ -143,34 +143,34 @@ Public Function smfGetYahooPortfolioView(ByVal pTickers As Variant, _
         vGMTOffset = smfStrExtr(sLine & ",", """gmtOffSetMilliseconds"":", ",", 1) / 86400000
         For i3 = 0 To UBound(aTickers)
             If s1 = aTickers(i3) Then
-               i4 = i3 + 1 + pHeader
-               For i1 = 1 To iCols
-                   v1 = smfStrExtr(sLine & ",", """" & aFieldName(aCols(i1)) & """:", ",""", 1)
-                   If v1 = "" Then
-                      vData(i4, i1) = "--"
-                   Else
-                      If Left(v1, 1) = """" Then v1 = smfStrExtr(v1 & """", """", """", 1)
-                      Select Case 0 + aCols(i1)
-                         Case 34, 52, 72, 76
-                              On Error Resume Next
-                              v1 = v1 / 100
-                              On Error GoTo ErrorExit
-                              vData(i4, i1) = v1
-                         Case 80, 81, 82, 90, 91
-                              vData(i4, i1) = Int(smfUnix2Date(0 + v1))
-                         Case 78, 83, 85
-                              vData(i4, i1) = Int(smfUnix2Date(0 + v1) + vGMTOffset)
-                         Case 79, 84, 86
-                              vData(i4, i1) = smfUnix2Date(0 + v1) + vGMTOffset - Int(smfUnix2Date(0 + v1) + vGMTOffset)
-                         Case 87, 88, 89
-                              vData(i4, i1) = smfUnix2Date(0 + v1) + vGMTOffset
-                         Case Else
-                              vData(i4, i1) = v1
-                         End Select
-                      End If ' v1
-                   Next i1
-               If pMultiple = "N" Then Exit For
-               End If ' s1
+                i4 = i3 + 1 + pHeader
+                For i1 = 1 To iCols
+                    v1 = smfStrExtr(sLine & ",", """" & aFieldName(aCols(i1)) & """:", ",""", 1)
+                    If v1 = "" Then
+                        vData(i4, i1) = "--"
+                    Else
+                        If Left(v1, 1) = """" Then v1 = smfStrExtr(v1 & """", """", """", 1)
+                        Select Case 0 + aCols(i1)
+                            Case 34, 52, 72, 76
+                                On Error Resume Next
+                                v1 = v1 / 100
+                                On Error GoTo ErrorExit
+                                vData(i4, i1) = v1
+                            Case 80, 81, 82, 90, 91
+                                vData(i4, i1) = Int(smfUnix2Date(0 + v1))
+                            Case 78, 83, 85
+                                vData(i4, i1) = Int(smfUnix2Date(0 + v1) + vGMTOffset)
+                            Case 79, 84, 86
+                                vData(i4, i1) = smfUnix2Date(0 + v1) + vGMTOffset - Int(smfUnix2Date(0 + v1) + vGMTOffset)
+                            Case 87, 88, 89
+                                vData(i4, i1) = smfUnix2Date(0 + v1) + vGMTOffset
+                            Case Else
+                                vData(i4, i1) = v1
+                            End Select
+                        End If ' v1
+                    Next i1
+                If pMultiple = "N" Then Exit For
+                End If ' s1
             Next i3
         Next i2
 
