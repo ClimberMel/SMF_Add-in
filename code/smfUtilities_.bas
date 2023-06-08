@@ -7,6 +7,8 @@ Public sData(1 To 3) As String                  ' 1 = Raw data, 2 = Stripped dat
 Public sLog As String
 Public sWebCache As String                      ' Set to "N" to force SMF to web pages for selected ranges
 Public bASync As Boolean                        ' Set to TRUE for Asyncrhonous XMLHTTP processing
+Public crumb As String                          ' Holds Yahoo crumb value  between calls
+Public cookie As String                         ' Holds yahoo Cookie Value between Calls
 
 
 Public Function smfLogInternetCalls(pLog As String)
@@ -186,6 +188,7 @@ Public Function RCHGetURLData(ByVal pURL As String, _
     ' 2014.05.25 -- Add double quotes around URL
     ' 2016.05.18 -- Add Application.PathSeparator to ease transition between operating systems
     ' 2016.05.18 -- Add call to RCHGetURLData1Mac for Mac usage
+    ' 2023.06.07 -- Added RCHGetURLData4 for Yahoo data using cookie/crumb method - pUseIE option 4
     '-----------------------------------------------------------------------------------------------------------*
     
     Dim i1 As Integer
@@ -200,6 +203,8 @@ Public Function RCHGetURLData(ByVal pURL As String, _
        Case pUseIE = 1: RCHGetURLData = RCHGetURLData2(pURL)                  ' IE Object
        Case pUseIE = 2: RCHGetURLData = RCHGetURLData3(pURL)                  ' HTMLDocument
        Case pUseIE = 3: RCHGetURLData = RCHGetURLData1(pURL, "POST")          ' XMLHTTP Post
+       Case pUseIE = 4: RCHGetURLData = RCHGetURLData4(pURL)                  ' WinHttp.WinHttpRequest.5.1
+       
        Case Else: RCHGetURLData = RCHGetURLData1(pURL, "GET")                 ' XMLHTTP Get
        End Select
 #End If
@@ -486,3 +491,49 @@ Public Function smfHTMLDecode(pString As String) As String
     smfHTMLDecode = Replace(smfHTMLDecode, "&#160;", " ")
     smfHTMLDecode = Replace(smfHTMLDecode, "&amp;", "&")
     End Function
+
+Public Function RCHGetURLData4(pURL As String)
+    '-----------------------------------------------------------------------------------------------------------*
+    ' 2023-06-07 -- Added function
+    '            -- Gets Yahoo Data Using Cookie/Crumb Method
+    '-----------------------------------------------------------------------------------------------------------*    
+    
+    If Len(crumb) <> 11 Then Call getYahooCookieCrumb(crumb, cookie)
+
+    pURL = pURL & "&crumb=" & crumb
+
+    With CreateObject("WinHttp.WinHttpRequest.5.1")
+        .Open "GET", pURL, False
+        .setRequestHeader "Cookie", cookie
+        .send
+        .waitForResponse
+        
+        RCHGetURLData4 = .responseText
+    End With
+
+End Function
+
+Private Sub getYahooCookieCrumb(crumb As String, cookie As String)
+    '-----------------------------------------------------------------------------------------------------------*
+    ' 2023.06.07 -- Added sub
+    '            -- Helper function for RCHGetURLData4
+    '-----------------------------------------------------------------------------------------------------------*    
+    
+    With CreateObject("WinHttp.WinHttpRequest.5.1")
+        .Open "GET", "https://fc.yahoo.com", False
+        .send
+        .waitForResponse (10)
+            
+        cookie = Split(.getResponseHeader("Set-Cookie"), ";")(0)
+            
+        .Open "GET", "https://query2.finance.yahoo.com/v1/test/getcrumb"
+        .setRequestHeader "Cookie", cookie
+        .send
+        .waitForResponse (10)
+                
+        crumb = .responseText
+            
+    End With
+
+End Sub
+

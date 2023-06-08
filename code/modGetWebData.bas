@@ -6,6 +6,8 @@ Public Function RCHGetWebData(ByVal pURL As String, _
                          Optional ByVal pUseIE As Integer = 0) As Variant
     '-----------------------------------------------------------------------------------------------------------*
     ' 2011.02.16 -- Convert to use smfGetWebPage() function
+    ' 2023-06-06 -- This is basically a pass through function to maintain old code that called it
+    '            -- modules such as smfGetYahooPortfolio_.smfGetYahooPortfolioView call it
     '-----------------------------------------------------------------------------------------------------------*
     On Error GoTo ErrorExit
     '--------------------------------> Retrieve web page, if needed
