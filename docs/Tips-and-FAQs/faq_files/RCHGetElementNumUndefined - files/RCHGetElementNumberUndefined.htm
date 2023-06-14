@@ -1,0 +1,24 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	
+<title>RCHGetElementNumber returns Undefined</title>
+
+</head>
+
+<body>
+<h2>Why is RCHGetElementNumber() returning "Undefined"?</h2>
+
+<br><br>
+<p> RCHGetElementNumber funtion gets the Element Number definitions from files such as smf-elements-1.txt
+    See <a href="../../../Elements/index.html"> Elements</a> for details
+</p><br>
+<p>
+    <ul>
+        <li>If the element number you request doesn't have a definition in one of the elements files then you will get <b>Undefined</b> returned.</li><br>
+        <li>If you get <b>Obsolete</b> then there is a definition for the element but it has been marked Obsolete as the data is no longer available.</li><br>
+        <li>If you get <b>Error</b> then there is a definition for the element but, most likely, the data is no longer available, or the page has changed.</li><br>
+    </ul>
+</p>
+
+</body>
+</html>
