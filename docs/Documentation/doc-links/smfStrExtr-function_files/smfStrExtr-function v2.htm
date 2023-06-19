@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>smfWord() -- Documentation</title>
+    <style>
+        table {
+            width: 100%;
+            margin-left:40px
+        }
+        p {
+            margin-left:40px
+        }
+        td {
+            vertical-align: top;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Documentation for smfStrExtr() function</h1>
+
+    <h3><u>Description</u></h3>
+        <p style="margin-left:40px">
+            A utility function to extract a substring from another string.
+        </p>
+
+    <h3><u>Syntax</u></h3>
+        <p>
+            <b>=smfStrExtr( Haystack, Start, End )</b>
+        </p>
+        
+    <h3><u>Parameters</u></h3>
+    <table>
+        <tr>
+            <td style="width:10%"><b>Haystack</b></td>
+            <td style="width:5%">=</td>
+            <td style="width:85%">String to extract the substring from.</td>
+        </tr>
+        <tr>
+            <td><b>Start</b></td>
+            <td>=</td>
+            <td>String to start the extract of the substring from, FOLLOWING this string when found. 
+                If the Start string is the tilde character (~) the extraction starts at the beginning of the Haystack string.
+            </td>
+        </tr>
+        <tr>
+            <td><b>End</b></td>
+            <td>=</td>
+            <td>String to end the extract of the substring from, BEFORE this string when found. The search for this string will be after the ending of the "Start" string.<br> 
+                If the End string is the tilde character (~) the extraction includes the last character of the Haystack string.
+            </td>
+        </tr>
+    </table>
+    <br>
+    <h3><u>Examples</u></h3>
+    <ul>
+        <li>To extract "table" out of "1table2", you would use:<br>
+            =smfStrExtr("1table2","1","2")<br>
+            ...which says to extract everything between "1" and "2".</li>
+        <br>
+        <li>To extract "table" out of "1table12", you would use:<br>
+            =smfStrExtr("1table12","1","1")<br>
+            ...which says to extract everything between the first "1" and the "1" following that.</li>
+        <br>
+        <li>To extract "lemon" out of "lemonade", you would use:<br>
+            =smfStrExtr("lemonade ", "~", "a")<br>
+            ...which says to extract everything starting at the first character and before the "a".
+        </li>
+        <li>o extract "last" out of "first/last", you would use:<br>
+            =smfStrExtr("first/last", /", ~",)<br>
+            ...which says to extract everything starting after / all the way to the end of Haystack.
+        </li>
+        <br>
+        <br>
+    </ul>
+
+    <h3><u>Usage notes</u></h3>
+    <ul>
+        <li>None at this time. 
+        </li>
+        <li>...more to come?</li>
+        <br>
+    </ul>
+</body>
+</html>
