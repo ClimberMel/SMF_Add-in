@@ -1,0 +1,136 @@
+<html>
+<head>
+	
+<title>smfGetOptionExpirations() -- Documentation</title>
+
+</head>
+
+<body>
+<h2>Documentation for smfGetOptionExpirations() function</h2>
+
+<br><u><b>Description</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns all expiration dates available for a specific equity.
+
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetOptionExpirations( Ticker, [Source], [Put/Call], [Strike Price], [Rows], [Columns], [Type])</b>
+
+
+<br><br><u><b>Parameters</b></u><br><br>
+<table>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td valign=top><b>Ticker</b></td>
+        <td valign=top>=</td>
+        <td>Ticker symbol of underlying equity (e.g "MMM" or "SPY").</td><br><br></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Source</b></td><td valign=top>=</td><td>
+A parameter to indicate which data source the expiration dates should be retrieved from. <b>Only Yahoo is now valid</b>.<br>
+Optional as it will defauly to Yahoo if blank<br>
+<table>
+    <tr>
+        <td>Y</td>
+        <td>= Yahoo</td>
+    </tr>
+</table>
+<br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Put/Call</b></td><td valign=top>=</td><td>
+An optional parameter that can allow you to create option ticker symbols for the smfGetOptionQuotes() function. If desired, both the Put/Call and Strike Price parameters should be passed. This parameter would be a literal value of "Put" or "Call" to indicate the type of ticker symbols that are desired. Can be abbreviated to "P" or "C". <br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Strike Price</b></td><td valign=top>=</td><td>
+An optional numeric value that can allow you to create option ticker symbols for the smfGetOptionQuotes() function. If desired, both the Put/Call and Strike Price parameters should be passed.<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Rows and Columns</b></td><td valign=top>=</td><td>
+These are advanced optional parameters to override the size of the returned array of data. Normally, the returned array size is set by the range the formula is entered over. However, if other functions or VBA are involved, these allow the size of the returned range to be specifically set.<br><br></td></tr>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Type</b></td><td valign=top>=</td><td>An optional integer value to determine the type of Internet request to make.  Defaults to 0.  For now, other values are experimental:
+<br><br>0 = XMLHTTP "Get" Request
+<br>1 = IE Object Request
+<br>2 = HTMLDocument Request
+<br>3 = XMLHTTP "Post" Request
+<br></td></tr>
+
+</table>
+
+<br><u><b>Examples</b></u><br><br>
+
+<ul>
+    <li>=smfGetOptionExpirations("MMM","Yahoo")</li>
+    <li>=smfGetOptionExpirations("MMM","Y")</li>
+    <li>=smfGetOptionExpirations("MMM")</li>
+    <br><br>
+    ...all of the above would return the available option expiration dates for "MMM" from Yahoo Finance:
+    <br><br>
+</ul>
+    <!-- Please do not remove this header -->
+    <!-- Table easily created from Excel with ASAP Utilities (http://www.asap-utilities.com)  -->
+    <table border="1" bordercolor="#C0C0C0" bordercolordark="#FFFFFF" cellspacing="0">
+        <tr>
+            <td bgcolor="#FFFFFF" width="72" height="25" align="center" valign="bottom" style="white-space: nowrap">2023-06-23</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="72" height="25" align="center" valign="bottom" style="white-space: nowrap">2023-06-30</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="72" height="25" align="center" valign="bottom" style="white-space: nowrap">2023-07-07</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="72" height="25" align="center" valign="bottom" style="white-space: nowrap">2023-07-14</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="72" height="25" align="center" valign="bottom" style="white-space: nowrap">2023-07-21</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="72" height="25" align="center" valign="bottom" style="white-space: nowrap">2023-07-28</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="72" height="25" align="center" valign="bottom" style="white-space: nowrap">2023-08-18</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="72" height="25" align="center" valign="bottom" style="white-space: nowrap">2023-09-15</td>
+        </tr>
+    </table>
+    <br><br>
+
+<ul>
+    <li>smfGetOptionExpirations("MMM","Y","C",100)</li>
+</ul>
+    <br><br>...would return the available option expiration dates for "MMM" from OptionsXpress, formatted as $100 call ticker symbols ready for the smfGetOptionQuotes() function:
+    <br><br>
+    <!-- Please do not remove this header -->
+    <!-- Table easily created from Excel with ASAP Utilities (http://www.asap-utilities.com)  -->
+    <table border="1" bordercolor="#C0C0C0" bordercolordark="#FFFFFF" cellspacing="0">
+        <tr>
+            <td bgcolor="#FFFFFF" width="182" height="25" align="left" valign="bottom" style="white-space: nowrap">MMM 6/23 2023 $100.00 Call</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="182" height="25" align="left" valign="bottom" style="white-space: nowrap">MMM 6/30 2023 $100.00 Call</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="182" height="25" align="left" valign="bottom" style="white-space: nowrap">MMM 7/7 2023 $100.00 Call</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="182" height="25" align="left" valign="bottom" style="white-space: nowrap">MMM 7/14 2023 $100.00 Call</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="182" height="25" align="left" valign="bottom" style="white-space: nowrap">MMM 7/21 2023 $100.00 Call</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="182" height="25" align="left" valign="bottom" style="white-space: nowrap">MMM 7/28 2023 $100.00 Call</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="182" height="25" align="left" valign="bottom" style="white-space: nowrap">MMM 8/18 2023 $100.00 Call</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFFFFF" width="182" height="25" align="left" valign="bottom" style="white-space: nowrap">MMM 9/15 2023 $100.00 Call</td>
+        </tr>
+    </table>
+</ul><br>
+
+<u><b>Usage notes</b></u>
+<ul>
+    <li>In almost all cases, this will need to be an array-entered formula.  To array-enter a formula in EXCEL, first highlight the range of cells where you would like the returned data to appear -- the number of rows for the range should be AT LEAST the number of ticker symbols you are requesting from the function, while the number of columns for the range should be AT LEAST the number of data items you are requesting for each ticker symbol from the function.  Next, enter your formula and then press Ctrl-Shift-Enter. 
+</ul>
+<br>
+</body>
+</html>
