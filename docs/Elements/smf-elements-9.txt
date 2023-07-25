@@ -1,4 +1,4 @@
-701;BarChart;Trend Spotter;=RCHGetTableCell("https://www.barchart.com/stocks/quotes/~~~~~/opinion",1,"> TrendSpotter",,,,,,3)
+701;BarChart;Trend Spotter;=RCHGetTableCell("https://www.barchart.com/stocks/quotes/~~~~~/opinion",1,"> Trend Seeker",,,,,,3)
 702;BarChart;Overall Average;=smfGetTagContent("https://www.barchart.com/stocks/quotes/~~~~~/opinion","span",2,"Overall average:",,,,1)
 703;BarChart;Short Term Indicators Average;=smfStrExtr(smfGetTagContent("https://www.barchart.com/stocks/quotes/~~~~~/opinion","span",1,">Short Term Indicators","Average:")," ","~")
 704;BarChart;7 Day Average Directional Indicator;=RCHGetTableCell("https://www.barchart.com/stocks/quotes/~~~~~/opinion",2,"7 Day Average Directional Indicator",,,,,,3)
