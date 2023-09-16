@@ -702,6 +702,13 @@
 13860;YahooMS;Market Stats -- OTC BB -- Unchanged Volume;="Obsolete"
 13861;YahooMS;Market Stats -- OTC BB -- Total Volume;="Obsolete"
 
+13863;Yahoo;Company Name;=smfStrExtr(smfGetTagContent("https://finance.yahoo.com/quote/~~~~~","title"),"~"," (~~~~~")
+13864;YahooIN;Sector Number;="Obsolete"
+13865;YahooIN;Sector Name;=smfStrExtr(RCHGetWebData("https://query2.finance.yahoo.com/v10/finance/quoteSummary/~~~~~?modules=assetProfile","""sector"":",150,,4),":""","""")
+13866;YahooIN;Industry Number;="Obsolete"
+13867;YahooIN;Industry Name;=smfStrExtr(RCHGetWebData("https://query2.finance.yahoo.com/v10/finance/quoteSummary/~~~~~?modules=assetProfile","""industry"":",150,,4),":""","""")
+13868;YahooIN;Industry Symbol;="Obsolete"
+
 13901;YahooMS2;Market Stats -- TSX -- Advancing Issues;="Obsolete"
 13902;YahooMS2;Market Stats -- TSX -- Declining Issues;="Obsolete"
 13903;YahooMS2;Market Stats -- TSX -- Unchanged Issues;="Obsolete"
@@ -724,9 +731,3 @@
 13920;YahooMS2;Market Stats -- TSX Ventures -- Total Volume;="Obsolete"
 
 
-13863;Yahoo;Company Name;=smfStrExtr(smfGetTagContent("https://finance.yahoo.com/quote/~~~~~","title"),"~"," (~~~~~")
-13864;YahooIN;Sector Number;="Obsolete"
-13865;YahooIN;Sector Name;=smfStrExtr(RCHGetWebData("https://query2.finance.yahoo.com/v10/finance/quoteSummary/~~~~~?modules=assetProfile","""sector"":",150),":""","""")
-13866;YahooIN;Industry Number;="Obsolete"
-13867;YahooIN;Industry Name;=smfStrExtr(RCHGetWebData("https://query2.finance.yahoo.com/v10/finance/quoteSummary/~~~~~?modules=assetProfile","""industry"":",150),":""","""")
-13868;YahooIN;Industry Symbol;="Obsolete"
