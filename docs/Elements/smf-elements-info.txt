@@ -3,7 +3,7 @@
 Files currently used by the add-in for existing element definitions:
 
    smf-elements-0.txt = Calculated data elements
-   smf-elements-1.txt = MSN data elements
+   smf-elements-1.txt = Yahoo Portfolio Elements 1 to 91, Scouter Elements
    smf-elements-2.txt = Yahoo data elements
    smf-elements-3.txt = Google data elements
    smf-elements-4.txt = Morningstar data elements
