@@ -23,6 +23,10 @@ Function smfGetADVFNElement(ByVal pTicker As String, _
    ' 2015.03.21 -- Allow exchange prefix on ticker symbol
    ' 2017.05.05 -- Add smfSetAdvFNPrefix() sub
    ' 2018.01.24 -- Change AdvFN URL from "http://" to "https://"
+   ' 2023-09-24 -- https://climbermel.github.io/SMF_Add-in/
+   '               5196 - 13625 AdvFN-A or Q all return error.  smf-elements-7.txt
+   '               https://ca.advfn.com/stock-market/NASDAQ/AAPL/financials has data,
+   '               but I doubt it is worth trying to fix any of these elements...
    '-----------------------------------------------------------------------------------------------------------*
    ' Sample of use:
    '
