@@ -146,6 +146,7 @@
 698;YahooAE;Revenue Estimates -- Sales Growth -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;0
 699;YahooAE;Revenue Estimates -- Sales Growth -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;0
 700;YahooAE;Revenue Estimates -- Sales Growth -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;0
+
 726;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Down Last 7 Days",,,,1)
 727;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Down Last 7 Days",,,,1)
 728;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Down Last 7 Days",,,,1)
@@ -207,6 +208,7 @@
 991;YahooKS;Dividend Date;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;DIVIDEND DATE; ; ;0;0;0;0
 992;YahooKS;Ex-Dividend Date;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;EX-DIVIDEND DATE; ; ;0;0;0;0
 993;YahooKS;Last Split Factor;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;LAST SPLIT FACTOR; ; ;0;0;0;0
+
 1285;YahooAE;Next Earnings Date;=RCHGetTableCell("https://finance.yahoo.com/quote/~~~~~?p=~~~~~",1,"Earnings Date")
 
 1552;YahooQBS;Quarterly Balance Sheet -- Date -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>; ; ;0;0;0;0
@@ -241,7 +243,6 @@
 1581;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;0
 1582;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;0
 1583;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;0
-
 1584;YahooQIS;Quarterly Income Statement -- Date -- FQ1;https://finance.yahoo.com/q/is?s=~~~~~;1;PERIOD ENDING;>; ; ;0;0;0;0
 1585;YahooQIS;Quarterly Income Statement -- Date -- FQ2;https://finance.yahoo.com/q/is?s=~~~~~;2;PERIOD ENDING;>; ; ;0;0;0;0
 1586;YahooQIS;Quarterly Income Statement -- Date -- FQ3;https://finance.yahoo.com/q/is?s=~~~~~;3;PERIOD ENDING;>; ; ;0;0;0;0
@@ -337,12 +338,14 @@
 1684;YahooPer;Fund Performance -- Year -- Category -- Year 20;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.20.year")
 1685;YahooPer;Fund Performance -- As of Date;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.asOfDate.fmt")
 1686;YahooPer;Fund Performance -- Avg 5-year Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverviewCat.fiveYrAvgReturnPct.raw")
+
 1687;YahooPer;Risk Statistic -- Label -- 3-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.1.year")
 1688;YahooPer;Risk Statistic -- Label -- 5-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.0.year")
 1689;YahooPer;Risk Statistic -- Label -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.2.year")
 1690;YahooPer;Risk Statistic -- Category -- Label -- 3-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.1.year")
 1691;YahooPer;Risk Statistic -- Category -- Label -- 5-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.0.year")
 1692;YahooPer;Risk Statistic -- Category -- Label -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.2.year")
+
 1693;YahooPer;Trailing Returns -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturns.tenYear.raw")
 1694;YahooPer;Trailing Returns Category -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsCat.tenYear.raw")
 1695;YahooPer;Trailing Returns -- NAV -- 1-Month;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsNav.oneMonth.fmt")
@@ -665,47 +668,6 @@
 5194;YahooTop;Fund Holdings -- Equity Attributes -- Median Market Cap -- Category;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.medianMarketCapCat.raw")
 5195;YahooTop;Fund Holdings -- Equity Attributes -- 3 Year Earnings Growth -- Category;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.threeYearEarningsGrowthCat.raw")
 
-13822;YahooMS;Market Stats -- NYSE -- Advancing Issues;="Obsolete"
-13823;YahooMS;Market Stats -- NYSE -- Declining Issues;="Obsolete"
-13824;YahooMS;Market Stats -- NYSE -- Unchanged Issues;="Obsolete"
-13825;YahooMS;Market Stats -- NYSE -- Total Issues;="Obsolete"
-13826;YahooMS;Market Stats -- NYSE -- New Highs;="Obsolete"
-13827;YahooMS;Market Stats -- NYSE -- New Lows;="Obsolete"
-13828;YahooMS;Market Stats -- NYSE -- Up Volume;="Obsolete"
-13829;YahooMS;Market Stats -- NYSE -- Down Volume;="Obsolete"
-13830;YahooMS;Market Stats -- NYSE -- Unchanged Volume;="Obsolete"
-13831;YahooMS;Market Stats -- NYSE -- Total Volume;="Obsolete"
-13832;YahooMS;Market Stats -- AMEX -- Advancing Issues;="Obsolete"
-13833;YahooMS;Market Stats -- AMEX -- Declining Issues;="Obsolete"
-13834;YahooMS;Market Stats -- AMEX -- Unchanged Issues;="Obsolete"
-13835;YahooMS;Market Stats -- AMEX -- Total Issues;="Obsolete"
-13836;YahooMS;Market Stats -- AMEX -- New Highs;="Obsolete"
-13837;YahooMS;Market Stats -- AMEX -- New Lows;="Obsolete"
-13838;YahooMS;Market Stats -- AMEX -- Up Volume;="Obsolete"
-13839;YahooMS;Market Stats -- AMEX -- Down Volume;="Obsolete"
-13840;YahooMS;Market Stats -- AMEX -- Unchanged Volume;="Obsolete"
-13841;YahooMS;Market Stats -- AMEX -- Total Volume;="Obsolete"
-13842;YahooMS;Market Stats -- NASDAQ -- Advancing Issues;="Obsolete"
-13843;YahooMS;Market Stats -- NASDAQ -- Declining Issues;="Obsolete"
-13844;YahooMS;Market Stats -- NASDAQ -- Unchanged Issues;="Obsolete"
-13845;YahooMS;Market Stats -- NASDAQ -- Total Issues;="Obsolete"
-13846;YahooMS;Market Stats -- NASDAQ -- New Highs;="Obsolete"
-13847;YahooMS;Market Stats -- NASDAQ -- New Lows;="Obsolete"
-13848;YahooMS;Market Stats -- NASDAQ -- Up Volume;="Obsolete"
-13849;YahooMS;Market Stats -- NASDAQ -- Down Volume;="Obsolete"
-13850;YahooMS;Market Stats -- NASDAQ -- Unchanged Volume;="Obsolete"
-13851;YahooMS;Market Stats -- NASDAQ -- Total Volume;="Obsolete"
-13852;YahooMS;Market Stats -- OTC BB -- Advancing Issues;="Obsolete"
-13853;YahooMS;Market Stats -- OTC BB -- Declining Issues;="Obsolete"
-13854;YahooMS;Market Stats -- OTC BB -- Unchanged Issues;="Obsolete"
-13855;YahooMS;Market Stats -- OTC BB -- Total Issues;="Obsolete"
-13856;YahooMS;Market Stats -- OTC BB -- New Highs;="Obsolete"
-13857;YahooMS;Market Stats -- OTC BB -- New Lows;="Obsolete"
-13858;YahooMS;Market Stats -- OTC BB -- Up Volume;="Obsolete"
-13859;YahooMS;Market Stats -- OTC BB -- Down Volume;="Obsolete"
-13860;YahooMS;Market Stats -- OTC BB -- Unchanged Volume;="Obsolete"
-13861;YahooMS;Market Stats -- OTC BB -- Total Volume;="Obsolete"
-
 13863;Yahoo;Company Name;=smfStrExtr(smfGetTagContent("https://finance.yahoo.com/quote/~~~~~","title"),"~"," (~~~~~")
 13864;YahooIN;Sector Number;="Obsolete"
 13865;YahooIN;Sector Name;=smfStrExtr(RCHGetWebData("https://query2.finance.yahoo.com/v10/finance/quoteSummary/~~~~~?modules=assetProfile","""sector"":",150,,4),":""","""")
@@ -713,23 +675,5 @@
 13867;YahooIN;Industry Name;=smfStrExtr(RCHGetWebData("https://query2.finance.yahoo.com/v10/finance/quoteSummary/~~~~~?modules=assetProfile","""industry"":",150,,4),":""","""")
 13868;YahooIN;Industry Symbol;="Obsolete"
 
-13901;YahooMS2;Market Stats -- TSX -- Advancing Issues;="Obsolete"
-13902;YahooMS2;Market Stats -- TSX -- Declining Issues;="Obsolete"
-13903;YahooMS2;Market Stats -- TSX -- Unchanged Issues;="Obsolete"
-13904;YahooMS2;Market Stats -- TSX -- Total Issues;="Obsolete"
-13905;YahooMS2;Market Stats -- TSX -- New Highs;="Obsolete"
-13906;YahooMS2;Market Stats -- TSX -- New Lows;="Obsolete"
-13907;YahooMS2;Market Stats -- TSX -- Up Volume;="Obsolete"
-13908;YahooMS2;Market Stats -- TSX -- Down Volume;="Obsolete"
-13909;YahooMS2;Market Stats -- TSX -- Unchanged Volume;="Obsolete"
-13910;YahooMS2;Market Stats -- TSX -- Total Volume;="Obsolete"
-13911;YahooMS2;Market Stats -- TSX Ventures -- Advancing Issues;="Obsolete"
-13912;YahooMS2;Market Stats -- TSX Ventures -- Declining Issues;="Obsolete"
-13913;YahooMS2;Market Stats -- TSX Ventures -- Unchanged Issues;="Obsolete"
-13914;YahooMS2;Market Stats -- TSX Ventures -- Total Issues;="Obsolete"
-13915;YahooMS2;Market Stats -- TSX Ventures -- New Highs;="Obsolete"
-13916;YahooMS2;Market Stats -- TSX Ventures -- New Lows;="Obsolete"
-13917;YahooMS2;Market Stats -- TSX Ventures -- Up Volume;="Obsolete"
-13918;YahooMS2;Market Stats -- TSX Ventures -- Down Volume;="Obsolete"
-13919;YahooMS2;Market Stats -- TSX Ventures -- Unchanged Volume;="Obsolete"
-13920;YahooMS2;Market Stats -- TSX Ventures -- Total Volume;="Obsolete"
+' Note: 13901 - 13920 removed obsolete elements YahooMS2
+' Note: 13822 - 13861 removed obsolete elements YahooMS
