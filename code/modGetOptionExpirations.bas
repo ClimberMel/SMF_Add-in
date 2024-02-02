@@ -34,16 +34,12 @@ Function smfGetOptionExpirations(ByVal pTicker As String, _
     ' 2017.10.10 -- optionsXpress is no longer a valid data source
     ' 2017.12.19 -- Add ability to request Yahoo expirations by type of period
     ' 2017.12.25 -- Add ability to request Yahoo expirations for multiple period types
-    ' 2023-01-17 -- Mel Pryor - testing
-    ' 2023-06-23 -- Clean up code.  Remove obsolete data sources. Yahoo is the only valid selection now
-    '            -- Fix Subscript out of range: https://github.com/ClimberMel/SMF_Add-in/issues/49
+    ' 2024.01.30 -- Invoke =RCHGetWebData with TYPE(4) param for Yahoo options url. (BS)
+    '               Add "?" to end of url if no other params used so "&crumb= ..." can be processed.
     '-----------------------------------------------------------------------------------------------------------*
     ' > Examples of invocations to get current quotes for SPY:
     '
-    '   =smfGetOptionExpirations("SPY", "Yahoo")
-    '   --> returns next expiry date
-    '
-    '   Array enter it over 10 rows and it will return the next 10 Expiry Dates
+    '   =smfGetOptionExpirations("SPY", "Google")
     '-----------------------------------------------------------------------------------------------------------*
     
     On Error GoTo ErrorExit
@@ -70,12 +66,11 @@ Function smfGetOptionExpirations(ByVal pTicker As String, _
     
     '------------------> Determine which data source to use
     Dim s1 As String, s2 As String, s3 As String, sURL As String, iPtr As Integer, d1 As Date, i1 As Integer
-    
     Select Case UCase(pSource)
-       'Case "8", "888": GoTo Source_888
-       'Case "B", "BC", "BARCHART": GoTo Source_Yahoo
-       'Case "G", "GOOGLE": GoTo Source_Google
-       'Case "N", "NASDAQ": GoTo Source_Yahoo
+       Case "8", "888": GoTo Source_888
+       Case "B", "BC", "BARCHART": GoTo Source_Yahoo
+       Case "G", "GOOGLE": GoTo Source_Google
+       Case "N", "NASDAQ": GoTo Source_Yahoo
        'Case "OX": GoTo Source_OptionsXpress
        Case "Y", "YAHOO": GoTo Source_Yahoo
        Case Else
@@ -84,29 +79,113 @@ Function smfGetOptionExpirations(ByVal pTicker As String, _
        End Select
 
     '------------------> 888options.com processing
-    ' Web site has changed
-    ' https://www.optionseducation.org/toolsoptionquotes/options-quotes
+Source_888:
+    sURL = "http://oic.ivolatility.com/oic_adv_options.j?exp_date=-1&ticker=" & UCase(pTicker)
+    s1 = ""
+    For iRow = 1 To kRows
+        s2 = RCHGetTableCell(sURL, 0, s1, "Days:")
+        If s2 = "Error" Then Exit For
+        vData(iRow, 1) = DateValue(smfStrExtr(s2, "Expiry:", "Days:"))
+        s1 = "Days:" & smfStrExtr(s2 & "|", "Days:", "|")
+        Next iRow
+    GoTo ExitFunction
 
-    
     '------------------> Google processing
-    ' Web site has changed
+Source_Google:
+    s1 = smfStrExtr(RCHGetWebData("http://www.google.com/finance/option_chain?output=json&q=" & UCase(pTicker)), "expirations:[", "]")
+    For iRow = 1 To kRows
+        If smfWord(s1, iRow, "}") = "" Then Exit For
+        vData(iRow, 1) = DateSerial(smfStrExtr(smfWord(s1, iRow, "}"), "y:", ","), _
+                                    smfStrExtr(smfWord(s1, iRow, "}"), "m:", ","), _
+                                    smfStrExtr(smfWord(s1, iRow, "}") & "|", "d:", "|"))
+        Next iRow
+    GoTo ExitFunction
 
 
-    '------------------> OptionsXpress processing removed
-    ' Web site has changed
+    '------------------> OptionsXpress processing
+Source_OptionsXpress:
+    sURL = "https://www.optionsxpress.com/OXNetTools/Chains/index.aspx?Range=All&lstMarket=0&ChainType=14&lstMonths=0&Symbol=" & UCase(pTicker)
+    s1 = smfGetTagContent(sURL, "select", -1, "id=""lstMonths""")
+    For iRow = 1 To kRows
+        s2 = smfWord(s1, iRow + 1, "value=""")
+        If s2 = "" Then Exit For
+        If InStr(s2, ">All<") > 0 Then Exit For
+        vData(iRow, 1) = DateValue(smfStrExtr(s2, "~", ";"))
+        Next iRow
+    GoTo ExitFunction
 
+    '------------------> OptionsXpress processing prior to 2014.03.15
+Source_OptionsXpress1:
+    s1 = RCHGetWebData("https://www.optionsxpress.com/OXNetTools/Chains/index.aspx?Symbol=" & UCase(pTicker), ":GetOptionChain", 2000)
+    d1 = smfGetOptionExpiry(, , "M")
+    i1 = 0
+    For iRow = 1 To kRows
+        s2 = smfStrExtr(smfWord(s1, iRow, ")"), "','", ";")
+        If s2 = "" Then Exit For
+        i1 = i1 + 1
+        If d1 < DateValue(s2) Then
+           vData(i1, 1) = d1
+           i1 = i1 + 1
+           d1 = #12/31/2099#
+           End If
+        If i1 > kRows Then Exit For
+        vData(i1, 1) = DateValue(s2)
+        Next iRow
+    GoTo ExitFunction
+
+
+    '------------------> OptionsXpress processing prior to 2015-02-21
+Source_OptionsXpress2:
+    pPeriod = UCase(pPeriod)
+    Dim iM As Integer, iKeep As Integer
+    s1 = RCHGetWebData("https://www.optionsxpress.com/OXNetTools/Chains/index.aspx?Symbol=" & UCase(pTicker), ":GetOptionChain", 2000)
+    If InStr("AMW", pPeriod) > 0 Then
+       vData(1, 1) = smfGetOptionExpiry(, , "M")
+       i1 = 1
+       iM = 1
+    Else
+       iM = 0
+       i1 = 0
+       End If
+    For iRow = 1 To 50
+        s2 = smfWord(s1, iRow, "|")
+        If s2 = "" Then Exit For
+        iKeep = 1
+        Select Case True
+           Case InStr(s2, "strong") > 0
+                iKeep = 0
+           Case Left(smfStrExtr(s2, ">", "<"), 1) = "Q"
+                If InStr("MW", pPeriod) > 0 Then iKeep = 0
+           Case Mid(smfStrExtr(s2, ">", "<"), 4, 2) = "Wk"
+                If InStr("QM", pPeriod) > 0 Then iKeep = 0
+           Case Else
+                iM = iM + 1
+                If iM > 2 And pPeriod = "W" Then iKeep = 0
+                If pPeriod = "Q" Then iKeep = 0
+           End Select
+        If iKeep = 1 Then
+           s3 = smfStrExtr(s2, ",'", ";")
+           i1 = i1 + 1
+           If i1 > kRows Then Exit For
+           vData(i1, 1) = DateValue(s3)
+           End If
+        Next iRow
+    If pPeriod = "W" Then
+       If vData(3, 1) = "" Then
+          vData(1, 1) = ""
+          vData(2, 1) = ""
+          End If
+       End If
+    GoTo ExitFunction
     
     '------------------> Yahoo processing after 2017-03-15
 Source_Yahoo:
     Dim vFirst As Variant, vNext As Variant
-    sURL = "https://query1.finance.yahoo.com/v7/finance/options/" & UCase(pTicker)
-    s1 = smfStrExtr(RCHGetWebData(sURL, """expirationDates"":[", 500), "[", "]")
+    sURL = "https://query1.finance.yahoo.com/v7/finance/options/" & UCase(pTicker) & "?"
+    s1 = smfStrExtr(RCHGetWebData(sURL, """expirationDates"":[", 500, , 4), "[", "]")
     vFirst = Int(smfUnix2Date(smfWord(s1, 1, ",", 1)))
     iPtr = 0
-'    For iRow = 1 To 50
-    For iRow = 1 To kRows
-Debug.Print iRow
-        
+    For iRow = 1 To 50
         s2 = smfWord(s1, iRow, ",")
         If s2 = "" Then Exit For
         vNext = Int(smfUnix2Date(0 + s2))
@@ -122,6 +201,59 @@ Debug.Print iRow
            End If
         Next iRow
     
+    GoTo ExitFunction
+
+    '------------------> Yahoo processing prior to 2012.01.06 and after 2015-02-21
+Source_Yahoo0:
+    sURL = "http://finance.yahoo.com/q/op?s=" & UCase(pTicker)
+    s1 = smfGetTagContent(sURL, "td", -1, "Expiration:")
+    iPtr = 0
+    
+    For iRow = 1 To 7
+        s2 = smfGetOptionExpiry(, , "W" & iRow)
+        If RCHGetWebData(sURL & "&m=" & Format(s2, "yyyy-mm"), pTicker & Format(s2, "yymmdd"), 5) <> "Error" Then
+           iPtr = iPtr + 1
+           vData(iPtr, 1) = DateValue(s2)
+           End If
+        Next iRow
+    
+    For iRow = 2 To kRows
+        s2 = smfWord(s1, iRow, "&m=")
+        If s2 = "" Then Exit For
+        d1 = smfGetOptionExpiry(Left(s2, 4), Mid(s2, 6, 2), "M")
+        If d1 > vData(iPtr, 1) Then
+           iPtr = iPtr + 1
+           If iPtr > kRows Then Exit For
+           vData(iPtr, 1) = d1
+           Select Case Mid(s2, 6, 2)
+              Case "03", "06", "09", "12"
+                   s3 = RCHGetWebData(sURL & "&m=" & Left(s2, 7), pTicker & Mid(s2, 3, 2) & Mid(s2, 6, 2) & "3", 12)
+                   If s3 <> "Error" Then
+                      s3 = "20" & Mid(s3, Len(pTicker) + 1, 6)
+                      iPtr = iPtr + 1
+                      If iPtr > kRows Then Exit For
+                      vData(iPtr, 1) = DateSerial(Mid(s3, 1, 4), Mid(s3, 5, 2), Mid(s3, 7, 2))
+                      End If
+              End Select
+           End If
+        Next iRow
+    
+    GoTo ExitFunction
+    
+    '------------------> Yahoo processing for new format page that was backed out
+Source_Yahoo1:
+    sURL = "http://finance.yahoo.com/q/op?s=" & UCase(pTicker)
+    iRow = 0
+    On Error GoTo ExitFunction
+    For i1 = 1 To 1500 ' Arbitrary value to cover 4 years?
+        s1 = smfGetTagContent(sURL, "option", i1, "class=""SelectBox-Pick""")
+        If s1 <> "Error" Then
+           d1 = DateValue(s1)
+           d1 = DateSerial(Year(d1), Month(d1), Day(d1))
+           iRow = iRow + 1
+           vData(iRow, 1) = d1
+           End If
+        Next i1
     GoTo ExitFunction
 
 ExitFunction:
