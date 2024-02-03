@@ -1,5 +1,5 @@
 Attribute VB_Name = "modGetElementNumber"
-Const kVersion = "3.0.2023.09.20"                   ' Version number of add-in
+Const kVersion = "3.0.2024.02.05"                   ' Version number of add-in
     
 Const kElements = 20000                             ' Number of data elements
 Dim aParms(1 To kElements) As String                ' Extraction parameters for each element
@@ -157,6 +157,9 @@ Public Function RCHGetElementNumber(ByVal pTicker As String, _
     ' 2023-09-20 -- Issue #56 Fix for smfGetYahooJSONField to work with Excel 64bit
     '               Issue #54 updates to smf-elements9.txt
     '               Updates to smf-elements2.txt
+    ' 2024-02-05 -- Updates for Issue#58 
+    '                 modGetOptionExpirations.bas
+    '                 modGetOptionStrikes.bas
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation to get The "Trend Spotter" value for IBM from the BarChart website:
     '

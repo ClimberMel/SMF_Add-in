@@ -20,7 +20,7 @@ Sub xport()
     
     For Each objVBComp In objMyProj.VBComponents
     If objVBComp.Type = vbext_ct_StdModule Then
-    objVBComp.Export "Z:\Temp\vba\test5\" & objVBComp.Name & ".bas"
+    objVBComp.Export "Z:\Temp\vba\test7\" & objVBComp.Name & ".bas"
     End If
     Next
 
