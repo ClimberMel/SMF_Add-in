@@ -1,5 +1,3 @@
-883;MorningStar;Stock Grades -- Financial Health;http://quicktake.morningstar.com/stocknet/printreport.aspx?symbol=~~~~~;2;STOCK GRADES;FINANCIAL HEALTH; ; ;0;0;0;0
-
 877;MorningstarP;Profile -- Industry;=smfGetTagContent("http://quotes.morningstar.com/stock/c-company-profile?t=~~~~~","span",1,"</div","Industry")
 878;MorningstarP;Profile -- Sector;=smfGetTagContent("http://quotes.morningstar.com/stock/c-company-profile?t=~~~~~","span",1,"</div","Sector")
 879;MorningstarP;Profile -- Stock Type;=smfGetTagContent("http://quotes.morningstar.com/stock/c-company-profile?t=~~~~~","span",1,"Stock Type")
@@ -7,6 +5,7 @@
 
 881;MorningstarT;Take -- Growth;=smfstrExtr(smfGetTagContent("http://quotes.morningstar.com/stock/c-morningstar-take?t=~~~~~","div",0,"idMstarGradeContent","Growth"),"_grade","""")
 882;MorningstarT;Take -- Profitability;=smfstrExtr(smfGetTagContent("http://quotes.morningstar.com/stock/c-morningstar-take?t=~~~~~","div",0,"idMstarGradeContent","Profitability"),"_grade","""")
+883;MorningStar;Stock Grades -- Financial Health;http://quicktake.morningstar.com/stocknet/printreport.aspx?symbol=~~~~~;2;STOCK GRADES;FINANCIAL HEALTH; ; ;0;0;0;0
 884;MorningstarT;Take -- Morningstar Credit Rating;=smfGetTagContent("http://bond.morningstar.com/internal/company.aspx?cID="&smfStrExtr(RCHGetWebData("http://quicktake.morningstar.com/StockNet/bonds.aspx?Symbol=~~~~~","?cID="),"?cID=","&"),"td",6,"Morningstar Credit Rating")
 885;MorningstarT;Take -- Company Notes;=smfGetTagContent("http://quotes.morningstar.com/stock/c-morningstar-take?t=~~~~~","span",-1,"idMstarTakeContent",,,,,"None found",,255)
 886;MorningstarT;Take -- Fair Value Estimate;=smfGetTagContent("http://quotes.morningstar.com/stock/c-morningstar-take?t=~~~~~","span",1,"idMstarRecommendationContent","Fair Value Estimate",,,1)
@@ -24,7 +23,6 @@
 4666;MorningstarTR;Total Return - Date - Y6;http://quicktake.morningstar.com/fundnet/printreport.aspx?symbol=~~~~~;4;Total Return %<; ; ; ;-2;</table;0;0
 4667;MorningstarTR;Total Return - Date - Y7;http://quicktake.morningstar.com/fundnet/printreport.aspx?symbol=~~~~~;3;Total Return %<; ; ; ;-2;</table;0;0
 4668;MorningstarTR;Total Return - Date - Y8;http://quicktake.morningstar.com/fundnet/printreport.aspx?symbol=~~~~~;2;Total Return %<; ; ; ;-2;</table;0;0
-
 
 4671;MorningstarRM;Volatility - Standard Deviation;http://quicktake.morningstar.com/fundnet/printreport.aspx?symbol=~~~~~;1;>Standard Deviation; ; ; ;0;</table;0;0
 4672;MorningstarRM;Volatility - Mean;http://quicktake.morningstar.com/fundnet/printreport.aspx?symbol=~~~~~;1;>Mean; ; ; ;0;</table;0;0
@@ -761,9 +759,6 @@
 14432;MorningstarAE;Annual Estimates -- Year 2 Mean Estimate;=RCHGetTableCell("http://financials.morningstar.com/valuation/annual-estimate-list.action?t=~~~~~",4,"Growth %",">Mean")
 14433;MorningstarAE;Annual Estimates -- Year 2 Mean Growth %;=RCHGetTableCell("http://financials.morningstar.com/valuation/annual-estimate-list.action?t=~~~~~",5,"Growth %",">Mean")/100
 
-14443;MorningstarAE;Annual Estimates -- Currency;=RCHGetTableCell("http://financials.morningstar.com/valuation/annual-estimate-list.action?t=~~~~~",-2,"Growth %")
-
-
 14434;MorningstarFC;Forward Comparisons -- 5Y Growth % -- Company;=RCHGetTableCell("http://financials.morningstar.com/valuation/forward-comparisons-list.action?t=~~~~~",0,"5Y Growth","stocktdone")/100
 14435;MorningstarFC;Forward Comparisons -- 5Y Growth % -- Industry;="N/A"
 14436;MorningstarFC;Forward Comparisons -- 5Y Growth % -- S&P 500;=RCHGetTableCell("http://financials.morningstar.com/valuation/forward-comparisons-list.action?t=~~~~~",1,"5Y Growth",">S&P 500")/100
@@ -773,6 +768,7 @@
 14440;MorningstarFC;Forward Comparisons -- PEG Ratio -- Company;=RCHGetTableCell("http://financials.morningstar.com/valuation/forward-comparisons-list.action?t=~~~~~",2,"5Y Growth","stocktdone")
 14441;MorningstarFC;Forward Comparisons -- PEG Ratio -- Industry;="N/A"
 14442;MorningstarFC;Forward Comparisons -- PEG Ratio -- S&P 500;="N/A"
+14443;MorningstarAE;Annual Estimates -- Currency;=RCHGetTableCell("http://financials.morningstar.com/valuation/annual-estimate-list.action?t=~~~~~",-2,"Growth %")
 
 14451;MorningstarAO;Analyst Opinion -- As Of Date;=DATEVALUE(RIGHT(RCHGetTableCell("http://financials.morningstar.com/valuation/analyst-opinion-list.action?t=~~~~~",0,"Data as of"),10))
 14452;MorningstarAO;Analyst Opinion -- Five-Year Growth Forecast;=RCHGetTableCell("http://financials.morningstar.com/valuation/analyst-opinion-list.action?t=~~~~~",1,"Five-Year Growth Forecast","<tr")
