@@ -28,6 +28,8 @@ Function smfGetOptionStrikes(ByVal pTicker As String, _
     ' 2017.10.12 -- Try Yahoo processing using smfGetYahooJSONField() to get data again
     ' 2017.10.14 -- Removed smfGetYahooJSONField() to get data, as it was still not reliable with this JSON file
     ' 2017.10.24 -- Add default value of 0 for pExpiry so first available date is used for Yahoo calls
+    ' 2024.01.30 -- Invoke =RCHGetWebData with TYPE(4) param for Yahoo options url. (BS)
+    '               Add "?" to end of url if no other params used so "&crumb= ..." can can be processed.
     '-----------------------------------------------------------------------------------------------------------*
     ' > Examples of invocations to get current quotes for SPY:
     '
@@ -147,24 +149,24 @@ Source_OptionsXpress:
 Source_Yahoo:
     Dim iPos1 As Double, iPos2 As Double, iPos3 As Double
     If pExpiry = 0 Then
-       s1 = ""   ' Use first available expiration date
+       s1 = "?"   ' Use first available expiration date
     Else
        dDate = 86400 * (DateSerial(Year(pExpiry), Month(pExpiry), Day(pExpiry)) - DateSerial(1970, 1, 1))
        s1 = "?date=" & dDate
        End If
     sURL = "https://query1.finance.yahoo.com/v7/finance/options/" & UCase(pTicker) & s1
-    nPrice = smfStrExtr(RCHGetWebData(sURL, "regularMarketPrice", 100), ":", ",", 1)
-    If pExpiry = 0 Then pExpiry = smfUnix2Date(smfStrExtr(RCHGetWebData(sURL, """expirationDates"":", 100), "[", ",", 1))
+    nPrice = smfStrExtr(RCHGetWebData(sURL, "regularMarketPrice", 100, , 4), ":", ",", 1)
+    If pExpiry = 0 Then pExpiry = smfUnix2Date(smfStrExtr(RCHGetWebData(sURL, """expirationDates"":", 100, , 4), "[", ",", 1))
     iPtr = 0  ' Pointer for first ITM price
     i1 = 0
     iPos1 = 1
-    s1 = RCHGetWebData(sURL, iPos1)
+    s1 = RCHGetWebData(sURL, iPos1, , , 4)
     For iRow = 1 To 500
         iPos2 = InStr(2, s1, """puts"":")
         iPos3 = InStr(2, s1, """strike"":")
         If iPos3 = 0 Or (iPos2 > 0 And iPos2 < iPos3) Then Exit For
         iPos1 = iPos1 + iPos3
-        s1 = RCHGetWebData(sURL, iPos1)
+        s1 = RCHGetWebData(sURL, iPos1, , , 4)
         vData0(iRow) = smfStrExtr(s1, ":", ",", 1)
         If iPtr = 0 And vData0(iRow) > nPrice Then iPtr = iRow   ' First ITM price
         Next iRow
