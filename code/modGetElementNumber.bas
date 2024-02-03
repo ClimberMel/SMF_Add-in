@@ -157,9 +157,10 @@ Public Function RCHGetElementNumber(ByVal pTicker As String, _
     ' 2023-09-20 -- Issue #56 Fix for smfGetYahooJSONField to work with Excel 64bit
     '               Issue #54 updates to smf-elements9.txt
     '               Updates to smf-elements2.txt
-    ' 2024-02-05 -- Updates for Issue#58 
+    ' 2024-02-05 -- Updates for Issue #58 
     '                 modGetOptionExpirations.bas
     '                 modGetOptionStrikes.bas
+    '                 modGetAdvFNElement.bas 
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation to get The "Trend Spotter" value for IBM from the BarChart website:
     '
