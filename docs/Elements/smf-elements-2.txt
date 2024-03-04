@@ -173,7 +173,7 @@
 956;YahooKS;Revenue;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;REVENUE; ; ;0;0;0;0
 957;YahooKS;Revenue Per Share;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;REVENUE PER SHARE; ; ;0;0;0;0
 958;YahooKS;Quarterly Revenue Growth;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;QUARTERLY REVENUE GROWTH; ; ;0;0;0;0
-959;YahooKS;Gross Profit;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;GROSS PROFIT; ; ;0;0;0;0
+959;YahooKS;Gross Profit;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Gross Profit",,,,1)
 960;YahooKS;EBITDA;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;EBITDA; ; ;0;0;0;0
 961;YahooKS;Net Income Available to Common;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;NET INCOME AVI TO COMMON; ; ;0;0;0;0
 962;YahooKS;Diluted EPS;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;DILUTED EPS; ; ;0;0;0;0
