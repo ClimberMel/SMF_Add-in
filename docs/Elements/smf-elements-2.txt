@@ -152,6 +152,11 @@
 728;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Down Last 7 Days",,,,1)
 729;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Down Last 7 Days",,,,1)
 
+933;YahooIS;Total Expenses;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Total Expenses",,,,1)
+934;YahooIS;Operating Expense;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Operating Expense",,,,1)
+935;YahooIS;Net Income;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Net Income",,,,1)
+936;YahooIS;Cost of Revenue;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Cost of Revenue",,,,1)
+937;YahooIS;Total Revenue;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Total Revenue",,,,1)
 938;YahooKS;Date of 52-Week High;="Obsolete"
 939;YahooKS;Date of 52-Week Low;="Obsolete"
 940;YahooKS;Last Split Date;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;LAST SPLIT DATE; ; ; ;0;0;0;0
