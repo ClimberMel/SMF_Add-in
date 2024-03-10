@@ -1,20 +1,99 @@
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=windows-1252">
-	
-<title>smfFixLinks-Macro -- Documentation</title>
-
+<html>
+<head>
+    <title>smfGetYahooPortfolioView() -- Documentation</title>
+    <link rel="stylesheet" href="../../../styles/documentation.css">
 </head>
-
 <body>
+<h2>Documentation for smfGetYahooPortfolioView() function</h2>
+<br><u><b>Description</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns stock quotes and other data from the Yahoo Portfolios JSON file to an EXCEL range.
 
-<h2>Preliminary Documentation for smfGetYahooPortfolioView-Function</h2>
-
+<br><br><u><b>Syntax</b></u>
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetYahooPortfolioView(tickerlist, [fieldlist], [multiples], [headers] ,[rows],[columns])</b>
 <br><br>
-<p>There was no documentation found for the smfGetYahooPortfolioView-Function so I will add this to the TO-DO list.</p>
+<u><b>Parameters</b></u>
+<table>
+<tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td valign=top><b>Tickerlist</b></td><td valign=top>=</td>
+    <td>A list of ticker symbols to get quotes and/or other data for from the Yahoo Portfolios JSON file. <br>
+        This parameter can either be a single ticker symbol, a comma-delimited list of ticker symbols, 
+        a cell reference, or a range reference. <br>
+        Passing "None" as the first ticker symbol will bypass calculation. <br><br>
+    </td>
+</tr>
+<tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td valign=top nowrap><b>Fieldlist</b></td><td valign=top>=</td>
+    <td>An optional list of field number codes indicating which fields are desired. <br>
+        Each field number code is a 2-byte string ranging from "00" to "91". <br>
+        This parameter can either be a string concatenation of all desired field number codes, a cell reference, or a range reference (which can be numbers instead of 2-byte strings). 
+        See the example template for a list of the available field number codes. <br>
+        The default value for this parameter is to display all 91 available fields.<br><br>
+    </td>
+</tr>
+<tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Multiples</b></td><td valign=top>=</td>
+    <td>An optional parameter that allows a ticker symbol to be returned more than once.<br><br>
+    </td>
+</tr>
+<tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Headers</b></td><td valign=top>=</td>
+    <td>An optional parameter that allows column headings to be generated for the returned columns of data. <br>
+        Defaults to 0, but can be set to 1 if you want headers on your output data.<br><br>
+    </td>
+</tr>
+<tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=top><b>Rows and Columns</b></td><td valign=top>=</td>
+    <td>These are advanced optional parameters to override the size of the returned array of data. 
+        Normally, the returned array size is set by the range the formula is entered over. 
+        However, if other functions or VBA are involved, these allow the size of the returned range to be specifically set.<br><br>
+    </td>
+</tr>
+</table>
 
-<br><br><br><br>
-... to be continued.
-<br><br><br>
-
-
-</body></html>
+<br><u><b>Examples</b></u><br>
+<ul>
+    <li>This would be array-entered over a 3-row by 2-column range to return the symbol & last traded price for ticker symbols IBM and MMM<br>
+        The last parm being 1 will add headers as the first row:</li>
+    <br>
+    =smfGetYahooPortfolioView("AAPL,MMM","0115",,1)<br>
+</ul>
+<ul>
+    <table border="1">
+        <tbody><tr><td><b>Symbol</b></td><td><b>Last Price</b></td></tr>
+            <tr><td>AAPL</td><td>170.48</td></tr>
+            <tr><td>MMM</td><td>93.73</td></tr>
+        </tbody></table>
+</ul>
+<ul>
+    <li>This next example you woul have the fields/elements in C3 to E3 and the tickers would be in B5 to B6.<br>
+        The formula would be array-entered over a 3-row by 3-column range (C4:E6).<br>
+        This will return the long name, last traded price & 52-Wk Low for the ticker symbols AAPL and MMM<br>
+    </li>
+    <br>
+    =smfGetYahooPortfolioView("AAPL,MMM","021563",,1)<br>
+</ul>
+<ul>
+    <table border="1">
+        <tbody>
+            <td> </td>
+            <td align="center"><div class="recent">2</div></td>
+            <td align="center"><div class="recent">15</div></td>
+            <td align="center"><div class="recent">63</div></td>
+            <tr><td><b></b><td><b>Long Name</b></td><td><b>Last Price</b></td><td><b>52-Wk Low</b></td></tr>
+            <tr><td><div class="recent">AAPL</div></td><td>Apple Inc.</td><td align="center">170.48</td><td align="center">147.70</td></tr>
+            <tr><td><div class="recent">MMM</div></td><td>3M Company</td><td align="center">93.73</td><td align="center">85.35</td></tr>
+        </tbody></table>
+</ul>
+<br>
+<u><b>Usage notes</b></u>
+<ul>
+    <li>In almost all cases, this will need to be an array-entered formula.  
+        To array-enter a formula in EXCEL, first highlight the range of cells where you would like the returned data to appear <br>
+        The number of rows for the range should be AT LEAST the number of ticker symbols you are requesting from the function, while the number of columns for the range should be AT LEAST the number of data items you are requesting for each ticker symbol from the function.  
+        Next, enter your formula and then press Ctrl-Shift-Enter. 
+</ul>
+<br><br>
+</body>
+</html>
