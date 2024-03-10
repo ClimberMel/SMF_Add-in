@@ -83,7 +83,9 @@ Function smfGetYahooHistoryCSV(ByVal pTicker As String, _
     '------------------> Get CSV file
     Dim sURL As String
     sURL = "https://query1.finance.yahoo.com/v7/finance/download/" & UCase(pTicker) & _
-           "?period1=" & dBegin & "&period2=" & dEnd & "&interval=" & sInterval & "&events=" & sEvent & "&crumb="
+           "?period1=" & dBegin & "&period2=" & dEnd & "&interval=" & sInterval & "&events=" & sEvent
+'           "?period1=" & dBegin & "&period2=" & dEnd & "&interval=" & sInterval & "&events=" & sEvent & "&crumb="
+
     vData = smfGetCSVFile(sURL, ",", iRows, iCols)
 
 ErrorExit:
