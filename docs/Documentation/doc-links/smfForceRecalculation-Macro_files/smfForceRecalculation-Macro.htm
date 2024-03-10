@@ -1,20 +1,36 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=windows-1252">
 	
-<title>smfFixLinks-Macro -- Documentation</title>
+<title> </title>
 
 </head>
 
 <body>
 
-<h2>Preliminary Documentation for smfForceRecalculation-Macro</h2>
+<h2>Documentation for Force Recalculation macro</h2>
 
-<br><br>There was no documentation found for the smfForceRecalculation-Macro so I will add this to the TO-DO list.<br>
+<br><br>There was no documentation found for the Force Recalculation macro so I have added this.
 
+<br><br>I have always had the Force Recalculation macro in my own personal macros and then have a shortcut on my menu bar to access both it 
+        and the smfFixLinks macro.  This allows me to run them quickly and also resolves when on occasion the add-in 
+        doesn't appear when first opening a new workbook.
 
-<br><br><br>
-... to be continued.
-<br><br><br>
+        Here is the macro if you want to copy it to your own personal macros:<br><br>
 
-
+<p style="margin-left:40px">
+    Public Sub smfForceRecalculation()<br>
+&nbsp&nbsp    sAdvFNPrefix = ""<br>
+&nbsp&nbsp    sAdvFNPrefix = ""<br>
+&nbsp&nbsp    iCookieInit = 0<br>
+&nbsp&nbsp    Erase aData, aGuruFocusItems<br>
+&nbsp&nbsp    If Val(Application.Version) < 10 Then<br>
+&nbsp&nbsp&nbsp&nbsp    Application.CalculateFull<br>
+&nbsp&nbsp    Else<br>
+&nbsp&nbsp&nbsp&nbsp    Application.CalculateFull<br>
+&nbsp&nbsp    End If<br>
+    End Sub<br>
+    <br>
+</p>
+<br>
+<hr>
 </body></html>
