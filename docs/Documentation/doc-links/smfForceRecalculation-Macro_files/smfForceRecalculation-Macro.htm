@@ -2,35 +2,43 @@
 <meta http-equiv="content-type" content="text/html; charset=windows-1252">
 	
 <title> </title>
-
 </head>
-
 <body>
-
 <h2>Documentation for Force Recalculation macro</h2>
+<br><u><b>Description</b></u>
+<br><br>
 
-<br><br>There was no documentation found for the Force Recalculation macro so I have added this.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A macro to purge the "saved array" of web pages and then trigger a full recalculation within Excel. <br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In addition, this macro will force all of the RCHGetElementNumber() element definitions to be reloaded. 
+<br><br>
 
-<br><br>I have always had the Force Recalculation macro in my own personal macros and then have a shortcut on my menu bar to access both it 
-        and the smfFixLinks macro.  This allows me to run them quickly and also resolves when on occasion the add-in 
-        doesn't appear when first opening a new workbook.
+<br><u><b>How to Use</b></u>
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any of the following steps can be used to run the function.<br>
+<ul>
+    <li>Right click on any worksheet cell and select "SMF" at the bottom of the context menu. Then select "Recalculate Worksheet". <br><br>
+    <li>You can use the keyboard shortcut alt-F8 to bring up EXCEL's macro dialog window.  <br>
+        Unfortunately, this window does NOT list macros that are part of an add-in. <br>
+        That means you need to type in "smfForceRecalculation" for the macro name.  
+        When you complete entering the macro name, you should see the various buttons activate.  Then click "Run".<br><br>
+    <li>You can run the macro using a keyboard shortcut. You assign a keyboard shortcut in the macro dialog window (done from the "Options..." button, which is located several buttons below the "Run" button used above). <br><br>
+    <li>You can also add a button to the Quick Access Toolbar in EXCEL that runs the macro. This is the easiest way to run the macro once you set up the button.<br><br>
+        To add a button:<br><br>
+        <ol>
+            <li>Go to the Quick Access Toolbar at the top of the spreadsheet and select the down arrow to bring up the "Quick Access Toolbar Customize" window.<br>
+            <li>Go to the bottom and select "More Commands ...".<br>
+            <li>In the next window under "Choose Commands from:" select "Macros".<br>
+            <li>Select "smfForceRecalculation" from the list and click the "Add >>" button between the two boxes. Click OK. <br><br>
+        </ol>
+    </ul>
 
-        Here is the macro if you want to copy it to your own personal macros:<br><br>
-
-<p style="margin-left:40px">
-    Public Sub smfForceRecalculation()<br>
-&nbsp&nbsp    sAdvFNPrefix = ""<br>
-&nbsp&nbsp    sAdvFNPrefix = ""<br>
-&nbsp&nbsp    iCookieInit = 0<br>
-&nbsp&nbsp    Erase aData, aGuruFocusItems<br>
-&nbsp&nbsp    If Val(Application.Version) < 10 Then<br>
-&nbsp&nbsp&nbsp&nbsp    Application.CalculateFull<br>
-&nbsp&nbsp    Else<br>
-&nbsp&nbsp&nbsp&nbsp    Application.CalculateFull<br>
-&nbsp&nbsp    End If<br>
-    End Sub<br>
-    <br>
-</p>
-<br>
+<u><b>Useage Notes:</b></u>
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More detailed information on the SMF blog.<br>
+<ul>
+<li><a href="https://smfxl-add-in.blogspot.com/2020/05/what-is-smfforcerecalculation-macro-and.html">What is the smfForceRecalculation macro and how do I use it?</a><br><br>
+<li><a href="https://smfxl-add-in.blogspot.com/2020/05/what-do-i-need-in-addtion-to.html">What do I need in addtion to smfForceRecalculation to get my data to refresh?</a><br><br>
+<li><a href="https://smfxl-add-in.blogspot.com/2024/03/how-to-add-macro-to-excels-quick-access.html">How to Add a Macro to Excel's Quick Access Toolbar?</a><br><br>    
+</ul>
 <hr>
 </body></html>
