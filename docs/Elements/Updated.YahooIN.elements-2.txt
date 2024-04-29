@@ -1,2 +1,0 @@
-13865;YahooIN;Sector Name;=smfStrExtr(RCHGetWebData("https://query2.finance.yahoo.com/v10/finance/quoteSummary/~~~~~?modules=assetProfile","""sector"":",150,,4),":""","""")
-13867;YahooIN;Industry Name;=smfStrExtr(RCHGetWebData("https://query2.finance.yahoo.com/v10/finance/quoteSummary/~~~~~?modules=assetProfile","""industry"":",150,,4),":""","""")
