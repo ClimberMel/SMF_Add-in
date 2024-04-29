@@ -1365,6 +1365,8 @@ Public Function smfGetYahooOptionQuote(ByVal pTicker As Variant, _
     ' 2016.08.04 -- Update quotes page URL because of Yahoo change
     ' 2016.11.26 -- Update extractions because of Yahoo change
     ' 2017.04.26 -- Change protocol from "http://" to "https://
+    ' 2024-04-27 -- Use smfGetYahooJSONData() instead of smfGetTagContent().
+    '
     '-----------------------------------------------------------------------------------------------------------*
     ' > Examples of invocations to get current quotes for IBM and MMM:
     '
@@ -1373,7 +1375,7 @@ Public Function smfGetYahooOptionQuote(ByVal pTicker As Variant, _
     
     On Error GoTo ErrorExit
     Dim sPutCall As String, sStrike As String, sItem As String
-    Dim sURL As String, sFind1 As String, sFind2 As String
+    Dim sFind1 As String, sFind2 As String
     Dim sLabel As String, iCells As Integer, iRows As Integer
     Dim iYear As Integer, iMonth As Integer, iDay As Integer
     
@@ -1404,25 +1406,22 @@ Public Function smfGetYahooOptionQuote(ByVal pTicker As Variant, _
             smfGetYahooOptionQuote = "Bad expiration date: " & pExpiry
             Exit Function
        End Select
-       
-    '------------------> Verify the pItem parameter and return data item
-    If sTicker = "VIX" Then sTicker = "^VIX"
-    sURL = "https://finance.yahoo.com/quote/" & sFind1
     
+    '------------------ Verify the pItem parameter -----------------------
     sItem = Trim(UCase(pItem))
     Select Case sItem
-       Case "A": smfGetYahooOptionQuote = smfGetTagContent(sURL, "td", 1, ">Ask", , , , 1)
-       Case "B": smfGetYahooOptionQuote = smfGetTagContent(sURL, "td", 1, ">Bid", , , , 1)
-       Case "C": smfGetYahooOptionQuote = smfConvertData(smfStrExtr(smfGetTagContent(sURL, "span", -1, "quote-market-notice"), "~", " "))
-       Case "O": smfGetYahooOptionQuote = smfGetTagContent(sURL, "td", 1, ">Open", , , , 1)
-       Case "P": smfGetYahooOptionQuote = smfGetTagContent(sURL, "td", 1, ">Previous Close", , , , 1)
-       Case "V": smfGetYahooOptionQuote = smfGetTagContent(sURL, "td", 1, ">Volume", , , , 1)
-       Case "I": smfGetYahooOptionQuote = smfGetTagContent(sURL, "td", 1, ">Open Interest", , , , 1)
-       Case "L": smfGetYahooOptionQuote = smfGetTagContent(sURL, "span", -2, "quote-market-notice", , , , 1)
+       Case "A": smfGetYahooOptionQuote = smfGetYahooJSONData(sFind1, "summaryDetail", "ask")
+       Case "B": smfGetYahooOptionQuote = smfGetYahooJSONData(sFind1, "summaryDetail", "bid")
+       Case "C": smfGetYahooOptionQuote = smfGetYahooJSONData(sFind1, "price", "regularMarketChange")
+       Case "O": smfGetYahooOptionQuote = smfGetYahooJSONData(sFind1, "price", "regularMarketOpen")
+       Case "P": smfGetYahooOptionQuote = smfGetYahooJSONData(sFind1, "summaryDetail", "previousClose")
+       Case "V": smfGetYahooOptionQuote = smfGetYahooJSONData(sFind1, "price", "regularMarketVolume")
+       Case "I": smfGetYahooOptionQuote = smfGetYahooJSONData(sFind1, "summaryDetail", "openInterest")
+       Case "L": smfGetYahooOptionQuote = smfGetYahooJSONData(sFind1, "price", "regularMarketPrice")
        Case "S": smfGetYahooOptionQuote = pStrike
-       Case "X": smfGetYahooOptionQuote = smfGetTagContent(sURL, "td", 1, ">Expire Date", , , , 1)
+       Case "X": smfGetYahooOptionQuote = smfGetYahooJSONData(sFind1, "summaryDetail", "expireDate", , "fmt")
        Case "Z": smfGetYahooOptionQuote = sFind1
-       Case "%": smfGetYahooOptionQuote = smfConvertData(smfStrExtr(smfGetTagContent(sURL, "span", -1, "quote-market-notice"), "(", ")"))
+       Case "%": smfGetYahooOptionQuote = smfGetYahooJSONData(sFind1, "price", "regularMarketChangePercent")
        Case Else: smfGetYahooOptionQuote = "Unrecognized item ID: " & pItem
        End Select
     Exit Function
@@ -1432,6 +1431,93 @@ ErrorExit:
 
     End Function
     
+Public Function smfGetYahooOptionQuote1(ByVal pTicker As Variant, _
+                                       ByVal pPutCall As Variant, _
+                                       ByVal pExpiry As Variant, _
+                                       ByVal pStrike As Variant, _
+                                       ByVal pItem As Variant)
+                  
+    '-----------------------------------------------------------------------------------------------------------*
+    ' User defined function to get option quote from Yahoo
+    '-----------------------------------------------------------------------------------------------------------*
+    ' 2010.04.07 -- Created function
+    ' 2010.09.10 -- Add "u" data item for last traded price of the underlying equity
+    ' 2012.01.15 -- Update elements c/t/u for Yahoo web page changes (dropped last trade and time)
+    ' 2013.01.04 -- Remove day 1, 30, and 31 assumptions for option expiration date
+    ' 2013.02.06 -- Add workaround to fix the "^VIX" / "VIX" issue
+    ' 2013.06.03 -- Add ability to use mini options by apending "7" to ticker symbol
+    ' 2013.06.28 -- Add ability to use adjusted ticker symbols (i.e. rightward numeric)
+    ' 2013.12.21 -- Fix sPutCall processing to only use 1st byte of parameter
+    ' 2016.07.13 -- Update extractions for updated Yahoo website
+    ' 2016.08.04 -- Update quotes page URL because of Yahoo change
+    ' 2016.11.26 -- Update extractions because of Yahoo change
+    ' 2017.04.26 -- Change protocol from "http://" to "https://
+    '-----------------------------------------------------------------------------------------------------------*
+    ' > Examples of invocations to get current quotes for IBM and MMM:
+    '
+    '   =smfGetYahooOptionQuote1("SPY","C",DATE(2012,6,1),110,"b")
+    '-----------------------------------------------------------------------------------------------------------*
+    
+    On Error GoTo ErrorExit
+    Dim sPutCall As String, sStrike As String, sItem As String
+    Dim sURL As String, sFind1 As String, sFind2 As String
+    Dim sLabel As String, iCells As Integer, iRows As Integer
+    Dim iYear As Integer, iMonth As Integer, iDay As Integer
+    
+    '------------------> Verify the pPutCall parameter
+    sPutCall = Left(Trim(UCase(pPutCall)), 1)
+    Select Case sPutCall
+       Case "P"
+       Case "C"
+       Case Else
+            smfGetYahooOptionQuote1 = "Invalid Put/Call indicator (must be a P or C): " & pPutCall
+            Exit Function
+       End Select
+       
+    '------------------> Handle special strike price strings
+    Dim sTicker As String, sMini As String
+    sTicker = Trim(UCase(pTicker))
+    sMini = ""
+    Select Case Right(sTicker, 1)
+       Case "0" To "9"
+            sMini = Right(sTicker, 1)
+            sTicker = Left(sTicker, Len(sTicker) - 1)
+       End Select
+    sStrike = Trim(UCase(pStrike))
+    Select Case True
+       Case VarType(pExpiry) = vbDouble Or IsDate(pExpiry)
+            sFind1 = sTicker & sMini & Format(pExpiry, "yymmdd") & sPutCall & Format(1000 * pStrike, "00000000")
+       Case Else
+            smfGetYahooOptionQuote1 = "Bad expiration date: " & pExpiry
+            Exit Function
+       End Select
+       
+    '------------------> Verify the pItem parameter and return data item
+    If sTicker = "VIX" Then sTicker = "^VIX"
+    sURL = "https://finance.yahoo.com/quote/" & sFind1
+    
+    sItem = Trim(UCase(pItem))
+    Select Case sItem
+       Case "A": smfGetYahooOptionQuote1 = smfGetTagContent(sURL, "td", 1, ">Ask", , , , 1)
+       Case "B": smfGetYahooOptionQuote1 = smfGetTagContent(sURL, "td", 1, ">Bid", , , , 1)
+       Case "C": smfGetYahooOptionQuote1 = smfConvertData(smfStrExtr(smfGetTagContent(sURL, "span", -1, "quote-market-notice"), "~", " "))
+       Case "O": smfGetYahooOptionQuote1 = smfGetTagContent(sURL, "td", 1, ">Open", , , , 1)
+       Case "P": smfGetYahooOptionQuote1 = smfGetTagContent(sURL, "td", 1, ">Previous Close", , , , 1)
+       Case "V": smfGetYahooOptionQuote1 = smfGetTagContent(sURL, "td", 1, ">Volume", , , , 1)
+       Case "I": smfGetYahooOptionQuote1 = smfGetTagContent(sURL, "td", 1, ">Open Interest", , , , 1)
+       Case "L": smfGetYahooOptionQuote1 = smfGetTagContent(sURL, "span", -2, "quote-market-notice", , , , 1)
+       Case "S": smfGetYahooOptionQuote1 = pStrike
+       Case "X": smfGetYahooOptionQuote1 = smfGetTagContent(sURL, "td", 1, ">Expire Date", , , , 1)
+       Case "Z": smfGetYahooOptionQuote1 = sFind1
+       Case "%": smfGetYahooOptionQuote1 = smfConvertData(smfStrExtr(smfGetTagContent(sURL, "span", -1, "quote-market-notice"), "(", ")"))
+       Case Else: smfGetYahooOptionQuote1 = "Unrecognized item ID: " & pItem
+       End Select
+    Exit Function
+
+ErrorExit:
+    smfGetYahooOptionQuote1 = "Error"
+
+    End Function
 Public Function smfGetYahooOptionQuote2(ByVal pTicker As Variant, _
                                        ByVal pPutCall As Variant, _
                                        ByVal pExpiry As Variant, _
@@ -1609,176 +1695,4 @@ ErrorExit:
 
     End Function
 
-
-Public Function smfGetYahooOptionQuote3(ByVal pTicker As Variant, _
-                                       ByVal pPutCall As Variant, _
-                                       ByVal pExpiry As Variant, _
-                                       ByVal pStrike As Variant, _
-                                       ByVal pItem As Variant)
-                  
-    '-----------------------------------------------------------------------------------------------------------*
-    ' User defined function to get option quote from Yahoo
-    '-----------------------------------------------------------------------------------------------------------*
-    ' 2010.04.07 -- Created function
-    ' 2010.09.10 -- Add "u" data item for last traded price of the underlying equity
-    ' 2012.01.15 -- Update elements c/t/u for Yahoo web page changes (dropped last trade and time)
-    ' 2013.01.04 -- Remove day 1, 30, and 31 assumptions for option expiration date
-    ' 2013.02.06 -- Add workaround to fix the "^VIX" / "VIX" issue
-    ' 2013.06.03 -- Add ability to use mini options by apending "7" to ticker symbol
-    ' 2013.06.28 -- Add ability to use adjusted ticker symbols (i.e. rightward numeric)
-    ' 2013.12.21 -- Fix sPutCall processing to only use 1st byte of parameter
-    ' 2016.07.13 -- This processing became obsolete
-    '-----------------------------------------------------------------------------------------------------------*
-    ' > Examples of invocations to get current quotes for IBM and MMM:
-    '
-    '   =smfGetYahooOptionQuote3("SPY","C",DATE(2012,6,1),110,"b")
-    '-----------------------------------------------------------------------------------------------------------*
-    
-    On Error GoTo ErrorExit
-    Dim sPutCall As String, sStrike As String, sItem As String
-    Dim sURL As String, sFind1 As String, sFind2 As String
-    Dim sLabel As String, iCells As Integer, iRows As Integer
-    Dim iYear As Integer, iMonth As Integer, iDay As Integer
-    
-    '------------------> Verify the pPutCall parameter
-    sPutCall = Left(Trim(UCase(pPutCall)), 1)
-    Select Case sPutCall
-       Case "P"
-       Case "C"
-       Case Else
-            smfGetYahooOptionQuote3 = "Invalid Put/Call indicator (must be a P or C): " & pPutCall
-            Exit Function
-       End Select
-       
-    '------------------> Verify the pItem parameter and set the # of cells to skip
-    sItem = Trim(UCase(pItem))
-    Select Case sItem
-       Case "S": iCells = -8: sLabel = ""               ' Strike price
-       Case "Z": iCells = 0: sLabel = ""                ' Yahoo ticker symbol
-       Case "L": iCells = 1: sLabel = ""                ' Last price
-       Case "B": iCells = 3: sLabel = ""                ' Bid price
-       Case "A": iCells = 4: sLabel = ""                ' Ask price
-       Case "V": iCells = 5: sLabel = ""                ' Volume
-       Case "I": iCells = 6: sLabel = ""                ' Open Interest
-       Case "G": iCells = 0: sLabel = "Day's Range:"    ' For computing daily low
-       Case "H": iCells = 0: sLabel = "Day's Range:"    ' For computing daily high
-       Case "J": iCells = 0: sLabel = "Contract Range:" ' For computing contract low
-       Case "K": iCells = 0: sLabel = "Contract Range:" ' For computing contract high
-       Case "C": iCells = 0: sLabel = "Prev Close:"     ' Previous close to compute change
-       Case "O": iCells = 0: sLabel = "Open:"           ' Open
-       Case "P": iCells = 0: sLabel = "Prev Close:"     ' Previous close
-       Case "T": iCells = 0: sLabel = "x"               ' Last trade time
-       Case "U": iCells = 0: sLabel = ""                ' Last price of underlying equity
-       Case "X": iCells = 0: sLabel = ""                ' For computing expiry date
-       Case Else
-            smfGetYahooOptionQuote3 = "Unrecognized item ID: " & pItem
-            Exit Function
-       End Select
-       
-    '------------------> Handle special strike price strings
-    Dim sTicker As String, sMini As String
-    sTicker = Trim(UCase(pTicker))
-    sMini = ""
-    Select Case Right(sTicker, 1)
-       Case "0" To "9"
-            sMini = Right(sTicker, 1)
-            sTicker = Left(sTicker, Len(sTicker) - 1)
-       End Select
-    sStrike = Trim(UCase(pStrike))
-    Select Case True
-       Case sPutCall & Left(sStrike, 3) = "CITM"
-            sFind1 = ">Call Options"
-            sFind2 = "yfnc_tabledata1"
-            iRows = -CInt(Mid(sStrike, 4, 2)) - 1
-            iCells = Application.WorksheetFunction.Max(1, iCells + 2)
-       Case sPutCall & Left(sStrike, 3) = "COTM"
-            sFind1 = ">Call Options"
-            sFind2 = "yfnc_tabledata1"
-            iRows = CInt(Mid(sStrike, 4, 2)) - 1
-            If iRows = 0 Then iRows = -1
-            iCells = Application.WorksheetFunction.Max(1, iCells + 2)
-       Case sPutCall & Left(sStrike, 3) = "POTM"
-            sFind1 = ">Put Options"
-            sFind2 = "yfnc_h"
-            iRows = -CInt(Mid(sStrike, 4, 2)) - 1
-            iCells = Application.WorksheetFunction.Max(1, iCells + 2)
-       Case sPutCall & Left(sStrike, 3) = "PITM"
-            sFind1 = ">Put Options"
-            sFind2 = "yfnc_h"
-            iRows = CInt(Mid(sStrike, 4, 2)) - 1
-            If iRows = 0 Then iRows = -1
-            iCells = Application.WorksheetFunction.Max(1, iCells + 2)
-       Case VarType(pExpiry) = vbDouble Or IsDate(pExpiry)
-            iRows = 0
-            Select Case Day(pExpiry)
-               'Case 30, 31 ' Quarterly expiration
-               '   sFind1 = Format(smfGetOptionExpiry(Year(pExpiry), Month(pExpiry), "Q"), "yymmdd") & _
-               '            sPutCall & Format(1000 * pStrike, "00000000")
-               'Case Is = 1 ' Monthly expiration
-               '   sFind1 = Format(smfGetOptionExpiry(Year(pExpiry), Month(pExpiry)), "yymmdd") & _
-               '            sPutCall & Format(1000 * pStrike, "00000000")
-               Case Else
-                  sFind1 = sTicker & sMini & Format(pExpiry, "yymmdd") & sPutCall & Format(1000 * pStrike, "00000000")
-               End Select
-            sFind2 = ""
-       Case Else
-            smfGetYahooOptionQuote3 = "Bad expiration date: " & pExpiry
-            Exit Function
-       End Select
-    
-    '------------------> Do primary search
-    Dim nLast As Variant
-    If sTicker = "VIX" Then sTicker = "^VIX"
-    sURL = "http://finance.yahoo.com/q/op?s=" & sTicker & "&m=" & Format(pExpiry, "yyyy-mm")
-
-    Select Case sItem
-        Case "C"
-             nLast = RCHGetTableCell(sURL, 1, sFind1, sFind2, , , iRows, "</table")
-             smfGetYahooOptionQuote3 = RCHGetTableCell(sURL, iCells, sFind1, sFind2, , , iRows, "</table")
-        Case "U"
-             smfGetYahooOptionQuote3 = "Error"
-             On Error Resume Next
-             smfGetYahooOptionQuote3 = smfConvertData(smfGetTagContent(sURL, "span", -1, "yfs_l84_"))
-             On Error GoTo ErrorExit
-        Case Else
-             smfGetYahooOptionQuote3 = RCHGetTableCell(sURL, iCells, sFind1, sFind2, , , iRows, "</table")
-        End Select
-    
-    If sItem = "X" Then
-       iYear = Mid(smfGetYahooOptionQuote3, Len(smfGetYahooOptionQuote3) - 14, 2)
-       iMonth = Mid(smfGetYahooOptionQuote3, Len(smfGetYahooOptionQuote3) - 12, 2)
-       iDay = Mid(smfGetYahooOptionQuote3, Len(smfGetYahooOptionQuote3) - 10, 2)
-       smfGetYahooOptionQuote3 = DateSerial(iYear, iMonth, iDay)
-       End If
-    If sLabel = "" Then Exit Function  ' Primary search item already retrieved
-    
-    '------------------> Do extended search
-    sURL = "http://finance.yahoo.com/q?s=" & smfGetYahooOptionQuote3
-    smfGetYahooOptionQuote3 = RCHGetTableCell(sURL, 1, sLabel)
-    
-    '------------------> Special processing items
-    Select Case sItem
-        Case "C"
-             smfGetYahooOptionQuote3 = nLast - smfGetYahooOptionQuote3
-        Case "G"
-             smfGetYahooOptionQuote3 = smfConvertData(Left(smfGetYahooOptionQuote3, InStr(smfGetYahooOptionQuote3, "-") - 1))
-        Case "H"
-             smfGetYahooOptionQuote3 = smfConvertData(Mid(smfGetYahooOptionQuote3, InStr(smfGetYahooOptionQuote3, "-") + 1, 99))
-        Case "J"
-             smfGetYahooOptionQuote3 = smfConvertData(Left(smfGetYahooOptionQuote3, InStr(smfGetYahooOptionQuote3, "-") - 1))
-        Case "K"
-             smfGetYahooOptionQuote3 = smfConvertData(Mid(smfGetYahooOptionQuote3, InStr(smfGetYahooOptionQuote3, "-") + 1, 99))
-        Case "T"
-             smfGetYahooOptionQuote3 = "Error"
-             On Error Resume Next
-             smfGetYahooOptionQuote3 = smfConvertData(smfGetTagContent(sURL, "span", 1, "yfs_t10_"))
-             On Error GoTo ErrorExit
-        End Select
-    
-    Exit Function
-
-ErrorExit:
-    smfGetYahooOptionQuote3 = "Error"
-
-    End Function
 
