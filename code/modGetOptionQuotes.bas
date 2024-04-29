@@ -27,6 +27,7 @@ Public Function smfGetOptionQuotes(ByVal pTickers As Variant, _
     ' 2016.08.05 -- Obsolete MSN and MW as data sources
     ' 2016.12.03 -- Add BarChart as a data source
     ' 2017.08.06 -- Restore MW as a data source
+    ' 2024-04-29 -- Add crumb processing
     '-----------------------------------------------------------------------------------------------------------*
     ' > Examples of invocations to get current quotes for IBM and MMM:
     '
