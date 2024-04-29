@@ -7,7 +7,7 @@
   <h2>Documentation for smfGetYahooHistory() function</h2>
 
   <br><u><b>Description</b></u>
-  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns historical stock quotes from Yahoo
+  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns historical stock quotes (and limited options history) from Yahoo
 
   <br><br><u><b>Syntax</b></u>
   <br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetYahooHistory( Ticker, [Start Date], [End Date], [Period], [Items], [Headers], [Resort], [Rows], [Columns] )</b>
@@ -127,7 +127,8 @@
       &nbsp;&nbsp;&nbsp;&nbsp;=smfGetYahooHistory(B4,"1/1/2019","2/28/2023","d")
     </li>
     <br><br>
-    <li>...more to come
+    <li>You can also use an option formatted like this: SPXW240426P05305000<br><br>
+      just like a ticker and it will give daily data for up to 4 weeks.
     </li>
   </ul>
 
