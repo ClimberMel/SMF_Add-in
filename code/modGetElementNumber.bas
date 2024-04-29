@@ -161,6 +161,11 @@ Public Function RCHGetElementNumber(ByVal pTicker As String, _
     '                 modGetOptionExpirations.bas
     '                 modGetOptionStrikes.bas
     '                 modGetAdvFNElement.bas 
+    ' 2024-02-05 -- Updates for Issues #66, 67 68 regarding Yahoo change now requires crumb for options functions
+    '                 modGetOptionExpirations.bas
+    '                 modGetOptionStrikes.bas
+    '                 modGetElementNumber.bas (this file to change version)
+    '                 elements2.txt and various web pages
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation to get The "Trend Spotter" value for IBM from the BarChart website:
     '
