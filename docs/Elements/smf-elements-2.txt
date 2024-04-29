@@ -1,78 +1,75 @@
-'
-'  04/23/24 - added "type 4" for crumb processing
-'
-553;YahooAE;Consensus EPS Trend -- Date -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;>; ; ;0;0;0;4
-554;YahooAE;Consensus EPS Trend -- Date -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>EPS Trend;>; ; ;0;0;0;4
-555;YahooAE;Consensus EPS Trend -- Date -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>EPS Trend;>; ; ;0;0;0;4
-556;YahooAE;Consensus EPS Trend -- Date -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>EPS Trend;>; ; ;0;0;0;4
-557;YahooAE;Consensus EPS Trend -- Current Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;CURRENT ESTIMATE; ; ;0;0;0;4
-558;YahooAE;Consensus EPS Trend -- Current Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>EPS Trend;CURRENT ESTIMATE; ; ;0;0;0;4
-559;YahooAE;Consensus EPS Trend -- Current Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>EPS Trend;CURRENT ESTIMATE; ; ;0;0;0;4
-560;YahooAE;Consensus EPS Trend -- Current Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>EPS Trend;CURRENT ESTIMATE; ; ;0;0;0;4
-561;YahooAE;Consensus EPS Trend --  7 Days Ago -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;7 DAYS AGO; ; ;0;0;0;4
-562;YahooAE;Consensus EPS Trend --  7 Days Ago -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>EPS Trend;7 DAYS AGO; ; ;0;0;0;4
-563;YahooAE;Consensus EPS Trend --  7 Days Ago -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>EPS Trend;7 DAYS AGO; ; ;0;0;0;4
-564;YahooAE;Consensus EPS Trend --  7 Days Ago -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>EPS Trend;7 DAYS AGO; ; ;0;0;0;4
-565;YahooAE;Consensus EPS Trend -- 30 Days Ago -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;30 DAYS AGO; ; ;0;0;0;4
-566;YahooAE;Consensus EPS Trend -- 30 Days Ago -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>EPS Trend;30 DAYS AGO; ; ;0;0;0;4
-567;YahooAE;Consensus EPS Trend -- 30 Days Ago -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>EPS Trend;30 DAYS AGO; ; ;0;0;0;4
-568;YahooAE;Consensus EPS Trend -- 30 Days Ago -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>EPS Trend;30 DAYS AGO; ; ;0;0;0;4
-569;YahooAE;Consensus EPS Trend -- 60 Days Ago -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;60 DAYS AGO; ; ;0;0;0;4
-570;YahooAE;Consensus EPS Trend -- 60 Days Ago -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>EPS Trend;60 DAYS AGO; ; ;0;0;0;4
-571;YahooAE;Consensus EPS Trend -- 60 Days Ago -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>EPS Trend;60 DAYS AGO; ; ;0;0;0;4
-572;YahooAE;Consensus EPS Trend -- 60 Days Ago -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>EPS Trend;60 DAYS AGO; ; ;0;0;0;4
-573;YahooAE;Consensus EPS Trend -- 90 Days Ago -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;90 DAYS AGO; ; ;0;0;0;4
-574;YahooAE;Consensus EPS Trend -- 90 Days Ago -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>EPS Trend;90 DAYS AGO; ; ;0;0;0;4
-575;YahooAE;Consensus EPS Trend -- 90 Days Ago -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>EPS Trend;90 DAYS AGO; ; ;0;0;0;4
-576;YahooAE;Consensus EPS Trend -- 90 Days Ago -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>EPS Trend;90 DAYS AGO; ; ;0;0;0;4
-577;YahooAE;Earnings Estimates -- Date -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS EST;>; ; ;0;0;0;4
-578;YahooAE;Earnings Estimates -- Date -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS EST;>; ; ;0;0;0;4
-579;YahooAE;Earnings Estimates -- Date -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS EST;>; ; ;0;0;0;4
-580;YahooAE;Earnings Estimates -- Date -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS EST;>; ; ;0;0;0;4
-581;YahooAE;Earnings Estimates -- Number of Analysts -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS EST;NO. OF ANALYSTS; ; ;0;0;0;4
-582;YahooAE;Earnings Estimates -- Number of Analysts -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS EST;NO. OF ANALYSTS; ; ;0;0;0;4
-583;YahooAE;Earnings Estimates -- Number of Analysts -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS EST;NO. OF ANALYSTS; ; ;0;0;0;4
-584;YahooAE;Earnings Estimates -- Number of Analysts -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS EST;NO. OF ANALYSTS; ; ;0;0;0;4
-585;YahooAE;Earnings Estimates -- Low Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS EST;LOW ESTIMATE; ; ;0;0;0;4
-586;YahooAE;Earnings Estimates -- Low Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS EST;LOW ESTIMATE; ; ;0;0;0;4
-587;YahooAE;Earnings Estimates -- Low Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS EST;LOW ESTIMATE; ; ;0;0;0;4
-588;YahooAE;Earnings Estimates -- Low Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS EST;LOW ESTIMATE; ; ;0;0;0;4
-589;YahooAE;Earnings Estimates -- High Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS EST;HIGH ESTIMATE; ; ;0;0;0;4
-590;YahooAE;Earnings Estimates -- High Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS EST;HIGH ESTIMATE; ; ;0;0;0;4
-591;YahooAE;Earnings Estimates -- High Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS EST;HIGH ESTIMATE; ; ;0;0;0;4
-592;YahooAE;Earnings Estimates -- High Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS EST;HIGH ESTIMATE; ; ;0;0;0;4
-593;YahooAE;Earnings Estimates -- Average Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS EST;AVG. ESTIMATE; ; ;0;0;0;4
-594;YahooAE;Earnings Estimates -- Average Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS EST;AVG. ESTIMATE; ; ;0;0;0;4
-595;YahooAE;Earnings Estimates -- Average Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS EST;AVG. ESTIMATE; ; ;0;0;0;4
-596;YahooAE;Earnings Estimates -- Average Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS EST;AVG. ESTIMATE; ; ;0;0;0;4
-597;YahooAE;Earnings Estimates -- Year Ago EPS -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS EST;YEAR AGO EPS; ; ;0;0;0;4
-598;YahooAE;Earnings Estimates -- Year Ago EPS -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS EST;YEAR AGO EPS; ; ;0;0;0;4
-599;YahooAE;Earnings Estimates -- Year Ago EPS -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS EST;YEAR AGO EPS; ; ;0;0;0;4
-600;YahooAE;Earnings Estimates -- Year Ago EPS -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS EST;YEAR AGO EPS; ; ;0;0;0;4
-601;YahooAE;Earnings Growth Rates -- Current Quarter -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Growth Estimates","Current Qtr",,,1,,4)
-602;YahooAE;Earnings Growth Rates -- Current Quarter -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Growth Estimates","Current Qtr",,,1,,4)
-603;YahooAE;Earnings Growth Rates -- Current Quarter -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Growth Estimates","Current Qtr",,,1,,4)
-604;YahooAE;Earnings Growth Rates -- Current Quarter -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Growth Estimates","Current Qtr",,,1,,4)
-605;YahooAE;Earnings Growth Rates -- Next Quarter -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Growth Estimates","Next Qtr",,,1,,4)
-606;YahooAE;Earnings Growth Rates -- Next Quarter -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Growth Estimates","Next Qtr",,,1,,4)
-607;YahooAE;Earnings Growth Rates -- Next Quarter -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Growth Estimates","Next Qtr",,,1,,4)
-608;YahooAE;Earnings Growth Rates -- Next Quarter -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Growth Estimates","Next Qtr",,,1,,4)
-609;YahooAE;Earnings Growth Rates -- Current Year -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Growth Estimates","Current Year",,,1,,4)
-610;YahooAE;Earnings Growth Rates -- Current Year -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Growth Estimates","Current Year",,,1,,4)
-611;YahooAE;Earnings Growth Rates -- Current Year -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Growth Estimates","Current Year",,,1,,4)
-612;YahooAE;Earnings Growth Rates -- Current Year -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Growth Estimates","Current Year",,,1,,4)
-613;YahooAE;Earnings Growth Rates -- Next Year -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Growth Estimates","Next Year",,,1,,4)
-614;YahooAE;Earnings Growth Rates -- Next Year -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Growth Estimates","Next Year",,,1,,4)
-615;YahooAE;Earnings Growth Rates -- Next Year -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Growth Estimates","Next Year",,,1,,4)
-616;YahooAE;Earnings Growth Rates -- Next Year -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Growth Estimates","Next Year",,,1,,4)
-617;YahooAE;Earnings Growth Rates -- Past 5 Years -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Growth Estimates","Past 5 Years",,,1,,4)
-618;YahooAE;Earnings Growth Rates -- Past 5 Years -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Growth Estimates","Past 5 Years",,,1,,4)
-619;YahooAE;Earnings Growth Rates -- Past 5 Years -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Growth Estimates","Past 5 Years",,,1,,4)
-620;YahooAE;Earnings Growth Rates -- Past 5 Years -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Growth Estimates","Past 5 Years",,,1,,4)
-621;YahooAE;Earnings Growth Rates -- Next 5 Years -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Growth Estimates","Next 5 Years",,,1,,4)
-622;YahooAE;Earnings Growth Rates -- Next 5 Years -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Growth Estimates","Next 5 Years",,,1,,4)
-623;YahooAE;Earnings Growth Rates -- Next 5 Years -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Growth Estimates","Next 5 Years",,,1,,4)
-624;YahooAE;Earnings Growth Rates -- Next 5 Years -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Growth Estimates","Next 5 Years",,,1,,4)
+553;YahooAE;Consensus EPS Trend -- Date -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;>; ; ;0;0;0;0
+554;YahooAE;Consensus EPS Trend -- Date -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>EPS Trend;>; ; ;0;0;0;0
+555;YahooAE;Consensus EPS Trend -- Date -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>EPS Trend;>; ; ;0;0;0;0
+556;YahooAE;Consensus EPS Trend -- Date -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>EPS Trend;>; ; ;0;0;0;0
+557;YahooAE;Consensus EPS Trend -- Current Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;CURRENT ESTIMATE; ; ;0;0;0;0
+558;YahooAE;Consensus EPS Trend -- Current Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>EPS Trend;CURRENT ESTIMATE; ; ;0;0;0;0
+559;YahooAE;Consensus EPS Trend -- Current Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>EPS Trend;CURRENT ESTIMATE; ; ;0;0;0;0
+560;YahooAE;Consensus EPS Trend -- Current Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>EPS Trend;CURRENT ESTIMATE; ; ;0;0;0;0
+561;YahooAE;Consensus EPS Trend --  7 Days Ago -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;7 DAYS AGO; ; ;0;0;0;0
+562;YahooAE;Consensus EPS Trend --  7 Days Ago -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>EPS Trend;7 DAYS AGO; ; ;0;0;0;0
+563;YahooAE;Consensus EPS Trend --  7 Days Ago -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>EPS Trend;7 DAYS AGO; ; ;0;0;0;0
+564;YahooAE;Consensus EPS Trend --  7 Days Ago -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>EPS Trend;7 DAYS AGO; ; ;0;0;0;0
+565;YahooAE;Consensus EPS Trend -- 30 Days Ago -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;30 DAYS AGO; ; ;0;0;0;0
+566;YahooAE;Consensus EPS Trend -- 30 Days Ago -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>EPS Trend;30 DAYS AGO; ; ;0;0;0;0
+567;YahooAE;Consensus EPS Trend -- 30 Days Ago -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>EPS Trend;30 DAYS AGO; ; ;0;0;0;0
+568;YahooAE;Consensus EPS Trend -- 30 Days Ago -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>EPS Trend;30 DAYS AGO; ; ;0;0;0;0
+569;YahooAE;Consensus EPS Trend -- 60 Days Ago -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;60 DAYS AGO; ; ;0;0;0;0
+570;YahooAE;Consensus EPS Trend -- 60 Days Ago -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>EPS Trend;60 DAYS AGO; ; ;0;0;0;0
+571;YahooAE;Consensus EPS Trend -- 60 Days Ago -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>EPS Trend;60 DAYS AGO; ; ;0;0;0;0
+572;YahooAE;Consensus EPS Trend -- 60 Days Ago -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>EPS Trend;60 DAYS AGO; ; ;0;0;0;0
+573;YahooAE;Consensus EPS Trend -- 90 Days Ago -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;90 DAYS AGO; ; ;0;0;0;0
+574;YahooAE;Consensus EPS Trend -- 90 Days Ago -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>EPS Trend;90 DAYS AGO; ; ;0;0;0;0
+575;YahooAE;Consensus EPS Trend -- 90 Days Ago -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>EPS Trend;90 DAYS AGO; ; ;0;0;0;0
+576;YahooAE;Consensus EPS Trend -- 90 Days Ago -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>EPS Trend;90 DAYS AGO; ; ;0;0;0;0
+577;YahooAE;Earnings Estimates -- Date -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS EST;>; ; ;0;0;0;0
+578;YahooAE;Earnings Estimates -- Date -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS EST;>; ; ;0;0;0;0
+579;YahooAE;Earnings Estimates -- Date -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS EST;>; ; ;0;0;0;0
+580;YahooAE;Earnings Estimates -- Date -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS EST;>; ; ;0;0;0;0
+581;YahooAE;Earnings Estimates -- Number of Analysts -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS EST;NO. OF ANALYSTS; ; ;0;0;0;0
+582;YahooAE;Earnings Estimates -- Number of Analysts -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS EST;NO. OF ANALYSTS; ; ;0;0;0;0
+583;YahooAE;Earnings Estimates -- Number of Analysts -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS EST;NO. OF ANALYSTS; ; ;0;0;0;0
+584;YahooAE;Earnings Estimates -- Number of Analysts -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS EST;NO. OF ANALYSTS; ; ;0;0;0;0
+585;YahooAE;Earnings Estimates -- Low Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS EST;LOW ESTIMATE; ; ;0;0;0;0
+586;YahooAE;Earnings Estimates -- Low Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS EST;LOW ESTIMATE; ; ;0;0;0;0
+587;YahooAE;Earnings Estimates -- Low Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS EST;LOW ESTIMATE; ; ;0;0;0;0
+588;YahooAE;Earnings Estimates -- Low Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS EST;LOW ESTIMATE; ; ;0;0;0;0
+589;YahooAE;Earnings Estimates -- High Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS EST;HIGH ESTIMATE; ; ;0;0;0;0
+590;YahooAE;Earnings Estimates -- High Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS EST;HIGH ESTIMATE; ; ;0;0;0;0
+591;YahooAE;Earnings Estimates -- High Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS EST;HIGH ESTIMATE; ; ;0;0;0;0
+592;YahooAE;Earnings Estimates -- High Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS EST;HIGH ESTIMATE; ; ;0;0;0;0
+593;YahooAE;Earnings Estimates -- Average Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS EST;AVG. ESTIMATE; ; ;0;0;0;0
+594;YahooAE;Earnings Estimates -- Average Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS EST;AVG. ESTIMATE; ; ;0;0;0;0
+595;YahooAE;Earnings Estimates -- Average Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS EST;AVG. ESTIMATE; ; ;0;0;0;0
+596;YahooAE;Earnings Estimates -- Average Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS EST;AVG. ESTIMATE; ; ;0;0;0;0
+597;YahooAE;Earnings Estimates -- Year Ago EPS -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS EST;YEAR AGO EPS; ; ;0;0;0;0
+598;YahooAE;Earnings Estimates -- Year Ago EPS -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS EST;YEAR AGO EPS; ; ;0;0;0;0
+599;YahooAE;Earnings Estimates -- Year Ago EPS -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS EST;YEAR AGO EPS; ; ;0;0;0;0
+600;YahooAE;Earnings Estimates -- Year Ago EPS -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS EST;YEAR AGO EPS; ; ;0;0;0;0
+601;YahooAE;Earnings Growth Rates -- Current Quarter -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Growth Estimates","Current Qtr",,,1)
+602;YahooAE;Earnings Growth Rates -- Current Quarter -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Growth Estimates","Current Qtr",,,1)
+603;YahooAE;Earnings Growth Rates -- Current Quarter -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Growth Estimates","Current Qtr",,,1)
+604;YahooAE;Earnings Growth Rates -- Current Quarter -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Growth Estimates","Current Qtr",,,1)
+605;YahooAE;Earnings Growth Rates -- Next Quarter -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Growth Estimates","Next Qtr",,,1)
+606;YahooAE;Earnings Growth Rates -- Next Quarter -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Growth Estimates","Next Qtr",,,1)
+607;YahooAE;Earnings Growth Rates -- Next Quarter -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Growth Estimates","Next Qtr",,,1)
+608;YahooAE;Earnings Growth Rates -- Next Quarter -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Growth Estimates","Next Qtr",,,1)
+609;YahooAE;Earnings Growth Rates -- Current Year -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Growth Estimates","Current Year",,,1)
+610;YahooAE;Earnings Growth Rates -- Current Year -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Growth Estimates","Current Year",,,1)
+611;YahooAE;Earnings Growth Rates -- Current Year -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Growth Estimates","Current Year",,,1)
+612;YahooAE;Earnings Growth Rates -- Current Year -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Growth Estimates","Current Year",,,1)
+613;YahooAE;Earnings Growth Rates -- Next Year -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Growth Estimates","Next Year",,,1)
+614;YahooAE;Earnings Growth Rates -- Next Year -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Growth Estimates","Next Year",,,1)
+615;YahooAE;Earnings Growth Rates -- Next Year -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Growth Estimates","Next Year",,,1)
+616;YahooAE;Earnings Growth Rates -- Next Year -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Growth Estimates","Next Year",,,1)
+617;YahooAE;Earnings Growth Rates -- Past 5 Years -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Growth Estimates","Past 5 Years",,,1)
+618;YahooAE;Earnings Growth Rates -- Past 5 Years -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Growth Estimates","Past 5 Years",,,1)
+619;YahooAE;Earnings Growth Rates -- Past 5 Years -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Growth Estimates","Past 5 Years",,,1)
+620;YahooAE;Earnings Growth Rates -- Past 5 Years -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Growth Estimates","Past 5 Years",,,1)
+621;YahooAE;Earnings Growth Rates -- Next 5 Years -- Company;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Growth Estimates","Next 5 Years",,,1)
+622;YahooAE;Earnings Growth Rates -- Next 5 Years -- Industry;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Growth Estimates","Next 5 Years",,,1)
+623;YahooAE;Earnings Growth Rates -- Next 5 Years -- Sector;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Growth Estimates","Next 5 Years",,,1)
+624;YahooAE;Earnings Growth Rates -- Next 5 Years -- S&P 500;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Growth Estimates","Next 5 Years",,,1)
 625;YahooAE;Earnings Growth Rates -- Price/Earnings -- Company;="Obsolete"
 626;YahooAE;Earnings Growth Rates -- Price/Earnings -- Industry;="Obsolete"
 627;YahooAE;Earnings Growth Rates -- Price/Earnings -- Sector;="Obsolete";0;0;0;0
@@ -81,178 +78,184 @@
 630;YahooAE;Earnings Growth Rates -- PEG Ratio -- Industry;="Obsolete"
 631;YahooAE;Earnings Growth Rates -- PEG Ratio -- Sector;="Obsolete"
 632;YahooAE;Earnings Growth Rates -- PEG Ratio -- S&P 500;="Obsolete"
-633;YahooAE;Earnings Surprise -- Date -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS HISTORY;>; ; ;0;0;0;4
-634;YahooAE;Earnings Surprise -- Date -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS HISTORY;>; ; ;0;0;0;4
-635;YahooAE;Earnings Surprise -- Date -- FQ3;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS HISTORY;>; ; ;0;0;0;4
-636;YahooAE;Earnings Surprise -- Date -- FQ4;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS HISTORY;>; ; ;0;0;0;4
-637;YahooAE;Earnings Surprise -- EPS Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS HISTORY;EPS EST; ; ;0;0;0;4
-638;YahooAE;Earnings Surprise -- EPS Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS HISTORY;EPS EST; ; ;0;0;0;4
-639;YahooAE;Earnings Surprise -- EPS Estimate -- FQ3;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS HISTORY;EPS EST; ; ;0;0;0;4
-640;YahooAE;Earnings Surprise -- EPS Estimate -- FQ4;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS HISTORY;EPS EST; ; ;0;0;0;4
-641;YahooAE;Earnings Surprise -- EPS Actual -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS HISTORY;EPS ACTUAL; ; ;0;0;0;4
-642;YahooAE;Earnings Surprise -- EPS Actual -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS HISTORY;EPS ACTUAL; ; ;0;0;0;4
-643;YahooAE;Earnings Surprise -- EPS Actual -- FQ3;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS HISTORY;EPS ACTUAL; ; ;0;0;0;4
-644;YahooAE;Earnings Surprise -- EPS Actual -- FQ4;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS HISTORY;EPS ACTUAL; ; ;0;0;0;4
-645;YahooAE;Earnings Surprise -- Difference -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS HISTORY;DIFFERENCE; ; ;0;0;0;4
-646;YahooAE;Earnings Surprise -- Difference -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS HISTORY;DIFFERENCE; ; ;0;0;0;4
-647;YahooAE;Earnings Surprise -- Difference -- FQ3;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS HISTORY;DIFFERENCE; ; ;0;0;0;4
-648;YahooAE;Earnings Surprise -- Difference -- FQ4;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS HISTORY;DIFFERENCE; ; ;0;0;0;4
-649;YahooAE;Earnings Surprise -- Surprise % -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS HISTORY;SURPRISE %; ; ;0;0;0;4
-650;YahooAE;Earnings Surprise -- Surprise % -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS HISTORY;SURPRISE %; ; ;0;0;0;4
-651;YahooAE;Earnings Surprise -- Surprise % -- FQ3;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS HISTORY;SURPRISE %; ; ;0;0;0;4
-652;YahooAE;Earnings Surprise -- Surprise % -- FQ4;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS HISTORY;SURPRISE %; ; ;0;0;0;4
-653;YahooAE;EPS Revisions -- Date -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EPS REVISIONS;>; ; ;0;0;0;4
-654;YahooAE;EPS Revisions -- Date -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EPS REVISIONS;>; ; ;0;0;0;4
-655;YahooAE;EPS Revisions -- Date -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EPS REVISIONS;>; ; ;0;0;0;4
-656;YahooAE;EPS Revisions -- Date -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EPS REVISIONS;>; ; ;0;0;0;4
-657;YahooAE;EPS Revisions -- Up Last 7 Days -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EPS REVISIONS;UP LAST 7 DAYS; ; ;0;0;0;4
-658;YahooAE;EPS Revisions -- Up Last 7 Days -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EPS REVISIONS;UP LAST 7 DAYS; ; ;0;0;0;4
-659;YahooAE;EPS Revisions -- Up Last 7 Days -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EPS REVISIONS;UP LAST 7 DAYS; ; ;0;0;0;4
-660;YahooAE;EPS Revisions -- Up Last 7 Days -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EPS REVISIONS;UP LAST 7 DAYS; ; ;0;0;0;4
-661;YahooAE;EPS Revisions -- Up Last 30 Days -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EPS REVISIONS;UP LAST 30 DAYS; ; ;0;0;0;4
-662;YahooAE;EPS Revisions -- Up Last 30 Days -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EPS REVISIONS;UP LAST 30 DAYS; ; ;0;0;0;4
-663;YahooAE;EPS Revisions -- Up Last 30 Days -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EPS REVISIONS;UP LAST 30 DAYS; ; ;0;0;0;4
-664;YahooAE;EPS Revisions -- Up Last 30 Days -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EPS REVISIONS;UP LAST 30 DAYS; ; ;0;0;0;4
-665;YahooAE;EPS Revisions -- Down Last 30 Days -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EPS REVISIONS;DOWN LAST 30 DAYS; ; ;0;0;0;4
-666;YahooAE;EPS Revisions -- Down Last 30 Days -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EPS REVISIONS;DOWN LAST 30 DAYS; ; ;0;0;0;4
-667;YahooAE;EPS Revisions -- Down Last 30 Days -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EPS REVISIONS;DOWN LAST 30 DAYS; ; ;0;0;0;4
-668;YahooAE;EPS Revisions -- Down Last 30 Days -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EPS REVISIONS;DOWN LAST 30 DAYS; ; ;0;0;0;4
+633;YahooAE;Earnings Surprise -- Date -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS HISTORY;>; ; ;0;0;0;0
+634;YahooAE;Earnings Surprise -- Date -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS HISTORY;>; ; ;0;0;0;0
+635;YahooAE;Earnings Surprise -- Date -- FQ3;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS HISTORY;>; ; ;0;0;0;0
+636;YahooAE;Earnings Surprise -- Date -- FQ4;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS HISTORY;>; ; ;0;0;0;0
+637;YahooAE;Earnings Surprise -- EPS Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS HISTORY;EPS EST; ; ;0;0;0;0
+638;YahooAE;Earnings Surprise -- EPS Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS HISTORY;EPS EST; ; ;0;0;0;0
+639;YahooAE;Earnings Surprise -- EPS Estimate -- FQ3;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS HISTORY;EPS EST; ; ;0;0;0;0
+640;YahooAE;Earnings Surprise -- EPS Estimate -- FQ4;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS HISTORY;EPS EST; ; ;0;0;0;0
+641;YahooAE;Earnings Surprise -- EPS Actual -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS HISTORY;EPS ACTUAL; ; ;0;0;0;0
+642;YahooAE;Earnings Surprise -- EPS Actual -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS HISTORY;EPS ACTUAL; ; ;0;0;0;0
+643;YahooAE;Earnings Surprise -- EPS Actual -- FQ3;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS HISTORY;EPS ACTUAL; ; ;0;0;0;0
+644;YahooAE;Earnings Surprise -- EPS Actual -- FQ4;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS HISTORY;EPS ACTUAL; ; ;0;0;0;0
+645;YahooAE;Earnings Surprise -- Difference -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS HISTORY;DIFFERENCE; ; ;0;0;0;0
+646;YahooAE;Earnings Surprise -- Difference -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS HISTORY;DIFFERENCE; ; ;0;0;0;0
+647;YahooAE;Earnings Surprise -- Difference -- FQ3;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS HISTORY;DIFFERENCE; ; ;0;0;0;0
+648;YahooAE;Earnings Surprise -- Difference -- FQ4;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS HISTORY;DIFFERENCE; ; ;0;0;0;0
+649;YahooAE;Earnings Surprise -- Surprise % -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EARNINGS HISTORY;SURPRISE %; ; ;0;0;0;0
+650;YahooAE;Earnings Surprise -- Surprise % -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EARNINGS HISTORY;SURPRISE %; ; ;0;0;0;0
+651;YahooAE;Earnings Surprise -- Surprise % -- FQ3;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EARNINGS HISTORY;SURPRISE %; ; ;0;0;0;0
+652;YahooAE;Earnings Surprise -- Surprise % -- FQ4;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EARNINGS HISTORY;SURPRISE %; ; ;0;0;0;0
+653;YahooAE;EPS Revisions -- Date -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EPS REVISIONS;>; ; ;0;0;0;0
+654;YahooAE;EPS Revisions -- Date -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EPS REVISIONS;>; ; ;0;0;0;0
+655;YahooAE;EPS Revisions -- Date -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EPS REVISIONS;>; ; ;0;0;0;0
+656;YahooAE;EPS Revisions -- Date -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EPS REVISIONS;>; ; ;0;0;0;0
+657;YahooAE;EPS Revisions -- Up Last 7 Days -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EPS REVISIONS;UP LAST 7 DAYS; ; ;0;0;0;0
+658;YahooAE;EPS Revisions -- Up Last 7 Days -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EPS REVISIONS;UP LAST 7 DAYS; ; ;0;0;0;0
+659;YahooAE;EPS Revisions -- Up Last 7 Days -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EPS REVISIONS;UP LAST 7 DAYS; ; ;0;0;0;0
+660;YahooAE;EPS Revisions -- Up Last 7 Days -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EPS REVISIONS;UP LAST 7 DAYS; ; ;0;0;0;0
+661;YahooAE;EPS Revisions -- Up Last 30 Days -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EPS REVISIONS;UP LAST 30 DAYS; ; ;0;0;0;0
+662;YahooAE;EPS Revisions -- Up Last 30 Days -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EPS REVISIONS;UP LAST 30 DAYS; ; ;0;0;0;0
+663;YahooAE;EPS Revisions -- Up Last 30 Days -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EPS REVISIONS;UP LAST 30 DAYS; ; ;0;0;0;0
+664;YahooAE;EPS Revisions -- Up Last 30 Days -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EPS REVISIONS;UP LAST 30 DAYS; ; ;0;0;0;0
+665;YahooAE;EPS Revisions -- Down Last 30 Days -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;EPS REVISIONS;DOWN LAST 30 DAYS; ; ;0;0;0;0
+666;YahooAE;EPS Revisions -- Down Last 30 Days -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;EPS REVISIONS;DOWN LAST 30 DAYS; ; ;0;0;0;0
+667;YahooAE;EPS Revisions -- Down Last 30 Days -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;EPS REVISIONS;DOWN LAST 30 DAYS; ; ;0;0;0;0
+668;YahooAE;EPS Revisions -- Down Last 30 Days -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;EPS REVISIONS;DOWN LAST 30 DAYS; ; ;0;0;0;0
 669;YahooAE;EPS Revisions -- Down Last 90 Days -- FQ1;="Obsolete"
 670;YahooAE;EPS Revisions -- Down Last 90 Days -- FQ2;="Obsolete"
 671;YahooAE;EPS Revisions -- Down Last 90 Days -- FY1;="Obsolete"
 672;YahooAE;EPS Revisions -- Down Last 90 Days -- FY2;="Obsolete"
-673;YahooAE;Revenue Estimates -- Date -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;>; ; ;0;0;0;4
-674;YahooAE;Revenue Estimates -- Date -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;>; ; ;0;0;0;4
-675;YahooAE;Revenue Estimates -- Date -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;>; ; ;0;0;0;4
-676;YahooAE;Revenue Estimates -- Date -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;>; ; ;0;0;0;4
-677;YahooAE;Revenue Estimates -- Number of Analysts -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;NO. OF ANALYSTS; ; ;0;0;0;4
-678;YahooAE;Revenue Estimates -- Number of Analysts -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;NO. OF ANALYSTS; ; ;0;0;0;4
-679;YahooAE;Revenue Estimates -- Number of Analysts -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;NO. OF ANALYSTS; ; ;0;0;0;4
-680;YahooAE;Revenue Estimates -- Number of Analysts -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;NO. OF ANALYSTS; ; ;0;0;0;4
-681;YahooAE;Revenue Estimates -- Low Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;LOW ESTIMATE; ; ;0;0;0;4
-682;YahooAE;Revenue Estimates -- Low Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;LOW ESTIMATE; ; ;0;0;0;4
-683;YahooAE;Revenue Estimates -- Low Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;LOW ESTIMATE; ; ;0;0;0;4
-684;YahooAE;Revenue Estimates -- Low Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;LOW ESTIMATE; ; ;0;0;0;4
-685;YahooAE;Revenue Estimates -- High Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;HIGH ESTIMATE; ; ;0;0;0;4
-686;YahooAE;Revenue Estimates -- High Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;HIGH ESTIMATE; ; ;0;0;0;4
-687;YahooAE;Revenue Estimates -- High Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;HIGH ESTIMATE; ; ;0;0;0;4
-688;YahooAE;Revenue Estimates -- High Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;HIGH ESTIMATE; ; ;0;0;0;4
-689;YahooAE;Revenue Estimates -- Average Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;AVG. ESTIMATE; ; ;0;0;0;4
-690;YahooAE;Revenue Estimates -- Average Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;AVG. ESTIMATE; ; ;0;0;0;4
-691;YahooAE;Revenue Estimates -- Average Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;AVG. ESTIMATE; ; ;0;0;0;4
-692;YahooAE;Revenue Estimates -- Average Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;AVG. ESTIMATE; ; ;0;0;0;4
-693;YahooAE;Revenue Estimates -- Year Ago Sales -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;YEAR AGO SALES; ; ;0;0;0;4
-694;YahooAE;Revenue Estimates -- Year Ago Sales -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;YEAR AGO SALES; ; ;0;0;0;4
-695;YahooAE;Revenue Estimates -- Year Ago Sales -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;YEAR AGO SALES; ; ;0;0;0;4
-696;YahooAE;Revenue Estimates -- Year Ago Sales -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;YEAR AGO SALES; ; ;0;0;0;4
-697;YahooAE;Revenue Estimates -- Sales Growth -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;4
-698;YahooAE;Revenue Estimates -- Sales Growth -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;4
-699;YahooAE;Revenue Estimates -- Sales Growth -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;4
-700;YahooAE;Revenue Estimates -- Sales Growth -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;4
-726;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Down Last 7 Days",,,,1,,4)
-727;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Down Last 7 Days",,,,1,,4)
-728;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Down Last 7 Days",,,,1,,4)
-729;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Down Last 7 Days",,,,1,,4)
+673;YahooAE;Revenue Estimates -- Date -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;>; ; ;0;0;0;0
+674;YahooAE;Revenue Estimates -- Date -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;>; ; ;0;0;0;0
+675;YahooAE;Revenue Estimates -- Date -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;>; ; ;0;0;0;0
+676;YahooAE;Revenue Estimates -- Date -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;>; ; ;0;0;0;0
+677;YahooAE;Revenue Estimates -- Number of Analysts -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;NO. OF ANALYSTS; ; ;0;0;0;0
+678;YahooAE;Revenue Estimates -- Number of Analysts -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;NO. OF ANALYSTS; ; ;0;0;0;0
+679;YahooAE;Revenue Estimates -- Number of Analysts -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;NO. OF ANALYSTS; ; ;0;0;0;0
+680;YahooAE;Revenue Estimates -- Number of Analysts -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;NO. OF ANALYSTS; ; ;0;0;0;0
+681;YahooAE;Revenue Estimates -- Low Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;LOW ESTIMATE; ; ;0;0;0;0
+682;YahooAE;Revenue Estimates -- Low Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;LOW ESTIMATE; ; ;0;0;0;0
+683;YahooAE;Revenue Estimates -- Low Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;LOW ESTIMATE; ; ;0;0;0;0
+684;YahooAE;Revenue Estimates -- Low Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;LOW ESTIMATE; ; ;0;0;0;0
+685;YahooAE;Revenue Estimates -- High Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;HIGH ESTIMATE; ; ;0;0;0;0
+686;YahooAE;Revenue Estimates -- High Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;HIGH ESTIMATE; ; ;0;0;0;0
+687;YahooAE;Revenue Estimates -- High Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;HIGH ESTIMATE; ; ;0;0;0;0
+688;YahooAE;Revenue Estimates -- High Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;HIGH ESTIMATE; ; ;0;0;0;0
+689;YahooAE;Revenue Estimates -- Average Estimate -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;AVG. ESTIMATE; ; ;0;0;0;0
+690;YahooAE;Revenue Estimates -- Average Estimate -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;AVG. ESTIMATE; ; ;0;0;0;0
+691;YahooAE;Revenue Estimates -- Average Estimate -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;AVG. ESTIMATE; ; ;0;0;0;0
+692;YahooAE;Revenue Estimates -- Average Estimate -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;AVG. ESTIMATE; ; ;0;0;0;0
+693;YahooAE;Revenue Estimates -- Year Ago Sales -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;YEAR AGO SALES; ; ;0;0;0;0
+694;YahooAE;Revenue Estimates -- Year Ago Sales -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;YEAR AGO SALES; ; ;0;0;0;0
+695;YahooAE;Revenue Estimates -- Year Ago Sales -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;YEAR AGO SALES; ; ;0;0;0;0
+696;YahooAE;Revenue Estimates -- Year Ago Sales -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;YEAR AGO SALES; ; ;0;0;0;0
+697;YahooAE;Revenue Estimates -- Sales Growth -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;0
+698;YahooAE;Revenue Estimates -- Sales Growth -- FQ2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;2;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;0
+699;YahooAE;Revenue Estimates -- Sales Growth -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;0
+700;YahooAE;Revenue Estimates -- Sales Growth -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;0
 
+726;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Down Last 7 Days",,,,1)
+727;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Down Last 7 Days",,,,1)
+728;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Down Last 7 Days",,,,1)
+729;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Down Last 7 Days",,,,1)
+
+933;YahooIS;Total Expenses;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Total Expenses",,,,1)
+934;YahooIS;Operating Expense;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Operating Expense",,,,1)
+935;YahooIS;Net Income;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Net Income",,,,1)
+936;YahooIS;Cost of Revenue;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Cost of Revenue",,,,1)
+937;YahooIS;Total Revenue;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Total Revenue",,,,1)
 938;YahooKS;Date of 52-Week High;="Obsolete"
 939;YahooKS;Date of 52-Week Low;="Obsolete"
-940;YahooKS;Last Split Date;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;LAST SPLIT DATE; ; ; ;0;0;0;4
-941;YahooKS;Market Cap;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~","td",1,">Market Cap",,,,1,,4)
-942;YahooKS;Enterprise Value;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;ENTERPRISE VALUE; ; ;0;0;0;4
-943;YahooKS;Trailing P/E;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;TRAILING P/E; ; ;0;0;0;4
-944;YahooKS;Forward P/E;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;FORWARD P/E; ; ;0;0;0;4
-945;YahooKS;Forward PEG Ratio;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;PEG RATIO; ; ;0;0;0;4
-946;YahooKS;Price/Sales;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;PRICE/SALES; ; ;0;0;0;4
-947;YahooKS;Price/Book;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~","td",1,">Price/Book",,,,1,,4)
-948;YahooKS;Enterprise Value/Revenue;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;ENTERPRISE VALUE/REVENUE; ; ;0;0;0;4
-949;YahooKS;Enterprise Value/EBITDA;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;ENTERPRISE VALUE/EBITDA; ; ;0;0;0;4
-950;YahooKS;Fiscal Year Ends;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;FISCAL YEAR ENDS; ; ;0;0;0;4
-951;YahooKS;Most Recent Quarter;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;MOST RECENT QUARTER; ; ;0;0;0;4
-952;YahooKS;Profit Margin;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;PROFIT MARGIN; ; ;0;0;0;4
-953;YahooKS;Operating Margin;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;OPERATING MARGIN; ; ;0;0;0;4
-954;YahooKS;Return on Assets;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;RETURN ON ASSETS; ; ;0;0;0;4
-955;YahooKS;Return on Equity;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;RETURN ON EQUITY; ; ;0;0;0;4
-956;YahooKS;Revenue;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;REVENUE; ; ;0;0;0;4
-957;YahooKS;Revenue Per Share;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;REVENUE PER SHARE; ; ;0;0;0;4
-958;YahooKS;Quarterly Revenue Growth;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;QUARTERLY REVENUE GROWTH; ; ;0;0;0;4
-959;YahooKS;Gross Profit;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;GROSS PROFIT; ; ;0;0;0;4
-960;YahooKS;EBITDA;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;EBITDA; ; ;0;0;0;4
-961;YahooKS;Net Income Available to Common;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;NET INCOME AVI TO COMMON; ; ;0;0;0;4
-962;YahooKS;Diluted EPS;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;DILUTED EPS; ; ;0;0;0;4
-963;YahooKS;Quarterly Earnings Growth;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;QUARTERLY EARNINGS GROWTH; ; ;0;0;0;4
-964;YahooKS;Total Cash;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;TOTAL CASH; ; ;0;0;0;4
-965;YahooKS;Total Cash Per Share;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;TOTAL CASH PER SHARE; ; ;0;0;0;4
-966;YahooKS;Total Debt;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;TOTAL DEBT; ; ;0;0;0;4
-967;YahooKS;Total Debt/Equity;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;TOTAL DEBT/EQUITY; ; ;0;0;0;4
-968;YahooKS;Current Ratio;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;CURRENT RATIO; ; ;0;0;0;4
-969;YahooKS;Book Value Per Share;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;BOOK VALUE PER SHARE; ; ;0;0;0;4
-970;YahooKS;Operating Cash Flow;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;OPERATING CASH FLOW; ; ;0;0;0;4
-971;YahooKS;Levered Free Cash Flow;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;LEVERED FREE CASH FLOW; ; ;0;0;0;4
-972;YahooKS;Beta;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;BETA; ; ;0;0;0;4
-973;YahooKS;52-Week Change;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;52-WEEK CHANGE; ; ;0;0;0;4
-974;YahooKS;S&P500 52-Week Change;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;S&P500 52-WEEK CHANGE; ; ;0;0;0;4
-975;YahooKS;52-Week High;=RCHGetTableCell("https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~",1,">52 week high",,,,,,,,4)
-976;YahooKS;52-Week Low;=RCHGetTableCell("https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~",1,">52 week low",,,,,,,,4)
-977;YahooKS;50-Day Moving Average;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;50-DAY MOVING AVERAGE; ; ;0;0;0;4
-978;YahooKS;200-Day Moving Average;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;200-DAY MOVING AVERAGE; ; ;0;0;0;4
-979;YahooKS;Average Volume (3 month);https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;AVG VOL (3 MONTH); ; ;0;0;0;4
-980;YahooKS;Average Volume (10 day);https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;AVG VOL (10 DAY); ; ;0;0;0;4
-981;YahooKS;Shares Outstanding;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;SHARES OUTSTANDING; ; ;0;0;0;4
-982;YahooKS;Float;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;>FLOAT; ; ;0;0;0;4
-983;YahooKS;% Held by Insiders;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;% HELD BY INSIDERS; ; ;0;0;0;4
-984;YahooKS;% Held by Institutions;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;% HELD BY INSTITUTIONS; ; ;0;0;0;4
-985;YahooKS;Shares Short -- Current;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;SHARES SHORT; ; ;0;0;0;4
-986;YahooKS;Short Ratio;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;SHORT RATIO; ; ;0;0;0;4
-987;YahooKS;Short % of Float;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;SHORT % OF FLOAT; ; ;0;0;0;4
-988;YahooKS;Shares Short -- Prior;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;SHARES SHORT (PRIOR MONTH; ; ;0;0;0;4
+940;YahooKS;Last Split Date;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;LAST SPLIT DATE; ; ; ;0;0;0;0
+941;YahooKS;Market Cap;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~","td",1,">Market Cap",,,,1)
+942;YahooKS;Enterprise Value;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;ENTERPRISE VALUE; ; ;0;0;0;0
+943;YahooKS;Trailing P/E;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;TRAILING P/E; ; ;0;0;0;0
+944;YahooKS;Forward P/E;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;FORWARD P/E; ; ;0;0;0;0
+945;YahooKS;Forward PEG Ratio;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;PEG RATIO; ; ;0;0;0;0
+946;YahooKS;Price/Sales;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;PRICE/SALES; ; ;0;0;0;0
+947;YahooKS;Price/Book;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~","td",1,">Price/Book",,,,1)
+948;YahooKS;Enterprise Value/Revenue;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;ENTERPRISE VALUE/REVENUE; ; ;0;0;0;0
+949;YahooKS;Enterprise Value/EBITDA;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;VALUATION MEASURES;ENTERPRISE VALUE/EBITDA; ; ;0;0;0;0
+950;YahooKS;Fiscal Year Ends;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;FISCAL YEAR ENDS; ; ;0;0;0;0
+951;YahooKS;Most Recent Quarter;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;MOST RECENT QUARTER; ; ;0;0;0;0
+952;YahooKS;Profit Margin;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;PROFIT MARGIN; ; ;0;0;0;0
+953;YahooKS;Operating Margin;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;OPERATING MARGIN; ; ;0;0;0;0
+954;YahooKS;Return on Assets;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;RETURN ON ASSETS; ; ;0;0;0;0
+955;YahooKS;Return on Equity;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;RETURN ON EQUITY; ; ;0;0;0;0
+956;YahooKS;Revenue;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;REVENUE; ; ;0;0;0;0
+957;YahooKS;Revenue Per Share;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;REVENUE PER SHARE; ; ;0;0;0;0
+958;YahooKS;Quarterly Revenue Growth;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;QUARTERLY REVENUE GROWTH; ; ;0;0;0;0
+959;YahooKS;Gross Profit;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Gross Profit",,,,1)
+960;YahooKS;EBITDA;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;EBITDA; ; ;0;0;0;0
+961;YahooKS;Net Income Available to Common;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;NET INCOME AVI TO COMMON; ; ;0;0;0;0
+962;YahooKS;Diluted EPS;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;DILUTED EPS; ; ;0;0;0;0
+963;YahooKS;Quarterly Earnings Growth;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;QUARTERLY EARNINGS GROWTH; ; ;0;0;0;0
+964;YahooKS;Total Cash;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;TOTAL CASH; ; ;0;0;0;0
+965;YahooKS;Total Cash Per Share;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;TOTAL CASH PER SHARE; ; ;0;0;0;0
+966;YahooKS;Total Debt;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;TOTAL DEBT; ; ;0;0;0;0
+967;YahooKS;Total Debt/Equity;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;TOTAL DEBT/EQUITY; ; ;0;0;0;0
+968;YahooKS;Current Ratio;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;CURRENT RATIO; ; ;0;0;0;0
+969;YahooKS;Book Value Per Share;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;BOOK VALUE PER SHARE; ; ;0;0;0;0
+970;YahooKS;Operating Cash Flow;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;OPERATING CASH FLOW; ; ;0;0;0;0
+971;YahooKS;Levered Free Cash Flow;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;LEVERED FREE CASH FLOW; ; ;0;0;0;0
+972;YahooKS;Beta;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;BETA; ; ;0;0;0;0
+973;YahooKS;52-Week Change;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;52-WEEK CHANGE; ; ;0;0;0;0
+974;YahooKS;S&P500 52-Week Change;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;S&P500 52-WEEK CHANGE; ; ;0;0;0;0
+975;YahooKS;52-Week High;=RCHGetTableCell("https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~",1,">52 week high")
+976;YahooKS;52-Week Low;=RCHGetTableCell("https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~",1,">52 week low")
+977;YahooKS;50-Day Moving Average;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;50-DAY MOVING AVERAGE; ; ;0;0;0;0
+978;YahooKS;200-Day Moving Average;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;200-DAY MOVING AVERAGE; ; ;0;0;0;0
+979;YahooKS;Average Volume (3 month);https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;AVG VOL (3 MONTH); ; ;0;0;0;0
+980;YahooKS;Average Volume (10 day);https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;AVG VOL (10 DAY); ; ;0;0;0;0
+981;YahooKS;Shares Outstanding;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;SHARES OUTSTANDING; ; ;0;0;0;0
+982;YahooKS;Float;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;>FLOAT; ; ;0;0;0;0
+983;YahooKS;% Held by Insiders;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;% HELD BY INSIDERS; ; ;0;0;0;0
+984;YahooKS;% Held by Institutions;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;% HELD BY INSTITUTIONS; ; ;0;0;0;0
+985;YahooKS;Shares Short -- Current;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;SHARES SHORT; ; ;0;0;0;0
+986;YahooKS;Short Ratio;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;SHORT RATIO; ; ;0;0;0;0
+987;YahooKS;Short % of Float;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;SHORT % OF FLOAT; ; ;0;0;0;0
+988;YahooKS;Shares Short -- Prior;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;SHARES SHORT (PRIOR MONTH; ; ;0;0;0;0
 989;YahooKS;Dividend;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;2;Trading Information;FORWARD ANNUAL DIVIDEND RATE; ; ;2;</table;0;0
 990;YahooKS;Dividend Yield;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;2;Trading Information;FORWARD ANNUAL DIVIDEND YIELD; ; ;2;</table;0;0
-991;YahooKS;Dividend Date;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;DIVIDEND DATE; ; ;0;0;0;4
-992;YahooKS;Ex-Dividend Date;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;EX-DIVIDEND DATE; ; ;0;0;0;4
-993;YahooKS;Last Split Factor;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;LAST SPLIT FACTOR; ; ;0;0;0;4
-1285;YahooAE;Next Earnings Date;=RCHGetTableCell("https://finance.yahoo.com/quote/~~~~~?p=~~~~~",1,"Earnings Date",,,,,,,,4)
+991;YahooKS;Dividend Date;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;DIVIDEND DATE; ; ;0;0;0;0
+992;YahooKS;Ex-Dividend Date;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;EX-DIVIDEND DATE; ; ;0;0;0;0
+993;YahooKS;Last Split Factor;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;LAST SPLIT FACTOR; ; ;0;0;0;0
 
-1552;YahooQBS;Quarterly Balance Sheet -- Date -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>; ; ;0;0;0;4
-1553;YahooQBS;Quarterly Balance Sheet -- Date -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>; ; ;0;0;0;4
-1554;YahooQBS;Quarterly Balance Sheet -- Date -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>; ; ;0;0;0;4
-1555;YahooQBS;Quarterly Balance Sheet -- Date -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>; ; ;0;0;0;4
-1556;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;4
-1557;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;4
-1558;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;4
-1559;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;4
-1560;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;4
-1561;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;4
-1562;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;4
-1563;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;4
-1564;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;4
-1565;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;4
-1566;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;4
-1567;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;4
-1568;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;4
-1569;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;4
-1570;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;4
-1571;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;4
-1572;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;4
-1573;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;4
-1574;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;4
-1575;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;4
-1576;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;4
-1577;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;4
-1578;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;4
-1579;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;4
-1580;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;4
-1581;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;4
-1582;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;4
-1583;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;4
+1285;YahooAE;Next Earnings Date;=RCHGetTableCell("https://finance.yahoo.com/quote/~~~~~?p=~~~~~",1,"Earnings Date")
 
-1584;YahooQIS;Quarterly Income Statement -- Date -- FQ1;https://finance.yahoo.com/q/is?s=~~~~~;1;PERIOD ENDING;>; ; ;0;0;0;4
-1585;YahooQIS;Quarterly Income Statement -- Date -- FQ2;https://finance.yahoo.com/q/is?s=~~~~~;2;PERIOD ENDING;>; ; ;0;0;0;4
-1586;YahooQIS;Quarterly Income Statement -- Date -- FQ3;https://finance.yahoo.com/q/is?s=~~~~~;3;PERIOD ENDING;>; ; ;0;0;0;4
-1587;YahooQIS;Quarterly Income Statement -- Date -- FQ4;https://finance.yahoo.com/q/is?s=~~~~~;4;PERIOD ENDING;>; ; ;0;0;0;4
-1588;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ1;https://finance.yahoo.com/q/is?s=~~~~~;1;PERIOD ENDING;EARNINGS BEFORE INTEREST AND TAXES; ; ;0;0;0;4
-1589;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ2;https://finance.yahoo.com/q/is?s=~~~~~;2;PERIOD ENDING;EARNINGS BEFORE INTEREST AND TAXES; ; ;0;0;0;4
-1590;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ3;https://finance.yahoo.com/q/is?s=~~~~~;3;PERIOD ENDING;EARNINGS BEFORE INTEREST AND TAXES; ; ;0;0;0;4
-1591;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ4;https://finance.yahoo.com/q/is?s=~~~~~;4;PERIOD ENDING;EARNINGS BEFORE INTEREST AND TAXES; ; ;0;0;0;4
+1552;YahooQBS;Quarterly Balance Sheet -- Date -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>; ; ;0;0;0;0
+1553;YahooQBS;Quarterly Balance Sheet -- Date -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>; ; ;0;0;0;0
+1554;YahooQBS;Quarterly Balance Sheet -- Date -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>; ; ;0;0;0;0
+1555;YahooQBS;Quarterly Balance Sheet -- Date -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>; ; ;0;0;0;0
+1556;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;0
+1557;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;0
+1558;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;0
+1559;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;0
+1560;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;0
+1561;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;0
+1562;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;0
+1563;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;0
+1564;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;0
+1565;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;0
+1566;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;0
+1567;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;0
+1568;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;0
+1569;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;0
+1570;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;0
+1571;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;0
+1572;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;0
+1573;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;0
+1574;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;0
+1575;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;0
+1576;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;0
+1577;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;0
+1578;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;0
+1579;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;0
+1580;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;0
+1581;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;0
+1582;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;0
+1583;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;0
+1584;YahooQIS;Quarterly Income Statement -- Date -- FQ1;https://finance.yahoo.com/q/is?s=~~~~~;1;PERIOD ENDING;>; ; ;0;0;0;0
+1585;YahooQIS;Quarterly Income Statement -- Date -- FQ2;https://finance.yahoo.com/q/is?s=~~~~~;2;PERIOD ENDING;>; ; ;0;0;0;0
+1586;YahooQIS;Quarterly Income Statement -- Date -- FQ3;https://finance.yahoo.com/q/is?s=~~~~~;3;PERIOD ENDING;>; ; ;0;0;0;0
+1587;YahooQIS;Quarterly Income Statement -- Date -- FQ4;https://finance.yahoo.com/q/is?s=~~~~~;4;PERIOD ENDING;>; ; ;0;0;0;0
+1588;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ1;https://finance.yahoo.com/q/is?s=~~~~~;1;PERIOD ENDING;EARNINGS BEFORE INTEREST AND TAXES; ; ;0;0;0;0
+1589;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ2;https://finance.yahoo.com/q/is?s=~~~~~;2;PERIOD ENDING;EARNINGS BEFORE INTEREST AND TAXES; ; ;0;0;0;0
+1590;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ3;https://finance.yahoo.com/q/is?s=~~~~~;3;PERIOD ENDING;EARNINGS BEFORE INTEREST AND TAXES; ; ;0;0;0;0
+1591;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ4;https://finance.yahoo.com/q/is?s=~~~~~;4;PERIOD ENDING;EARNINGS BEFORE INTEREST AND TAXES; ; ;0;0;0;0
 
 1601;YahooPer;Fund Performance -- Annual Return -- Year 0;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.0.annualValue.raw")
 1602;YahooPer;Fund Performance -- Year -- Year 0;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.0.year")
@@ -340,12 +343,14 @@
 1684;YahooPer;Fund Performance -- Year -- Category -- Year 20;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returnsCat.20.year")
 1685;YahooPer;Fund Performance -- As of Date;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.asOfDate.fmt")
 1686;YahooPer;Fund Performance -- Avg 5-year Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverviewCat.fiveYrAvgReturnPct.raw")
+
 1687;YahooPer;Risk Statistic -- Label -- 3-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.1.year")
 1688;YahooPer;Risk Statistic -- Label -- 5-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.0.year")
 1689;YahooPer;Risk Statistic -- Label -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatistics.riskStatistics.2.year")
 1690;YahooPer;Risk Statistic -- Category -- Label -- 3-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.1.year")
 1691;YahooPer;Risk Statistic -- Category -- Label -- 5-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.0.year")
 1692;YahooPer;Risk Statistic -- Category -- Label -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.riskOverviewStatisticsCat.riskStatisticsCat.2.year")
+
 1693;YahooPer;Trailing Returns -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturns.tenYear.raw")
 1694;YahooPer;Trailing Returns Category -- 10-Year;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsCat.tenYear.raw")
 1695;YahooPer;Trailing Returns -- NAV -- 1-Month;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.trailingReturnsNav.oneMonth.fmt")
@@ -390,12 +395,12 @@
 4669;YahooPro;Fund Profile - Lead Manager;=smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.managementInfo.managerName")
 4670;YahooPro;Fund Profile - Management Information;=LEFT(smfGetYahooJSONField("~~~~~","fundProfile","quoteSummary.result.0.fundProfile.managementInfo.managerBio"),255)
 
-4924;YahooKS;Forward Annual Dividend Rate;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;FORWARD ANNUAL DIVIDEND RATE; ; ;0;0;0;4
-4925;YahooKS;Forward Annual Dividend Yield;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;FORWARD ANNUAL DIVIDEND YIELD; ; ;0;0;0;4
+4924;YahooKS;Forward Annual Dividend Rate;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;FORWARD ANNUAL DIVIDEND RATE; ; ;0;0;0;0
+4925;YahooKS;Forward Annual Dividend Yield;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;FORWARD ANNUAL DIVIDEND YIELD; ; ;0;0;0;0
 4926;YahooKS;Trailing Annual Dividend Rate;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;2;Trading Information;FORWARD ANNUAL DIVIDEND RATE; ; ;2;</table;0;0
 4927;YahooKS;Trailing Annual Dividend Yield;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;2;Trading Information;FORWARD ANNUAL DIVIDEND YIELD; ; ;2;</table;0;0
-4928;YahooKS;5 Year Average Dividend Yield;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;5 YEAR AVERAGE DIVIDEND YIELD; ; ;0;0;0;4
-4929;YahooKS;Payout Ratio;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;PAYOUT RATIO; ; ;0;0;0;4
+4928;YahooKS;5 Year Average Dividend Yield;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;5 YEAR AVERAGE DIVIDEND YIELD; ; ;0;0;0;0
+4929;YahooKS;Payout Ratio;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;Trading Information;PAYOUT RATIO; ; ;0;0;0;0
 
 4930;YahooPer;Fund Performance -- Morningstar Return Rating;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.morningStarReturnRating.raw")
 4931;YahooPer;Fund Performance -- Year to Date Return;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.performanceOverview.ytdReturnPct.raw")
@@ -668,47 +673,6 @@
 5194;YahooTop;Fund Holdings -- Equity Attributes -- Median Market Cap -- Category;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.medianMarketCapCat.raw")
 5195;YahooTop;Fund Holdings -- Equity Attributes -- 3 Year Earnings Growth -- Category;=smfGetYahooJSONField("~~~~~","topHoldings","quoteSummary.result.0.topHoldings.equityHoldings.threeYearEarningsGrowthCat.raw")
 
-13822;YahooMS;Market Stats -- NYSE -- Advancing Issues;="Obsolete"
-13823;YahooMS;Market Stats -- NYSE -- Declining Issues;="Obsolete"
-13824;YahooMS;Market Stats -- NYSE -- Unchanged Issues;="Obsolete"
-13825;YahooMS;Market Stats -- NYSE -- Total Issues;="Obsolete"
-13826;YahooMS;Market Stats -- NYSE -- New Highs;="Obsolete"
-13827;YahooMS;Market Stats -- NYSE -- New Lows;="Obsolete"
-13828;YahooMS;Market Stats -- NYSE -- Up Volume;="Obsolete"
-13829;YahooMS;Market Stats -- NYSE -- Down Volume;="Obsolete"
-13830;YahooMS;Market Stats -- NYSE -- Unchanged Volume;="Obsolete"
-13831;YahooMS;Market Stats -- NYSE -- Total Volume;="Obsolete"
-13832;YahooMS;Market Stats -- AMEX -- Advancing Issues;="Obsolete"
-13833;YahooMS;Market Stats -- AMEX -- Declining Issues;="Obsolete"
-13834;YahooMS;Market Stats -- AMEX -- Unchanged Issues;="Obsolete"
-13835;YahooMS;Market Stats -- AMEX -- Total Issues;="Obsolete"
-13836;YahooMS;Market Stats -- AMEX -- New Highs;="Obsolete"
-13837;YahooMS;Market Stats -- AMEX -- New Lows;="Obsolete"
-13838;YahooMS;Market Stats -- AMEX -- Up Volume;="Obsolete"
-13839;YahooMS;Market Stats -- AMEX -- Down Volume;="Obsolete"
-13840;YahooMS;Market Stats -- AMEX -- Unchanged Volume;="Obsolete"
-13841;YahooMS;Market Stats -- AMEX -- Total Volume;="Obsolete"
-13842;YahooMS;Market Stats -- NASDAQ -- Advancing Issues;="Obsolete"
-13843;YahooMS;Market Stats -- NASDAQ -- Declining Issues;="Obsolete"
-13844;YahooMS;Market Stats -- NASDAQ -- Unchanged Issues;="Obsolete"
-13845;YahooMS;Market Stats -- NASDAQ -- Total Issues;="Obsolete"
-13846;YahooMS;Market Stats -- NASDAQ -- New Highs;="Obsolete"
-13847;YahooMS;Market Stats -- NASDAQ -- New Lows;="Obsolete"
-13848;YahooMS;Market Stats -- NASDAQ -- Up Volume;="Obsolete"
-13849;YahooMS;Market Stats -- NASDAQ -- Down Volume;="Obsolete"
-13850;YahooMS;Market Stats -- NASDAQ -- Unchanged Volume;="Obsolete"
-13851;YahooMS;Market Stats -- NASDAQ -- Total Volume;="Obsolete"
-13852;YahooMS;Market Stats -- OTC BB -- Advancing Issues;="Obsolete"
-13853;YahooMS;Market Stats -- OTC BB -- Declining Issues;="Obsolete"
-13854;YahooMS;Market Stats -- OTC BB -- Unchanged Issues;="Obsolete"
-13855;YahooMS;Market Stats -- OTC BB -- Total Issues;="Obsolete"
-13856;YahooMS;Market Stats -- OTC BB -- New Highs;="Obsolete"
-13857;YahooMS;Market Stats -- OTC BB -- New Lows;="Obsolete"
-13858;YahooMS;Market Stats -- OTC BB -- Up Volume;="Obsolete"
-13859;YahooMS;Market Stats -- OTC BB -- Down Volume;="Obsolete"
-13860;YahooMS;Market Stats -- OTC BB -- Unchanged Volume;="Obsolete"
-13861;YahooMS;Market Stats -- OTC BB -- Total Volume;="Obsolete"
-
 13863;Yahoo;Company Name;=smfStrExtr(smfGetTagContent("https://finance.yahoo.com/quote/~~~~~","title"),"~"," (~~~~~")
 13864;YahooIN;Sector Number;="Obsolete"
 13865;YahooIN;Sector Name;=smfStrExtr(RCHGetWebData("https://query2.finance.yahoo.com/v10/finance/quoteSummary/~~~~~?modules=assetProfile","""sector"":",150,,4),":""","""")
@@ -716,23 +680,5 @@
 13867;YahooIN;Industry Name;=smfStrExtr(RCHGetWebData("https://query2.finance.yahoo.com/v10/finance/quoteSummary/~~~~~?modules=assetProfile","""industry"":",150,,4),":""","""")
 13868;YahooIN;Industry Symbol;="Obsolete"
 
-13901;YahooMS2;Market Stats -- TSX -- Advancing Issues;="Obsolete"
-13902;YahooMS2;Market Stats -- TSX -- Declining Issues;="Obsolete"
-13903;YahooMS2;Market Stats -- TSX -- Unchanged Issues;="Obsolete"
-13904;YahooMS2;Market Stats -- TSX -- Total Issues;="Obsolete"
-13905;YahooMS2;Market Stats -- TSX -- New Highs;="Obsolete"
-13906;YahooMS2;Market Stats -- TSX -- New Lows;="Obsolete"
-13907;YahooMS2;Market Stats -- TSX -- Up Volume;="Obsolete"
-13908;YahooMS2;Market Stats -- TSX -- Down Volume;="Obsolete"
-13909;YahooMS2;Market Stats -- TSX -- Unchanged Volume;="Obsolete"
-13910;YahooMS2;Market Stats -- TSX -- Total Volume;="Obsolete"
-13911;YahooMS2;Market Stats -- TSX Ventures -- Advancing Issues;="Obsolete"
-13912;YahooMS2;Market Stats -- TSX Ventures -- Declining Issues;="Obsolete"
-13913;YahooMS2;Market Stats -- TSX Ventures -- Unchanged Issues;="Obsolete"
-13914;YahooMS2;Market Stats -- TSX Ventures -- Total Issues;="Obsolete"
-13915;YahooMS2;Market Stats -- TSX Ventures -- New Highs;="Obsolete"
-13916;YahooMS2;Market Stats -- TSX Ventures -- New Lows;="Obsolete"
-13917;YahooMS2;Market Stats -- TSX Ventures -- Up Volume;="Obsolete"
-13918;YahooMS2;Market Stats -- TSX Ventures -- Down Volume;="Obsolete"
-13919;YahooMS2;Market Stats -- TSX Ventures -- Unchanged Volume;="Obsolete"
-13920;YahooMS2;Market Stats -- TSX Ventures -- Total Volume;="Obsolete"
+' Note: 13901 - 13920 removed obsolete elements YahooMS2
+' Note: 13822 - 13861 removed obsolete elements YahooMS
