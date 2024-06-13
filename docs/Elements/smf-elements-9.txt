@@ -75,6 +75,8 @@
 835;StockScores;Volume Price Trend;=PROPER(RCHGetTableCell("https://www.stockscores.com/charts/charts?ticker=~~~~~",1,"Volume Price Trend"))
 836;StockScores;William Volume Accumulation;=PROPER(RCHGetTableCell("https://www.stockscores.com/charts/charts?ticker=~~~~~",1,"William Volume"))
 
+'837 - 843 Undefined
+
 994;ETFOutlookHL;Description;http://www.etfinvestmentoutlook.com/rank_breadth_new_highs_lows_avg_d.php;-11;>~~~~~<; ; ; ;0;</table;0;0
 995;ETFOutlookHL;New Highs %;http://www.etfinvestmentoutlook.com/rank_breadth_new_highs_lows_avg_d.php;1;>~~~~~<; ; ; ;0;</table;0;0
 996;ETFOutlookHL;New Lows %;http://www.etfinvestmentoutlook.com/rank_breadth_new_highs_lows_avg_d.php;2;>~~~~~<; ; ; ;0;</table;0;0

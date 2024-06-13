@@ -114,7 +114,7 @@
 1399;ZacksEA;Quarterly Earnings -- Reported Time -- 23;=smfStrExtr(smfWord(smfWord(smfStrExtr(RCHGetWebData("https://www.zacks.com/stock/research/~~~~~/earnings-calendar?tab=transcript","document.obj_data = {"),": ",":"),25,"["),7,","),"""",""" ")
 1400;ZacksEA;Quarterly Earnings -- Reported Date -- 23;=SUBSTITUTE(smfWord(smfWord(smfStrExtr(RCHGetWebData("https://www.zacks.com/stock/research/~~~~~/earnings-calendar?tab=transcript","document.obj_data = {"),": ",":"),25,"["),1,","),"""","")
 
-
+'Earnings.com no longer exits
 1401;Earnings;Splits -- Ratio -- 1;="Obsolete -- Web site no longer exists"
 1402;Earnings;Splits -- Ex-Date -- 1;="Obsolete -- Web site no longer exists"
 1403;Earnings;Splits -- Payable -- 1;="Obsolete -- Web site no longer exists"
@@ -135,9 +135,11 @@
 1418;Earnings;Splits -- Ex-Date -- 5;="Obsolete -- Web site no longer exists"
 1419;Earnings;Splits -- Payable -- 5;="Obsolete -- Web site no longer exists"
 1420;Earnings;Splits -- Record -- 5;="Obsolete -- Web site no longer exists"
-
 1421;Earnings;Dividends -- Amount -- 1;="Obsolete -- Web site no longer exists"
-1422;Earnings;Dividends -- Ex-Date -- 1;=DATEVALUE(smfStrExtr(smfWord(RCHGetWebData("https://www.zacks.com/stock/research/~~~~~/earnings-calendar?tab=transcript","earnings_announcements_dividends_table""  :"),4,","),"""",""""))
+
+'Replaced with Zacks Div Ex-Date
+1422;ZackEA;Dividends -- Ex-Date -- 1;=DATEVALUE(smfStrExtr(smfWord(RCHGetWebData("https://www.zacks.com/stock/research/~~~~~/earnings-calendar?tab=transcript","earnings_announcements_dividends_table""  :"),4,","),"""",""""))
+
 1423;Earnings;Dividends -- Payable -- 1;="Obsolete -- Web site no longer exists"
 1424;Earnings;Dividends -- Record -- 1;="Obsolete -- Web site no longer exists"
 1425;Earnings;Dividends -- Amount -- 2;="Obsolete -- Web site no longer exists"
