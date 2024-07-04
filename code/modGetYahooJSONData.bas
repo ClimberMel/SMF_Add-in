@@ -86,7 +86,7 @@ Public Function smfGetYahooJSONData(ByVal pTicker As String, _
    Dim sURL As String, s1 As String, aSplit As Variant, i1 As Integer, s2 As String
    smfGetYahooJSONData = "Error"
    Select Case Left(pModule, 4)
-      Case "smfY": sURL = smfBuildYahooTimeSeriesURL(pTicker, pModule)      ' psuedo module?
+      Case "smfY": sURL = smfBuildYahooTimeSeriesURL(pTicker, pModule)      ' pseudo module?
       Case "http": sURL = Replace(pModule, "~~~~~", pTicker)
       Case Else: sURL = "https://query1.finance.yahoo.com/v10/finance/quoteSummary/" & pTicker & "?modules=" & pModule
       End Select
