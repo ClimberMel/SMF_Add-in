@@ -407,7 +407,7 @@ Public Function smfWord(ByVal pHaystack As String, _
     ' 2023-01-22 -- Mel Pryor (ClimberMel@gmail.com)
     '               Called by --> Verify and Process pNames parameter (Headers)
     '               in smfGetYahooHistory to extract the Header name based on position
-    ' 2024-06-09 -- Add pReverse parameter to start extraction at end of Haysack
+    ' 2024-06-09 -- Add pReverse parameter to start extraction at end of Haystack
     '
     '-----------------------------------------------------------------------------------------------------------*
     Dim s1 As String, s2 As String
