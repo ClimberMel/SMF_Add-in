@@ -1,4 +1,5 @@
 Attribute VB_Name = "modRSITargetPrices"
+'@Lang VBA
 Option Explicit
 Public Function smfRSITargetPrices(ByVal pTicker As String, _
                           Optional ByVal pLoTrigger As Integer = 20, _

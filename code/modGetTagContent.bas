@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetTagContent"
+'@Lang VBA
 Public Function smfGetTagContent(ByVal pURL As String, _
                                  ByVal pTag As String, _
                         Optional ByVal pTags As Integer = 1, _

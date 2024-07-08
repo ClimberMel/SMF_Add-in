@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetWebData"
+'@Lang VBA
 Public Function RCHGetWebData(ByVal pURL As String, _
                          Optional ByVal pPos As Variant = 1, _
                          Optional ByVal pLen As Integer = 32767, _

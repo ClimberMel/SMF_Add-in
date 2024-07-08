@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetOptionStrikes"
+'@Lang VBA
 Option Explicit
 Function smfGetOptionStrikes(ByVal pTicker As String, _
                     Optional ByVal pExpiry As Variant = 0, _

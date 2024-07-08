@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetOptionQuotes"
+'@Lang VBA
 Option Explicit
 Public Function smfGetOptionQuotes(ByVal pTickers As Variant, _
                                    ByVal pItems As Variant, _

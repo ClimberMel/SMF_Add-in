@@ -1,4 +1,5 @@
 Attribute VB_Name = "modMacCode"
+'@Lang VBA
 Public cookieArr As Variant
 Public iCookieInit As Integer
 

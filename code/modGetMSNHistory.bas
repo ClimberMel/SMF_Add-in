@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetMSNHistory"
+'@Lang VBA
 Public Function smfGetMSNHistory(pTicker As String, _
                           Optional pStartYear As Integer = 1900, _
                           Optional pStartMonth As Integer = 1, _

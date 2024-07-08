@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetOptionExpiry"
+'@Lang VBA
 Option Explicit
 Public Function smfGetOptionExpiry(Optional ByVal pYear As Integer = 0, _
                                    Optional ByVal pMonth As Integer = 0, _

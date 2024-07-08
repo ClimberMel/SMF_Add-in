@@ -1,4 +1,5 @@
 Attribute VB_Name = "modTechnicalAnalysis"
+'@Lang VBA
 Const kD = 1
 Const kO = 2
 Const kH = 3
