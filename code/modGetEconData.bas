@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetEconData"
+'@Lang VBA
 Function smfGetEconData(pID As String, _
                         pDate As Variant, _
                Optional pError As Variant = "Error")

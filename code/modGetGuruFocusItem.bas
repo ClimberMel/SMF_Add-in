@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetGuruFocusItem"
+'@Lang VBA
 Option Explicit
 Public aGuruFocusItems2(1 To 250) As Variant
 Function smfGetGuruFocusItem(ByVal pTicker As String, _

@@ -1,4 +1,5 @@
 Attribute VB_Name = "modJSONExtract"
+'@Lang VBA
 Option Explicit
 
 '-----------------------------------------------------------------------------------

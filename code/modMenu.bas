@@ -1,4 +1,5 @@
 Attribute VB_Name = "modMenu"
+'@Lang VBA
 '-----------------------------------------------------------------------------------------------------------*
 ' 2014.05.31 -- Originally added all menu routines, thanks go to Andrei Radulescu-Banu
 ' 2014.06.13 -- Add smfASyncOff and smfASyncOn

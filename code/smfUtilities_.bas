@@ -1,4 +1,5 @@
 Attribute VB_Name = "smfUtilities_"
+'@Lang VBA
 Public Const kPages = 1000                      ' Number of data pages to save
 Public Const kUnix1970 As Long = 25569          ' CDbl(DateSerial(1970, 1, 1))
 Public vError As Variant                        ' Value to return if error

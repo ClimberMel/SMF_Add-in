@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetOptionExpirations"
+'@Lang VBA
 Option Explicit
 Function smfGetOptionExpirations(ByVal pTicker As String, _
                         Optional ByVal pSource As String = "Yahoo", _

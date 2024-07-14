@@ -1,4 +1,5 @@
 Attribute VB_Name = "modExtractData"
+'@Lang VBA
 Public Function RCHExtractData(ByVal pSource As String, _
                                 ByVal pElement As String, _
                                 ByVal pFind1 As String, _

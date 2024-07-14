@@ -1,4 +1,5 @@
 Attribute VB_Name = "smfGetGuruFocusCSVItem_"
+'@Lang VBA
 Option Explicit
 Function smfGetGuruFocusCSVItem(ByVal pTicker As String, _
                                 ByVal pItem As String, _

@@ -1,4 +1,5 @@
 Attribute VB_Name = "smfDownloadTable_"
+'@Lang VBA
 Public Sub smfUpdateDownloadTable()
     '-----------------------------------------------------------------------------------------------------------*
     ' Macro to download data to fill in a 2-dimensional table

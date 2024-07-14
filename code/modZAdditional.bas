@@ -1,4 +1,5 @@
 Attribute VB_Name = "modZAdditional"
+'@Lang VBA
 
 
 Public Function DateOfHigh(pTicker As String, pDays As Integer)

@@ -1,4 +1,5 @@
 Attribute VB_Name = "smfConvertYahooTicker_"
+'@Lang VBA
 Function smfConvertYahooTicker(ByVal pTicker As String, _
                                ByVal pSource As String) As String
                          

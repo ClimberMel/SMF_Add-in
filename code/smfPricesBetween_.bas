@@ -1,4 +1,5 @@
 Attribute VB_Name = "smfPricesBetween_"
+'@Lang VBA
 Public Function smfPricesBetween(ByVal pTicker As String, _
                         Optional ByVal pBegDate As Variant, _
                         Optional ByVal pEndDate As Variant, _
