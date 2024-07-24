@@ -25,7 +25,7 @@
 
     <h3><u>Syntax</u></h3>
         <p>
-            <b>=smfWord(Haystack, Occurrence, [Delimiter], [Convert])</b>
+            <b>=smfWord(Haystack, Occurrence, [Delimiter], [Convert], [Reverse])</b>
         </p>
         
     <h3><u>Parameters</u></h3>
@@ -43,30 +43,34 @@
         <tr>
             <td><b>Delimiter</b></td>
             <td>=</td>
-            <td>Optional - Default is “ “.  String to delimit the Haystack into words.  If a zero-length string is used; i.e., “”, Haystack will be returned.</td>
+            <td>Optional - Default is “ ”.  String to delimit the Haystack into words.  If a zero-length string is used; i.e., “”, Haystack will be returned.</td>
         </tr>
         <tr>
             <td><b>Convert</b></td>
             <td>=</td>
-            <td>Optional - Default is “0”.  If set to 1, function will attempt to convert the substring to a numeric value, for example convert “50K” to “50000”.</td>
+            <td>Optional - Default is 0.  If set to 1, function will attempt to convert the substring to a numeric value, for example convert “50K” to “50000”.</td>
+        </tr>
+        <tr>
+            <td><b>Reverse</b></td>
+            <td>=</td>
+            <td>Optional - Default is 0.  If set to 1, function will retrieve the substring starting at the end of Haystack and work backwards.</td>
         </tr>
     </table>
     <br>
     <h3><u>Examples</u></h3>
     <ul>
         <li>To extract the 3<sup>rd</sup>
-            word from "apples - oranges - bananas - grapes", you would use: =smfWord("apples
-            - oranges - bananas - grapes") ... which gives
-            bananas including the surrounding spaces.</li>
+            word from "apples - oranges - bananas - grapes", use: =smfWord("apples - oranges - bananas - grapes", 3, "-") ... giving
+            “ bananas ” including the surrounding spaces.</li>
         <br>
-        <li>To extract the 2<sup>nd</sup> word from "apples - oranges - bananas - grapes", you would use:  
-            =smfWord("apples - oranges - bananas - grapes", "2", " - ")  ... which gives “oranges“; the delimiter includes spaces.</li>
+        <li>To extract the 2<sup>nd</sup> 
+			word from "apples - oranges - bananas - grapes", use: =smfWord("apples - oranges - bananas - grapes", 2, " - ")  ... giving 
+			“oranges”; the delimiter includes spaces.</li>
         <br>
-        <li>To extract the 3<sup>rd</sup> word from "Accounts Receivables: 700K", you would use:  =smfWord("Accounts Receivables: 700K", "3", , 1)  
-            ... which gives “700000“ using the Convert parameter.</li>
+        <li>To extract the 3<sup>rd</sup> word from "Accounts Receivables: 700K", use: =smfWord("Accounts Receivables: 700K", 3, , 1)  
+            ... giving “700000” using the Convert parameter.</li>
         <br>
-        <br>
-        <li>...more to come?</li>
+        <li>To extract the last word from "apples - oranges - bananas - grapes", use: =smfWord("apples - oranges - bananas - grapes", 1, , , 1) ... giving “grapes”.</li>
     </ul>
 
     <h3><u>Usage notes</u></h3>

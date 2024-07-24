@@ -78,7 +78,7 @@ Attribute smfForceRecalculation.VB_ProcData.VB_Invoke_Func = "R\n14"
        Application.CalculateFullRebuild
        End If
     End Sub
-
+    
 Public Sub smfASyncOn() ' Turn Asynchronous XMLHTTP on
     bASync = True
     End Sub
@@ -396,19 +396,37 @@ Function smfJoin(myRange As Range, myDelimiter As String)
         Next oCell
     End Function
 
-Public Function smfWord(ByVal Haystack As String, _
-                        ByVal Occurrence As Long, _
-               Optional ByVal Delimiter As String = " ", _
-               Optional ByVal pConvert As Integer = 0)
+Public Function smfWord(ByVal pHaystack As String, _
+                        ByVal pOccurrence As Long, _
+               Optional ByVal pDelimiter As String = " ", _
+               Optional ByVal pConvert As Integer = 0, _
+               Optional ByVal pReverse As Integer = 0)
     '-----------------------------------------------------------------------------------------------------------*
     ' 2011.02.16 -- Add function
     ' 2017.09.20 -- Add pConvert parameter
     ' 2023-01-22 -- Mel Pryor (ClimberMel@gmail.com)
     '               Called by --> Verify and Process pNames parameter (Headers)
     '               in smfGetYahooHistory to extract the Header name based on position
+    ' 2024-06-09 -- Add pReverse parameter to start extraction at end of Haystack
+    '
     '-----------------------------------------------------------------------------------------------------------*
+    Dim s1 As String, s2 As String
     On Error GoTo ErrorHandler
-    smfWord = Split(Haystack, Delimiter)(Occurrence - 1)
+    
+    If pReverse = 1 Then
+        s1 = StrReverse(pHaystack)
+        s2 = StrReverse(pDelimiter)
+    Else
+        s1 = pHaystack
+        s2 = pDelimiter
+    End If
+        
+    smfWord = Split(s1, s2)(pOccurrence - 1)
+    
+    If pReverse = 1 Then
+        smfWord = StrReverse(smfWord)
+     End If
+     
     If pConvert = 1 Then smfWord = smfConvertData(smfWord)
     Exit Function
 ErrorHandler:
@@ -496,7 +514,7 @@ Public Function RCHGetURLData4(pURL As String)
     '-----------------------------------------------------------------------------------------------------------*
     ' 2023-06-07 -- Added function
     '            -- Gets Yahoo Data Using Cookie/Crumb Method
-    '-----------------------------------------------------------------------------------------------------------*    
+    '-----------------------------------------------------------------------------------------------------------*
     
     If Len(crumb) <> 11 Then Call getYahooCookieCrumb(crumb, cookie)
 
@@ -517,7 +535,7 @@ Private Sub getYahooCookieCrumb(crumb As String, cookie As String)
     '-----------------------------------------------------------------------------------------------------------*
     ' 2023.06.07 -- Added sub
     '            -- Helper function for RCHGetURLData4
-    '-----------------------------------------------------------------------------------------------------------*    
+    '-----------------------------------------------------------------------------------------------------------*
     
     With CreateObject("WinHttp.WinHttpRequest.5.1")
         .Open "GET", "https://fc.yahoo.com", False
