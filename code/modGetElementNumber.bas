@@ -1,9 +1,9 @@
 Attribute VB_Name = "modGetElementNumber"
-Const kVersion = "3.0.2024.07.04"    		    ' Version number of add-in
+Const kVersion = "3.0.2024.06.27(BETA)"             ' Version number of add-in
     
 Const kElements = 20000                             ' Number of data elements
 Dim aParms(1 To kElements) As String                ' Extraction parameters for each element
-Dim aFiles(1 To kElements) As String                ' "smf-elements-nn.txt" file name for each element.
+Dim aFiles(1 To kElements) As String                ' Each element nbr and its "smf-elements-n.txt" file name
 Public aConstants(1 To 100) As String               ' Constants for use in RCHGetElementNumber() formulas
 
 Public sElementsLocation As String                  ' Location of element defintion files
@@ -142,7 +142,6 @@ Public Function RCHGetElementNumber(ByVal pTicker As String, _
     ' 2017.07.23 -- Remove iMorningStar variable
     ' 2018.08.27 -- ERASE aData() array rather than resetting the individual items
     ' 2020.03.09 -- Replace EVALUATE() function with smfEvaluateTwice(), a fix for Microsoft changes
-    '-----------------------------------------------------------------------------------------------------------*
     ' 2023-01-22 -- Mel Pryor (ClimberMel@gmail.com)
     '               Changed version number to reflect updates to other modules
     ' 2023-02-08 -- Version 3.0.2023.02.09 to reflect major overhaul and fix to smfGetYahooHistory
@@ -269,7 +268,6 @@ Public Function RCHGetElementNumber(ByVal pTicker As String, _
        Case Else: RCHGetElementNumber = ""
        End Select
     If RCHGetElementNumber <> "" Then Exit Function
-
     '--------------------------------> Preprocess web page data
     sURL = Replace(aParm(2), "~~~~~", sTicker2)
     If aParm(0) = "Calculated" Then
@@ -278,7 +276,6 @@ Public Function RCHGetElementNumber(ByVal pTicker As String, _
        sData(2) = smfGetWebPage(sURL, aParm(11), 0)
        End If
     sData(3) = UCase(sData(2))
-
     '--------------------------------> Return requested item
     If pFile <> "" Then
        On Error GoTo ErrorExit
@@ -325,7 +322,6 @@ Public Function RCHGetElementNumber(ByVal pTicker As String, _
     Exit Function
 ErrorExit: RCHGetElementNumber = vError
     End Function
-
 Private Function RCHSpecialExtraction(pLookup As String, Optional pTicker As String = "")
     On Error GoTo ErrorExit
     Select Case pLookup
@@ -655,7 +651,7 @@ Sub LoadElementsFromFile(pSuffix As Variant)
     '------------------------------------------------------------------------------------------------------*
     ' 2017.05.05 -- Add processing for settings
     ' 2017.05.19 -- Add processing for constants
-    ' 2024.06.09 -- Add processing to get the "smf-elements-nn.txt" file name
+    ' 2024.06.09 -- Add processing to get the "smf-elements-n.txt" file name
     '               the element was last loaded from.
     '------------------------------------------------------------------------------------------------------*
     On Error GoTo ErrorExit
@@ -683,7 +679,6 @@ Sub LoadElementsFromFile(pSuffix As Variant)
     Close #1
 ErrorExit:
     End Sub
-
 Sub LoadElementsFromInternet(pSuffix As Variant)
     '-----------------------------------------------------------------------------------------------------------*
     ' 2016.05.18 -- Change to RCHGetURLData to ease transition between operating systems
@@ -740,7 +735,7 @@ Public Function smfGetAConstants(p1 As Integer)
 
 Public Function smfGetaFiles(p1 As Integer)
     '-----------------------------------------------------------------------------------------------------------*
-    ' 2024.06.29 -- Test function to view element's file location.
+    ' 2024.06.29 -- New test function to view element's file location.
     '-----------------------------------------------------------------------------------------------------------*
     smfGetaFiles = aFiles(p1)
     End Function
