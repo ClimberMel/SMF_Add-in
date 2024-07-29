@@ -1,5 +1,5 @@
 Attribute VB_Name = "modGetElementNumber"
-Const kVersion = "3.0.2024.06.27(BETA)"             ' Version number of add-in
+Const kVersion = "3.0.2024.07.30"                   ' Version number of add-in
     
 Const kElements = 20000                             ' Number of data elements
 Dim aParms(1 To kElements) As String                ' Extraction parameters for each element
@@ -167,8 +167,15 @@ Public Function RCHGetElementNumber(ByVal pTicker As String, _
     '                 modGetOptionStrikes.bas
     '                 modGetElementNumber.bas (this file to change version)
     '                 elements2.txt and various web pages
-    ' 2024.06.09 -- Add "ELEMENTFILE" value for pTicker parameter
-    ' 2024.06.10 -- Update Add-in web site name in LoadElementsFromInternet() subroutine
+    ' 2024-06-09 -- Add "ELEMENTFILE" value for pTicker parameter
+    ' 2024-06-10 -- Update Add-in web site name in LoadElementsFromInternet() subroutine
+    ' 2024-07-29 -- Create new package with changes from Issue #72, 76, 77, 78, 79, 81, 82, 83, 89, 90
+    '                 New add-in: RCH_Stock_Market_Functions-3.0.2024.07.30
+    '                 modGetElementNumber.bas
+    '                 smfUtilities_.bas
+    '                 modGetYahooJSONData.bas
+    '                 modGetEconData.bas
+    '                 element files 1, 2, 22
     '-----------------------------------------------------------------------------------------------------------*
     ' > Example of an invocation to get The "Trend Spotter" value for IBM from the BarChart website:
     '
