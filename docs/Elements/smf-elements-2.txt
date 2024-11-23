@@ -2,9 +2,9 @@
 '             smf-elements-2.txt
 '---------------------------------------------------------------------------------------------------------
 '
-'  04/23/24 - added "type 4" for crumb processing
-'  05/08/24 - changed 1584-1587, 1592-1599 to use smfGetYahooJSONField()
-'
+'  04/23/24 -- Added "type 4" for crumb processing
+'  05/08/24 -- Changed 1584-1587, 1592-1599 to use smfGetYahooJSONField()
+'  06/09/24 -- Updated 933-937, 1552-1599 to redirect to new Yahoo elements in smf-elements-1.txt
 '---------------------------------------------------------------------------------------------------------
 
 553;YahooAE;Consensus EPS Trend -- Date -- FQ1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;1;>EPS Trend;CURRENCY IN USD; ; ;0;0;0;4
@@ -156,15 +156,16 @@
 699;YahooAE;Revenue Estimates -- Sales Growth -- FY1;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;3;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;4
 700;YahooAE;Revenue Estimates -- Sales Growth -- FY2;https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~;4;>REVENUE EST;SALES GROWTH (YEAR/EST); ; ;0;0;0;4
 726;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",1,">Down Last 7 Days",,,,1,,4)
-727;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Down Last 7 Days",,,,1,,4)
-728;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Down Last 7 Days",,,,1,,4)
-729;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Down Last 7 Days",,,,1,,4)
+727;YahooAE;EPS Revisions -- Down Last 7 Days -- FQ2;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",2,">Down Last 7 Days",,,,1,,4)
+728;YahooAE;EPS Revisions -- Down Last 7 Days -- FY1;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",3,">Down Last 7 Days",,,,1,,4)
+729;YahooAE;EPS Revisions -- Down Last 7 Days -- FY2;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/analysis?p=~~~~~","td",4,">Down Last 7 Days",,,,1,,4)
 
-933;YahooIS;Total Expenses;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Total Expenses",,,,1,,4)
-934;YahooIS;Operating Expense;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Operating Expense",,,,1,,4)
-935;YahooIS;Net Income;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Net Income",,,,1,,4)
-936;YahooIS;Cost of Revenue;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Cost of Revenue",,,,1,,4)
-937;YahooIS;Total Revenue;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~/financials","span",1,">Total Revenue",,,,1,,4)
+933;YahooIS;Total Expenses;="See elements 341-345, 433-436"
+934;YahooIS;Operating Expense;="See elements 321-326, 417-420"
+935;YahooIS;Net Income;="See elements 331-335, 425-428"
+936;YahooIS;Cost of Revenue;="See elements 311-315, 409-412"
+937;YahooIS;Total Revenue;="See elements 306-310, 404-408"
+
 938;YahooKS;Date of 52-Week High;="Obsolete"
 939;YahooKS;Date of 52-Week Low;="Obsolete"
 940;YahooKS;Last Split Date;https://finance.yahoo.com/quote/~~~~~/key-statistics?p=~~~~~;1;LAST SPLIT DATE; ; ; ;0;0;0;4
@@ -224,55 +225,55 @@
 
 1285;YahooAE;Next Earnings Date;=smfGetTagContent("https://finance.yahoo.com/quote/~~~~~?p=~~~~~","span",1,">Earnings Date",,,,1,,4)
 
-1552;YahooQBS;Quarterly Balance Sheet -- Date -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>; ; ;0;0;0;4
-1553;YahooQBS;Quarterly Balance Sheet -- Date -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>; ; ;0;0;0;4
-1554;YahooQBS;Quarterly Balance Sheet -- Date -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>; ; ;0;0;0;4
-1555;YahooQBS;Quarterly Balance Sheet -- Date -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>; ; ;0;0;0;4
-1556;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;4
-1557;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;4
-1558;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;4
-1559;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;CASH AND CASH EQUIVALENTS; ; ;0;0;0;4
-1560;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;4
-1561;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;4
-1562;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;4
-1563;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;SHORT TERM INVESTMENTS; ; ;0;0;0;4
-1564;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;4
-1565;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;4
-1566;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;4
-1567;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;PROPERTY PLANT AND EQUIPMENT; ; ;0;0;0;4
-1568;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;4
-1569;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;4
-1570;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;4
-1571;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;SHORT/CURRENT LONG TERM DEBT; ; ;0;0;0;4
-1572;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;4
-1573;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;4
-1574;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;4
-1575;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>LONG TERM DEBT; ; ;0;0;0;4
-1576;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;4
-1577;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;4
-1578;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;4
-1579;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;REDEEMABLE PREFERRED STOCK; ; ;0;0;0;4
-1580;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ1;https://finance.yahoo.com/q/bs?s=~~~~~;1;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;4
-1581;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ2;https://finance.yahoo.com/q/bs?s=~~~~~;2;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;4
-1582;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ3;https://finance.yahoo.com/q/bs?s=~~~~~;3;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;4
-1583;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ4;https://finance.yahoo.com/q/bs?s=~~~~~;4;PERIOD ENDING;>PREFERRED STOCK; ; ;0;0;0;4
+1552;YahooQBS;Quarterly Balance Sheet -- Date -- FQ1;="See elements 101-105"
+1553;YahooQBS;Quarterly Balance Sheet -- Date -- FQ2;="See elements 101-105"
+1554;YahooQBS;Quarterly Balance Sheet -- Date -- FQ3;="See elements 101-105"
+1555;YahooQBS;Quarterly Balance Sheet -- Date -- FQ4;="See elements 101-105"
+1556;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ1;="See elements 156-160"
+1557;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ2;="See elements 156-160"
+1558;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ3;="See elements 156-160"
+1559;YahooQBS;Quarterly Balance Sheet -- Cash And Cash Equivalents -- FQ4;="See elements 156-160"
+1560;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ1;="Obsolete"
+1561;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ2;="Obsolete"
+1562;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ3;="Obsolete"
+1563;YahooQBS;Quarterly Balance Sheet -- Short Term Investments -- FQ4;="Obsolete"
+1564;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ1;="See elements 161-165"
+1565;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ2;="See elements 161-165"
+1566;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ3;="See elements 161-165"
+1567;YahooQBS;Quarterly Balance Sheet -- Property Plant and Equipment -- FQ4;="See elements 161-165"
+1568;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ1;="Obsolete"
+1569;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ2;="Obsolete"
+1570;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ3;="Obsolete"
+1571;YahooQBS;Quarterly Balance Sheet -- Short Term Debt -- FQ4;="Obsolete"
+1572;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ1;="See elements 126-130"
+1573;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ2;="See elements 126-130"
+1574;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ3;="See elements 126-130"
+1575;YahooQBS;Quarterly Balance Sheet -- Long Term Debt -- FQ4;="See elements 126-130"
+1576;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ1;="Obsolete"
+1577;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ2;="Obsolete"
+1578;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ3;="Obsolete"
+1579;YahooQBS;Quarterly Balance Sheet -- Redeemable Preferred Stock -- FQ4;="Obsolete"
+1580;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ1;="Obsolete"
+1581;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ2;="Obsolete"
+1582;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ3;="Obsolete"
+1583;YahooQBS;Quarterly Balance Sheet -- Preferred Stock -- FQ4;="Obsolete"
 
-1584;YahooQIS;Quarterly Income Statement -- Date -- FQ1;=smfGetYahooJSONField("~~~~~","incomeStatementHistoryQuarterly","quoteSummary.result.0.incomeStatementHistoryQuarterly.incomeStatementHistory.0.endDate.fmt")
-1585;YahooQIS;Quarterly Income Statement -- Date -- FQ2;=smfGetYahooJSONField("~~~~~","incomeStatementHistoryQuarterly","quoteSummary.result.0.incomeStatementHistoryQuarterly.incomeStatementHistory.1.endDate.fmt")
-1586;YahooQIS;Quarterly Income Statement -- Date -- FQ3;=smfGetYahooJSONField("~~~~~","incomeStatementHistoryQuarterly","quoteSummary.result.0.incomeStatementHistoryQuarterly.incomeStatementHistory.2.endDate.fmt")
-1587;YahooQIS;Quarterly Income Statement -- Date -- FQ4;=smfGetYahooJSONField("~~~~~","incomeStatementHistoryQuarterly","quoteSummary.result.0.incomeStatementHistoryQuarterly.incomeStatementHistory.3.endDate.fmt")
+1584;YahooQIS;Quarterly Income Statement -- Date -- FQ1;="See elements 301-305"
+1585;YahooQIS;Quarterly Income Statement -- Date -- FQ2;="See elements 301-305"
+1586;YahooQIS;Quarterly Income Statement -- Date -- FQ3;="See elements 301-305"
+1587;YahooQIS;Quarterly Income Statement -- Date -- FQ4;="See elements 301-305"
 1588;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ1;="Obsolete"
 1589;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ2;="Obsolete"
 1590;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ3;="Obsolete"
 1591;YahooQIS;Quarterly Income Statement -- Earnings Before Interest And Taxes -- FQ4;="Obsolete"
-1592;YahooQIS;Quarterly Income Statement -- Total Revenue -- FQ1;=smfGetYahooJSONField("~~~~~","incomeStatementHistoryQuarterly","quoteSummary.result.0.incomeStatementHistoryQuarterly.incomeStatementHistory.0.totalRevenue.raw")
-1593;YahooQIS;Quarterly Income Statement -- Total Revenue -- FQ2;=smfGetYahooJSONField("~~~~~","incomeStatementHistoryQuarterly","quoteSummary.result.0.incomeStatementHistoryQuarterly.incomeStatementHistory.1.totalRevenue.raw")
-1594;YahooQIS;Quarterly Income Statement -- Total Revenue -- FQ3;=smfGetYahooJSONField("~~~~~","incomeStatementHistoryQuarterly","quoteSummary.result.0.incomeStatementHistoryQuarterly.incomeStatementHistory.2.totalRevenue.raw")
-1595;YahooQIS;Quarterly Income Statement -- Total Revenue -- FQ4;=smfGetYahooJSONField("~~~~~","incomeStatementHistoryQuarterly","quoteSummary.result.0.incomeStatementHistoryQuarterly.incomeStatementHistory.3.totalRevenue.raw")
-1596;YahooQIS;Quarterly Income Statement -- Net Income -- FQ1;=smfGetYahooJSONField("~~~~~","incomeStatementHistoryQuarterly","quoteSummary.result.0.incomeStatementHistoryQuarterly.incomeStatementHistory.0.netIncome.raw")
-1597;YahooQIS;Quarterly Income Statement -- Net Income -- FQ2;=smfGetYahooJSONField("~~~~~","incomeStatementHistoryQuarterly","quoteSummary.result.0.incomeStatementHistoryQuarterly.incomeStatementHistory.1.netIncome.raw")
-1598;YahooQIS;Quarterly Income Statement -- Net Income -- FQ3;=smfGetYahooJSONField("~~~~~","incomeStatementHistoryQuarterly","quoteSummary.result.0.incomeStatementHistoryQuarterly.incomeStatementHistory.2.netIncome.raw")
-1599;YahooQIS;Quarterly Income Statement -- Net Income -- FQ4;=smfGetYahooJSONField("~~~~~","incomeStatementHistoryQuarterly","quoteSummary.result.0.incomeStatementHistoryQuarterly.incomeStatementHistory.3.netIncome.raw")
+1592;YahooQIS;Quarterly Income Statement -- Total Revenue -- FQ1;="See elements 306-310"
+1593;YahooQIS;Quarterly Income Statement -- Total Revenue -- FQ2;="See elements 306-310"
+1594;YahooQIS;Quarterly Income Statement -- Total Revenue -- FQ3;="See elements 306-310"
+1595;YahooQIS;Quarterly Income Statement -- Total Revenue -- FQ4;="See elements 306-310"
+1596;YahooQIS;Quarterly Income Statement -- Net Income -- FQ1;="See elements 331-335"
+1597;YahooQIS;Quarterly Income Statement -- Net Income -- FQ2;="See elements 331-335"
+1598;YahooQIS;Quarterly Income Statement -- Net Income -- FQ3;="See elements 331-335"
+1599;YahooQIS;Quarterly Income Statement -- Net Income -- FQ4;="See elements 331-335"
 
 1601;YahooPer;Fund Performance -- Annual Return -- Year 0;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.0.annualValue.raw")
 1602;YahooPer;Fund Performance -- Year -- Year 0;=smfGetYahooJSONField("~~~~~","fundPerformance","quoteSummary.result.0.fundPerformance.annualTotalReturns.returns.0.year")
