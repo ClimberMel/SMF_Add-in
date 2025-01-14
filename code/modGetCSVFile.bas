@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetCSVFile"
+'@Lang VBA
 Public Function smfGetCSVFile(pURL As String, _
                Optional ByVal pDelimiter As String = ",", _
                Optional ByVal pDim1 As Integer = 0, _

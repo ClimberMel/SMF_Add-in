@@ -1,4 +1,5 @@
 Attribute VB_Name = "modPictureTable"
+'@Lang VBA
 Function RCHImageTable(pTickers As Variant, _
         Optional ByVal pBreaks As Integer = -1, _
         Optional ByVal pChart As String = "6")

@@ -1,4 +1,5 @@
 Attribute VB_Name = "smfConvertData_"
+'@Lang VBA
 Public Function smfConvertData(ByVal pData As String, _
                       Optional ByVal pConv As Integer = 0)
     '-----------------------------------------------------------------------------------------------------------*

@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetAdvFNElement"
+'@Lang VBA
 Public sAdvFNPrefix As String                       ' URL prefix to use for AdvFN
 Function smfGetADVFNElement(ByVal pTicker As String, _
                             ByVal pPeriod As String, _

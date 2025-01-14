@@ -1,4 +1,5 @@
 Attribute VB_Name = "smfGetGoogleHistoryCSV_"
+'@Lang VBA
 Option Explicit
 
 Function smfGetGoogleHistoryCSV(ByVal pTicker As String, _

@@ -1,4 +1,5 @@
 Attribute VB_Name = "modPictureInsert"
+'@Lang VBA
 Public Sub RCHInsertPicture(ByVal Target As Range)
     '-----------------------------------------------------------------------------------------------------------*
     ' Subroutine to insert/update a picture within a cell based on cell content ("Image: http://...")

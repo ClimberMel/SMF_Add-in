@@ -1,4 +1,5 @@
 Attribute VB_Name = "modInCellChart"
+'@Lang VBA
 Function smfInCellChart(pVector As Variant, _
                Optional pType As String = "Line", _
                Optional pColor As Long = 203) As String

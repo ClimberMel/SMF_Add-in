@@ -1,4 +1,5 @@
 Attribute VB_Name = "smfGetYahooHistoryCSV_"
+'@Lang VBA
 Option Explicit
 
 Function smfGetYahooHistoryCSV(ByVal pTicker As String, _

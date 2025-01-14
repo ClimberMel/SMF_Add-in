@@ -1,4 +1,5 @@
 Attribute VB_Name = "smfCreateComment_"
+'@Lang VBA
 Public Function RCHCreateComment(pTicker As String, _
                   Optional ByVal pChoice As Integer = 1, _
                   Optional ByVal pWidth As Integer = 0, _

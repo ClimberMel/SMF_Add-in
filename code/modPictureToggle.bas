@@ -1,4 +1,5 @@
 Attribute VB_Name = "modPictureToggle"
+'@Lang VBA
 Public Sub RCHTogglePicture()
     '-----------------------------------------------------------------------------------------------------------*
     ' Subroutine to toggle image (i.e. zoom in/zoom out) within a cell

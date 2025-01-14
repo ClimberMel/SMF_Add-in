@@ -1,4 +1,5 @@
 Attribute VB_Name = "smfxDatabaseUpdate_"
+'@Lang VBA
 Sub UpdateStockDatabase()
     '-----------------------------------------------------------------------------------------------------------*
     ' Subroutine to update a number of stock databases, one sheet per data source

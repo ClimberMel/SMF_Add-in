@@ -1,4 +1,5 @@
 Attribute VB_Name = "modYahooAPIData"
+'@Lang VBA
 Option Explicit
 Function smfYahooAPIData(pTicker As String, _
          Optional pItem As String = "LastTradePriceOnly", _
