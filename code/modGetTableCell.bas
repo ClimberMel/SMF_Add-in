@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetTableCell"
+'@Lang VBA
 Public Function RCHGetTableCell(ByVal pURL As String, _
                                 ByVal pCells As Integer, _
                        Optional ByVal pFind1 As String = "<BODY", _

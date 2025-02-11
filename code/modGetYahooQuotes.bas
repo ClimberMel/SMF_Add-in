@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetYahooQuotes"
+'@Lang VBA
 Public Function RCHGetYahooQuotes(ByVal pTickers As Variant, _
                          Optional ByVal pItems As Variant = "sl1d1t1c1ohgv", _
                          Optional ByVal pServerID As String = "", _

@@ -1,4 +1,5 @@
 Attribute VB_Name = "smfGetMorningStarCSV_"
+'@Lang VBA
 Option Explicit
 
 Function smfGetMorningstarHistoryCSV(ByVal pTicker As String, _

@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetHTMLTable"
+'@Lang VBA
 Const kDim3 = 20
 Public Function RCHGetHTMLTable(ByVal pURL As String, _
                                 ByVal pFind1 As String, _

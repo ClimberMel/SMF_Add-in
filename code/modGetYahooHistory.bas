@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetYahooHistory"
+'@Lang VBA
 Public Function RCHGetYahooHistory(pTicker As String, _
                         Optional pStartYear As Integer = 1950, _
                         Optional pStartMonth As Integer = 1, _

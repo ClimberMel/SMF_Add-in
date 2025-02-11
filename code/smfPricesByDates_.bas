@@ -1,4 +1,5 @@
 Attribute VB_Name = "smfPricesByDates_"
+'@Lang VBA
 Public Function smfPricesByDates(ByVal pTicker As String, _
                             ParamArray pDates() As Variant)
                         

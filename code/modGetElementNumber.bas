@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetElementNumber"
+'@Lang VBA
 Const kVersion = "3.0.2024.07.30"                   ' Version number of add-in
     
 Const kElements = 20000                             ' Number of data elements

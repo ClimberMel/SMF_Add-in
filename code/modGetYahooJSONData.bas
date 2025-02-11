@@ -1,4 +1,5 @@
 Attribute VB_Name = "modGetYahooJSONData"
+'@Lang VBA
 Public Function smfGetYahooJSONField(ByVal pTicker As String, _
                                      ByVal pModule As String, _
                                      ByVal pField As String, _
