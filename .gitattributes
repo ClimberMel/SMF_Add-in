@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Declare files that will always have CRLF line endings on checkout.
+# ref: https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings
+*.txt text eol=crlf
