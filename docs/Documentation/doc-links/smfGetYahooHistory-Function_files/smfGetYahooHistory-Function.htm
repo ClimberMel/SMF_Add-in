@@ -7,10 +7,10 @@
   <h2>Documentation for smfGetYahooHistory() function</h2>
 
   <br><u><b>Description</b></u>
-  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns historical stock quotes (and limited options history) from Yahoo
+  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns historical stock quotes from Yahoo
 
   <br><br><u><b>Syntax</b></u>
-  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetYahooHistory( Ticker, [Start Date], [End Date], [Period], [Items], [Headers], [Resort], [Rows], [Columns] )</b>
+  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=smfGetYahooHistory( Ticker, [Start Date], [End Date], [Period], [Items], [Headers], [Re-Sort], [Rows], [Columns] )</b>
 
 
   <br><br><u><b>Parameters</b></u><br><br>
@@ -20,13 +20,13 @@
         <tr>
           <td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Ticker</b></td>
           <td valign="top">=</td>
-          <td>Ticker symbol (e.g "MMM")<br><br></td>
+          <td>Ticker symbol (e.g "AAPL")<br><br></td>
         </tr>
         <tr>
           <td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Start&nbsp;Date</b></td><td valign="top">=</td><td>
               An optional starting date. The date can either be a string value (e.g. 
               "mm/dd/yyyy") or an EXCEL serial date value. If none is specifed, the 
-              default is "1/1/1970".<br><br>
+              default is "01/01/2000".<br><br>
           </td>
         </tr>
         <tr>
@@ -38,14 +38,11 @@
         </tr>
         <tr>
           <td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Period</b></td><td valign="top">=</td>
-          <td>An optional character indicating the type of data period to retrieve. The default value is "d". Possible values:<br><br>
+          <td>An optional character indicating the data period to retrieve. The default value is "d". Possible values:<br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;"d" = Daily quotes<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"w" = Weekly quotes  (Yahoo chooses to use the first trading day of the week as the end of the period)<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"m" = Monthly quotes (Yahoo chooses to use the first trading day of the month as the end of the period)<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"q" = Quarterly quotes (Yahoo chooses to use the first trading day of the month as the end of the period)<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"s" = Semi-annual quotes (Yahoo chooses to use the first trading day of the month as the end of the period)<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"a" = Annual quotes (Yahoo chooses to use the first trading day of the month as the end of the period)<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"v" = Dividend history ("T" is the only "Item" that makes a difference - Date and Dividend amount are automatic)<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"w" = Weekly quotes <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"m" = Monthly quotes<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"q" = Quarterly quotes<br><br>
           </td>
         </tr>
         <tr>
@@ -53,36 +50,34 @@
           <td valign="top"><b>Items</b></td>
           <td valign="top">=</td>
           <td>An optional character string indicating which data items to retrieve. 
-              The default value is "DOHLCVU". Possible values within the character string:<br><br>
+              The default value is "DOHLCAV". Possible values:<br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;"T" = Ticker symbol<br>
             &nbsp;&nbsp;&nbsp;&nbsp;"D" = Ending date of the period<br>
             &nbsp;&nbsp;&nbsp;&nbsp;"O" = Opening price of the period<br>
             &nbsp;&nbsp;&nbsp;&nbsp;"H" = High price for the period<br>
             &nbsp;&nbsp;&nbsp;&nbsp;"L" = Low price for the period<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"C" = Adjusted closing price for the period<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"V" = Trading volume for the period<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"U" = Unadjusted closing price for the period<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"X" =  Amount of dividends paid in period<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"S" =  Text indication of split amount<br><br>
-          </td>
+            &nbsp;&nbsp;&nbsp;&nbsp;"C" = Unadjusted closing price for the period<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"A" = Adjusted closing price for the period<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"V" = Trading volume for the period<br><br>
+            </td>
         </tr>
         <tr>
           <td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top"><b>Headers</b></td>
           <td valign="top">=</td>
-          <td>An optional binary value to indicate whether headers should be returned 
-            for the column(s) of data. The value defaults to 1. Possible values:<br><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;0 = Suppress column headings<br>
+          <td>An optional value to indicate whether column heading(s) should be displayed 
+            in the first row. Default is 1. Possible values:<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;0 = No column headings<br>
             &nbsp;&nbsp;&nbsp;&nbsp;1 = Display column headings<br><br>
           </td>
         </tr>
         <tr>
           <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td valign="top"><b>Resort</b></td>
+          <td valign="top"><b>Re-Sort</b></td>
           <td valign="top">=</td>
           <td>
-            An optional binary value to indicate whether data should be resorted or not. The value defaults to 0. Possible Values<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;0 = Do not resort data; present raw data as returned from Yahoo!; newest data will be on the top rows of table.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;1 = Reverse the order of data returned from Yahoo!; oldest data will be on the top rows of table.<br><br>
+            An optional value to indicate whether data should be re-sorted or not. Default is 1. Possible Values:<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;0 = Do not re-sort data; display data as returned from Yahoo!; earliest data will be at the top of the table.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;1 = Reverse the order of data; latest data will be at the top of the table.<br><br>
           </td>
         </tr>
         <tr>
@@ -90,16 +85,16 @@
           <td valign="top"><b>Rows</b></td>
           <td valign="top">=</td>
           <td>
-            An optional integer value that can override the number of rows of desired output. This is typically not relevant, 
-            as it is automatically based on the number of rows you array-entered the formula over.<br><br>
+            An optional integer value that can override the number of rows of desired output. This is typically not used, 
+            as it is automatically based on the number of rows array-entered for the formula.<br><br>
           </td>
         </tr>
         <tr>
           <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
           <td valign="top"><b>Columns</b></td>
           <td valign="top">=</td>
-          <td>An optional interger that can override the number of columns of desired output. This is typically not relevant, 
-            as it is automatically based on the number of columns you array-entered the formula over.<br><br>
+          <td>An optional interger that can override the number of columns of desired output. This is typically not used, 
+            as it is automatically based on the number of columns array-entered for the formula.<br><br>
           </td>
         </tr>
       </tbody>
@@ -107,48 +102,43 @@
 
   <br><u><b>Examples</b></u>
   <ul>
-    <li>This would return the twelve default data items for ticker symbol IBM:
-      <br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetYahooHistory("IBM")
-      <br><br>If you array-entered the above formula over a 10-row by11-column
-      range, you would get the D/O/H/L/C/V/U/F/G/X/S data items for the 
+    <li>This would return the seven default data items for ticker symbol AAPL:
+      <br><br>&nbsp;&nbsp;&nbsp;&nbsp;=smfGetYahooHistory("AAPL")
+      <br><br>If you array-entered the above formula over a 10-row by 7-column
+      range, you would get the DOHLCAV data items, with headings, for the 
       latest 9 days of history.<br><br>
     </li>
 
-    <li>This would return a single item -- the adjusted closing price for ticker symbol IBM for January 3rd, 2007:<br><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;=smfGetYahooHistory("IBM",,"1/3/2007",,"c",0)<br><br>
+    <li>This would return a single item (no headings) -- the unadjusted closing price  for ticker symbol AAPL for January 3rd, 2024:<br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;=smfGetYahooHistory("AAPL", "1/3/2024", "1/3/2024",,"c",0)<br><br>
     </li>
 
-    <li>This would return a single item -- the current 5-day moving average for ticker symbol MMM:<br><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;=AVERAGE(smfGetYahooHistory("MMM",,,,"c",0,,5,1))<br><br>
-    </li>
-
-    <li>If you array-entered the above formula over a 10-row by 6-column range, 
-      you would get the D/O/H/L/C/V data items for the latest 9 days of history.
-      &nbsp;&nbsp;&nbsp;&nbsp;=smfGetYahooHistory(B4,"1/1/2019","2/28/2023","d")
+     <li>If cell B4 contains a valid stock symbol, i.e. "CMG", and you array-entered this formula over a 10-row by 6-column range, 
+      you would get the DOHLCA data items for the latest 9 days of history.<br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;=smfGetYahooHistory(B4,"1/1/2024","2/28/2025","d")
     </li>
     <br><br>
-    <li>You can also use an option formatted like this: SPXW240426P05305000<br><br>
-      just like a ticker and it will give daily data for up to 4 weeks.
-    </li>
   </ul>
 
   <u><b>Usage notes</b></u>
   <ul>
-    <li>In most cases, this will need to be an array-entered formula.  To array-enter a formula in EXCEL, 
+    <li>This function will need to be an array-entered formula.  To array-enter a formula in EXCEL, 
       first highlight the range of cells where you would like the returned data to appear -- the number of rows for 
       the range should be the number of periods of data you are requesting from the function, 
       while the number of columns for the range should be the number of data items you are requesting 
       for each date from the function.  Next, enter your formula and then press Ctrl-Shift-Enter. <br><br>
     </li>
     <li>If the function is array-entered over a range that is larger than the amount of data available from Yahoo, 
-      the excess portion of the range will be filled with blanks.<br><br>
+      the excess portion of the range will be blank.<br><br>
     </li>
     <li>If the function is array-entered over a range that is smaller than the amount of data returned from Yahoo, 
-      the excess Yahoo data will simply be ignored.  
-      A user-defined function can only return data to a cell or a range that it has been given access to 
-      -- in this case, by the range used when array-entering the function.<br><br>
+      the excess Yahoo data will not be displayed.<br><br>
     </li>
-    <li>...more to come</li>
-  </ul>
+    <li>Option price history can also be retrieved using the option symbol, for example "CMG251219C00045000". The function will return daily pricing for up to 4 weeks. <br><br>
+    </li>
+     <li>History for dividends and stock splits are not available at this time. You can retrieve this info
+	  from Yahoo's "Historical Data" page for the particular stock. <br><br>
+    </li>
+ </ul>
 </body>
 </html>
