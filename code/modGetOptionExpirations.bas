@@ -1,4 +1,3 @@
-Attribute VB_Name = "modGetOptionExpirations"
 Option Explicit
 Function smfGetOptionExpirations(ByVal pTicker As String, _
                         Optional ByVal pSource As String = "Yahoo", _
@@ -6,7 +5,7 @@ Function smfGetOptionExpirations(ByVal pTicker As String, _
                         Optional ByVal pStrike As Double = 0, _
                         Optional ByVal pRows As Integer = 0, _
                         Optional ByVal pCols As Integer = 0, _
-                        Optional ByVal pType As Integer = 0, _
+                        Optional ByVal pType As Integer = 4, _
                         Optional ByVal pPeriod As String = "A" _
                         )
                                                       
@@ -35,11 +34,15 @@ Function smfGetOptionExpirations(ByVal pTicker As String, _
     ' 2017.12.19 -- Add ability to request Yahoo expirations by type of period
     ' 2017.12.25 -- Add ability to request Yahoo expirations for multiple period types
     ' 2024.01.30 -- Invoke =RCHGetWebData with TYPE(4) param for Yahoo options url. (BS)
-    '               Add "?" to end of url if no other params used so "&crumb= ..." can be processed.
+    '            -- Add "?" to end of url if no other params used so "&crumb= ..." can be processed.
+    ' 2026.03.19 -- Some stocks now have Mon, Wed, Fri weeklies. (AAPL, TSLA, GOOGL, etc.)
+    '            -- For weeklies and monthlies, get the Thursday expiration date if Friday is a stock market holiday,
+    '               i.e., Good Friday and Juneteenth. (BS)
+    ' 2026.04.17 -- Fix determination of monthly expiration date. (BS)
     '-----------------------------------------------------------------------------------------------------------*
     ' > Examples of invocations to get current quotes for SPY:
     '
-    '   =smfGetOptionExpirations("SPY", "Google")
+    '   =smfGetOptionExpirations("SPY", "Yahoo")
     '-----------------------------------------------------------------------------------------------------------*
     
     On Error GoTo ErrorExit
@@ -64,8 +67,10 @@ Function smfGetOptionExpirations(ByVal pTicker As String, _
     For iRow = 1 To kRows: For iCol = 1 To kCols: vData(iRow, iCol) = "": Next iCol: Next iRow
     vData(1, 1) = "None"
     
-    '------------------> Determine which data source to use
     Dim s1 As String, s2 As String, s3 As String, sURL As String, iPtr As Integer, d1 As Date, i1 As Integer
+    
+    '------------------> Determine which data source to use
+    '-------- (03/12/26:  Always use Yahoo for data source. Other's obsolete?) --------------
     Select Case UCase(pSource)
        Case "8", "888": GoTo Source_888
        Case "B", "BC", "BARCHART": GoTo Source_Yahoo
@@ -178,31 +183,33 @@ Source_OptionsXpress2:
        End If
     GoTo ExitFunction
     
-    '------------------> Yahoo processing after 2017-03-15
+    '------------------> Yahoo processing after 2026-03-19
 Source_Yahoo:
     Dim vFirst As Variant, vNext As Variant
     sURL = "https://query1.finance.yahoo.com/v7/finance/options/" & UCase(pTicker) & "?"
     s1 = smfStrExtr(RCHGetWebData(sURL, """expirationDates"":[", 500, , 4), "[", "]")
     vFirst = Int(smfUnix2Date(smfWord(s1, 1, ",", 1)))
     iPtr = 0
+
     For iRow = 1 To 50
         s2 = smfWord(s1, iRow, ",")
         If s2 = "" Then Exit For
         vNext = Int(smfUnix2Date(0 + s2))
         If UCase(pPeriod) = "A" _
-              Or (InStr(UCase(pPeriod), "W") > 0 And vNext <= vFirst + 43 And Weekday(vNext) = 6) _
-              Or (InStr(UCase(pPeriod), "M") > 0 And Day(vNext) > 14 And Day(vNext) < 23 And Weekday(vNext) = 6) _
+              Or (InStr(UCase(pPeriod), "W") > 0 And vNext <= vFirst + 43 And Mid("0101110", Weekday(vNext), 1) = "1") _
+              Or (InStr(UCase(pPeriod), "M") > 0 And Day(vNext) > 14 And Day(vNext) < 22 And (Weekday(vNext) = 6 _
+                 Or ((Month(vNext) = 4 Or Month(vNext) = 6) And Weekday(vNext) = 5))) _
               Or (InStr(UCase(pPeriod), "Q") > 0 And Day(vNext) > 27 And Mid("001001001001", Month(vNext), 1) = "1") _
               Or (InStr(UCase(pPeriod), "H") > 0 And vNext <= vFirst + 43 And Weekday(vNext) = 4) _
-              Or (InStr(UCase(pPeriod), "V") > 0 And Day(vNext) > 14 And Day(vNext) < 23 And Weekday(vNext) = 4) _
-              Then
+              Or (InStr(UCase(pPeriod), "V") > 0 And Day(vNext) > 14 And Day(vNext) < 22 And Weekday(vNext) = 4) _
+        Then
            iPtr = iPtr + 1
            vData(iPtr, 1) = vNext
            End If
         Next iRow
     
     GoTo ExitFunction
-
+   
     '------------------> Yahoo processing prior to 2012.01.06 and after 2015-02-21
 Source_Yahoo0:
     sURL = "http://finance.yahoo.com/q/op?s=" & UCase(pTicker)
